@@ -11,7 +11,7 @@ import chess.svg
 from dotenv import load_dotenv
 from typesafe_sdk import Choice, TypeSafeClient
 
-from .state import describe_board, describe_move
+from .state import STATES, describe_move
 from .trace import Tracer
 
 INSTRUCTIONS = "Choose the best move for the side to move in this chess position."
@@ -20,6 +20,8 @@ INSTRUCTIONS = "Choose the best move for the side to move in this chess position
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--model", default="jev-latest")
+    parser.add_argument("--state", choices=list(STATES), default="prose_1",
+                        help="how the position is shown to jev")
     parser.add_argument("--opponent", choices=["self", "stockfish"], default="self",
                         help="jev plays white; this is who plays black")
     parser.add_argument("--stockfish-option", action="append", default=[], metavar="NAME=VALUE",
@@ -30,12 +32,12 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def get_move(client: TypeSafeClient, model: str,
-             board: chess.Board) -> tuple[str, dict[str, float], float]:
+def get_move(client, model, board, state_fn, history, describe):
     """Returns (move, probabilities, confidence)."""
-    criteria = {board.san(move): describe_move(board, move) for move in board.legal_moves}
+    criteria = {board.san(move): (describe_move(board, move) if describe else None)
+                for move in board.legal_moves}
     response = client.system_one(
-        state=describe_board(board),
+        state=state_fn(board, history),
         model=model,
         questions={"move": Choice(instructions=INSTRUCTIONS, criteria=criteria)},
     )
@@ -63,15 +65,19 @@ def play(client, args, engine, limit, run_id: str, tracer: Tracer) -> None:
     frames.mkdir(parents=True, exist_ok=True)
     render(board, frames / "000-start.svg")
 
+    state_fn = STATES[args.state]
+    describe = args.state in ("prose_1", "json_1")
     black = "jev" if engine is None else "stockfish"
-    print(f"Executing game: jev (white) vs {black} (black)")
+    print(f"Executing game: jev (white) vs {black} (black)  [state={args.state}]")
 
+    history: list[str] = []
     while not board.is_game_over(claim_draw=True) and board.ply() < args.max_plies:
         colour = "w" if board.turn == chess.WHITE else "b"
         number = board.fullmove_number
 
         if engine is None or board.turn == chess.WHITE:
-            move, probabilities, confidence = get_move(client, args.model, board)
+            move, probabilities, confidence = get_move(
+                client, args.model, board, state_fn, history, describe)
             board.push_san(move)
             tracer.record(ply=board.ply(), colour=colour, move=move,
                           probabilities=probabilities, confidence=confidence)
@@ -83,6 +89,7 @@ def play(client, args, engine, limit, run_id: str, tracer: Tracer) -> None:
             tracer.record(ply=board.ply(), colour=colour, move=move)
             note = "(stockfish)"
 
+        history.append(move)
         render(board, frames / f"{board.ply():03d}-{move}.svg")
         print(f"{number:>3}. {colour}  {move}   {note}")
 
