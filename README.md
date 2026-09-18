@@ -37,8 +37,6 @@ Jev per-move confidence, one 30-ply game each vs Stockfish (UCI_Elo 1320):
 | prose_1 | 15 | 0.29 | 0.30 | 0.08 | 0.54 |
 | json_1 | 15 | 0.26 | 0.23 | 0.08 | 0.79 |
 
-This development and testing cost $0.09.
-
 ## Jev's world knowledge
 
 Test Jev's general world knowledge by running through the [MMLU](https://huggingface.co/datasets/cais/mmlu) dataset.
@@ -53,17 +51,12 @@ uv run jev-knows --run-id mmlu-full --concurrency 12
 
 It took 4:35 to run through the full 14k questions at concurrency level 12.
 
-91.6% correct (12,853/14,033). Confidence averaged 0.93 on correct answers, 0.68 on wrong.
-
-Accuracy by [MMLU category](https://github.com/hendrycks/test/blob/master/categories.py):
-
 | category | accuracy | n |
 |---|--:|--:|
 | STEM | 94.7% | 3014 |
 | Social sciences | 93.3% | 3074 |
 | Other (business, health, misc.) | 91.7% | 3241 |
 | Humanities | 88.4% | 4704 |
-
 
 | category | subject | n | accuracy | confidence when correct | confidence when wrong |
 |---|---|--:|--:|--:|--:|
@@ -124,3 +117,43 @@ Accuracy by [MMLU category](https://github.com/hendrycks/test/blob/master/catego
 | Humanities | moral_disputes | 346 | 85% | 0.91 | 0.71 |
 | Humanities | professional_law | 1534 | 85% | 0.85 | 0.64 |
 | Humanities | moral_scenarios | 895 | 84% | 0.86 | 0.60 |
+
+## Prompt routing
+
+Route customer queries to intents using [banking77](https://huggingface.co/datasets/mteb/banking77).
+
+### Run
+
+```
+uv run jev-routes --run-id routing-full --concurrency 12
+```
+
+### Results
+
+It took 0:58 to route all 3076 queries at concurrency level 12.
+
+79.2% correct (2437/3076). Confidence averaged 0.92 on correct answers, 0.70 on wrong.
+
+## Compliance
+
+Classify statements against a legal rule using [LegalBench](https://huggingface.co/datasets/nguha/legalbench). The task's rule is supplied in the instruction (the `hearsay` task shown here).
+
+### Run
+
+```
+uv run jev-complies --task hearsay --run-id hearsay-full --concurrency 12
+```
+
+### Results
+
+It took 0:03 to classify all 94 statements at concurrency level 12.
+
+76.6% correct (72/94). Confidence averaged 0.66 on correct answers, 0.40 on wrong.
+
+| slice | n | accuracy |
+|---|--:|--:|
+| Non-assertive conduct | 19 | 100% |
+| Statement made in-court | 14 | 100% |
+| Not introduced to prove truth | 20 | 85% |
+| Standard hearsay | 29 | 66% |
+| Non-verbal hearsay | 12 | 25% |
