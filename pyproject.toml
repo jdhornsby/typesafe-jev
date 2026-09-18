@@ -9,12 +9,14 @@ authors = [
 requires-python = ">=3.12"
 dependencies = [
     "chess>=1.11.2",
+    "datasets>=5.0.1",
     "python-dotenv>=1.2.3",
     "typesafe-sdk>=0.6.0",
 ]
 
 [project.scripts]
 jev-plays-chess = "jev.chess.play:main"
+jev-knows = "jev.knowledge.probe:main"
 
 [build-system]
 requires = ["uv_build>=0.11.3,<0.12.0"]

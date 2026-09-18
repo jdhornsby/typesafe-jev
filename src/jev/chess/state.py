@@ -1,5 +1,4 @@
-"""Ways to show Jev the position. `prose_1` and `json_1` describe the board
-plainly; the rest are the raw representations from earlier attempts."""
+"""Ways to show Jev the position. prose_1 and json_1 describe it plainly; the rest are raw."""
 
 import chess
 
@@ -42,7 +41,7 @@ def pgn_full(board: chess.Board, history: list[str]) -> str:
             tokens.append(f"{n}. {' '.join(pair)}")
             n += len(pair) // 2
             i += len(pair)
-        if board.turn == chess.WHITE:  # bare trailing number cues White
+        if board.turn == chess.WHITE:
             tokens.append(f"{n}.")
         return " ".join(tokens)
 
@@ -64,7 +63,7 @@ def pgn_windowed(board: chess.Board, history: list[str]) -> str:
             tokens.append(f"{n}. {' '.join(pair)}")
             n += len(pair) // 2
             i += len(pair)
-        if board.turn == chess.WHITE:  # bare trailing number cues White
+        if board.turn == chess.WHITE:
             tokens.append(f"{n}.")
         return " ".join(tokens)
 
