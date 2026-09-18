@@ -1,0 +1,21 @@
+[project]
+name = "jev-plays-chess"
+version = "0.1.0"
+description = "Jev (TypeSafe AI) plays chess against itself"
+readme = "README.md"
+authors = [
+    { name = "Josh Hornsby", email = "jdhornsby@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "chess>=1.11.2",
+    "python-dotenv>=1.2.3",
+    "typesafe-sdk>=0.6.0",
+]
+
+[project.scripts]
+jev-plays-chess = "jev_plays_chess.play:main"
+
+[build-system]
+requires = ["uv_build>=0.11.3,<0.12.0"]
+build-backend = "uv_build"
