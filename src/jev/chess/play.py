@@ -12,9 +12,10 @@ from dotenv import load_dotenv
 from typesafe_sdk import Choice, TypeSafeClient
 
 from .state import STATES, describe_move
-from .trace import Tracer
+from ..trace import Tracer
 
 INSTRUCTIONS = "Choose the best move for the side to move in this chess position."
+TRACE_DIR = Path("traces/chess")
 
 
 def parse_args() -> argparse.Namespace:
@@ -61,7 +62,7 @@ def _value(text: str) -> str | int | bool:
 
 def play(client, args, engine, limit, run_id: str, tracer: Tracer) -> None:
     board = chess.Board()
-    frames = Path("traces") / run_id
+    frames = TRACE_DIR / run_id
     frames.mkdir(parents=True, exist_ok=True)
     render(board, frames / "000-start.svg")
 
@@ -96,7 +97,7 @@ def play(client, args, engine, limit, run_id: str, tracer: Tracer) -> None:
     game = chess.pgn.Game.from_board(board)
     game.headers["White"] = "jev"
     game.headers["Black"] = black
-    pgn_path = Path("traces") / f"{run_id}.pgn"
+    pgn_path = TRACE_DIR / f"{run_id}.pgn"
     pgn_path.write_text(str(game) + "\n")
 
     print(f"result: {board.result(claim_draw=True)} ({board.ply()} plies)")
@@ -108,7 +109,7 @@ def main() -> None:
     load_dotenv()
     args = parse_args()
     run_id = args.run_id or time.strftime("%Y%m%d-%H%M%S")
-    tracer = Tracer(f"traces/{run_id}.jsonl")
+    tracer = Tracer(TRACE_DIR / f"{run_id}.jsonl")
 
     engine = limit = None
     if args.opponent == "stockfish":

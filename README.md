@@ -1,6 +1,4 @@
-# jev plays chess
-
-Jev plays chess against itself.
+# exploration of jdev
 
 ## Setup
 
@@ -9,7 +7,11 @@ uv sync
 cp .env.sample .env   # add TYPESAFE_API_KEY   (needs the stockfish binary: brew install stockfish)
 ```
 
-## Run
+## Jev plays chess
+
+Jev plays chess against stockfish.
+
+### Run
 
 ```
 uv run jev-plays-chess --state san           --opponent stockfish --stockfish-option UCI_LimitStrength=true --stockfish-option UCI_Elo=1320 --max-plies 30 --run-id char-san
