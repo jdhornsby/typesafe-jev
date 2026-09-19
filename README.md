@@ -132,7 +132,9 @@ uv run jev-routes --run-id routing-full --concurrency 12
 
 It took 0:58 to route all 3076 queries at concurrency level 12.
 
-79.2% correct (2437/3076). Confidence averaged 0.92 on correct answers, 0.70 on wrong.
+| correct | confidence when right | confidence when wrong |
+|--:|--:|--:|
+| 79.2% | 0.92 | 0.70 |
 
 ## Compliance
 
