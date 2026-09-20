@@ -174,14 +174,14 @@ uv run jev-judges --condition minimal --run-id judge-full
 
 384 levels, `minimal` condition.
 
-| criterion | original | jev | delta |
-|---|--:|--:|--:|
-| reference_integrity | 3.90 | 4.53 | +0.63 |
-| causal_chain | 3.85 | 4.60 | +0.74 |
-| balance | 4.12 | 4.33 | +0.21 |
-| thematic_coherence | 4.50 | 4.68 | +0.18 |
-| mechanical_sense | 3.91 | 4.40 | +0.49 |
-| completeness | 4.10 | 4.81 | +0.71 |
+| criterion | original | jev | delta | jev range, 10 runs |
+|---|--:|--:|--:|--:|
+| reference_integrity | 3.90 | 4.53 | +0.63 | 4.53–4.54 |
+| causal_chain | 3.85 | 4.60 | +0.74 | 4.59–4.60 |
+| balance | 4.12 | 4.33 | +0.21 | 4.32–4.33 |
+| thematic_coherence | 4.50 | 4.68 | +0.18 | 4.68–4.68 |
+| mechanical_sense | 3.91 | 4.40 | +0.49 | 4.39–4.40 |
+| completeness | 4.10 | 4.81 | +0.71 | 4.80–4.81 |
 
 Reachability agreement: 1139/1152 = 98.9%.
 
