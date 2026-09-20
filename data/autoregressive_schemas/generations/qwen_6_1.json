@@ -1,0 +1,1138 @@
+[
+  {
+    "case": {
+      "genre": "horror",
+      "mood": "eerie",
+      "player_class": "alchemist",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Alchemy is not creation — it is consumption. To become stronger, you must consume the horrors you face. But the final truth: you were never the alchemist. You were the ingredient.",
+      "setting": "A forgotten underground alchemy sanctuary, where the air smells of burnt honey and rotting parchment. Walls are lined with broken retorts, dried vials, and preserved organs in glass jars. The only light comes from phosphorescent fungi and flickering candles that never burn down. Time feels fractured — echoes of past experiments replay as whispers. No doors open. Only paths revealed by death.",
+      "player_weapon": "Retort of Unstable Elements — fires volatile alchemical charges. Can be charged for increased AoE, but risks self-damage",
+      "player_weapon_damage": 20,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Scented Crypt",
+          "enemy": {
+            "name": "Whispering Wretch",
+            "health": 120,
+            "damage": 25,
+            "weakness": "Vial of Fungal Spores — only when shattered in its path does the spore cloud induce paralytic decay"
+          },
+          "hazard": "Floor tiles emit silent screams — stepping on them reduces player stamina regeneration by 50% for 10 seconds",
+          "pickup": {
+            "name": "Vial of Fungal Spores",
+            "effect": "Grants Vial of Fungal Spores — emits a soft purple glow and pulses like a dying lung"
+          },
+          "trigger": "Defeating the Wretch causes the crypt’s wall to crack open, revealing a narrow tunnel filled with glowing mold — leading to the next chamber"
+        },
+        {
+          "location": "The Guttering Grotto",
+          "enemy": {
+            "name": "The Symbiotic Maw",
+            "health": 200,
+            "damage": 35,
+            "weakness": "Vial of Fungal Spores — the spore cloud disrupts its internal symbiosis, causing its flesh to rot and split open for 5 seconds"
+          },
+          "hazard": "Floating organs pulse on chains — if the player remains within 3 meters for more than 4 seconds, they gain ‘Contaminated Blood’ debuff (takes 5 damage per second)",
+          "pickup": {
+            "name": "Embalmed Heart",
+            "effect": "Grants Embalmed Heart — still faintly beats. When held, ambient whispers cease for 15 seconds"
+          },
+          "trigger": "The Maw’s death causes its ribcage to collapse inward, revealing a hidden altar. The Embalmed Heart levitates above it. As the player takes it, distant chimes echo — and the floor below the altar dissolves into a shaft leading to the final chamber"
+        },
+        {
+          "location": "The Hall of Echoed Alchemy",
+          "enemy": {
+            "name": "Echo-Soul Revenant",
+            "health": 300,
+            "damage": 40,
+            "weakness": "Embalmed Heart — when held during its ‘Echo Phase’ (when it mimics player movements), the heart’s pulse disrupts its temporal resonance, freezing it in place for 8 seconds"
+          },
+          "hazard": "Mirrors line the walls — if player looks into one for more than 3 seconds, their reflection steps out and attacks (50% of player’s current HP)",
+          "pickup": {
+            "name": "None",
+            "effect": "None — the player must have already acquired the Embalmed Heart to survive this encounter"
+          },
+          "trigger": "Defeating the Revenant causes the central alchemical apparatus to activate — its glass core shatters, revealing the Hollow Alchemist’s true form: a skeletal figure suspended in a cage of rusted pipes, its chest cavity hollow and waiting"
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Alchemist",
+        "health": 1500,
+        "damage": 100,
+        "weakness": "The Embalmed Heart — only when placed into its hollow ribcage does it destabilize its essence",
+        "victory_condition": "Use the Embalmed Heart on the boss’s chest cavity"
+      },
+      "objective": "Survive the alchemical descent. Use each harvested essence to unravel the next horror. Only by offering the Embalmed Heart to the Hollow Alchemist can the cycle be broken.",
+      "reward": "The Alchemist’s Final Manuscript — unlocks the ‘Soul-Weaver’ class upgrade"
+    }
+  },
+  {
+    "case": {
+      "genre": "horror",
+      "mood": "ominous",
+      "player_class": "pyromancer",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Fire does not purify. Fire remembers. And the worst thing you can do… is forget what you burned.",
+      "setting": "A decaying gothic cathedral fused with an ancient funeral pyre. Candles burn green. Shadows move when not observed. The air smells of burnt honey and old blood. Time feels broken — clocks tick backward. The player's own breath is visible as smoke, even when not casting.",
+      "player_weapon": "Pyroclasm Gauntlet — basic attack: short-range fire burst (costs 5 mana). Ultimate: Ignition Surge — 3-second firestorm around player (costs 30 mana, cooldown 25s).",
+      "player_weapon_damage": 7,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Candlelit Crypt",
+          "enemy": {
+            "name": "The Whispering Shroud",
+            "health": 80,
+            "damage": 6,
+            "weakness": "Burned Cloth"
+          },
+          "hazard": "Flickering candles that drain 1 HP/sec if extinguished — they must be kept lit to prevent the enemy from regenerating.",
+          "pickup": {
+            "name": "Burned Cloth",
+            "effect": "Burned Cloth — grants 30% bonus flame duration on Pyromancer's basic attacks."
+          },
+          "trigger": "After defeating the Whispering Shroud, the candles ignite into a single pillar of black flame — revealing a hidden corridor lined with scorched doll fragments. The smell of charred hair grows stronger as the walls bleed ash."
+        },
+        {
+          "location": "The Chapel of Weeping Wax",
+          "enemy": {
+            "name": "The Bride of Smoldering Tears",
+            "health": 120,
+            "damage": 8,
+            "weakness": "Emberheart (from the Ashen Core)"
+          },
+          "hazard": "Frozen puddles of molten wax that erupt into firestorms if stepped on — but walking through them while holding Burned Cloth reduces damage by 75% and leaves a trail of persistent flame.",
+          "pickup": {
+            "name": "Emberheart",
+            "effect": "Emberheart — a pulsing, living ember fused to your gauntlet. When held, your fire attacks ignite an area-of-effect ember storm on critical hits. Lasts until boss fight."
+          },
+          "trigger": "When the Bride is slain, her wedding veil dissolves into smoke, revealing a massive iron door etched with the shape of a screaming heart. The Emberheart in your gauntlet begins to pulse in sync with the door's rhythm. A voice whispers: 'You carry what was stolen. Now return it.'"
+        },
+        {
+          "location": "The Inner Sanctum",
+          "enemy": {
+            "name": "The Hollow Pyre",
+            "health": 200,
+            "damage": 10,
+            "weakness": "Emberheart"
+          },
+          "hazard": "The entire arena is a massive pyre. Fire spreads every 8 seconds unless extinguished by standing on the three ritual stones. Each stone drains 2 HP/sec while stood upon — but standing on them while holding Emberheart grants 1 HP/sec regen.",
+          "pickup": {
+            "name": "Emberheart",
+            "effect": "None — the Emberheart is your only weapon now."
+          },
+          "trigger": "Defeating the Hollow Pyre causes the Emberheart to detonate inside it, collapsing the sanctum. The player is ejected into a burning forest as dawn breaks — but the Emberheart still burns in their palm. Somewhere, another heart is calling."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Pyre",
+        "health": 500,
+        "damage": 12,
+        "weakness": "The Ashen Core is vulnerable only to the Emberheart's sustained flame — any other fire dissipates harmlessly.",
+        "victory_condition": "Burn the Ashen Core with the Emberheart"
+      },
+      "objective": "Survive the three encounters and destroy the Hollow Pyre by using the Emberheart — a relic you collected from the Bride of Smoldering Tears. Your fire must be sustained, precise, and desperate. Every flame is a prayer. Every second, the darkness whispers your name.",
+      "reward": "The Emberheart remains. The Pyromancer is no longer just a wielder of fire. They are its heir. The next pyre is already lit."
+    }
+  },
+  {
+    "case": {
+      "genre": "horror",
+      "mood": "tense",
+      "player_class": "shadowblade",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "You are not hunting the darkness — you are its echo.",
+      "setting": "An abandoned cathedral beneath a forgotten asylum. The air is thick with the scent of wet iron and burning incense. Walls pulse faintly, like a heartbeat.",
+      "player_weapon": "Shadow Slice (standard attack: 10 damage, stealth bonus: +50% damage from behind)",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Whispering Corridor",
+          "enemy": {
+            "name": "Shade Stalker",
+            "health": 40,
+            "damage": 8,
+            "weakness": "Shadowblade’s primary weapon — Shadow Slice (damage amplified by 50% when striking from behind)"
+          },
+          "hazard": "Flickering wall lanterns that briefly extinguish, creating 3-second windows of total darkness",
+          "pickup": {
+            "name": "Glimmering Lens",
+            "effect": "Reveals enemy weak spots as glowing red outlines for 10 seconds when activated"
+          },
+          "trigger": "Defeating the Shade Stalker causes the corridor’s lanterns to stabilize permanently — revealing a hidden door behind the altar, which opens only when the Glimmering Lens is equipped"
+        },
+        {
+          "location": "Hall of Echoes",
+          "enemy": {
+            "name": "Echo Wraith",
+            "health": 60,
+            "damage": 10,
+            "weakness": "Glimmering Lens — the Wraith is only vulnerable when its afterimage is revealed by the Lens. Normal attacks pass through it."
+          },
+          "hazard": "Repeating auditory echoes (footsteps, whispers) that mislead the player’s directional audio cues. The real enemy is always in the opposite direction of the loudest echo",
+          "pickup": {
+            "name": "Whispering Dagger",
+            "effect": "A small, humming dagger that emits a soft chime when near living souls. When drawn, it drains 1 HP per second but deals 150% damage and ignores armor. Can be sheathed to pause drain."
+          },
+          "trigger": "Defeating the Echo Wraith causes the walls to bleed black ichor. The ichor forms a path leading to the final chamber — and the Whispering Dagger is the only weapon capable of cutting through the ichor barrier blocking the boss door"
+        },
+        {
+          "location": "Chamber of the Fallen",
+          "enemy": {
+            "name": "Veil Sentinel",
+            "health": 80,
+            "damage": 12,
+            "weakness": "Whispering Dagger — the Sentinel’s armor is woven from stolen shadows. Only the Whispering Dagger’s soul-draining chime can disrupt its shadow-forged shell, making it briefly phase out of reality and vulnerable to a single critical strike"
+          },
+          "hazard": "Periodic gravity shifts — every 15 seconds, the ceiling and floor swap. Player must reorient movement mid-fight. Light sources invert — shadows now pool upward.",
+          "pickup": {
+            "name": "None",
+            "effect": "None — player must use the Whispering Dagger from prior encounter"
+          },
+          "trigger": "Defeating the Veil Sentinel causes the ceiling to crack open, revealing the Hollow Warden suspended in chains above the altar. The Whispering Dagger’s chime resonates with the Warden’s chains — initiating the boss fight"
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Warden",
+        "health": 150,
+        "damage": 18,
+        "weakness": "The Whispering Dagger (acquired in Encounter 2)",
+        "victory_condition": "Deal 150 damage using the Whispering Dagger"
+      },
+      "objective": "Use each encounter’s reward to unlock the next. The Whispering Dagger is not just a weapon — it is the key, the key that sings the dead to sleep.",
+      "reward": "The Hollow Warden’s crown — grants the player the ability to phase through solid shadows for 5 seconds, once per level"
+    }
+  },
+  {
+    "case": {
+      "genre": "horror",
+      "mood": "desolate",
+      "player_class": "ranger",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "The land doesn't want you to live. It wants you to become part of its silence.",
+      "setting": "An abandoned frontier outpost swallowed by a blighted tundra, where the wind never stops screaming and the earth remembers every soul it claimed. Fog, iron, and silence define the journey — each encounter a tombstone leading to the final, hollow king.",
+      "player_weapon": "Ranger’s Longbow (3 arrows max, reload time: 4s)",
+      "player_weapon_damage": 10,
+      "player_health": 75,
+      "encounters": [
+        {
+          "location": "Foggrave Marsh",
+          "enemy": {
+            "name": "Mire Wraith",
+            "health": 30,
+            "damage": 8,
+            "weakness": "Frostbite Arrow (pickup from Encounter 1)"
+          },
+          "hazard": "Thick, clinging mist that reduces visibility and drains stamina over time",
+          "pickup": {
+            "name": "Frostbite Arrow Core",
+            "effect": "Frostbite Arrow: Fire an arrow that freezes enemies in place for 3 seconds"
+          },
+          "trigger": "After defeating the Mire Wraith, the mist clears partially, revealing a cracked ice bridge leading to the Iron Hollow."
+        },
+        {
+          "location": "The Iron Hollow",
+          "enemy": {
+            "name": "Iron Hollow Stalker",
+            "health": 45,
+            "damage": 12,
+            "weakness": "Frostbite Arrow (acquired from Encounter 1)"
+          },
+          "hazard": "Falling iron spikes triggered by movement; narrow walkways over a chasm",
+          "pickup": {
+            "name": "Echoing Sigil",
+            "effect": "Echoing Sigil: When fired, emits a pulse that reveals invisible enemies and echoes their position through walls for 5 seconds"
+          },
+          "trigger": "After slaying the Stalker, the Echoing Sigil activates a hidden mechanism, causing the floor beneath to collapse into the Whispering Vault — revealing the final encounter's entrance."
+        },
+        {
+          "location": "Whispering Vault",
+          "enemy": {
+            "name": "Whispering Husk",
+            "health": 60,
+            "damage": 15,
+            "weakness": "Echoing Sigil (acquired from Encounter 2)"
+          },
+          "hazard": "Soul-siphoning whispers that drain health over time unless the player is stationary or uses the Echoing Sigil to silence them",
+          "pickup": {
+            "name": "Obsidian Core",
+            "effect": "Obsidian Core: A shard of solidified dread, pulsing with trapped souls. Can be inserted into the boss’s chest to destabilize its core."
+          },
+          "trigger": "Upon defeating the Husk, the Obsidian Core detaches from the ceiling and embeds itself in the ranger’s quiver. A stone door groans open, revealing the Hollow Warden’s chamber."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Warden",
+        "health": 150,
+        "damage": 25,
+        "weakness": "The Obsidian Core (acquired from Encounter 3)",
+        "victory_condition": "Destroy the Obsidian Core"
+      },
+      "objective": "Survive the desolate wasteland and destroy the Hollow Warden using the Obsidian Core.",
+      "reward": "The Warden’s Crown — grants permanent stamina regeneration and silence against whispers."
+    }
+  },
+  {
+    "case": {
+      "genre": "horror",
+      "mood": "mysterious",
+      "player_class": "necromancer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Mystery is not solved by force — but by listening. The dead do not scream. They remember. And they leave clues for those who know how to hear.",
+      "setting": "An ancient burial complex buried beneath a cursed forest. The air hums with half-remembered chants. Walls are carved with faces weeping obsidian tears. No sunlight has touched this place in centuries. The player moves through a labyrinth of silent tombs, guided only by spectral whispers and fading echoes.",
+      "player_weapon": "Necrotic Grasp — a spectral hand that drains life on melee hit (cooldown: 2s)",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Entrance Crypt",
+          "enemy": {
+            "name": "Shambler of the Forgotten Tomb",
+            "health": 30,
+            "damage": 8,
+            "weakness": "Necrotic Grasp (player's default weapon)"
+          },
+          "hazard": "Rotting vines that drain 1 HP/sec if stood in for more than 3 seconds",
+          "pickup": {
+            "name": "Whispering Dust",
+            "effect": "Grants 'Echo of the Dead' — reveals faint spectral footprints leading to the next chamber"
+          },
+          "trigger": "After defeating the Shambler, the Whispering Dust scatters across the floor, forming a faint trail that glows blue and leads through a crumbling archway into the next chamber."
+        },
+        {
+          "location": "Chamber of Echoes",
+          "enemy": {
+            "name": "The Chanting Specter",
+            "health": 40,
+            "damage": 10,
+            "weakness": "Echo of the Dead (pickup from Encounter 1)"
+          },
+          "hazard": "Floating, whispering skulls that emit disorienting sounds — if player listens too long, movement speed is reduced by 50% for 5 seconds",
+          "pickup": {
+            "name": "Hollow Bone Flute",
+            "effect": "Grants the Hollow Bone Flute — when played, it silences all nearby spectral sounds and reveals hidden paths"
+          },
+          "trigger": "When the Specter is defeated, its final breath coalesces into a hollow bone that falls from its ribcage. As the player picks it up, the chamber’s whispers cease — and a hidden door beneath the altar slides open, revealing the final chamber’s dim, flickering torchlight."
+        },
+        {
+          "location": "Sanctum of the Final Breath",
+          "enemy": {
+            "name": "The Mourning Warden",
+            "health": 50,
+            "damage": 12,
+            "weakness": "Hollow Bone Flute (pickup from Encounter 2)"
+          },
+          "hazard": "Floating candles that extinguish if the player moves too quickly — each extinguished candle reduces light radius by 10% and increases enemy detection range",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is the final encounter before the boss"
+          },
+          "trigger": "Defeating the Warden causes the last candle to flare bright, illuminating a stone throne where the Weeping Lich slowly rises from its sarcophagus. The flute’s echo lingers in the air — and the Lich’s eyes lock onto it."
+        }
+      ],
+      "boss": {
+        "name": "The Weeping Lich",
+        "health": 100,
+        "damage": 15,
+        "weakness": "The Hollow Bone Flute (acquired in Encounter 2)",
+        "victory_condition": "Use the Hollow Bone Flute to silence its final chant"
+      },
+      "objective": "Use your necromantic gifts to unravel the secrets of the tomb — each enemy defeated reveals the next step. Only by understanding the echoes of the past can you silence the Lich’s eternal sorrow.",
+      "reward": "The Lich’s Crown — allows you to command one minor undead per level, and unlocks the 'Soul Whispers' lore journal"
+    }
+  },
+  {
+    "case": {
+      "genre": "horror",
+      "mood": "chaotic",
+      "player_class": "berserker",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Chaos isn't the absence of order — it's the scream of a thousand throats, finally given voice.",
+      "setting": "A decaying industrial cathedral built atop an ancient slaughterhouse — every wall bleeds, every floor groans, and every shadow has teeth.",
+      "player_weapon": "Bone Cleaver (melee only — 50 damage, slow swing, high bleed)",
+      "player_weapon_damage": 50,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Abandoned meatpacking plant — blood-slick floors, hanging carcasses, broken conveyors.",
+          "enemy": {
+            "name": "Gutterkin Stalker",
+            "health": 180,
+            "damage": 45,
+            "weakness": "Player’s primary weapon: The Bone Cleaver (melee only). Stalkers are armored in cured hide that deflects bullets — but the cleaver’s serrated edge can split their spinal tendons if struck during their lunge animation (1.2s window)."
+          },
+          "hazard": "Flickering fluorescent tubes emit high-pitched whines that disrupt the player’s hearing — forcing them to rely on visual cues to predict attacks. When the lights cut, the Stalker teleports 3m closer.",
+          "pickup": {
+            "name": "Rusted Choker",
+            "effect": "The Rusted Choker — a corroded metal collar stolen from the Stalker’s corpse. When equipped, the player’s next 3 melee strikes gain +50% bleed damage and emit a low-frequency pulse that attracts nearby horrors."
+          },
+          "trigger": "When the Stalker dies, the Rusted Choker activates. Its pulse causes the ceiling vents to rupture, releasing a swarm of airborne spores — and the next room’s lights flicker violently as the air fills with a wet, gurgling breath."
+        },
+        {
+          "location": "Ventilation duct labyrinth — rusted metal tunnels, hanging lung sacs dripping viscous fluid, ceiling vents weeping steam.",
+          "enemy": {
+            "name": "The Lung-Weaver",
+            "health": 250,
+            "damage": 60,
+            "weakness": "Rusted Choker’s pulse — The Lung-Weaver’s body is composed of fused lungs and sinew that inflate/deflate rhythmically. The Choker’s pulse disrupts its breathing cycle. When it inhales deeply, the player can dash into its thorax and slam the Choker into its central trachea — causing a catastrophic implosion that ruptures all 12 lung sacs."
+          },
+          "hazard": "Air is thick with spores. Every 8 seconds, the player must hold breath (timer) or suffer -15% movement speed and -30% vision clarity for 6s. Spore clouds also obscure enemy position. The Choker’s pulse makes spores glow faintly red, revealing the Lung-Weaver’s inhalation phase.",
+          "pickup": {
+            "name": "Hollow Tongue",
+            "effect": "The Hollow Tongue — a fleshy, pulsating organ harvested from the Lung-Weaver’s throat. When equipped, the player’s melee attacks emit a deafening shriek that stuns nearby enemies for 1.5s on critical hit. Also reveals hidden paths in the environment."
+          },
+          "trigger": "Upon death, the Lung-Weaver’s final scream shatters the duct walls, revealing a hidden chamber. The Hollow Tongue vibrates violently, pointing down a corridor lined with human teeth embedded in the walls — leading to the final room where a massive, pulsing ribcage slowly rises from the floor."
+        },
+        {
+          "location": "Cathedral of Screams — broken pews, stained glass depicting screaming angels, ceiling dripping black ichor.",
+          "enemy": {
+            "name": "The Hollow Choir",
+            "health": 320,
+            "damage": 75,
+            "weakness": "Hollow Tongue’s shriek — The Choir is a mass of fused mouths screaming in harmonic dissonance. The Tongue’s shriek resonates with its vocal cords, creating feedback that causes one of its mouths to split open. If the player strikes the exposed throat with the Bone Cleaver during the split (3s window), the Choir’s scream becomes a scream of agony — weakening its defense by 40% for 10s."
+          },
+          "hazard": "Every 10 seconds, the Choir sings a note that shatters glass and bone. Player takes 10 damage if not facing away from it (back to wall). Floor tiles crack underfoot — falling into lower levels filled with grasping hands. The Hollow Tongue makes the Choir’s mouth positions visible as glowing red orifices.",
+          "pickup": {
+            "name": "Hollow Tongue (active)",
+            "effect": "None — this is the final encounter. The Hollow Tongue remains equipped. Its shriek is now the only tool to create openings for the boss’s weakness."
+          },
+          "trigger": "When the Choir dies, its final scream collapses the cathedral’s altar — revealing a massive, fleshy chest cavity embedded in the floor: The Howling Maw. The Rusted Choker in the player’s inventory vibrates violently, pulling toward the core."
+        }
+      ],
+      "boss": {
+        "name": "The Howling Maw",
+        "health": 1000,
+        "damage": 120,
+        "weakness": "The Rusted Choker — when slammed into its chest cavity during its open-mouthed roar, it detonates its internal bio-organic reactor, triggering a chain reaction of ruptured veins and screaming flesh.",
+        "victory_condition": "Shatter its core with the Rusted Choker"
+      },
+      "objective": "Survive. Slaughter. Shatter the Maw with the Rusted Choker during its open-mouthed roar — the only moment it is vulnerable. Failure means the player becomes the next vocal chord in the Choir.",
+      "reward": "The Maw’s Core — when consumed, grants permanent +20% bleed damage and the ability to scream in terror — causing all nearby enemies to freeze for 3 seconds (once per minute)."
+    }
+  },
+  {
+    "case": {
+      "genre": "horror",
+      "mood": "serene",
+      "player_class": "warden",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "The horror of forgetting who you were — and the peace found in finally remembering.",
+      "setting": "A decaying, opulent asylum once used to contain wardens who went mad from silence. Now, it’s a place where sound is forbidden — and those who break the silence become part of the haunting. The air is still. Dust hangs motionless. Faint lullabies play from nowhere. The player moves like a ghost among ghosts.",
+      "player_weapon": "Warden’s Lanthorn",
+      "player_weapon_damage": 30,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "The Gilded Hallway",
+          "enemy": {
+            "name": "The Hollowed Warden",
+            "health": 80,
+            "damage": 25,
+            "weakness": "Warden’s Lanthorn (player's starting weapon)"
+          },
+          "hazard": "Flickering candlelight that dims when player stands still too long — attracts the enemy.",
+          "pickup": {
+            "name": "Lanthorn’s Resonance Crystal",
+            "effect": "Grants the Warden’s Lanthorn the ability to burn through spectral dampeners — now reveals hidden paths and emits a low chime when enemies are near."
+          },
+          "trigger": "After defeating the Hollowed Warden, the hallway’s candles reignite permanently, illuminating a hidden door behind the mural — leading to Encounter 2."
+        },
+        {
+          "location": "The Choir Vault",
+          "enemy": {
+            "name": "The Silent Choir",
+            "health": 100,
+            "damage": 30,
+            "weakness": "Lanthorn’s Resonance Crystal (pickup from Encounter 1)"
+          },
+          "hazard": "Whispering voices that increase in volume as player moves — forcing quiet movement. Loud movement summons more choir members.",
+          "pickup": {
+            "name": "Hollowed Bell",
+            "effect": "A small, cracked bell that, when held, emits a single pure tone that quiets all ambient sound within 10 meters. It resonates with the Warden’s Lanthorn."
+          },
+          "trigger": "After using the Resonance Crystal to silence the Choir’s final note, the bell falls from the ceiling. The vault’s walls dissolve into mist, revealing the final chamber — the Warden’s Sanctum."
+        },
+        {
+          "location": "The Echo Chamber",
+          "enemy": {
+            "name": "The Echo Warden",
+            "health": 150,
+            "damage": 40,
+            "weakness": "Hollowed Bell (pickup from Encounter 2)"
+          },
+          "hazard": "Time echoes — the player sees ghostly versions of themselves moving ahead. Touching them causes memory damage (reduces max health by 10% per echo).",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is the final encounter before the boss."
+          },
+          "trigger": "Defeating the Echo Warden causes the chamber’s mirrors to shatter. In the center, a throne emerges — and the Weeping Warden rises, weeping silver tears."
+        }
+      ],
+      "boss": {
+        "name": "The Weeping Warden",
+        "health": 400,
+        "damage": 120,
+        "weakness": "The Hollowed Bell (acquired in Encounter 2)",
+        "victory_condition": "Use the Hollowed Bell to silence its lament"
+      },
+      "objective": "Restore the Warden’s silence by confronting the corruption of your past selves.",
+      "reward": "The Warden’s Peace — permanently silences all enemy noises in future levels and reduces fear drain by 50%."
+    }
+  },
+  {
+    "case": {
+      "genre": "horror",
+      "mood": "whimsical",
+      "player_class": "illusionist",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "The horror isn’t in blood or screams — it’s in the uncanny innocence. The enemy isn’t trying to kill you. It’s just trying to make you play its game forever. And you’re starting to forget how to stop.",
+      "setting": "A forgotten children’s toy factory that was never meant to be haunted — just... misremembered. Everything is made of felt, plush, candy, and cracked porcelain. The lighting is dim but saturated in cotton-candy pinks, mint greens, and buttercup yellows. Soft music box melodies play constantly — until they glitch into distorted nursery rhymes.",
+      "player_weapon": "Illusionist Wand — creates short-range ghostly duplicates that distract enemies",
+      "player_weapon_damage": 1,
+      "player_health": 12,
+      "encounters": [
+        {
+          "location": "Laundry Room",
+          "enemy": {
+            "name": "Sock Puppet Shadow",
+            "health": 6,
+            "damage": 2,
+            "weakness": "Player’s Illusionist Wand (basic attack)"
+          },
+          "hazard": "Floating socks that trip the player if stepped on",
+          "pickup": {
+            "name": "Shattered Compact Mirror",
+            "effect": "Unlocks 'Mirror Gaze' ability — lets player reflect illusions"
+          },
+          "trigger": "After defeating the Sock Puppet Shadow, the mirror shatters and reforms into a hallway lined with giggling hand mirrors. Each mirror shows a different distorted version of the player — one of them is blinking slower than the rest. Following that mirror leads to the next room."
+        },
+        {
+          "location": "Nursery Hallway",
+          "enemy": {
+            "name": "Whispering Wind-Up Doll",
+            "health": 8,
+            "damage": 3,
+            "weakness": "Reflected illusion (Mirror Gaze ability)"
+          },
+          "hazard": "Ticking metronomes that play lullabies. If the player stands still too long, the doll appears behind them.",
+          "pickup": {
+            "name": "Rainbow Lollipop",
+            "effect": "Grants 'Sugar Bloom' — creates a temporary rainbow-colored sugar trail that lures enemies"
+          },
+          "trigger": "After using Mirror Gaze to reflect the doll’s whispering voice back at it, the doll shatters into candy. The Rainbow Lollipop rolls out from under its porcelain chest. As the player picks it up, the hallway walls melt into cotton candy, and the ceiling drips with sticky neon syrup — revealing the glowing, candy-caned door to the boss room."
+        },
+        {
+          "location": "Candy-Coated Catacombs",
+          "enemy": {
+            "name": "Candyfloss Banshee",
+            "health": 10,
+            "damage": 4,
+            "weakness": "Rainbow Lollipop’s trail (must lure it into the trail, then reflect with Mirror Gaze)"
+          },
+          "hazard": "Glowing gumdrops that explode into sticky mist if touched — slows movement",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is the final enemy before the boss"
+          },
+          "trigger": "Defeating the Candyfloss Banshee causes the sugar mist to solidify into a giant gumball machine with a grinning face. Its glass dome flickers with the last reflected image of the player — the exact moment the Rainbow Lollipop was picked up. The machine begins to hum a lullaby... and the door to the boss chamber opens."
+        }
+      ],
+      "boss": {
+        "name": "The Grinning Gumball Machine",
+        "health": 15,
+        "damage": 5,
+        "weakness": "Only vulnerable when struck with the Rainbow Lollipop’s reflected light",
+        "victory_condition": "Use the Rainbow Lollipop to reveal its true form"
+      },
+      "objective": "Survive the whimsical horrors and shatter the Grinning Gumball Machine with the Rainbow Lollipop’s light.",
+      "reward": "The Wand glows with soft pastel hues. You gain the 'Laughter of the Lost' title — and a single, floating sock that follows you forever. It sings you lullabies when you’re alone."
+    }
+  },
+  {
+    "case": {
+      "genre": "steampunk",
+      "mood": "chaotic",
+      "player_class": "engineer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Chaos as Engineering — failure is the only constant, and the player must turn each breakdown into an advantage.",
+      "setting": "A collapsing, airborne steampunk factory-city, half-sunken in a storm of brass and smoke. Gears grind erratically, steam vents burst unpredictably, and lightning crackles from exposed coils. The entire level pulses with chaotic energy — machinery lives, dies, and reboots without warning.",
+      "player_weapon": "Multi-Tool Wrench (default: melee, secondary: short-range steam burst)",
+      "player_weapon_damage": 6,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Boiler Room",
+          "enemy": {
+            "name": "Cogspitter Mechanoid",
+            "health": 40,
+            "damage": 8,
+            "weakness": "Steam Vent Upgrade (player weapon upgrade)"
+          },
+          "hazard": "Failing Steam Pipes",
+          "pickup": {
+            "name": "Steam Vent Mod",
+            "effect": "Steam Vent Upgrade — player weapon gains a burst of superheated steam that ignites exposed mechanical parts."
+          },
+          "trigger": "After defeating the Cogspitter, the main steam line ruptures, flooding the next corridor with high-pressure steam — revealing a hidden panel in the wall that leads to the Workshop."
+        },
+        {
+          "location": "The Workshop",
+          "enemy": {
+            "name": "Volt-Borer Drone",
+            "health": 60,
+            "damage": 10,
+            "weakness": "Pulsing Core Capacitor (acquired from the Workshop)"
+          },
+          "hazard": "Overloaded Wiring Grid",
+          "pickup": {
+            "name": "Pulsing Core Capacitor",
+            "effect": "Pulsing Core Capacitor — a volatile energy cell harvested from a damaged Tesla coil. Can be thrown to overload machinery or used to empower the Engineer’s gear."
+          },
+          "trigger": "After defeating the Volt-Borer, the Capacitor’s resonance destabilizes the workshop’s main generator, triggering a cascade failure that blows open the ceiling — revealing the access shaft to the Goliath’s core chamber."
+        },
+        {
+          "location": "The Assembly Spire",
+          "enemy": {
+            "name": "Geargrinder Sentinel",
+            "health": 80,
+            "damage": 12,
+            "weakness": "Pulsing Core Capacitor (acquired in Encounter 2)"
+          },
+          "hazard": "Collapsing Catwalks",
+          "pickup": {
+            "name": "N/A",
+            "effect": "None — this is the final encounter before the boss."
+          },
+          "trigger": "Defeating the Geargrinder causes its last gear to fly into the ceiling, jamming the Goliath’s primary stabilizer. The boss chamber doors grind open — and the Iron Goliath awakens."
+        }
+      ],
+      "boss": {
+        "name": "The Iron Goliath",
+        "health": 150,
+        "damage": 20,
+        "weakness": "Pulsing Core Capacitor (acquired in Encounter 2)",
+        "victory_condition": "Overload the Core"
+      },
+      "objective": "Reach and overload the Iron Goliath’s core using the Pulsing Core Capacitor.",
+      "reward": "Blueprints for the Steamforge Gauntlet — unlocks future weapon upgrades"
+    }
+  },
+  {
+    "case": {
+      "genre": "steampunk",
+      "mood": "mysterious",
+      "player_class": "artificer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Harmony is the key. Silence is the trap. The machine remembers what the world forgot.",
+      "setting": "An abandoned sky-cathedral built by a lost order of Artificers who believed sound could control time. The entire level is a vast, broken clockwork engine — suspended in the clouds, lit by flickering gas lamps and glowing brass runes. Fog drifts between floating platforms. Every step echoes. Every whisper is recorded.",
+      "player_weapon": "Focus Cannon — fires slow, high-damage energy pulses that can be charged for resonance bursts. Can be modded with harmonic attachments.",
+      "player_weapon_damage": 35,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "The Whispering Gallery — a cathedral-like chamber of suspended brass pipes and ticking pendulums.",
+          "enemy": {
+            "name": "Rustweaver Gargoyle",
+            "health": 100,
+            "damage": 45,
+            "weakness": "Vulnerable to Arcane Resonance — its iron plating is brittle when exposed to sustained harmonic frequencies."
+          },
+          "hazard": "Corrupted steam vents periodically blast scalding vapor — players must stand in the shadowed alcoves to avoid damage.",
+          "pickup": {
+            "name": "Resonant Tuning Fork (Tier 1)",
+            "effect": "Grants Arcane Resonance — a passive aura that emits a low harmonic tone when player fires their Artificer’s Focus Cannon."
+          },
+          "trigger": "Defeating the Gargoyle causes a hidden panel in the floor to slide open, revealing a spiral staircase descending into a submerged gear chamber — and the next encounter."
+        },
+        {
+          "location": "The Pressure Vault — a cavernous chamber lined with pistons, pressure gauges, and whistling conduits.",
+          "enemy": {
+            "name": "Steam-Siphon Sentinel",
+            "health": 140,
+            "damage": 55,
+            "weakness": "Its pressure core is destabilized by harmonic interference — the Resonant Tuning Fork’s tone causes internal steam valves to rupture."
+          },
+          "hazard": "The chamber is flooded with pressurized steam that auto-activates every 15 seconds. Standing in the wrong zone triggers a scalding geyser.",
+          "pickup": {
+            "name": "Resonant Tuning Fork (Tier 2)",
+            "effect": "Grants the Resonant Tuning Fork (Tier 2) — doubles the harmonic radius and enables the fork to temporarily freeze one enemy in place for 3 seconds."
+          },
+          "trigger": "When the Sentinel is defeated, its core implodes, cracking the wall behind it. A fractured brass key, glowing with residual resonance, is ejected — it vibrates toward the final chamber: The Core Sanctum."
+        },
+        {
+          "location": "The Echoing Throne — a floating platform suspended by chains above a pit of whirring gears, surrounded by floating, singing crystal orbs.",
+          "enemy": {
+            "name": "The Iron Siren",
+            "health": 200,
+            "damage": 70,
+            "weakness": "Her song is amplified by the Resonant Tuning Fork (Tier 2). If the fork is held near her throat during her song-cycle, it inverts her melody into a feedback scream — stunning her for 8 seconds."
+          },
+          "hazard": "The air shimmers with sonic distortion. Prolonged exposure causes the player’s vision to blur and their Focus Cannon to misfire. Must time attacks during her breath pauses.",
+          "pickup": {
+            "name": "Resonant Tuning Fork (Tier 3)",
+            "effect": "None — but upon death, the Siren’s throat releases the Resonant Tuning Fork (Tier 3), a fully charged, unstable variant that glows crimson and pulses with chaotic harmonics."
+          },
+          "trigger": "After defeating the Iron Siren, the fork she releases flies upward, embedding itself into a keyhole atop the central spire. The spire hums, and the ceiling opens to reveal the Clockwork Leviathan, awakening with a grinding roar."
+        }
+      ],
+      "boss": {
+        "name": "The Clockwork Leviathan",
+        "health": 400,
+        "damage": 120,
+        "weakness": "Vulnerable to harmonic resonance from the Resonant Tuning Fork — must be inserted into the core while the Leviathan’s gears are synchronized by its own rhythm.",
+        "victory_condition": "Overload the Core with the Resonant Tuning Fork"
+      },
+      "objective": "The Artificer must ascend the forgotten airship cathedral to silence the Leviathan’s heart — but the machine’s soul is bound to three echoes of its own past. Each echo must be harmonized with the Tuning Fork, or the Leviathan will shatter the city below.",
+      "reward": "The Leviathan’s Heart — a pulsing core that, when fused with the Artificer’s core, grants the ability to temporarily reverse time (5 seconds) once per level — but only if the player used the Resonant Tuning Fork at full power in all three encounters."
+    }
+  },
+  {
+    "case": {
+      "genre": "steampunk",
+      "mood": "whimsical",
+      "player_class": "alchemist",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whimsy as a weapon — the most dangerous thing in this world is kindness, and the most powerful magic is curiosity.",
+      "setting": "A cheerful, steampunk city where clocks grow on trees, pipes sing lullabies, and mechanical animals wear tiny top hats. Everything is polished brass, copper, and glowing glass — even the shadows are tinted lavender. The air smells faintly of caramelized cinnamon and hot oil.",
+      "player_weapon": "Potion Flask (basic alchemy tool — throws a single vial per use, regenerates 1 every 15s)",
+      "player_weapon_damage": 3,
+      "player_health": 20,
+      "encounters": [
+        {
+          "location": "The Brass Bazaar Alley",
+          "enemy": {
+            "name": "Steam-Weasel Bandit",
+            "health": 8,
+            "damage": 3,
+            "weakness": "Glowing Vial (pickup from this encounter)"
+          },
+          "hazard": "Puffing steam vents that slow movement if stepped on",
+          "pickup": {
+            "name": "Glowing Vial",
+            "effect": "Grants the player the 'Glowing Vial' — a flask of iridescent liquid that explodes in a soft burst of rainbow mist upon throwing."
+          },
+          "trigger": "After defeating the Steam-Weasel, the vial shatters on the ground, releasing a cloud that reveals a hidden pipe leading upward — the next path is now visible, and the pipe emits a rhythmic ticking sound."
+        },
+        {
+          "location": "The Skyward Gears Garden",
+          "enemy": {
+            "name": "Cog-Bird Swarm",
+            "health": 10,
+            "damage": 4,
+            "weakness": "Glowing Vial (acquired in Encounter 1)"
+          },
+          "hazard": "Floating gears that rotate unpredictably — but slow down when rainbow mist touches them",
+          "pickup": {
+            "name": "Gilded Acorn",
+            "effect": "Grants the player the 'Gilded Acorn' — a tiny, golden acorn that glows with inner warmth and hums like a lullaby."
+          },
+          "trigger": "When the Cog-Bird Swarm is defeated with the Glowing Vial, its shattered gears reform into a tiny brass squirrel statue holding an acorn. The acorn floats gently into the player’s hand. The statue’s eyes glow, and a clocktower chime echoes — the final path opens with a warm, inviting steam glow."
+        },
+        {
+          "location": "The Grand Chrono-Chamber",
+          "enemy": {
+            "name": "The Gearsnout Guardian",
+            "health": 12,
+            "damage": 5,
+            "weakness": "Gilded Acorn (acquired in Encounter 2)"
+          },
+          "hazard": "A spinning, multi-layered gear wall that blocks direct attack — but vibrates gently when the Gilded Acorn is held nearby",
+          "pickup": {
+            "name": "None",
+            "effect": "None — the boss fight begins immediately after this encounter is triggered"
+          },
+          "trigger": "The Gearsnout Guardian is immune to all attacks unless the player holds the Gilded Acorn — doing so causes the gear wall to pause and hum in resonance. When the acorn is thrown at its chest core, it cracks open to reveal the Clockwork Squirrel inside — the final boss emerges."
+        }
+      ],
+      "boss": {
+        "name": "The Clockwork Squirrel",
+        "health": 20,
+        "damage": 5,
+        "weakness": "The Gilded Acorn (must be acquired in Encounter 2)",
+        "victory_condition": "Break its core with the Gilded Acorn"
+      },
+      "objective": "Collect the Glowing Vial, use it to pacify the Cog-Bird Swarm, acquire the Gilded Acorn, and use it to awaken the Clockwork Squirrel’s true form — then defeat it by striking its core with the acorn.",
+      "reward": "The Alchemist’s Whisper — a passive ability that causes all future potions to emit a whimsical chime on impact, charming nearby creatures for 5 seconds."
+    }
+  },
+  {
+    "case": {
+      "genre": "steampunk",
+      "mood": "tense",
+      "player_class": "rogue",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "You are not the hunter. You are the pressure release. And the machine knows it.",
+      "setting": "A decaying, underground steam refinery where pressure is currency and silence is death. Pipes groan like dying beasts. Copper wires twitch with dying energy. Every step echoes — and something always answers.",
+      "player_weapon": "Razorwire Whip",
+      "player_weapon_damage": 15,
+      "player_health": 75,
+      "encounters": [
+        {
+          "location": "The Boiler Tunnels",
+          "enemy": {
+            "name": "Cogguard Enforcer",
+            "health": 60,
+            "damage": 18,
+            "weakness": "Player must have the 'Razorwire Whip' (starting weapon) to sever the steam lines on its back, causing overheating and stagger"
+          },
+          "hazard": "Steam vents intermittently erupt, dealing 5 damage if player stands too long in marked zones",
+          "pickup": {
+            "name": "Razorwire Whip",
+            "effect": "Grants 'Razorwire Whip' (starting weapon) — a whip laced with razor-edged copper filaments that can sever thin mechanical conduits"
+          },
+          "trigger": "After defeating the Cogguard, the player's whip vibration activates a hidden panel in the wall, revealing a vent leading to the next chamber — and the sound of grinding gears intensifies"
+        },
+        {
+          "location": "The Overpressure Vault",
+          "enemy": {
+            "name": "Steam Golem Sentinel",
+            "health": 80,
+            "damage": 22,
+            "weakness": "Must use the 'Razorwire Whip' to cut the primary steam line running from its chest to the overhead pipe, releasing high-pressure steam that damages the Golem and reveals the 'Pressure Valve Key' embedded in its spine"
+          },
+          "hazard": "The chamber is flooded with low-pressure steam that obscures vision and reduces movement speed by 30% unless the player stands on pressure plates",
+          "pickup": {
+            "name": "Pressure Valve Key",
+            "effect": "Grants 'Pressure Valve Key' — a brass key that fits into the regulator of any high-pressure steam engine. Used to override safety protocols"
+          },
+          "trigger": "When the Golem dies, the valve key drops — and as the player picks it up, a distant mechanical screech echoes. The floor beneath them begins to tilt, revealing a massive iron door slowly opening ahead — the boss chamber. The air pressure drops dangerously."
+        },
+        {
+          "location": "The Core Chamber",
+          "enemy": {
+            "name": "The Iron Warden",
+            "health": 100,
+            "damage": 25,
+            "weakness": "The 'Pressure Valve Key' must be inserted into the Warden's chest regulator to trigger a steam overload sequence. Once inserted, the player has 15 seconds to reach the exposed core and strike it with the Razorwire Whip to detonate it. Failure causes the Warden to gain 200% damage for 10 seconds"
+          },
+          "hazard": "The entire chamber is a pressure chamber. If the player doesn't maintain pressure balance by standing on three alternating pressure plates (which shift every 8 seconds), the ceiling collapses, dealing 30 damage per second",
+          "pickup": {
+            "name": "N/A",
+            "effect": "None — the key from Encounter 2 is the only usable item"
+          },
+          "trigger": "The Iron Warden’s entrance is triggered the moment the 'Pressure Valve Key' is picked up in Encounter 2. The final door is already unlocked — the player is being led, not invited."
+        }
+      ],
+      "boss": {
+        "name": "The Iron Warden",
+        "health": 150,
+        "damage": 40,
+        "weakness": "Player must have acquired the 'Pressure Valve Key' from Encounter 2 to access and overload the core",
+        "victory_condition": "Destroy the core after overloading its steam regulator"
+      },
+      "objective": "Survive the gauntlet of mechanical horrors and destroy the Iron Warden by exploiting its own steam infrastructure — using the tools it forced you to collect.",
+      "reward": "The Warden’s Core — allows the player to disable future steam traps and temporarily overload enemy machinery for 10 seconds"
+    }
+  },
+  {
+    "case": {
+      "genre": "steampunk",
+      "mood": "ominous",
+      "player_class": "stormcaller",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "The machines were meant to control the storm — but the storm learned to sing through them. And now, it sings through you.",
+      "setting": "A decaying airship cathedral suspended in a perpetual storm, where steam is both life and curse, and lightning is the only voice left that can speak truth to machinery.",
+      "player_weapon": "Stormcaller's Gauntlet",
+      "player_weapon_damage": 40,
+      "player_health": 200,
+      "encounters": [
+        {
+          "location": "The Gilded Tunnels",
+          "enemy": {
+            "name": "Gearmaw Skitterer",
+            "health": 300,
+            "damage": 60,
+            "weakness": "Storm Surge — its exoskeleton resonates at 120Hz, making it vulnerable to high-frequency lightning bursts."
+          },
+          "hazard": "Rotating Brass Gears — slow movement, damage on contact",
+          "pickup": {
+            "name": "Storm Surge Core",
+            "effect": "Unlocks Storm Surge (primary ability) — a chain lightning that arcs between up to 3 targets."
+          },
+          "trigger": "Defeating the Gearmaw Skitterer causes the ceiling to collapse, revealing a hidden ventilation shaft leading to the next chamber — and activating the pressure valve that floods the next room with steam."
+        },
+        {
+          "location": "The Whispering Boiler Room",
+          "enemy": {
+            "name": "Steam Wraith",
+            "health": 450,
+            "damage": 80,
+            "weakness": "Storm Surge Core — the Wraith’s form is stabilized by pressurized steam; disrupting the pressure with electrical surges destabilizes its corporeal shell."
+          },
+          "hazard": "High-Pressure Steam Vents — burst randomly, inflict burn and silence (blocks ability use for 2s)",
+          "pickup": {
+            "name": "Harmonic Resonance Core",
+            "effect": "Unlocks Storm Echo — a delayed lightning rebound that detonates 1.5s after initial strike, dealing 150% damage in a 5m radius."
+          },
+          "trigger": "When the Steam Wraith is defeated, its final gasp ruptures the main boiler line. The resulting steam surge triggers a mechanical countdown: 30 seconds until the central vault opens — revealing the final chamber. Simultaneously, the Resonance Core’s frequency locks into the chamber’s tuning forks, preparing the boss arena."
+        },
+        {
+          "location": "The Clockwork Tempest Spire",
+          "enemy": {
+            "name": "The Iron Stormfather",
+            "health": 600,
+            "damage": 100,
+            "weakness": "Harmonic Resonance Core — must be inserted into its chest cavity during its 3-second vulnerability window after being struck by three consecutive Storm Surge pulses."
+          },
+          "hazard": "Gravity Fluctuation Fields — randomly invert player gravity, disorienting movement and targeting",
+          "pickup": {
+            "name": "Harmonic Resonance Core",
+            "effect": "None — the Harmonic Resonance Core is the key to victory and cannot be dropped or lost."
+          },
+          "trigger": "The final chamber activates only when the Resonance Core is in the player’s inventory. The Stormfather awakens as the last gear of the chamber’s mechanism locks into place — the player is now the only one who can disrupt its resonance with the very tool they collected from the Wraith."
+        }
+      ],
+      "boss": {
+        "name": "The Iron Stormfather",
+        "health": 1500,
+        "damage": 250,
+        "weakness": "Harmonic Resonance Core — must be inserted into its chest cavity during its 3-second vulnerability window after being struck by three consecutive Storm Surge pulses.",
+        "victory_condition": "Overload its core with the Harmonic Resonance Core"
+      },
+      "objective": "Ascend the Spire. Silence the Stormfather. Survive the Resonance.",
+      "reward": "The Eye of the Tempest — grants permanent Storm Surge range +50%, and reduces cooldowns by 30%."
+    }
+  },
+  {
+    "case": {
+      "genre": "steampunk",
+      "mood": "desolate",
+      "player_class": "chronomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Time is the enemy — and the only tool you have.",
+      "setting": "A once-grand steampunk metropolis, now a graveyard of rusted brass and broken timepieces. Fog clings to twisted gears. The sky is a bruised violet, frozen mid-sunset. No birds. No wind. Only the groan of dying machinery and the whisper of broken time.",
+      "player_weapon": "Chrono-Whip",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Rusting Foundry",
+          "enemy": {
+            "name": "Gear Goliath",
+            "health": 40,
+            "damage": 8,
+            "weakness": "Player's Chrono-Whip (primary weapon) — slowed by temporal stasis pulses"
+          },
+          "hazard": "Rotating cogwheels that crush the player if not timed correctly",
+          "pickup": {
+            "name": "Temporal Resonator",
+            "effect": "Grants temporary 'Time Dilation' field (slows nearby enemies for 5s)"
+          },
+          "trigger": "Defeating the Gear Goliath causes the central piston to jam, opening a collapsed tunnel to the next area"
+        },
+        {
+          "location": "The Shattered Observatory",
+          "enemy": {
+            "name": "Clockwork Phantom",
+            "health": 55,
+            "damage": 10,
+            "weakness": "Temporal Resonator (pickup from Encounter 1) — disrupts its phased existence"
+          },
+          "hazard": "Floating, broken clocks that release time-loops: if stepped into, player is trapped in a 3-second echo of their previous position",
+          "pickup": {
+            "name": "Shattered Time Shard",
+            "effect": "Allows player to briefly rewind their position by 2 seconds (once per fight)"
+          },
+          "trigger": "The Phantom’s death causes the observatory’s main lens to shatter, projecting a vision of the Chrono-Wraith’s anchor beneath the Clockwork Spire"
+        },
+        {
+          "location": "The Clockwork Spire",
+          "enemy": {
+            "name": "Chrono-Sentinel",
+            "health": 70,
+            "damage": 12,
+            "weakness": "Shattered Time Shard (pickup from Encounter 2) — reverses its temporal shielding"
+          },
+          "hazard": "Time-rifts that randomly pull the player backward or forward in time by 2 seconds (disorienting, but can be used strategically)",
+          "pickup": {
+            "name": "Shattered Time Shard (already acquired)",
+            "effect": "None — this is the final pickup. The Shard is the key to the boss."
+          },
+          "trigger": "Defeating the Chrono-Sentinel causes the Spire’s central gear to grind to a halt, revealing the hidden chamber beneath: the Chrono-Wraith’s prison."
+        }
+      ],
+      "boss": {
+        "name": "The Chrono-Wraith",
+        "health": 150,
+        "damage": 15,
+        "weakness": "Shattered Time Shard (acquired from Encounter 3)",
+        "victory_condition": "Break the Chrono-Anchor"
+      },
+      "objective": "Defeat the Chrono-Wraith by using the Shattered Time Shard to destabilize its Chrono-Anchor",
+      "reward": "The Fractured Hourglass — unlocks ability to briefly freeze time in a 5m radius (once per level)"
+    }
+  },
+  {
+    "case": {
+      "genre": "steampunk",
+      "mood": "eerie",
+      "player_class": "geomancer",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Harmony is destruction. Rhythm is entropy. The Geomancer does not crush machinery — they unmake its song.",
+      "setting": "The level is set in the abandoned Chronos Foundry, a once-great engine of time-regulation now corrupted by a failed experiment. Rust coats every surface. Pipes exhale ghostly steam that whispers in reversed language. Gears turn in slow motion, but the air shimmers with displaced time — shadows move before their objects do. The air tastes of copper and burnt ozone.",
+      "player_weapon": "Earth Spike — a crystalline stave that summons spikes of living stone. Can be charged to create seismic waves. Limited ammo (3 charges).",
+      "player_weapon_damage": 40,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "The Shattered Foundry",
+          "enemy": {
+            "name": "Rustmaw Gargoyle",
+            "health": 200,
+            "damage": 35,
+            "weakness": "Cracks in its brass shell — vulnerable to Geomancer’s Earth Spike when struck on the lower spine"
+          },
+          "hazard": "Floating debris field — players must navigate unstable, magnetized iron shards that pull toward the floor. Stepping on pressure plates triggers seismic pulses that reveal the Gargoyle’s weak spot.",
+          "pickup": {
+            "name": "Resonant Gear Fragment",
+            "effect": "Grants 'Earthen Echo' — player’s next Earth Spike causes a delayed seismic pulse that stuns enemies for 3s"
+          },
+          "trigger": "When the Gargoyle is defeated, the floor collapses, revealing a shaft lined with corroded clockwork pipes. The Resonant Gear Fragment activates, emitting a low harmonic hum — audible in the next chamber."
+        },
+        {
+          "location": "The Whispering Boiler Room",
+          "enemy": {
+            "name": "The Siren of Steam",
+            "health": 300,
+            "damage": 45,
+            "weakness": "Vulnerable to harmonic disruption — her steam vents pulse in rhythm with the Earthen Echo. If the player uses Earth Spike while the Echo is active, her internal pressure ruptures"
+          },
+          "hazard": "Constricted steam tunnels — player must time movements between bursts of superheated steam. Mistimed steps cause burn damage and reset the Echo timer.",
+          "pickup": {
+            "name": "Resonant Gear",
+            "effect": "Grants 'Resonant Gear' — player’s Earth Spike now emits a harmonic pulse that disrupts mechanical rhythms for 8s. Can be charged by standing in harmonic zones."
+          },
+          "trigger": "Upon defeat, the Siren’s core explodes, sending a pulse through the chamber’s pipes. The Resonant Gear activates fully. The ceiling above the boss chamber begins to rotate, grinding open — revealing the Leviathan’s prison."
+        },
+        {
+          "location": "The Rotating Gauntlet",
+          "enemy": {
+            "name": "The Iron Sentinel",
+            "health": 400,
+            "damage": 55,
+            "weakness": "Its armor is immune to direct geomancy — but its joints are synced to the harmonic frequency of the Resonant Gear. If the player activates the Gear while the Sentinel’s foot is planted on a resonance plate, its legs lock for 5s."
+          },
+          "hazard": "Rotating pressure plates — each step on a plate triggers a mechanical reconfiguration of the chamber. Only 3 plates are active at once, and their positions change every 12s. The player must predict the pattern to position the Sentinel.",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is a pure combat gauntlet. Player must use Resonant Gear + spatial awareness to win."
+          },
+          "trigger": "Defeating the Sentinel causes the final chamber’s walls to retract, exposing the Clockwork Leviathan’s core. The Resonant Gear begins to vibrate violently, pulsing in sync with the Leviathan’s heartbeat."
+        }
+      ],
+      "boss": {
+        "name": "The Clockwork Leviathan",
+        "health": 1500,
+        "damage": 200,
+        "weakness": "Vulnerable to Harmonic Resonance — only the Resonant Gear can disrupt its inner chronomantic sync",
+        "victory_condition": "Shatter its core with the Resonant Gear"
+      },
+      "objective": "The Geomancer must navigate a decaying steampunk labyrinth built atop an ancient temporal rift. Each encounter’s pickup refines the player’s ability to disrupt mechanical resonance — culminating in the destruction of a colossal, time-warping entity sustained by harmonic feedback loops. Failure means being trapped in a time-loop of the level’s final moments.",
+      "reward": "The Chrono-Weave Shard — allows the player to briefly rewind their last death, but only once per run. Unlocks the ‘Resonant Master’ achievement."
+    }
+  },
+  {
+    "case": {
+      "genre": "steampunk",
+      "mood": "serene",
+      "player_class": "paladin",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Peace is not the absence of machinery — but the harmony within it.",
+      "setting": "The Clockwork Cathedral — a once-sacred place where steam-powered hymns were sung to calm the minds of the weary. Now, its harmony is fractured. The player moves through serene, golden-lit corridors filled with quiet machinery, moss-covered brass, and the distant chime of wind-driven bells. No blood. No screams. Only silence... and the slow, broken ticking of time.",
+      "player_weapon": "Holy Mace of the Tuned Soul — deals radiant damage, and emits a soft harmonic chime on each strike. The chime grows stronger with each enemy defeated.",
+      "player_weapon_damage": 25,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "The Brass Atrium — a sun-drenched, moss-covered courtyard with copper pipes and stained glass depicting angels tuning harps.",
+          "enemy": {
+            "name": "Steam-Rattled Gargoyle",
+            "health": 60,
+            "damage": 15,
+            "weakness": "The Paladin's Holy Mace emits resonant harmonic frequencies when striking brass surfaces — which disrupts the gargoyle's steam valves."
+          },
+          "hazard": "Low-pressure steam vents hiss along the path, obscuring vision but revealing hidden pressure plates.",
+          "pickup": {
+            "name": "Harmonic Tuning Fork",
+            "effect": "Grants the Harmonic Tuning Fork — a small brass instrument that emits a pure, calming tone when played."
+          },
+          "trigger": "After defeating the Gargoyle, the Tuning Fork’s tone causes a hidden panel in the central fountain to slide open, revealing a stairway lined with ticking gears leading downward."
+        },
+        {
+          "location": "The Whispering Gear Chamber — a dim, circular room filled with suspended brass gears, each rotating at a different tempo, bathed in golden lamplight.",
+          "enemy": {
+            "name": "Clockwork Wisp",
+            "health": 80,
+            "damage": 20,
+            "weakness": "The Harmonic Tuning Fork’s frequency cancels the Wisp’s phase-shifted resonance, forcing it into corporeal form and making it vulnerable to melee strikes."
+          },
+          "hazard": "Floating, ghostly gears drift in slow orbits. If the player moves too quickly, they trigger dissonant chimes that summon minor clockwork drones.",
+          "pickup": {
+            "name": "Resonance Lens",
+            "effect": "Grants the Resonance Lens — a monocle that lets the player see the hidden harmonic frequencies of machinery."
+          },
+          "trigger": "After defeating the Wisp, the Tuning Fork’s tone causes the largest gear to slow and reveal a hidden alcove: inside, a rusted but intact steam organ plays a single note — the same note as the Tuning Fork. The organ’s lid opens, revealing a staircase spiraling upward, lined with golden vines and humming with anticipation."
+        },
+        {
+          "location": "The Cathedral of Stillness — a vast, cathedral-like chamber with stained glass windows showing saints with their mouths sewn shut. Brass pipes hang like silent organs above a central dais.",
+          "enemy": {
+            "name": "The Muted Mechanist",
+            "health": 100,
+            "damage": 25,
+            "weakness": "The Resonance Lens reveals that the Mechanist’s vocalizer is tuned to a dissonant frequency. Playing the Harmonic Tuning Fork directly at its throat silences its scream and exposes its core."
+          },
+          "hazard": "The air is thick with silence — no wind, no ticking, no birds. Any loud noise triggers a retaliatory shockwave from the walls.",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is the final encounter before the boss."
+          },
+          "trigger": "After defeating the Mechanist, the Harmonic Tuning Fork and Resonance Lens sync with the cathedral’s central organ. A beam of light shines through the highest window, illuminating a hidden door above — revealing the Gilded Clockwork Sentinel, slowly turning to face the player, its core glowing in rhythm with the Tuning Fork’s last note."
+        }
+      ],
+      "boss": {
+        "name": "The Gilded Clockwork Sentinel",
+        "health": 300,
+        "damage": 80,
+        "weakness": "The Harmonic Tuning Fork resonates with its internal chronovibrations, causing its gears to seize when played directly at its core.",
+        "victory_condition": "Defeat the boss using the Harmonic Tuning Fork"
+      },
+      "objective": "The Paladin seeks to restore harmony to the Clockwork Cathedral, once a sanctuary for peace-minded engineers. Each enemy was once a guardian corrupted by dissonance. Only by understanding the language of sound can the Paladin restore balance.",
+      "reward": "The Cathedral's central clock resets, releasing a wave of calm steam that heals the Paladin and unlocks the 'Harmonic Guardian' achievement. The land outside begins to bloom with mechanical flowers that chime in the wind."
+    }
+  }
+]

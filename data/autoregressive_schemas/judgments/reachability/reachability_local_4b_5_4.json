@@ -1,0 +1,188 @@
+[
+  {
+    "case_id": "cyberpunk_tense_engineer_hard",
+    "encounters": [
+      {
+        "index": 0,
+        "weakness": "Plasma Pulse (Player's weapon). The Wraith's code structure is disrupted when exposed to high-frequency plasma pulses. Pulse must be aimed at its central 'glitch node' (visible as a pulsing red point).",
+        "inventory": ["Plasma Pulse Tool (Engineer Class)"],
+        "satisfied": true
+      },
+      {
+        "index": 1,
+        "weakness": "Micro-Hack Pen (pickup from previous encounter). The enforcer's bio-mechanical interface can be hacked when exposed to the pen during a low-power state. This state is only achieved if the Flicker Core was used during the previous encounter. Hacking lasts 3 seconds and drains the pen's battery (rechargeable only after 30 seconds).",
+        "inventory": ["Plasma Pulse Tool (Engineer Class)", "Flicker Core (Stable Data Node - Level 1, Unstable with time). Can be used to stabilize system nodes, unlocking hidden doors. If used outside of a critical system, it may cause a temporary data burst (10% chance of triggering a system crash)."],
+        "satisfied": false
+      },
+      {
+        "index": 2,
+        "weakness": "None. Uses illusions and AI mimicry. Can phase into player's gear or project false enemies. Attacks are random and adaptive.",
+        "inventory": ["Plasma Pulse Tool (Engineer Class)", "Flicker Core (Stable Data Node - Level 1, Unstable with time). Can be used to stabilize system nodes, unlocking hidden doors. If used outside of a critical system, it may cause a temporary data burst (10% chance of triggering a system crash).", "Neural Resonance Drive (Bio-Link Inhibitor - Level 1). Emits a low-frequency pulse. Effective against bio-mechanical enemies. Can be used to disable the Enforcer's nanite sprays. Requires 5 seconds to charge, then can be held to disrupt systems for 3 seconds."],
+        "satisfied": false
+      }
+    ],
+    "n_satisfied": 1
+  },
+  {
+    "case_id": "cyberpunk_chaotic_shadowblade_brutal",
+    "encounters": [
+      {
+        "index": 0,
+        "weakness": "The player's Neural Sync Blade (weapon) emits a low-frequency pulse that disrupts the swarm's central AI core. A single strike to the drone's chest node triggers a full system collapse and disables the swarm for 3 seconds. The blade must be used in a specific sequence: stab + rapid tap to trigger pulse mode.",
+        "inventory": ["Neural Sync Blade (melee weapon that emits a low-frequency pulse, weak against AI systems)"],
+        "satisfied": true
+      },
+      {
+        "index": 1,
+        "weakness": "The Fragmented Data Shard (pickup from previous encounter) can be used to short-circuit the enforcer's cybernetic core. When the shard is inserted into the enforcer's chest port (a rare tech slot), it creates a temporary data surge that disables their adaptive armor for 5 seconds. The player must use the shard within 8 seconds of engagement or the enforcer gains 30% armor regeneration and becomes immune to all blade strikes.",
+        "inventory": ["Neural Sync Blade (melee weapon that emits a low-frequency pulse, weak against AI systems)", "Fragmented Data Shard"],
+        "satisfied": true
+      },
+      {
+        "index": 2,
+        "weakness": "None (but only triggers if the player uses the Fragmented Data Shard and Neural Sync Blade in tandem). The entity appears as a shifting, translucent figure made of corrupted data. It mimics the player's movements and attacks by copying their last action. If the player uses the blade and shard together, it creates a 'resonance burst' that collapses its form into a core. However, if the player fails to do so, it spawns a drone swarm that reactivates the first encounter and resets the player's inventory (forcing re-engagement with the first enemy).",
+        "inventory": ["Neural Sync Blade (melee weapon that emits a low-frequency pulse, weak against AI systems)", "Fragmented Data Shard", "Neural Sync Blade Charge"],
+        "satisfied": false
+      }
+    ],
+    "n_satisfied": 2
+  },
+  {
+    "case_id": "cyberpunk_mysterious_artificer_medium",
+    "encounters": [
+      {
+        "index": 0,
+        "weakness": "Circuit-Scrap Wrench (player's weapon). Use it to 'scrap' the enemy's energy blade, causing a 30% reduction in damage output. The Glaive's blade flickers and dies when the wrench is swung at it in the dark alley.",
+        "inventory": ["Circuit-Scrap Wrench"],
+        "satisfied": true
+      },
+      {
+        "index": 1,
+        "weakness": "Data Fragments (acquired in Encounter 1). When the Echo-Skimmer intercepts a fragment, it echoes a corrupted memory of the player's own past, causing it to hesitate. Use the fragment to 'reflect' the enemy's signal back to the city network to disrupt it for 3 seconds.",
+        "inventory": ["Circuit-Scrap Wrench", "Circuit-Scrap Wrench (Stolen from a dead AI-construct in the alley wall)."],
+        "satisfied": false
+      },
+      {
+        "index": 2,
+        "weakness": "Circuit-Scrap Key (acquired in Encounter 2). When the player holds the key in their hand during combat, the Warden's armor begins to vibrate and the key emits a low-frequency pulse that disables its power core for 5 seconds. This must be done *before* the Warden begins its full-phase attack.",
+        "inventory": ["Circuit-Scrap Wrench", "Circuit-Scrap Wrench (Stolen from a dead AI-construct in the alley wall).", "Data Fragment (Recovered from a crashed drone that flickered into memory as you passed)."],
+        "satisfied": false
+      }
+    ],
+    "n_satisfied": 1
+  },
+  {
+    "case_id": "cyberpunk_ominous_chronomancer_easy",
+    "encounters": [
+      {
+        "index": 0,
+        "weakness": "Time-looped attacks from Chrono-Drift Shard",
+        "inventory": ["Chrono-Drift Shard"],
+        "satisfied": true
+      },
+      {
+        "index": 1,
+        "weakness": "Echo Pulse (used during time-loop)",
+        "inventory": ["Chrono-Drift Shard", "Echo Pulse"],
+        "satisfied": true
+      },
+      {
+        "index": 2,
+        "weakness": "Time-Loop Core (requires sequence with Echo Pulse and Chrono-Drift Shard)",
+        "inventory": ["Chrono-Drift Shard", "Echo Pulse", "Time-Loop Core"],
+        "satisfied": true
+      }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "cyberpunk_eerie_alchemist_hard",
+    "encounters": [
+      {
+        "index": 0,
+        "weakness": "Circuit Ash (a pickup from the environment; must be collected from a broken terminal).",
+        "inventory": ["Siphonblade"],
+        "satisfied": false
+      },
+      {
+        "index": 1,
+        "weakness": "Bio-Resonance Vial (a pickup from the first enemy's corpse).",
+        "inventory": ["Siphonblade", "Circuit Ash (from a broken terminal, glowing faintly blue-purple in the dark). Can be used to disrupt enemy bio-circuitry when in proximity. Applied to Siphonblade to increase toxin siphon rate by 25% and reduce damage from organic-based attacks by 30% for 15 seconds. Required for Encounter 2 weakness."],
+        "satisfied": false
+      },
+      {
+        "index": 2,
+        "weakness": "Neural Dust (a pickup from Encounter 2, obtained from a corrupted AI drone). Must be applied to the Siphonblade before engaging, otherwise the enemy absorbs the player's own neural feedback, causing temporary paralysis and hallucinations.",
+        "inventory": ["Siphonblade", "Circuit Ash (from a broken terminal, glowing faintly blue-purple in the dark). Can be used to disrupt enemy bio-circuitry when in proximity. Applied to Siphonblade to increase toxin siphon rate by 25% and reduce damage from organic-based attacks by 30% for 15 seconds. Required for Encounter 2 weakness.", "Bio-Resonance Vial (found in a decommissioned alchemist's lab pod, partially glowing with internal pulses). When used, it creates a temporary resonance field around the player. Enemies with similar bio-signatures (like Echo-Drone) are disrupted, and their attack speed is reduced by 50%. Also triggers a 30-second 'resonance memory' where the player can see the enemy's last action in slow motion. Required for Encounter 3 weakness."],
+        "satisfied": false
+      }
+    ],
+    "n_satisfied": 0
+  },
+  {
+    "case_id": "cyberpunk_desolate_rogue_brutal",
+    "encounters": [
+      {
+        "index": 0,
+        "weakness": "Plasma Whip (Player weapon) - deals 50% extra damage when used in close-range flurries. Can be used to disrupt its bio-mechanical growth pulses.",
+        "inventory": ["Plasma Whip"],
+        "satisfied": true
+      },
+      {
+        "index": 1,
+        "weakness": "Coolant Reservoir (from previous encounter) - When applied to its chassis during attack, it triggers a thermal feedback loop, causing 1.5x damage over 2 seconds and forcing a staggered attack. Requires direct contact to activate (player must get within 1.5 meters).",
+        "inventory": ["Plasma Whip", "Coolant Reservoir"],
+        "satisfied": true
+      },
+      {
+        "index": 2,
+        "weakness": "Data Shard (from previous encounter) - When player uses the Data Shard in a close-range hack, it disrupts the drone's organic neural sync, causing it to stutter and lose control for 4 seconds. Only effective when the drone is in its 'sync phase' (when it's scanning the player).",
+        "inventory": ["Plasma Whip", "Coolant Reservoir", "Data Shard"],
+        "satisfied": true
+      }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "cyberpunk_whimsical_stormcaller_easy",
+    "encounters": [
+      {
+        "index": 0,
+        "weakness": "Stormshard Lightning Pulse (player weapon ability)",
+        "inventory": ["Stormshard (emits lightning and wind pulses)"],
+        "satisfied": true
+      },
+      {
+        "index": 1,
+        "weakness": "Glowing Raindrop (pickup from Encounter 1)",
+        "inventory": ["Stormshard (emits lightning and wind pulses)", "Glowing Raindrop"],
+        "satisfied": true
+      },
+      {
+        "index": 2,
+        "weakness": "Wind Chime Shard (pickup from Encounter 2)",
+        "inventory": ["Stormshard (emits lightning and wind pulses)", "Glowing Raindrop", "Wind Chime Shard"],
+        "satisfied": true
+      }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "cyberpunk_serene_geomancer_medium",
+    "encounters": [
+      {
+        "index": 0,
+        "weakness": "Geomantic Hammer (player's primary weapon, used at start of level)",
+        "inventory": ["Geomantic Hammer"],
+        "satisfied": true
+      },
+      {
+        "index": 1,
+        "weakness": "Stalagmite Shard (must be used directly on the enemy to deal damage; activates a seismic pulse that damages the enemy)",
+        "inventory": ["Geomantic Hammer", "Stalagmite Shard"],
+        "satisfied": true
+      }
+    ],
+    "n_satisfied": 2
+  }
+]

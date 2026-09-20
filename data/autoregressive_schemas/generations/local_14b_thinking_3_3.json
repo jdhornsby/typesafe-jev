@@ -1,0 +1,1078 @@
+[
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "ominous",
+      "player_class": "geomancer",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Volcanic",
+      "setting": "A labyrinth of magma rivers, unstable rock formations, and suffocating ash. The air is thick with sulfur, and distant tremors hint at the titan's awakening. The level progresses from narrow caverns to a central magma chamber with a collapsing ceiling.",
+      "player_weapon": "Seismic Gauntlet (unlocks ground-shaking attacks)",
+      "player_weapon_damage": 120,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Ash-Crusted Cavern",
+          "enemy": {
+            "name": "Lava Warden",
+            "health": 250,
+            "damage": 80,
+            "weakness": "Seismic shock (player's weapon ability)"
+          },
+          "hazard": "Collapsing lava pillars force the player to dodge or risk damage.",
+          "pickup": {
+            "name": "Frost Shard",
+            "effect": "Unlocks cold-based elemental damage for 15 seconds when used."
+          },
+          "trigger": "Player must trigger a pressure plate to unlock the path forward, awakening the Lava Warden."
+        },
+        {
+          "location": "Molten Serpent's Lair",
+          "enemy": {
+            "name": "Molten Serpent",
+            "health": 320,
+            "damage": 100,
+            "weakness": "Frost Shard (pickup from prior encounter)"
+          },
+          "hazard": "Periodic eruptions of magma create temporary fire zones that burn the player if standing still.",
+          "pickup": {
+            "name": "Volcanic Core",
+            "effect": "Deals massive damage to magma-based enemies when activated."
+          },
+          "trigger": "The player must navigate a magma river to reach the serpent's lair, which becomes active when the player steps on a cracked obsidian tile."
+        }
+      ],
+      "boss": {
+        "name": "Magma Titan",
+        "health": 600,
+        "damage": 150,
+        "weakness": "Volcanic Core (pickup from second encounter)",
+        "victory_condition": "Player must plant the Volcanic Core in the titan's magma core to trigger an explosion."
+      },
+      "objective": "Reach the heart of the volcano and defeat the Magma Titan.",
+      "reward": "Volcanic Core (for boss defeat), +25% damage to seismic attacks, and access to the next level."
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "chaotic",
+      "player_class": "pyromancer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Inferno's Crucible",
+      "setting": "Chaotic volcanic environment with unstable terrain, erupting geysers, and molten rivers. The level becomes increasingly unstable after each encounter, with rocks falling and lava flows shifting.",
+      "player_weapon": "Fire Staff (Magma Pulse: Launches a shockwave that shatters rock and ignites enemies)",
+      "player_weapon_damage": 75,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Lava Caverns",
+          "enemy": {
+            "name": "Lava Warden",
+            "health": 200,
+            "damage": 50,
+            "weakness": "Player's fire staff (Magma Pulse ability)"
+          },
+          "hazard": "After defeat, the cavern collapses, revealing a fissure leading to the Magma Chamber.",
+          "pickup": {
+            "name": "Molten Core",
+            "effect": "Increases fire damage by 30% for 15 seconds"
+          },
+          "trigger": "Player ignites a magma pool, causing the Warden to emerge from the rock."
+        },
+        {
+          "location": "Magma Chamber",
+          "enemy": {
+            "name": "Magma Serpent",
+            "health": 300,
+            "damage": 65,
+            "weakness": "Molten Core pickup (from prior encounter)"
+          },
+          "hazard": "Defeating the Serpent causes the geyser to erupt, creating a path to the Volcanic Summit.",
+          "pickup": {
+            "name": "Volcanic Gem",
+            "effect": "Unlocks a temporary eruption ability that deals area-of-effect fire damage"
+          },
+          "trigger": "The fissure's heat awakens the Serpent, which coils around the chamber's central geyser."
+        }
+      ],
+      "boss": {
+        "name": "Volcanic Titan",
+        "health": 600,
+        "damage": 100,
+        "weakness": "Volcanic Gem (from second encounter)",
+        "victory_condition": "Use the Volcanic Gem to trigger a magma eruption, exploiting the Titan's exposed core."
+      },
+      "objective": "Reach the Volcanic Summit and defeat the final boss.",
+      "reward": "Pyroheart Amulet (permanent +25% fire damage)"
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "tense",
+      "player_class": "paladin",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Volcanic Inferno",
+      "setting": "A volcanic realm with active magma flows, erupting geysers, and unstable terrain. The air is thick with ash, and distant rumbling hints at the Titan's fury.",
+      "player_weapon": "Paladin's Holy Hammer (blunt weapon with fire resistance)",
+      "player_weapon_damage": 50,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Lava River Caverns",
+          "enemy": {
+            "name": "Lava Golem",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Holy Blunt Damage (Player's Paladin Hammer)"
+          },
+          "hazard": "Lava geysers erupt periodically, forcing the player to dodge or use a shield.",
+          "pickup": {
+            "name": "Volcanic Crystal",
+            "effect": "Enhances the Paladin's hammer with fire resistance and increases blunt damage by 20%."
+          },
+          "trigger": "Player crosses the lava bridge, awakening the golem by disturbing molten rock pillars."
+        },
+        {
+          "location": "Geysers of the Ash Wastes",
+          "enemy": {
+            "name": "Fire Spirit",
+            "health": 90,
+            "damage": 25,
+            "weakness": "Volcanic Crystal (from prior encounter)"
+          },
+          "hazard": "The ground cracks, revealing pools of lava that deal damage over time if the player lingers.",
+          "pickup": {
+            "name": "Molten Sigil",
+            "effect": "Unlocks the path to the final chamber and grants a temporary shield against fire damage."
+          },
+          "trigger": "After obtaining the Volcanic Crystal, the player activates a dormant geyser, summoning the spirit."
+        },
+        {
+          "location": "The Molten Crucible",
+          "enemy": {
+            "name": "Molten Guardian",
+            "health": 150,
+            "damage": 40,
+            "weakness": "Molten Sigil (from prior encounter)"
+          },
+          "hazard": "The chamber trembles with seismic activity, causing unstable terrain and falling rocks.",
+          "pickup": {
+            "name": "Ashen Relic",
+            "effect": "Temporarily increases the player's attack speed and grants a chance to reflect fire projectiles."
+          },
+          "trigger": "The player uses the Molten Sigil to melt a barrier of obsidian, revealing the guardian guarding the final chamber."
+        }
+      ],
+      "boss": {
+        "name": "Magma Titan",
+        "health": 300,
+        "damage": 60,
+        "weakness": "Molten Sigil (acquired in second encounter)",
+        "victory_condition": "Defeat the Titan by applying the Molten Sigil to its core during its vulnerable phase (after 50% health)."
+      },
+      "objective": "Reach the Magma Titan's lair and defeat it using the Molten Sigil.",
+      "reward": "Ascendancy Armor (grants fire immunity and boosts holy damage)"
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "desolate",
+      "player_class": "berserker",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Volcanic",
+      "setting": "A desolate volcanic cavern with molten rivers, ash-filled air, and ancient ruins. The environment is constantly threatened by eruptions and seismic activity.",
+      "player_weapon": "Crimson Cleaver (berserker greatsword with Rage Strike ability)",
+      "player_weapon_damage": 350,
+      "player_health": 2000,
+      "encounters": [
+        {
+          "location": "Ashen Crucible - Lava Cavern",
+          "enemy": {
+            "name": "Lava Wyrmling",
+            "health": 1200,
+            "damage": 150,
+            "weakness": "Rage Strike (player's weapon ability)"
+          },
+          "hazard": "Lava geysers erupt periodically, forcing player to dodge or risk taking damage.",
+          "pickup": {
+            "name": "Frost Shard",
+            "effect": "Freezes enemies on contact. Can be used as a consumable or weapon upgrade."
+          },
+          "trigger": "The Wyrmling blocks the path with its molten body. Player must enter berserker rage to land critical hits."
+        },
+        {
+          "location": "Obsidian Chamber",
+          "enemy": {
+            "name": "Molten Golem",
+            "health": 1800,
+            "damage": 220,
+            "weakness": "Cold damage (using Frost Shard from prior encounter)"
+          },
+          "hazard": "The Golem's lava attacks can ignite the environment, creating fire traps.",
+          "pickup": {
+            "name": "Volcanic Core",
+            "effect": "Power-up that creates fissures in the ground, weakening the final boss."
+          },
+          "trigger": "The cracked obsidian wall from the first encounter opens to reveal the Golem, which guards a magma core."
+        },
+        {
+          "location": "Titan's Forge",
+          "enemy": {
+            "name": "Volcanic Titan",
+            "health": 3500,
+            "damage": 300,
+            "weakness": "Volcanic Core (pickup from prior encounter)"
+          },
+          "hazard": "The Titan's attacks cause the ground to collapse, requiring precise movement to avoid falling into lava.",
+          "pickup": {
+            "name": "Ashen Relic",
+            "effect": "Permanent boost to berserker rage duration and damage."
+          },
+          "trigger": "Seismic activity from defeating the Golem opens a fissure leading to the Titan's lair."
+        }
+      ],
+      "boss": {
+        "name": "Volcanic Titan",
+        "health": 3500,
+        "damage": 300,
+        "weakness": "Volcanic Core (must be used during phase 2 to create fissures)",
+        "victory_condition": "Use the Volcanic Core to weaken the Titan and deliver a finishing strike with the Crimson Cleaver."
+      },
+      "objective": "Navigate the desolate volcanic terrain, defeat three enemies, and conquer the final boss by exploiting pickups acquired during encounters.",
+      "reward": "Ashen Relic (permanent berserker upgrade) and access to the next level."
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "mysterious",
+      "player_class": "artificer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Volcanic",
+      "setting": "A mysterious volcanic region with ancient ruins, geysers, and unstable terrain. The air is thick with ash, and the ground trembles with distant eruptions. Strange symbols suggest a forgotten civilization.",
+      "player_weapon": "Plasma Cannon (heat-based, used to exploit weak points)",
+      "player_weapon_damage": 50,
+      "player_health": 200,
+      "encounters": [
+        {
+          "location": "Cracked Lava Fields",
+          "enemy": {
+            "name": "Molten Sentinel",
+            "health": 120,
+            "damage": 30,
+            "weakness": "Player's plasma cannon (heat-based weapon)."
+          },
+          "hazard": "Lava flows and unstable terrain.",
+          "pickup": {
+            "name": "Thermal Inhibitor",
+            "effect": "Emits cold energy, temporarily freezing enemies."
+          },
+          "trigger": "Defeating the sentinel causes a fissure to open, revealing a path to the Magma Wraith's domain."
+        },
+        {
+          "location": "Ashen Ruins",
+          "enemy": {
+            "name": "Magma Wraith",
+            "health": 150,
+            "damage": 40,
+            "weakness": "Thermal Inhibitor (pickup from prior encounter)."
+          },
+          "hazard": "Sulfuric gas clouds that reduce visibility.",
+          "pickup": {
+            "name": "Volcanic Core",
+            "effect": "Stores volatile energy; can be used to overload the boss."
+          },
+          "trigger": "Using the Thermal Inhibitor on the wraith causes the ground to tremble, unlocking the path to the final chamber."
+        },
+        {
+          "location": "Seismic Caverns",
+          "enemy": {
+            "name": "Rock Titan",
+            "health": 180,
+            "damage": 50,
+            "weakness": "Tremor Charge (explosive pickup from the Magma Wraith's chamber)."
+          },
+          "hazard": "Collapsing rock formations and quakes.",
+          "pickup": {
+            "name": "Tremor Charge",
+            "effect": "A powerful explosive that triggers seismic shockwaves."
+          },
+          "trigger": "Destroying the titan collapses the cavern, revealing the boss's lair."
+        }
+      ],
+      "boss": {
+        "name": "Molten Overlord",
+        "health": 300,
+        "damage": 60,
+        "weakness": "Volcanic Core (pickup from second encounter).",
+        "victory_condition": "Use the Volcanic Core to overload the boss's core during its final phase."
+      },
+      "objective": "Defeat the Molten Overlord, the volcano's ancient guardian, using the Volcanic Core.",
+      "reward": "Volcanic Core and Tremor Charge, granting the artificer advanced crafting materials."
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "eerie",
+      "player_class": "stormcaller",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Volcanic Eerie",
+      "setting": "An eerie, abandoned volcanic complex with flickering bioluminescent fungi, ghostly echoes of past eruptions, and unstable terrain. The air is thick with sulfur, and distant rumbling hints at an impending eruption.",
+      "player_weapon": "Stormstaff (channel lightning, summon thunderclouds)",
+      "player_weapon_damage": 80,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Lava-Cracked Cavern",
+          "enemy": {
+            "name": "Lava Golem",
+            "health": 200,
+            "damage": 45,
+            "weakness": "Lightning (player's weapon)"
+          },
+          "hazard": "Periodic lava geysers erupt, forcing the player to dodge or risk damage.",
+          "pickup": {
+            "name": "Volcanic Core",
+            "effect": "Amplifies lightning damage by 50% for 30 seconds."
+          },
+          "trigger": "Player enters the cavern, triggering a rockslide that reveals the Golem's lair."
+        },
+        {
+          "location": "Magma Vein Tunnels",
+          "enemy": {
+            "name": "Magma Wraith",
+            "health": 180,
+            "damage": 35,
+            "weakness": "Volcanic Core (pickup from prior encounter)"
+          },
+          "hazard": "The tunnels fill with toxic gas clouds that slow movement and drain stamina.",
+          "pickup": {
+            "name": "Storm Lens",
+            "effect": "Focuses lightning into a concentrated beam, ignoring 30% of enemy armor."
+          },
+          "trigger": "After defeating the Golem, the player unlocks a path through a cracked magma vein, summoning the Wraith."
+        },
+        {
+          "location": "Chamber of the Molten Titan",
+          "enemy": {
+            "name": "Molten Titan",
+            "health": 350,
+            "damage": 60,
+            "weakness": "Storm Lens (pickup from prior encounter)"
+          },
+          "hazard": "The chamber's lava lake pulses with unstable energy, creating shockwaves that knock the player back.",
+          "pickup": {
+            "name": "Stormcaller's Resolve",
+            "effect": "Permanently increases maximum storm energy by 20%."
+          },
+          "trigger": "Destroying the Wraith collapses a magma barrier, revealing the Titan's chamber. The ground trembles as the boss awakens."
+        }
+      ],
+      "boss": {
+        "name": "Molten Titan",
+        "health": 350,
+        "damage": 60,
+        "weakness": "Storm Lens (requires prior pickup from Magma Wraith encounter)",
+        "victory_condition": "Use the Storm Lens to pierce the Titan's magma armor, then unleash a stormclap to shatter its core."
+      },
+      "objective": "Navigate the volcanic labyrinth, harnessing storm power to overcome elemental guardians and the ancient Molten Titan.",
+      "reward": "Stormcaller's Resolve (permanent stat boost), access to a new storm ability: 'Volcanic Tempest' (combines lightning and lava for area damage)."
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "whimsical",
+      "player_class": "beastmaster",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whimsical Volcanic Adventure",
+      "setting": "A whimsical volcanic realm with bouncing magma balls, talking geysers, and a comedic lava sprite that sells questionable potions.",
+      "player_weapon": "Frostfire Staff (can switch between ice and fire modes)",
+      "player_weapon_damage": 25,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Lava Geyser Fields",
+          "enemy": {
+            "name": "Sir Moltenbrick",
+            "health": 60,
+            "damage": 15,
+            "weakness": "Cold damage (player's weapon or Frostbite Crystal)"
+          },
+          "hazard": "Lava geysers erupt randomly, damaging the player if they stand still for too long.",
+          "pickup": {
+            "name": "Frostbite Crystal",
+            "effect": "Unlocks cold-based attacks for 30 seconds when used."
+          },
+          "trigger": "The player's companion (a fiery fox) paws at a glowing rock, triggering a tremor that awakens Sir Moltenbrick."
+        },
+        {
+          "location": "Serpentine Cavern",
+          "enemy": {
+            "name": "Fiery Siren",
+            "health": 50,
+            "damage": 12,
+            "weakness": "Frostbite Crystal (from prior pickup)"
+          },
+          "hazard": "The cavern floor is unstable; stepping on certain tiles triggers falling rocks.",
+          "pickup": {
+            "name": "Lava Core",
+            "effect": "Temporarily increases fire resistance and deals bonus damage to the final boss."
+          },
+          "trigger": "After claiming the Frostbite Crystal, the player's companion (now chilled) slithers into a hidden cave, revealing the Fiery Siren's nest."
+        },
+        {
+          "location": "The Jester's Caldera",
+          "enemy": {
+            "name": "Molten Jester",
+            "health": 120,
+            "damage": 20,
+            "weakness": "Lava Core (from prior pickup)"
+          },
+          "hazard": "The caldera's floor is a giant pressure plate; the player must avoid triggering it while fighting.",
+          "pickup": {
+            "name": "Volcanic Tiara",
+            "effect": "Grants permanent fire resistance and a unique ability to summon a fiery companion."
+          },
+          "trigger": "The Lava Core emits a pulse that cracks the caldera's floor, revealing the jester's trapdoor. The boss taunts the player with a lava-themed magic trick."
+        }
+      ],
+      "boss": {
+        "name": "Molten Jester",
+        "health": 120,
+        "damage": 20,
+        "weakness": "Lava Core (must be equipped before fight)",
+        "victory_condition": "Use the Lava Core to disrupt the jester's lava magic, then finish with a fire-based attack."
+      },
+      "objective": "Retrieve the Volcanic Tiara while navigating whimsical volcanic hazards and exploiting elemental weaknesses.",
+      "reward": "Volcanic Tiara + unique companion ability"
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "serene",
+      "player_class": "chronomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Volcanic Observatory",
+      "setting": "A serene volcanic observatory with geothermal vents, mist, and glowing crystals. The environment shifts subtly as encounters progress, with the final chamber revealing a dormant, ancient volcano core.",
+      "player_weapon": "Chrono Blade (can slow enemies, rewind attacks, or charge with pickups)",
+      "player_weapon_damage": 50,
+      "player_health": 200,
+      "encounters": [
+        {
+          "location": "Steam Veil Plaza",
+          "enemy": {
+            "name": "Molten Warden",
+            "health": 120,
+            "damage": 30,
+            "weakness": "Chrono Blade's temporal slowdown effect (player's primary weapon)"
+          },
+          "hazard": "Lava pools that periodically erupt, forcing the player to dodge or use time rewind.",
+          "pickup": {
+            "name": "Eternal Ember",
+            "effect": "Restores 50% mana when picked up; glows faintly with a rhythmic pulse."
+          },
+          "trigger": "Player enters the plaza; lava geysers erupt when the Warden detects movement."
+        },
+        {
+          "location": "Temporal Rift Chamber",
+          "enemy": {
+            "name": "Echo Shade",
+            "health": 150,
+            "damage": 35,
+            "weakness": "Eternal Ember (pickup from prior encounter)"
+          },
+          "hazard": "Flickering time distortions that randomly teleport the player 5 seconds into the past.",
+          "pickup": {
+            "name": "Chrono Core",
+            "effect": "Unlocks a charged chrono-blast ability (one-time use) that ignores enemy defenses."
+          },
+          "trigger": "After defeating the Warden, the ground cracks, revealing a glowing rift that pulls the player into the chamber."
+        },
+        {
+          "location": "Heart of the Volcano",
+          "enemy": {
+            "name": "Pyrochronos",
+            "health": 300,
+            "damage": 60,
+            "weakness": "Chrono Core (pickup from prior encounter)"
+          },
+          "hazard": "Periodic eruptions that spawn molten rocks; player must time jumps to avoid them.",
+          "pickup": {
+            "name": "Timeless Ash",
+            "effect": "Permanently increases chrono-ability duration by 30%."
+          },
+          "trigger": "Defeating the Echo Shade destabilizes the volcano's core, causing molten rock to collapse into a central chamber."
+        }
+      ],
+      "boss": {
+        "name": "Pyrochronos",
+        "health": 300,
+        "damage": 60,
+        "weakness": "Chrono Core (required to unlock charged chrono-blast)",
+        "victory_condition": "Defeat Pyrochronos using the Chrono Core's charged blast during its time-loop phase."
+      },
+      "objective": "Reach the volcano's core and stabilize the timeline by defeating Pyrochronos.",
+      "reward": "Timeless Ash (permanent stat boost) and a lore entry about the volcano's connection to temporal energy."
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "serene",
+      "player_class": "paladin",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Celestial",
+      "setting": "A serene, floating temple surrounded by starfields and glowing celestial runes. The environment shifts subtly as encounters progress, with calming choral music and soft auroras.",
+      "player_weapon": "Holy Light Sword",
+      "player_weapon_damage": 60,
+      "player_health": 200,
+      "encounters": [
+        {
+          "location": "Celestial Golem's Nexus",
+          "enemy": {
+            "name": "Celestial Golem",
+            "health": 150,
+            "damage": 40,
+            "weakness": "Holy Light Sword (Player's starting weapon)"
+          },
+          "hazard": "The Golem's seismic tremors destabilize the temple's floating platforms.",
+          "pickup": {
+            "name": "Celestial Shard",
+            "effect": "Boosts the player's light-based attacks by 25%."
+          },
+          "trigger": "Player enters the floating temple, awakening the Golem by disrupting its crystalline core."
+        },
+        {
+          "location": "Starborn Serpent's Veil",
+          "enemy": {
+            "name": "Starborn Serpent",
+            "health": 180,
+            "damage": 50,
+            "weakness": "Celestial Shard (Pickup from prior encounter)"
+          },
+          "hazard": "The Serpent's cosmic tail creates gravitational whirlwinds that pull the player off the map.",
+          "pickup": {
+            "name": "Starstone",
+            "effect": "Allows the player to summon a temporary light barrier (once per encounter)."
+          },
+          "trigger": "The Celestial Shard unlocks a hidden starpath, revealing the Serpent coiled around a nebula."
+        },
+        {
+          "location": "The Corrupted Star Sovereign's Throne",
+          "enemy": {
+            "name": "Corrupted Star Sovereign",
+            "health": 300,
+            "damage": 70,
+            "weakness": "Starstone (Pickup from prior encounter)"
+          },
+          "hazard": "The Sovereign summons falling meteors and distorts reality with black holes.",
+          "pickup": {
+            "name": "Celestial Crown",
+            "effect": " Grants permanent ability to heal 50% of health when using light-based attacks."
+          },
+          "trigger": "The Starstone reacts to the Sovereign's corrupted core, exposing a vulnerability in its aura."
+        }
+      ],
+      "boss": {
+        "name": "Corrupted Star Sovereign",
+        "health": 300,
+        "damage": 70,
+        "weakness": "Starstone",
+        "victory_condition": "Defeat the Sovereign by shattering its core with the Starstone-enhanced light barrier."
+      },
+      "objective": "Restore balance to the Celestial Sanctum by defeating the corrupted entities and reclaiming the Celestial Crown.",
+      "reward": "Celestial Crown (permanent healing ability) and access to higher celestial realms."
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "mysterious",
+      "player_class": "chronomancer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Celestial Collapse",
+      "setting": "A dying star's core, where time fractures into spiraling loops. The environment shifts between past, present, and future states, with celestial debris forming unstable bridges between encounters.",
+      "player_weapon": "Chronal Blade (unlocks time-reversal abilities when upgraded with pickups)",
+      "player_weapon_damage": 150,
+      "player_health": 300,
+      "encounters": [
+        {
+          "location": "The Fractured Nebula",
+          "enemy": {
+            "name": "Temporal Wraith",
+            "health": 250,
+            "damage": 80,
+            "weakness": "Chronal Blade (player's starting weapon)"
+          },
+          "hazard": "The nebula's unstable energy causes random time distortions, forcing the player to dodge floating debris that appears and disappears in loops.",
+          "pickup": {
+            "name": "Temporal Core",
+            "effect": "Allows the player to briefly reverse local time (1.5s cooldown), revealing hidden paths and disrupting enemy attacks."
+          },
+          "trigger": "Defeating the wraith causes its fractured essence to coalesce into a glowing **Temporal Core**. The core emits a pulse that destabilizes the nebula, creating a rift leading to the next area."
+        },
+        {
+          "location": "Event Horizon Chasm",
+          "enemy": {
+            "name": "Gravitic Anchor",
+            "health": 400,
+            "damage": 120,
+            "weakness": "Temporal Core (pickup from prior encounter)"
+          },
+          "hazard": "The anchor warps space, creating duplicate copies of the player that must be destroyed before proceeding. Movement is slowed by gravitational tides.",
+          "pickup": {
+            "name": "Cosmic Key",
+            "effect": "Unlocks the Chrono-Rift Guardian's vulnerabilities during its third phase. Can be used to bypass time-based traps in the boss arena."
+          },
+          "trigger": "The player uses the Temporal Core to disrupt the anchor's gravity field, causing it to shatter into a **Cosmic Key**. The key unlocks a portal to the final chamber, but the player must survive the anchor's collapsing spatial rift."
+        },
+        {
+          "location": "Chrono-Rift Core",
+          "enemy": {
+            "name": "Chrono-Rift Guardian",
+            "health": 800,
+            "damage": 180,
+            "weakness": "Cosmic Key (pickup from prior encounter)"
+          },
+          "hazard": "The boss manipulates time in 3 phases: 1) Linear time (normal combat), 2) Fractured time (duplicate enemies), 3) Frozen time (player must use Cosmic Key to break the freeze and land a critical strike).",
+          "pickup": {
+            "name": "Eon Shard",
+            "effect": "Permanent upgrade: grants the player a 'Time Loop' ability to replay the last 5 seconds of combat, allowing perfect dodges and counterattacks."
+          },
+          "trigger": "The guardian's time rift armor is impenetrable until the player uses the Cosmic Key during its third phase. Defeating it requires synchronizing attacks with temporal anomalies in the environment."
+        }
+      ],
+      "boss": {
+        "name": "Chrono-Rift Guardian",
+        "health": 800,
+        "damage": 180,
+        "weakness": "Cosmic Key (required to break time freeze and exploit rift armor)",
+        "victory_condition": "Land 3 consecutive critical strikes during Phase 3 while the rift armor is destabilized."
+      },
+      "objective": "Navigate the collapsing celestial structure, collect temporal artifacts, and dismantle the Chrono-Rift Guardian to prevent a temporal singularity from consuming the galaxy.",
+      "reward": "Eon Shard (permanent upgrade) and access to the Celestial Timeline Archive (unlocking new chronomancy abilities)."
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "ominous",
+      "player_class": "shadowblade",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Celestial",
+      "setting": "A dying star's core, surrounded by shattered asteroid fields and twisted constellations. The air hums with unstable energy, and shadows writhe with malevolent intent.",
+      "player_weapon": "Shadowblade",
+      "player_weapon_damage": 600,
+      "player_health": 3000,
+      "encounters": [
+        {
+          "location": "Corrupted Nebula",
+          "enemy": {
+            "name": "Celestial Wraith",
+            "health": 1200,
+            "damage": 300,
+            "weakness": "Shadowblade's innate void energy (player's weapon)"
+          },
+          "hazard": "Floating debris that damages the player if they stray from the central path.",
+          "pickup": {
+            "name": "Corrupted Star Core",
+            "effect": "Unlocks 'Void Pulse' ability (short-range shockwave that disrupts energy fields)."
+          },
+          "trigger": "Player absorbs light from the nebula's core to empower their shadowblade, causing the Wraith to manifest."
+        },
+        {
+          "location": "Gravitational Singularity",
+          "enemy": {
+            "name": "Gravity Spire",
+            "health": 1800,
+            "damage": 400,
+            "weakness": "Corrupted Star Core (pickup from prior encounter)"
+          },
+          "hazard": "Tidal forces that teleport the player to random locations if they fail to dodge attacks.",
+          "pickup": {
+            "name": "Gravity Anchor",
+            "effect": "Allows the player to briefly invert local gravity, countering the Spire's pull."
+          },
+          "trigger": "Player uses the Corrupted Star Core to destabilize the singularity, summoning the Spire."
+        },
+        {
+          "location": "Chrono Fracture Zone",
+          "enemy": {
+            "name": "Chrono Serpent",
+            "health": 2200,
+            "damage": 500,
+            "weakness": "Gravity Anchor (pickup from prior encounter)"
+          },
+          "hazard": "Time loops that force the player to relive the same 10-second sequence if they die.",
+          "pickup": {
+            "name": "Time Fracture Crystal",
+            "effect": "Freezes time for 3 seconds when thrown, revealing the boss's vulnerability."
+          },
+          "trigger": "Player activates the Gravity Anchor, causing temporal rifts that summon the Serpent."
+        }
+      ],
+      "boss": {
+        "name": "Chronosurge",
+        "health": 5000,
+        "damage": 800,
+        "weakness": "Time Fracture Crystal (pickup from third encounter)",
+        "victory_condition": "Use the Time Fracture Crystal to freeze Chronosurge's core, then deliver a final blow with the shadowblade."
+      },
+      "objective": "Reach the Celestial Forge and confront the corrupted star god, Chronosurge.",
+      "reward": "Celestial Ascension: Unlocks the 'Void Requiem' ultimate ability (summons a black hole to consume all enemies)."
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "whimsical",
+      "player_class": "illusionist",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Celestial",
+      "setting": "A floating labyrinth of prismatic spires and nebulae. The sky shifts colors with the player's movements, and the ground reflects illusions in kaleidoscopic patterns.",
+      "player_weapon": "Prism Wand",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Stardust Glade",
+          "enemy": {
+            "name": "Starling Swarm",
+            "health": 40,
+            "damage": 5,
+            "weakness": "Prism Weapon (refracted light beams)"
+          },
+          "hazard": "Floating, light-sensitive crystals that explode if hit by direct light.",
+          "pickup": {
+            "name": "Star Shard",
+            "effect": "Unlocks hidden pathways when activated."
+          },
+          "trigger": "Player enters the glade, attracting the Starlings with their light-based magic."
+        },
+        {
+          "location": "Mirror Maze",
+          "enemy": {
+            "name": "Mirror Mimic",
+            "health": 60,
+            "damage": 8,
+            "weakness": "Decoy Illusions (player's own illusion ability)"
+          },
+          "hazard": "Reflective surfaces that duplicate the player's movements, causing confusion.",
+          "pickup": {
+            "name": "Celestial Lens",
+            "effect": "Enhances Prism Weapon's light refraction, revealing hidden weaknesses."
+          },
+          "trigger": "Player uses the Star Shard to shatter a barrier, revealing the maze."
+        },
+        {
+          "location": "Celestial Core Chamber",
+          "enemy": {
+            "name": "Celestial Warden",
+            "health": 120,
+            "damage": 12,
+            "weakness": "Celestial Lens (reveals the Warden's glowing core)"
+          },
+          "hazard": "Gravity-defying debris that shifts when the Warden attacks.",
+          "pickup": {
+            "name": "Cosmic Compass",
+            "effect": "Guides the player through future celestial levels."
+          },
+          "trigger": "Player uses the Celestial Lens to see a hidden path to the chamber."
+        }
+      ],
+      "boss": {
+        "name": "Celestial Warden",
+        "health": 120,
+        "damage": 12,
+        "weakness": "Celestial Lens (reveals core vulnerability)",
+        "victory_condition": "Destroy the glowing core with refracted light beams."
+      },
+      "objective": "Navigate the celestial maze, defeat the guardians, and claim the Cosmic Compass.",
+      "reward": "Cosmic Compass (unlocks access to other celestial realms)"
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "chaotic",
+      "player_class": "stormcaller",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Celestial Chaos",
+      "setting": "A shattered celestial realm with floating debris, unstable gravity, and chaotic storms. The environment shifts unpredictably, forcing the player to adapt.",
+      "player_weapon": "Stormcaller's Wand (lightning-based, requires mana)",
+      "player_weapon_damage": 90,
+      "player_health": 300,
+      "encounters": [
+        {
+          "location": "Fractured Storm Plains",
+          "enemy": {
+            "name": "Celestial Serpent",
+            "health": 200,
+            "damage": 60,
+            "weakness": "Lightning (player's primary weapon)"
+          },
+          "hazard": "Unstable gravity wells pull the player toward the serpent.",
+          "pickup": {
+            "name": "Charged Storm Core",
+            "effect": "Temporarily amplifies lightning damage by 50%."
+          },
+          "trigger": "The player's arrival destabilizes the storm, awakening the serpent."
+        },
+        {
+          "location": "Gravity Wells of the Void",
+          "enemy": {
+            "name": "Gravity Warden",
+            "health": 300,
+            "damage": 80,
+            "weakness": "Charged Storm Core (pickup from prior encounter)"
+          },
+          "hazard": "Floating debris and black hole vortexes.",
+          "pickup": {
+            "name": "Celestial Key",
+            "effect": "Unlocks the final boss chamber."
+          },
+          "trigger": "The Charged Storm Core's energy destabilizes the gravity field, summoning the Warden."
+        },
+        {
+          "location": "Temple of Shattered Stars",
+          "enemy": {
+            "name": "Celestial Sentinel",
+            "health": 250,
+            "damage": 70,
+            "weakness": "Lightning (player's primary weapon)"
+          },
+          "hazard": "Collapsing star fragments and erratic lightning storms.",
+          "pickup": {
+            "name": "Stormcaller's Resolve",
+            "effect": "Reduces lightning damage taken by 30%."
+          },
+          "trigger": "The Celestial Key illuminates a hidden path, revealing the Sentinel guarding the boss chamber."
+        }
+      ],
+      "boss": {
+        "name": "Celestial Sovereign",
+        "health": 800,
+        "damage": 120,
+        "weakness": "Celestial Key (pickup from second encounter)",
+        "victory_condition": "Use the Celestial Key to disrupt the Sovereign's cosmic anchor."
+      },
+      "objective": "Defeat the Celestial Sovereign",
+      "reward": "Cosmic Storm Crown (grants permanent lightning damage boost)"
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "desolate",
+      "player_class": "ranger",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "The Hollow Expanse",
+      "setting": "A desolate, broken space station with flickering lights and floating debris. The atmosphere is thick with ionized particles, casting an eerie purple glow over crumbling corridors and shattered observation decks.",
+      "player_weapon": "Emberfang Bow (fire-elemental arrows)",
+      "player_weapon_damage": 18,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Derelict Control Chamber",
+          "enemy": {
+            "name": "Corrupted Drone",
+            "health": 40,
+            "damage": 10,
+            "weakness": "Fire-based attacks (player's weapon: Emberfang Bow)"
+          },
+          "hazard": "The drone's movements trigger collapsing debris, forcing the player to navigate narrow corridors.",
+          "pickup": {
+            "name": "Fire Core",
+            "effect": "Can be used to melt crystalline shields or activate mechanisms."
+          },
+          "trigger": "Player must defeat the drone to unlock the sealed door using the Fire Core pickup."
+        },
+        {
+          "location": "Crystalline Nexus",
+          "enemy": {
+            "name": "Crystalline Guardian",
+            "health": 80,
+            "damage": 15,
+            "weakness": "Shield bypassed by the Fire Core pickup (from prior encounter)"
+          },
+          "hazard": "The guardian's attacks summon gravity wells that pull the player toward dangerous debris fields.",
+          "pickup": {
+            "name": "Cosmic Shard",
+            "effect": "Damages celestial entities and disrupts energy shields."
+          },
+          "trigger": "The Fire Core melts the guardian's crystalline armor, revealing a vulnerable core. Defeating it unlocks the path to the boss chamber."
+        }
+      ],
+      "boss": {
+        "name": "Celestial Warden",
+        "health": 200,
+        "damage": 25,
+        "weakness": "Cosmic Shard (pickup from encounter 2) to disrupt its energy core",
+        "victory_condition": "Use the Cosmic Shard to disable the Warden's shield, then strike its core with fire arrows for critical damage."
+      },
+      "objective": "Reach the Celestial Warden at the core of the derelict station.",
+      "reward": "Celestial Gauntlet (grants temporary invincibility when dodging attacks)."
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "eerie",
+      "player_class": "artificer",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Celestial Eerie",
+      "setting": "A desolate, ancient celestial station with cracked crystalline structures, pulsating with unstable energy. The air hums with static, and distant echoes of machinery malfunction suggest a long-abandoned experiment.",
+      "player_weapon": "Quantum Capacitor (crafted using pickups)",
+      "player_weapon_damage": 150,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Derelict Celestial Station - Corridor of Echoes",
+          "enemy": {
+            "name": "Celestial Drone (Malfunction)",
+            "health": 200,
+            "damage": 50,
+            "weakness": "Player's starting weapon: Plasma Cannon (ignites energy shields)"
+          },
+          "hazard": "Flickering holograms of lost astronauts whisper warnings as the drone attacks.",
+          "pickup": {
+            "name": "Gravity Core",
+            "effect": "Activates gravitational fields to damage enemies with mass."
+          },
+          "trigger": "Malfunctioning drone patrols the corridor; its flickering lights reveal a hidden Gravity Core pickup after defeat."
+        },
+        {
+          "location": "Gravity Wells - Chamber of the Warden",
+          "enemy": {
+            "name": "Gravity Warden",
+            "health": 350,
+            "damage": 70,
+            "weakness": "Gravity Core (disrupts its gravitational manipulation)"
+          },
+          "hazard": "Floating debris and collapsing gravity wells force the player to navigate while fighting.",
+          "pickup": {
+            "name": "Quantum Capacitor",
+            "effect": "Stores and releases energy blasts to overload cosmic entities."
+          },
+          "trigger": "The Gravity Core unlocks a path to this chamber, where the Warden guards a portal. Its gravitational pull distorts the environment."
+        }
+      ],
+      "boss": {
+        "name": "Celestial Leviathan",
+        "health": 1000,
+        "damage": 120,
+        "weakness": "Quantum Capacitor (overloads its cosmic core during Phase 2)",
+        "victory_condition": "Defeat the Leviathan by exploiting its core vulnerability with the Quantum Capacitor."
+      },
+      "objective": "Reach the Celestial Leviathan's Core Chamber",
+      "reward": "Celestial Artificer's Codex (unlocks cosmic crafting recipes)."
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "tense",
+      "player_class": "engineer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Celestial Conduit",
+      "setting": "A decaying space station orbiting a dying star, with flickering lights, electromagnetic storms, and unstable gravity fields.",
+      "player_weapon": "Plasma Welder (overheats mechanical enemies)",
+      "player_weapon_damage": 20,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Derelict Corridor",
+          "enemy": {
+            "name": "Malfunctioning Drone",
+            "health": 50,
+            "damage": 10,
+            "weakness": "Plasma Welder (player's primary weapon)"
+          },
+          "hazard": "Flickering lights and electromagnetic pulses disrupt the player's aim.",
+          "pickup": {
+            "name": "Signal Booster",
+            "effect": "Overrides station security systems, unlocking the path to the next encounter."
+          },
+          "trigger": "Player must repair a damaged terminal to proceed, triggering the drone's patrol route."
+        },
+        {
+          "location": "Reactor Chamber",
+          "enemy": {
+            "name": "Corrupted AI",
+            "health": 80,
+            "damage": 15,
+            "weakness": "Signal Booster (pickup from prior encounter)"
+          },
+          "hazard": "Overloaded reactor cores cause periodic radiation bursts.",
+          "pickup": {
+            "name": "Gravity Anchor",
+            "effect": "Disrupts gravitational fields, essential for defeating the final boss."
+          },
+          "trigger": "The AI activates a shield after the player uses the Signal Booster to bypass security."
+        },
+        {
+          "location": "Stellar Core Chamber",
+          "enemy": {
+            "name": "Stellar Core Guardian",
+            "health": 200,
+            "damage": 25,
+            "weakness": "Gravity Anchor (pickup from prior encounter)"
+          },
+          "hazard": "The dying star's gravity well pulls the player toward the core, requiring precise movement.",
+          "pickup": {
+            "name": "Celestial Core",
+            "effect": "Restores station stability, completing the level."
+          },
+          "trigger": "The player's progress triggers the boss to activate its gravitational shield."
+        }
+      ],
+      "boss": {
+        "name": "Stellar Core Guardian",
+        "health": 200,
+        "damage": 25,
+        "weakness": "Gravity Anchor (disables gravitational shield)",
+        "victory_condition": "Destroy the core's unstable energy matrix after disabling the shield."
+      },
+      "objective": "Repair the station's core by overcoming three encounters and the final boss, using pickups to bypass defenses and weaknesses.",
+      "reward": "Celestial Core (restores station stability) and access to advanced engineering blueprints."
+    }
+  }
+]

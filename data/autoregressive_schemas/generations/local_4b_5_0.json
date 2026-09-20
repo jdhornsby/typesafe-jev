@@ -1,0 +1,1108 @@
+[
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "ominous",
+      "player_class": "pyromancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Ominous fire. The world is slowly being consumed by an ancient fire that remembers every death. The player is not just fighting — they are being tested by a fire that knows their past, and seeks to consume their strength. Every encounter reveals a fragment of the curse’s origin, tied to the player’s own pyromantic power.",
+      "setting": "The level is set deep within the Valley of Ember Ash, a place long abandoned after a fire curse consumed the land. Crumbling towers of blackened stone rise from the ground. The sky is a perpetual twilight, with a low, unnatural red glow from the horizon. The air is thick with ash and the smell of burnt metal. The environment feels alive — the ground breathes, stones shift, and fire flickers without cause.",
+      "player_weapon": "Fang of Ember (a fire-forged, jagged staff that increases pyromancer damage by 20% and allows fire bursts at 50% mana cost)",
+      "player_weapon_damage": 30,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Shattered Pyre Chamber",
+          "enemy": {
+            "name": "Scorch Wraith",
+            "health": 120,
+            "damage": 45,
+            "weakness": "Player's primary weapon, the 'Fang of Ember', which deals extra fire damage to Wraiths. The weapon's unique flame aura causes the Wraith to burn faster and take 1.5x fire damage."
+          },
+          "hazard": "The floor is covered in molten ash that triggers a 2-second burn effect when stepped on. The burn damages the player over time (2 damage per second) unless they use a fire-based spell to shield themselves.",
+          "pickup": {
+            "name": "Ember Shard",
+            "effect": "Ember Shard (a glowing, jagged shard of blackened fire), drops when Scorch Wraith is defeated. Can be used as a weapon in the fight with Ignis Maw."
+          },
+          "trigger": "After defeating the Scorch Wraith, the chamber's floor cracks. A low, guttural hum grows louder. A faint red pulse pulses from the center — the path to the next chamber becomes visible. The air grows thick with sulfur and ash, and the walls begin to emit sparks."
+        },
+        {
+          "location": "The Cracked Ember Gorge",
+          "enemy": {
+            "name": "Ashmaw Stalker",
+            "health": 200,
+            "damage": 75,
+            "weakness": "The Ember Shard. When the player holds it, the Stalker's fire resistance drops by 40%, and it takes 1.8x fire damage. This is only active when the Ember Shard is in the player's inventory or equipped as a secondary weapon."
+          },
+          "hazard": "The ceiling of the chamber is a series of crumbling stone slabs that slowly fall. A timed drop sequence occurs every 40 seconds — if the player is caught under one, they take 50 damage and lose a turn.",
+          "pickup": {
+            "name": "Flame Cinders",
+            "effect": "Flame Cinders (a cluster of burning embers), drops when the Ashmaw Stalker is defeated. Can be used to create a temporary flame shield or to ignite nearby objects."
+          },
+          "trigger": "After defeating the Ashmaw Stalker, a dark crack appears in the gorge wall, revealing a dark tunnel. From it, a deep, resonant growl echoes. The shadows move unnaturally — and the ground begins to emit pulsing heat waves. The air smells of burning flesh and old fire."
+        },
+        {
+          "location": "The Infernal Chasm",
+          "enemy": {
+            "name": "Ignis Maw (Early Form)",
+            "health": 500,
+            "damage": 120,
+            "weakness": "Ember Shard (must be equipped by the player at the time of battle). If not equipped, it takes double damage from fire resistance and attacks with flame-laced claws and a fire-spewing maw. The player can only survive with the Ember Shard active to break its core defense."
+          },
+          "hazard": "The tunnel is narrow, with collapsing walls and narrow ledges. The player must avoid falling into deep chasms, which cause instant death. Movement is slow, and the environment is visually oppressive — glowing red veins pulse through the rock like veins of fire.",
+          "pickup": {
+            "name": "None",
+            "effect": "None (this is the final battle)"
+          },
+          "trigger": "After the final battle, the ground trembles. The walls crack open, revealing a massive, molten core beneath. The core glows with unstable fire. A shadowy figure rises from the core — the true form of Ignis Maw, now fully manifested. The game transitions to the boss fight, requiring the Ember Shard to be equipped."
+        }
+      ],
+      "boss": {
+        "name": "Ignis Maw",
+        "health": 800,
+        "damage": 150,
+        "weakness": "Ember Shard (a fire-fragment pickup from the second encounter, used to ignite the core; requires player to have collected it prior to the fight).",
+        "victory_condition": "Player uses the Ember Shard to destroy the core of Ignis Maw"
+      },
+      "objective": "Destroy the core of Ignis Maw to end the infernal corruption in the valley. Use your pyromancer abilities wisely — fire is powerful, but misjudged attacks lead to death from the environment.",
+      "reward": "After defeating Ignis Maw, the player gains the 'Pyre Ascension' achievement and a permanent +10% fire damage buff."
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "whimsical",
+      "player_class": "beastmaster",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Playful, candy-crust, dreamlike adventure with gentle magic and creature companionship",
+      "setting": "A whimsical floating island of candy-colored moss, floating jelly trees, and rivers of bubblegum syrup. The sky is painted with floating clouds that move like bouncy cotton candy. The ground gently bounces underfoot, and the air hums with soft chimes.",
+      "player_weapon": "Crystal Shard",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The entrance of the Glittering Grotto, between two floating candy trees",
+          "enemy": {
+            "name": "Sugar-Slithering Snail",
+            "health": 20,
+            "damage": 5,
+            "weakness": "Crystal Shard (player's weapon) — the snail's sugar shell shatters upon impact with the shard, causing it to melt and collapse"
+          },
+          "hazard": "The snail's trail creates a soft, sticky path — stepping on it makes the ground bounce once",
+          "pickup": {
+            "name": "Glimmering Sparkle Seed (a glowing, seed-like crystal that glows when held in hand, used to summon the Glimmer Fox in next encounter)",
+            "effect": "Glimmering Sparkle Seed"
+          },
+          "trigger": "After defeating the snail, a small, playful fox with candy-colored fur appears behind a candy apple and starts dancing. The player sees a path leading deeper into the grotto."
+        },
+        {
+          "location": "A clearing behind the candy apple, with floating jelly lanterns",
+          "enemy": {
+            "name": "Glimmer Fox",
+            "health": 30,
+            "damage": 8,
+            "weakness": "Glimmering Sparkle Seed (pickup from Encounter 1) — if the player holds the seed and attacks, the fox freezes and turns into a harmless dancing sprite"
+          },
+          "hazard": "The fox spins rapidly and tosses candy; if the player doesn't avoid, it can trigger a small explosion of sugar dust",
+          "pickup": {
+            "name": "Whistle of Whimsy (a tiny, glowing wind instrument that plays cheerful tunes when held)",
+            "effect": "Whistle of Whimsy"
+          },
+          "trigger": "After the fox is defeated, it drops the whistle. The ground trembles, and a glowing arch appears. The sky begins to ripple with colors, and the path to the Grotto Vault opens."
+        },
+        {
+          "location": "The Grotto Vault — a cave with floating candy bricks and rainbow mushrooms",
+          "enemy": {
+            "name": "The Gloop Glitch",
+            "health": 100,
+            "damage": 10,
+            "weakness": "Whistle of Whimsy (pickup from Encounter 2) — when used directly on the boss, it causes a wave of playful sound that weakens the Gloop Glitch by 50% and triggers a rainbow burst of glitter"
+          },
+          "hazard": "The Gloop Glitch floats and sings silly songs; when hurt, it bounces and emits a bubble of giggles",
+          "pickup": {
+            "name": "Golden Beast Bond",
+            "effect": "Golden Beast Bond (a unique bond item that enhances future beastmaster abilities)"
+          },
+          "trigger": "The Gloop Glitch appears when the player reaches the Vault. After it is defeated, the level ends with a celebratory sparkle and music."
+        }
+      ],
+      "boss": {
+        "name": "The Gloop Glitch",
+        "health": 100,
+        "damage": 20,
+        "weakness": "The Whistle of Whimsy (a pickup from Encounter 2) — the boss takes 50% damage when the whistle is activated",
+        "victory_condition": "Player uses the Whistle of Whimsy on the boss"
+      },
+      "objective": "Defeat three enemies to awaken the Golden Beast Bond",
+      "reward": "The Golden Beast Bond (a powerful bond with the player's companion beast)"
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "tense",
+      "player_class": "paladin",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "A paladin’s holy light is being stolen by a corrupt force. To save the temple, they must reclaim the light — not through strength alone, but through sacrifice, precision, and the memory of what they lost. The only weapon that works is the one they wielded in battle, or the shard they found in the ruins of their own past.",
+      "setting": "A once-bright temple now choked by blackened stone and glowing corruption. The air is thick with ash. Flickering torches cast jagged shadows. The walls breathe — cracks pulse with dark energy. The deeper the player goes, the more the environment reacts to combat. Every step causes a creak. Every hit echoes.",
+      "player_weapon": "Divine Smite Lance (paladin weapon)",
+      "player_weapon_damage": 35,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Temple of the Shattered Sun",
+          "enemy": {
+            "name": "Corrupted Guardian",
+            "health": 150,
+            "damage": 75,
+            "weakness": "Holy Light (paladin weapon skill: Light Surge or Holy Aura)"
+          },
+          "hazard": "Flickering torches; collapsing ceiling above path",
+          "pickup": {
+            "name": "Holy Light Shard (Shard of Radiant Dawn)",
+            "effect": "Gains a temporary +10% Holy Light radius when attacking. Also, gains 15% damage reduction against undead."
+          },
+          "trigger": "After defeat, the temple collapses into a fissure. The player must navigate through a narrow, crumbling corridor lit only by glowing runes that begin to pulse. The path leads to a sealed door behind a shattered altar — activating it triggers the next encounter."
+        },
+        {
+          "location": "The Crumbling Atrium",
+          "enemy": {
+            "name": "Shadowed Warden",
+            "health": 200,
+            "damage": 90,
+            "weakness": "Divine Smite Shard (acquired from Encounter 1)"
+          },
+          "hazard": "Enemy phases: first phase (slow, defensive) — second phase (faster, aggressive, spawns shadow clone). Environment darkens; ambient wind howls.",
+          "pickup": {
+            "name": "Divine Smite Shard",
+            "effect": "Allows paladin to use Divine Smite as a passive ability (15% increased smite damage) until defeated. This effect stacks with a maximum of 2."
+          },
+          "trigger": "After the player defeats the Shadowed Warden, the altar in the atrium explodes in a burst of shadow energy. A new chamber opens — a glass-encased vault with flickering light, leading to the final chamber. The vault’s door seals behind the player, and the final boss is revealed in the center."
+        },
+        {
+          "location": "The Vault of Echoes",
+          "enemy": {
+            "name": "Revenant Sentinel",
+            "health": 300,
+            "damage": 110,
+            "weakness": "Holy Light (player's weapon or holy aura active; overrides all other weaknesses if active)"
+          },
+          "hazard": "Spawns a second copy if the player uses smite within 3 seconds. Immobilized for 2 seconds if hit by any enemy.",
+          "pickup": {
+            "name": "Holy Aura Amplifier",
+            "effect": "Increases the duration of Holy Aura by 40%. Cannot be dispelled by magic."
+          },
+          "trigger": "After defeating the Revenant Sentinel, a massive fissure opens in the vault. The ground shudders, and the ceiling collapses, revealing a massive, ancient statue half-buried in black ash — the source of the corruption. The statue awakens into the Fallen Saint, the final boss."
+        }
+      ],
+      "boss": {
+        "name": "The Fallen Saint",
+        "health": 800,
+        "damage": 120,
+        "weakness": "Divine Smite Shard (acquired from Shadowed Warden in Encounter 2)",
+        "victory_condition": "Deal 200 damage with the Divine Smite Shard active"
+      },
+      "objective": "Defeat all three enemies and the final boss to restore the Temple of the Shattered Sun. The final boss is vulnerable only when the Divine Smite Shard is active in the player’s inventory.",
+      "reward": "The Light of the First Paladin — a legendary artifact that restores 50 HP and grants a 10% chance to activate holy aura immediately."
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "mysterious",
+      "player_class": "illusionist",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "The player is not just fighting enemies — they are confronting their own fractured self. The illusions are not just tricks; they are echoes of a self that was lost. Every failure echoes. Every victory reveals a deeper truth.",
+      "setting": "A forgotten temple beneath a shattered mountain, where time flows backward in certain rooms and reflections do not behave as they should. The air is thick with silence and memory. The player begins to suspect that every enemy is not just a foe, but a fragment of themselves — corrupted by time and illusion.",
+      "player_weapon": "Prism Shard (a magical prism shard that can create illusions and break them. It is the player's primary tool. When used in a specific spell, it temporarily weakens enemies that are based on mirrors or reflections.)",
+      "player_weapon_damage": 80,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "A vast, stone hall with polished obsidian mirrors lining the walls. The mirrors reflect not just the player, but distorted versions of their own face and a dark version of the enemy. Ambient sound is a low hum that pulses in sync with the player's spell cast timing.",
+          "enemy": {
+            "name": "The Mirror Guardian",
+            "health": 300,
+            "damage": 75,
+            "weakness": "Prism Shard (the player's weapon). When the player uses a spell that activates the Prism Shard (e.g., 'Shatter Reflection' or 'Prism Cascade'), the enemy takes 40% damage and is forced into a state of flickering, revealing a hidden path behind it. If the Prism Shard is not used, the enemy reflects the illusion back to the player with 50% damage and gains a passive ability to absorb 20% of the player's next illusion spell damage as health."
+          },
+          "hazard": "Flickering walls that shift every 15 seconds. The walls are real for 3 seconds, then become illusions. Players must find the true path within the shift or become trapped in a corridor with no exits. If trapped for 10 seconds, the player takes 50% of the enemy's health as damage.",
+          "pickup": {
+            "name": "Shattered Reflection Fragment",
+            "effect": "Shattered Reflection Fragment (a small, cracked piece of mirror glass that glows faintly when near the player. It cannot be used directly. It must be collected and stored in the player's inventory for future use.)"
+          },
+          "trigger": "After defeating the Mirror Guardian, the player finds a hidden chamber behind the mirror that was previously obscured. The chamber contains a mirror that shows a shadowy version of the player, whispering: 'The reflection remembers. You must break it.' This chamber has a path that leads directly to the second encounter. If the player fails to collect the Shattered Reflection Fragment, the path becomes blocked and the player is forced into a corrupted corridor that spawns a second enemy instantly (trapped in a loop)."
+        },
+        {
+          "location": "A labyrinth of warped corridors, with walls that appear to breathe and move slowly. The air smells of cold iron. The Shadow Weaver appears as a silhouette that moves in perfect sync with the player’s illusion casting, making it nearly impossible to target.",
+          "enemy": {
+            "name": "The Shadow Weaver",
+            "health": 600,
+            "damage": 110,
+            "weakness": "Shattered Reflection Fragment. When the player uses the fragment as a spell component (e.g., 'Mimic the Reflection' or 'Shatter the Illusion'), the Shadow Weaver takes 50% damage and for 10 seconds, it becomes physically still and vulnerable. However, if the fragment is not used, the enemy will replicate the player’s last illusion spell as a real attack with 100% accuracy and 20% increased damage. It also gains the ability to 'phantom phase' — briefly becoming invisible and reappearing behind the player in a new location, disrupting positioning and spell timing."
+          },
+          "hazard": "The floor shifts underfoot every 10 seconds, with illusions of safe platforms appearing. One of these is a trap that explodes when stepped on. If the player steps on a false platform, they take 150% of the enemy's damage as a shockwave.",
+          "pickup": {
+            "name": "Void Echo Shard",
+            "effect": "Void Echo Shard (a small, black shard that emits a low-frequency hum. When used with a spell, it causes a temporary 'time slow' effect on the enemy. Can only be used once per battle. Must be used at the moment of the Shadow Weaver's phase shift or it is lost.)"
+          },
+          "trigger": "If the player defeats the Shadow Weaver without using the Shattered Reflection Fragment, the enemy absorbs the fragment and transforms into the core of the final boss (with a 50% chance). This makes the next encounter unavoidable and immediately triggers the boss fight. Alternatively, the player is teleported to the chamber where the Mirror Guardian was, with the Mirror Entity already present, and must fight it again immediately — a brutal reset with no healing or recovery. This sets up the final encounter as a necessary consequence of failure."
+        },
+        {
+          "location": "The central chamber of a forgotten temple, where every surface is a mirror. The air is still. The only light comes from a single pulsing core in the center, which pulses every 3 seconds. The core is the mirror entity’s heart. The walls whisper fragmented memories: 'You were never alone. You were always seen.'",
+          "enemy": {
+            "name": "The Mirror Entity (The True Form)",
+            "health": 1500,
+            "damage": 180,
+            "weakness": "Shattered Reflection Fragment (must be used in combat during the final phase). The fragment must be held in the player's hand when the entity’s core is exposed (after 40 seconds of attack phase). If the fragment is not used, the entity enters 'Infinite Reflection' mode: it spawns 3 copies of itself, each with 100% health, and each can reflect the player’s illusions back with 150% damage. The player is also unable to cast illusions for 60 seconds. The entity's attacks become adaptive — it learns the player’s spell pattern and duplicates it with a 20% damage boost each time. If the player fails to use the fragment, the fight becomes infinite in loop until the player is defeated or the entity consumes the player’s magic source (which is tied to the Prism Shard)."
+          },
+          "hazard": "The entire room becomes a living mirror. Every move the player makes is duplicated in every reflection, creating a false perception of position and movement. The player must track the real self against 4-8 reflections, and if they lose tracking, they are caught in a self-loop where they are attacked by their own illusion. A failed tracking leads to immediate damage and 30% chance of being disoriented for 10 seconds.",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is the final encounter and the Shattered Reflection Fragment is the only key. The fragment must be acquired from prior encounter."
+          },
+          "trigger": "After defeating the Shadow Weaver with the Shattered Reflection Fragment, the player is given a final choice: enter the central chamber to face the Mirror Entity, or be trapped in a loop that repeats the Shadow Weaver encounter indefinitely. If the player chooses to proceed, the chamber activates and the Mirror Entity appears. The encounter ends with the final boss fight. If the player fails to use the Shattered Reflection Fragment in time, they are instantly teleported into a looped memory of the second encounter, with no progress."
+        }
+      ],
+      "boss": {
+        "name": "The Fractured Reflection (The Mirror Entity)",
+        "health": 1800,
+        "damage": 1200,
+        "weakness": "Shattered Reflection Fragment (a piece of the first enemy's mirror core). The fragment must be in the player's inventory and actively used during the final phase (held in hand) to trigger the core's self-annihilation. If the fragment is not present or not used, the boss gains a phase where it reflects the player's illusions back with 2x damage and immunity to illusions for 30 seconds, and the player is unable to use illusions for 45 seconds (brutal mechanic).",
+        "victory_condition": "Player uses the Shattered Reflection Fragment in a direct confrontation with the entity's core. The fragment must be held during the final phase of the fight."
+      },
+      "objective": "Destroy all three enemies to awaken the final form of the Mirror Entity and break its cycle. The final battle requires the player to use the Shattered Reflection Fragment in a direct confrontation with the core — a moment of truth that breaks the cycle of illusion and corruption.",
+      "reward": "The Shattered Reflection Fragment is used to restore the player's illusion magic. The player gains access to a new spell: 'True Reflection', which can permanently shatter illusions of the enemy's form and reveal their true core."
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "serene",
+      "player_class": "warden",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Harmony through balance — the Warden must protect stillness, and each enemy represents a disruption of that balance. The player grows stronger not through force, but through quiet understanding and connection with nature.",
+      "setting": "A tranquil, mist-wrapped forest at dawn. Trees grow in graceful arches, and sunlight filters through leaves like honey. The forest hums with gentle sounds — birdsong, wind, and a soft chime from distant stones. Paths are made of ancient moss, and every step echoes quietly, as if the land itself is breathing.",
+      "player_weapon": "Sword of the Watcher",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Shrines at the Edge of the Forest",
+          "enemy": {
+            "name": "Mist Wisp",
+            "health": 35,
+            "damage": 8,
+            "weakness": "Sword of the Watcher (player's weapon)"
+          },
+          "hazard": "Floating moss-covered stones that slow movement",
+          "pickup": {
+            "name": "Sword of the Watcher",
+            "effect": "Sword of the Watcher (lighter version of the Warden's weapon)"
+          },
+          "trigger": "After defeating the Mist Wisp, the path ahead opens to reveal a narrow bridge over a still pool. A soft chime echoes — the bridge glimmers as if alive. The air grows still, and the bridge begins to tremble slightly, signaling the presence of a more grounded foe."
+        },
+        {
+          "location": "The Bridge Over Still Pond",
+          "enemy": {
+            "name": "Rooted Shade",
+            "health": 50,
+            "damage": 12,
+            "weakness": "Whispering Branch (pickup from previous encounter)"
+          },
+          "hazard": "Ground cracks that cause minor slip hazards when stepping too quickly",
+          "pickup": {
+            "name": "Whispering Branch",
+            "effect": "Whispering Branch — a fragile, glowing sapling that hums when swung"
+          },
+          "trigger": "The bridge begins to sway. A low hum vibrates through the air. The Rooted Shade emerges from the moss beneath, its body woven from dark roots and silence. As the Warden fights, a soft crack echoes — the Whispering Branch glows faintly, and the path ahead glows gently with golden moss, revealing the final approach to the forest's heart."
+        },
+        {
+          "location": "The Hollow Grove — center of the forest",
+          "enemy": {
+            "name": "Frost-Silent Spirit",
+            "health": 80,
+            "damage": 15,
+            "weakness": "Whispering Branch (pickup from prior encounter)"
+          },
+          "hazard": "Cold mist that slows attack speed and causes brief fog effects",
+          "pickup": {
+            "name": "Frost-Resistant Mantle",
+            "effect": "Frost-Resistant Mantle — grants +10% defense and slight resistance to cold damage"
+          },
+          "trigger": "As the Frost-Silent Spirit appears, the wind stills. A deep, echoing breath fills the grove. The spirits glow faintly with a pale blue light. After the Warden defeats it, the ground cracks open slightly, and a great stone arch rises from the earth. In the center, a pool of still water pulses with a soft light — and from it, the Guardian of Still Waters stirs."
+        }
+      ],
+      "boss": {
+        "name": "The Guardian of Still Waters",
+        "health": 150,
+        "damage": 30,
+        "weakness": "Whispering Branch (pickup from Encounter 2)",
+        "victory_condition": "Player uses the 'Whispering Branch' to damage the boss"
+      },
+      "objective": "Protect the sacred pool by defeating each guardian spirit in the grove. The final battle requires the player to wield the Whispering Branch as the key to peace.",
+      "reward": "Unlocks the 'Still Waters' questline and grants a permanent +5% peace effect (reduces enemy aggression) in future levels."
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "chaotic",
+      "player_class": "berserker",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Chaos as a force of evolution — each enemy is a fragment of a broken world. The berserker is not just fighting — they are a vessel for rage, and the world is reacting to their fury. Every action causes instability, and failure leads to a cascade of destruction.",
+      "setting": "A collapsing mountain temple deep within the Shattered Peaks, where ancient magic is breaking down. The walls bleed runes, and the air is thick with storm energy. The ground is unstable, and every few seconds, the world shifts — walls split, skies tear, and new enemies appear.",
+      "player_weapon": "Cursed Waraxe (rages with use, drains health over time when idle)",
+      "player_weapon_damage": 25,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Chamber of the First Collapse",
+          "enemy": {
+            "name": "Gorgon of the Shattered Walls",
+            "health": 150,
+            "damage": 40,
+            "weakness": "Player's weapon: Cursed Waraxe. When swung at full power (40% of max rage), the axe emits a pulse of raw rage that deals 2x damage and forces the enemy to stagger. If the player has not used the axe in 30 seconds, the enemy gains 50% resist to all damage and starts summoning wall fragments that fall from the ceiling."
+          },
+          "hazard": "The chamber walls are cracking. As the player fights, the ceiling splits in random locations, dropping jagged stone shards that move like living shards (hit players with 20% chance).",
+          "pickup": {
+            "name": "Fractured Sky Shard",
+            "effect": "Fractured Sky Shard (a jagged piece of black sky-metal that hums with static)."
+          },
+          "trigger": "After defeating the Gorgon, the ground trembles violently. A fissure opens beneath the player, and the walls begin to bleed purple flame. The player is dropped into the lower chamber — the second encounter begins as the floor collapses and a new wall of jagged black stone rises, forming a narrow path."
+        },
+        {
+          "location": "Ash-Fissure Cavern",
+          "enemy": {
+            "name": "Void Wyrmling, Ash-Carrier",
+            "health": 220,
+            "damage": 60,
+            "weakness": "Fractured Sky Shard. If the player uses the shard within 3 seconds of attacking, the wyrmling explodes into 3 fire-spirits, dealing 80 damage to nearby enemies (including itself). The wyrmling’s fire attacks cause 10% increased fire damage to players if not disrupted by the shard or a weapon swing (only available if player has the shard from prior encounter)."
+          },
+          "hazard": "The air becomes thick with ash that turns into sharp, glowing needles when inhaled. Breathing causes 5% slow; if player takes 3 hits from needles, they lose 10% movement speed and must reposition. Ash clouds spawn every 10 seconds.",
+          "pickup": {
+            "name": "Rage-Infused Iron Plate",
+            "effect": "Rage-Infused Iron Plate (a cracked plate of black iron, pulsing with crimson energy)."
+          },
+          "trigger": "The wyrmling explodes and the ground shudders. A sudden pressure wave tears through the chamber, opening a rift above. The ceiling begins to glow with unstable energy. From the rift, a jagged, obsidian column rises — the Shattered Sovereign’s form begins to emerge, partially visible behind fractured glass. The player is forced into a narrow passage where the final encounter begins."
+        },
+        {
+          "location": "The Cracked Sky Spire (Final Chamber)",
+          "enemy": {
+            "name": "Shattered Sovereign (Phase 1)",
+            "health": 350,
+            "damage": 90,
+            "weakness": "None directly — it is the precursor to the final form. However, during the final fight, the player must use the Rage-Infused Iron Plate to ignite a secondary attack. If the player attacks with the plate while under full rage, the Sovereign takes 25% damage and emits a crackling roar that damages all nearby enemies by 10% (only active if the plate was used in prior fight)."
+          },
+          "hazard": "The environment becomes unstable. Gravity fluctuates every 20 seconds. The player may fall through the ground or be teleported briefly. Time appears to stutter during attacks.",
+          "pickup": {
+            "name": "None",
+            "effect": "None — the final encounter is triggered and ends with boss fight."
+          },
+          "trigger": "The player enters the final chamber. The Sovereign begins to manifest fully. If the player does not have the Fractured Sky Shard, it activates a chaos phase: enemies spawn faster, terrain shifts, and the player takes 30% more damage. Only if the player has the Fractured Sky Shard (from prior encounter) can they unlock the true boss weakness."
+        }
+      ],
+      "boss": {
+        "name": "The Shattered Sovereign",
+        "health": 400,
+        "damage": 85,
+        "weakness": "Fractured Sky Shard (acquired from 2nd encounter). When thrown into its chest cavity, the shard causes a 40% damage reduction and 30% chance to trigger a temporary instability burst (reduces all enemy health by 15%). Only active if player has the shard and is in rage state (due to berserker class).",
+        "victory_condition": "Player uses the Fractured Sky Shard to disrupt its core formation."
+      },
+      "objective": "Defeat all three enemies and enter the final chamber to confront the Shattered Sovereign. The player must acquire the Fractured Sky Shard and the Rage-Infused Iron Plate to succeed.",
+      "reward": "Legendary Berserker's Fury (permanent rage boost, 30% damage increase when under full rage)."
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "eerie",
+      "player_class": "necromancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Eerie decay and forgotten necromantic rites. The player is alone, surrounded by dead things that remember the living. Every step echoes. The deeper one goes, the more alive the dead seem to grow.",
+      "setting": "A forgotten necropolis beneath a ruined cathedral. Fog clings to every wall. Statues whisper. Doors creak open and close on their own. The air smells of damp stone and old bones.",
+      "player_weapon": "Bone-handled dagger (default necromancer weapon)",
+      "player_weapon_damage": 12,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Chamber of Echoing Statues",
+          "enemy": {
+            "name": "Bone-Statue Warden",
+            "health": 120,
+            "damage": 28,
+            "weakness": "Player's weapon: Bone-handled dagger (when struck with the dagger, enemy takes double damage and shatters into dust, making it vulnerable to follow-up attacks). The dagger must be swung at the statue’s core (a glowing eye in the chest)."
+          },
+          "hazard": "Fog rolls in after defeat, causing temporary visibility loss for 5 seconds.",
+          "pickup": {
+            "name": "Cursed Silver Shard",
+            "effect": "Cursed Silver Shard (a glowing, cold silver shard that can be used to repel or weaken silver-sensitive enemies. Can be dropped or lost if not equipped. Duration: 10 minutes. Cannot be used more than once per game session.)"
+          },
+          "trigger": "After defeat, the floor cracks and a silver shard falls from above. The path to the next chamber is blocked by a stone gate. A low hum begins. If the player does not collect the shard, the gate closes permanently — forcing a restart of the level."
+        },
+        {
+          "location": "Chamber of the Drowned Choir",
+          "enemy": {
+            "name": "Hollow Choir of the Drowned",
+            "health": 180,
+            "damage": 35,
+            "weakness": "Cursed Silver Shard (when the shard is used within 2 seconds of enemy attack, the wraiths disintegrate and are stunned for 3 seconds. The shard must be equipped and held at the start of the fight to activate this effect). If used late, wraiths gain resistance to necromancy damage. Can be used only once per encounter. The wraiths attack in waves — 3 waves of 2-4 wraiths each, with a 10-second cooldown between waves. After wave 3, the enemy becomes immune to damage until the shard is used again (unusable until next level)."
+          },
+          "hazard": "Wraiths' lullabies cause confusion — player may move randomly or miss attacks for 3 seconds when a wraith sings.",
+          "pickup": {
+            "name": "None",
+            "effect": "None (player gains no new pickup here)"
+          },
+          "trigger": "After defeating all wraiths, a massive stone door slams shut behind the player. The path to the vault is blocked. The player must use the Cursed Silver Shard to activate a ritual phrase — spoken in a low whisper — to unlock the door. If the shard is not used, the door remains closed and the player is stuck until the next restart. If the player fails, the level resets and they lose all progress."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow King",
+        "health": 420,
+        "damage": 85,
+        "weakness": "Cursed Silver Shard (picked up in Encounter 1, must be equipped at the start of battle with a specific chant to activate weakness effect; if not used, the enemy becomes immune to all necromantic damage for 10 seconds). The shard emits a pulse that disrupts the Hollow King's shadow form, causing temporary stagger and slow movement.",
+        "victory_condition": "Player uses the Cursed Silver Shard in combat to reduce HP by 40% (critical hit) or trigger a ritual effect"
+      },
+      "objective": "Reach the Vault of Hollows to defeat The Hollow King using the Cursed Silver Shard.",
+      "reward": "Upon victory, player unlocks a new spell: 'Echo of the Dead' — a ghostly echo of the player’s last move, which can be used to counter enemy attacks in the next level."
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "desolate",
+      "player_class": "ranger",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Isolation and the cost of survival. The player is not just fighting enemies—they are fighting the desolation itself. Each encounter is a test of endurance, patience, and memory. The player must remember what they picked up to survive. The final battle is not just a fight—it is a reckoning with the past and the choices made in the wasteland.",
+      "setting": "The Ashen Spine — A desolate mountain plateau scarred by ancient conflict. Wind-swept stone, cracked earth, and emaciated trees. The sky is a bruised purple, and the only light comes from bioluminescent moss growing in stone fissures. The air is thin, and every step creates a soft crunch. The ground trembles when enemies move. There is no sound of life—only wind, howls, and the echo of footsteps. The player is alone. The world has forgotten them.",
+      "player_weapon": "Longbow (default)",
+      "player_weapon_damage": 25,
+      "player_health": 20,
+      "encounters": [
+        {
+          "location": "Cleft in the eastern ridge",
+          "enemy": {
+            "name": "Scavenger Wraith",
+            "health": 150,
+            "damage": 18,
+            "weakness": "Player's longbow (weapon). All physical attacks on the Wraith reduce its health by 50% per shot. If the player uses their bow within 3 seconds of the enemy’s first attack, it triggers a temporary 'Frost Arrow' effect (freezes the enemy in place for 2 seconds)."
+          },
+          "hazard": "Wind Drift",
+          "pickup": {
+            "name": "Sundered Thorn Arrow (obtained by shooting the Wraith with the bow during the first attack). The arrow appears after the first kill, on a broken stone pedestal. Only available after using the bow on the Wraith during its initial charge. Cannot be used in combat until after the encounter. Cannot be dropped. Requires a specific shot (a full arrow shot, not a quick one) to be activated. The arrow has a 30% chance to inflict a 'Steady Aim' debuff (reduces enemy movement speed by 20% for 4 seconds) on hit.",
+            "effect": "Sundered Thorn Arrow (rare arrow variant)"
+          },
+          "trigger": "After the Wraith dies, the wind drops. A stone fissure in the east opens. The wind howl grows louder. The next encounter appears as a slow, deliberate movement across the plateau toward the central crag. The terrain becomes more unstable—cracks widen. A distant howl echoes from the north."
+        },
+        {
+          "location": "The central plateau",
+          "enemy": {
+            "name": "Fangspit Stag",
+            "health": 275,
+            "damage": 22,
+            "weakness": "Sundered Thorn Arrow (from previous pickup). If the player uses the Sundered Thorn Arrow on the Stag during its charge, it causes a 10-second stun and reduces health by 35%. If not used, the Stag gains a 'Rip-Flare' effect (increases attack speed by 1.5x and attacks from behind)."
+          },
+          "hazard": "Tremor Rift",
+          "pickup": {
+            "name": "Frostflesh Pelt (obtained by defeating the Fangspit Stag. Found on its back after it dies. The pelt can be used to bind the player’s weapon to create a cold-attack aura when equipped. The aura increases arrow velocity and reduces fire-based damage taken by 40%. The pelt is fragile and can only be used once per playthrough. Must be equipped immediately to activate the aura. If damaged during combat, the effect fails for 10 seconds.)",
+            "effect": "Frostflesh Pelt (a rare animal hide)"
+          },
+          "trigger": "After the Stag is defeated, a fissure in the central plateau emits a low, rhythmic hum. The ground begins to vibrate. The wind picks up again—this time, it carries the scent of iron and rot. A shadow moves across the northern wall, forming a jagged shape. The final encounter begins when a faint, pulsing green light appears in the center—only visible at night. The player must now face a corrupted entity that mirrors the wind."
+        },
+        {
+          "location": "Central Crags, facing the ruined temple",
+          "enemy": {
+            "name": "Gale-Wrath Shadow-Beast",
+            "health": 600,
+            "damage": 35,
+            "weakness": "Frostflesh Pelt (must be equipped). If the player has the pelt equipped and uses an arrow while in stealth mode, the arrow deals 2x damage and has a 75% chance to freeze the enemy in place. If the pelt is not equipped, the enemy gains immunity to all arrow types and enters 'Searing Wind' mode (damages the player with every 3 seconds of inactivity)."
+          },
+          "hazard": "Wind Tether",
+          "pickup": {
+            "name": "No new pickup. Final battle requires the player to use the Sundered Thorn arrow and the Frostflesh Pelt in sequence.",
+            "effect": "None — the boss weakness is derived from the prior encounter."
+          },
+          "trigger": "After the Shadow-Beast is defeated, the central temple’s arch collapses. A massive stone door opens from within—carved with runes of wind and silence. The air becomes still. The wind dies. The final boss emerges from beneath the temple, not in a visible form, but in a swirling storm of silence and ash. The player hears the distant echo of a ranger’s song—then silence. The player must enter the temple to face the Hollow Warden."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Warden",
+        "health": 1200,
+        "damage": 250,
+        "weakness": "Sundered Thorn arrow (a specific pickup from the second encounter). When the player uses a Sundered Thorn arrow in the final attack, it triggers a critical vulnerability for 3 seconds, allowing the player to deal 3x damage. The arrow must be in inventory and used in a specific way (arrow shot into the exposed core).",
+        "victory_condition": "Player uses the 'Sundered Thorn' arrow in a critical shot to the spine when the boss is at 30% HP."
+      },
+      "objective": "Survive all three encounters and defeat the Hollow Warden using a Sundered Thorn arrow (from encounter 1) and the Frostflesh Pelt (from encounter 2).",
+      "reward": "Ancient Song of the First Ranger (a passive ability to restore 2 HP on stealth entry)."
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "tense",
+      "player_class": "engineer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "A relentless engineering struggle where failure is not just a consequence — it is a physical presence. Every system failure adds pressure. The player must think ahead, manage resources, and survive with only limited tools and time. The tension comes from the fact that each enemy makes the next one more dangerous, and the player has no backup systems or escape routes.",
+      "setting": "A decaying deep-space colony on a derelict orbital platform. Corrosion is rampant, systems are unstable, and the AI has begun to manifest hostile entities. The player is an engineer tasked with stabilizing the ship's core, but every step forward is met with mechanical decay and hostile interference.",
+      "player_weapon": "Plasma Cutter (initial weapon)",
+      "player_weapon_damage": 40,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Lower Deck Maintenance Shaft",
+          "enemy": {
+            "name": "Corroded Gristle",
+            "health": 150,
+            "damage": 50,
+            "weakness": "Plasma Cutter (player weapon) - causes 2x damage when used. Gristle's body is weak to high-energy plasma, which the player can deploy from their primary weapon."
+          },
+          "hazard": "Crumbling Hull Corridor - structural instability increases every 30 seconds, reducing player movement speed by 30% and making it harder to reposition.",
+          "pickup": {
+            "name": "Plasma Cutter Module (from Gristle's corpse after defeat) - unlocks ability to use plasma blasts in direct fire mode. Increases damage by 40% and reduces reload time by 50% when used with the player's main weapon. Must be collected after defeating Corroded Gristle to progress to next level.",
+            "effect": "Plasma Cutter (temporary weapon upgrade)"
+          },
+          "trigger": "After defeating the Corroded Gristle, a cracked access panel in the wall activates, revealing a hidden chamber with a weak signal — the signal grows stronger as the player moves forward. This triggers the next encounter if player stays in the same sector for more than 45 seconds or if a secondary threat is detected."
+        },
+        {
+          "location": "Radiation Buffer Bay (accessed via corridor opened after Gristle fight)",
+          "enemy": {
+            "name": "Scavenger Drift",
+            "health": 250,
+            "damage": 75,
+            "weakness": "Thermal Rebar (pickup from first encounter) - causes 3x damage to Scavenger Drift when used. The drift uses heat-conductive limbs, which are vulnerable to sudden thermal spikes from the rebar device when deployed in close proximity to the enemy."
+          },
+          "hazard": "Radiation Pulse Field - every 20 seconds, a burst of ionized radiation occurs, reducing player shield by 25% and causing stagger for 1.5 seconds.",
+          "pickup": {
+            "name": "Thermal Rebar (recovered from a collapsed support unit after Scavenger Drift is defeated) - allows player to deploy a localized thermal spike in front of them. When used, it increases damage by 60% and triggers a short stun on enemies within 2 meters. Critical for boss fight as it weakens Void Drifter’s shields.",
+            "effect": "Thermal Rebar (temporary weapon upgrade)"
+          },
+          "trigger": "If player fails to destroy the Scavenger Drift before the radiation pulse resets, a secondary pulse is triggered, causing a 5-second instability that forces the player to take cover in a locked chamber. The chamber's door opens 10 seconds later, revealing a pulsing energy node — the presence of this node increases the chance of activating the Void Drifter's AI core. If the node is active for over 12 seconds, it triggers the boss fight."
+        },
+        {
+          "location": "Central Reactor Chamber (accessed after Scavenger Drift is defeated and the node is active)",
+          "enemy": {
+            "name": "Void Drifter (early phase)",
+            "health": 350,
+            "damage": 100,
+            "weakness": "Stasis Core (pickup from second encounter) - if used within 3 seconds of contact, it freezes the enemy for 2 seconds and reduces damage taken by 30% during freeze. Only usable if player has collected the Thermal Rebar from earlier encounters and used it successfully in combat."
+          },
+          "hazard": "Dynamic Gravity Shift — every 30 seconds, the room's gravity flips. Player falls to the floor or is thrown upward. If gravity shifts during combat, the player is stunned and cannot act for 2 seconds.",
+          "pickup": {
+            "name": "Stasis Core (acquired from Scavenger Drift's wreckage after it's destroyed) - a dormant energy core that can be activated by pressing the player's 'hold' button during combat. When activated, it creates a localized time-dilation field for 4 seconds, allowing the player to perform a single critical action (e.g., deploy Thermal Rebar, fire Plasma Cutter) with guaranteed 1.5x damage. Critical for boss fight.",
+            "effect": "Stasis Core (key boss weakness pickup)"
+          },
+          "trigger": "If the player uses the Stasis Core during the void drifter encounter, it triggers a memory glitch in the system — a red alert flashes and the void drifter transforms into the final form. If not used in time (within 4 seconds of contact), it activates its true form and the player must face the full boss immediately."
+        }
+      ],
+      "boss": {
+        "name": "Void Drifter",
+        "health": 500,
+        "damage": 120,
+        "weakness": "Stasis Core (pickup from encounter 2) - causes 2x damage to all attacks when active and disables the enemy's phase-shift ability for 3 seconds. Must be used during the final 15 seconds of combat to win.",
+        "victory_condition": "Player damages boss to 0 OR activates the 'Stasis Core' pickup from the second encounter"
+      },
+      "objective": "Destroy all three enemies in sequence to activate the reactor core and stabilize the ship’s core. The final enemy, Void Drifter, can only be defeated if the player has both the Plasma Cutter and Thermal Rebar pickups, and uses the Stasis Core during combat. Failure to do so results in the ship’s collapse and a restart.",
+      "reward": "Upon completion, player unlocks the 'Engineering Core' skill tree, allowing them to create custom weapon modules and repair damaged systems on the fly."
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "desolate",
+      "player_class": "chronomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "The passage of time is broken. Every action repeats, or erases itself. The player must learn to manipulate time not just to survive, but to *remember* what happened before. The enemies are echoes of failed attempts — they remember what was lost. The only way to break them is to use what was found in the past.",
+      "setting": "A desolate, time-warping zone in the post-collapse Chrono Expanse — a once-great time-observatory now fractured and abandoned. The air is still, and time appears to stutter. Panels glow with corrupted data. Every 30 seconds, the environment rewinds slightly — like a broken clock trying to reset. The player moves through decaying corridors where echoes of past actions replay.",
+      "player_weapon": "Chrono-Scythe — allows rewinding 1 second of player action. Can be used to avoid attacks or reset timing.",
+      "player_weapon_damage": 50,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Decay Spire — a fractured observation tower with crumbling clockwork panels. Cracks emit weak chroniton pulses.",
+          "enemy": {
+            "name": "Chrono-Scavenger (Scrap Warden)",
+            "health": 120,
+            "damage": 45,
+            "weakness": "Time Rewind (player weapon): Inflicts 2-second rewind on attack animation. Can be used to reset enemy’s forward charge phase."
+          },
+          "hazard": "Falling time-fragments — if stepped on, causes 3-second time-stutter. Player must use Time Pause (active ability) to avoid. Cannot be used in mid-air.",
+          "pickup": {
+            "name": "Fragmented Chrono Core (Tier 1)",
+            "effect": "Time Rewind (cooldown: 15 seconds)"
+          },
+          "trigger": "After defeating the enemy, the clockwork panels begin to rotate backward. If player activates 'Time Pause' during this rotation, a red pulse appears. If unattended, the spire collapses in 20 seconds. Failure results in time-slip into a corrupted corridor — triggers Encounter 2."
+        },
+        {
+          "location": "The Fractured Archive — a derelict data vault where time loops repeat in fragments. Each loop increases enemy spawn count by 1, but only if player doesn’t use the shard.",
+          "enemy": {
+            "name": "Temporal Echo (Echo-Phantom)",
+            "health": 180,
+            "damage": 70,
+            "weakness": "Chrono-Resonance Shard (from prior encounter): When activated, causes enemy to phase into static — reducing damage by 40% and freezing movement for 2 seconds."
+          },
+          "hazard": "Phasing distortion zones — time flickers, and movement appears to lag. Player must use Time Dilation (active ability) to maintain momentum.",
+          "pickup": {
+            "name": "Chrono-Resonance Shard",
+            "effect": "Chrono-Resonance Shard (can be activated in 30-second window only)"
+          },
+          "trigger": "After defeating the enemy, the vault’s central core begins to pulse. If player uses the shard during its pulse (exact 7.3-second window), it emits a harmonic frequency. This triggers a temporary time-burst in the corridor, revealing a hidden passage to the boss location. If not used, the corridor collapses into a temporal void — forcing restart or leading to a glitched spawn of Echo-Phantom in the next loop (increases difficulty)."
+        },
+        {
+          "location": "The Hollowed Core — a collapsing chronal reactor with shifting time layers. The player sees echoes of past encounters. The core pulses every 10 seconds.",
+          "enemy": {
+            "name": "Temporal Anchor (Maw-Entity)",
+            "health": 240,
+            "damage": 100,
+            "weakness": "Chrono-Resonance Shard (from prior encounter): When used, creates a time-lag zone that halts all movement. The enemy cannot move, but is vulnerable to follow-up attacks during the freeze. Must be used within 5 seconds of detection to work. If not, the enemy begins to absorb time from the environment, gaining 50% health per second until player reaches the core zone."
+          },
+          "hazard": "Gravity-warp fields — when player steps in, they are pulled into a temporal vortex that resets the last 30 seconds of time. Player must use Time Dilation to survive.",
+          "pickup": {
+            "name": "Final Chrono Resonance (not picked up, used as boss weakness)",
+            "effect": "None (player already has shard)"
+          },
+          "trigger": "After defeating Maw-Entity, the reactor core shatters, releasing a wave of chronon energy. The player is teleported to the core chamber. The final stage begins: Virex Prime awakens. The time distortion collapses into a single point — the boss fight begins immediately."
+        }
+      ],
+      "boss": {
+        "name": "Temporal Echo: Virex Prime",
+        "health": 300,
+        "damage": 120,
+        "weakness": "Chrono-Resonance Shard (acquired from Enemy 2) used to trigger time-slow burst during final 15% health. Must be equipped in time-delayed use (activated only after 20-second countdown).",
+        "victory_condition": "Destroy the core using Chrono-Resonance Shard"
+      },
+      "objective": "Survive all three encounters and reach the core to stop Virex Prime from rewriting the timeline.",
+      "reward": "Chrono-Resonance Shard — unlocks ability to freeze time in 3-second bursts (active during boss fight)."
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "chaotic",
+      "player_class": "stormcaller",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Chaos as a weapon — the player’s power fuels the enemies, and every success creates a new threat.",
+      "setting": "Orbital Station 'Cerberus-9' — collapsing, atmosphere fractured, gravity fields shifting. Storms tear through the station like living wounds.",
+      "player_weapon": "Lightning Spear",
+      "player_weapon_damage": 4,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Outer Reactor Bay",
+          "enemy": {
+            "name": "Storm Surge Vortex",
+            "health": 40,
+            "damage": 5,
+            "weakness": "Direct lightning strike from Lightning Spear (only effective when fully charged with storm energy)"
+          },
+          "hazard": "Atmospheric shroud collapse → creates EMP ripple that destabilizes nearby systems",
+          "pickup": {
+            "name": "Fragile Conduit",
+            "effect": "Fragile Conduit (extends lightning range; allows overcharge feedback)"
+          },
+          "trigger": "After defeat, an EMP ripple destabilizes the gravity field in the lower core corridor, exposing the Ion Scavenger's entry point."
+        },
+        {
+          "location": "Lower Core Corridor",
+          "enemy": {
+            "name": "Ion Scavenger Drone",
+            "health": 60,
+            "damage": 7,
+            "weakness": "Overcharged plasma feedback (using Lightning Spear while holding Fragile Conduit) triggers destructive resonance pulse"
+          },
+          "hazard": "Plasma mist spreads as it detects player’s storm signature",
+          "pickup": {
+            "name": "Storm Pulse Beacon",
+            "effect": "Storm Pulse Beacon (emits harmonic pulse when activated; disables core's self-sustain cycle)"
+          },
+          "trigger": "After defeat, a hull breach releases toxic plasma mist — gravity field collapses, core begins to pulse erratically, triggering Final Storm Core emergence."
+        },
+        {
+          "location": "Central Reactor Chamber",
+          "enemy": {
+            "name": "Final Storm Core",
+            "health": 100,
+            "damage": 10,
+            "weakness": "Storm Pulse Beacon (must be used during the still pulse to disable harmonic cycle)"
+          },
+          "hazard": "Gravity wells pull players into rifts; lightning tendrils attack in sync with storm cycles",
+          "pickup": {
+            "name": "Storm Pulse Beacon",
+            "effect": "Storm Pulse Beacon (emits harmonic pulse when activated; disables core's self-sustain cycle)"
+          },
+          "trigger": "Player enters chamber after breach — core activates, begins self-replicating storms"
+        }
+      ],
+      "boss": {
+        "name": "Final Storm Core",
+        "health": 120,
+        "damage": 8,
+        "weakness": "Storm Pulse Beacon (activated during a still pulse to disrupt harmonic resonance)",
+        "victory_condition": "Strike the core during its still pulse using the Storm Pulse Beacon"
+      },
+      "objective": "Sustain storm energy to counter the growing chaos while avoiding environmental collapse.",
+      "reward": "Core Fragment: unlocks storm-based skill: 'Storm Surge' (temporary gravity inversion)"
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "mysterious",
+      "player_class": "artificer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Mystery through resonance — every enemy and environment reacts to the player's tools, reinforcing the idea that art and technology are intertwined. The level reveals deeper truths through subtle sound and visual patterns.",
+      "setting": "A decaying data-haven buried beneath a dead moon. The architecture shifts constantly, responding to sound and frequency. Walls are made of living code. Light bends unnaturally, and silence is often louder than noise.",
+      "player_weapon": "Luminous Artificer's Lens — a versatile tool that can be used to reflect light, detect anomalies, and disrupt enemy systems. When used on weak enemies, it amplifies their vulnerability.",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Cracked Core Chamber",
+          "enemy": {
+            "name": "Corroded Circuit Warden",
+            "health": 30,
+            "damage": 10,
+            "weakness": "Artificer's Prism Lens — when the player uses the Prism Lens on the enemy, it shatters and the enemy takes 30% more damage for 3 seconds"
+          },
+          "hazard": "Flickering Data Fields — occasionally glitch and cause temporary blindness (10 seconds). Player must avoid stepping into glowing blue zones.",
+          "pickup": {
+            "name": "Prism Lens",
+            "effect": "Prism Lens (a reflective, hexagonal lens that refracts light and can be used to detect hidden energy signatures)"
+          },
+          "trigger": "After defeating the Circuit Warden, the walls begin to emit a soft, rhythmic hum. A pulsing frequency appears in the data stream, and a new data pulse leads to the next chamber — the 'Echo Chamber'."
+        },
+        {
+          "location": "The Echo Chamber",
+          "enemy": {
+            "name": "Ghost Sigil Drone",
+            "health": 45,
+            "damage": 15,
+            "weakness": "Prism Lens — when used to 'refract' the drone's signal, the drone's movement freezes for 3 seconds and takes 20% damage per second for 5 seconds"
+          },
+          "hazard": "Fading Light Corridors — the path to the next chamber shifts every 15 seconds. Must use the Prism Lens to detect where the correct path lies.",
+          "pickup": {
+            "name": "Tuned Resonance Crystal",
+            "effect": "Tuned Resonance Crystal (a pulsing blue crystal that hums when in contact with specific frequencies)"
+          },
+          "trigger": "After defeating the Ghost Sigil Drone, the walls begin to vibrate in sync with a hidden frequency. A faint echo of a song plays — the tone matches the Resonance Crystal’s hum. The path ahead begins to glow, leading to the final chamber, the 'Symbiont Nexus'."
+        },
+        {
+          "location": "The Symbiont Nexus (pre-boss chamber)",
+          "enemy": {
+            "name": "Veil-Weaver Spore",
+            "health": 60,
+            "damage": 20,
+            "weakness": "Tuned Resonance Crystal — when the player uses it to 'vibrate' the spore, it explodes into harmless data fragments and takes 50% damage for 2 seconds"
+          },
+          "hazard": "Fog of Uncertainty — the player cannot see enemies or walls for 3 seconds after stepping into the fog. Use the Resonance Crystal to detect nearby threats.",
+          "pickup": {
+            "name": "Resonance Shard",
+            "effect": "Resonance Shard (a shard of broken light that activates when placed in a specific frequency field)"
+          },
+          "trigger": "After defeating the Veil-Weaver Spore, the environment collapses into a resonant field. A single glowing node appears in the center of the chamber. The Symbiont of Echoes manifests from the node."
+        }
+      ],
+      "boss": {
+        "name": "The Symbiont of Echoes",
+        "health": 120,
+        "damage": 40,
+        "weakness": "Resonance Shard (acquired from 2nd enemy) — when used, causes 50% damage reduction and triggers a harmonic feedback that damages the boss for 1.5x its normal damage over 2 seconds",
+        "victory_condition": "Player uses the 'Resonance Shard' to activate the final sequence"
+      },
+      "objective": "Use the collected artifacts to weaken the final enemy by exploiting their resonance weaknesses. The game ends when the player defeats the Symbiont of Echoes using the Resonance Shard.",
+      "reward": "Upon victory, the player discovers a hidden message from the First Artificer: 'The universe sings — find the rhythm.'"
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "ominous",
+      "player_class": "shadowblade",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "The station is dying — not from sabotage, but from internal decay. The enemies are fragments of corrupted AI, born from the core's malfunction. Each encounter reveals a deeper layer of the core's consciousness. The player must piece together fragments of the truth using weapons and abilities gained from previous fights. The final confrontation is not just a battle — it is a confrontation with the station’s forgotten soul.",
+      "setting": "A decaying orbital station known as 'The Spire-9'. The station is fractured by internal energy storms, and the core has been destabilized. Lights flicker, audio echoes of dead crew are heard, and the walls appear to shift subtly when not observed. The air is thick with static and a faint hum that grows louder as the player progresses.",
+      "player_weapon": "Shadow Dagger (acquired in first encounter)",
+      "player_weapon_damage": 20,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Fractured Corridor",
+          "enemy": {
+            "name": "Shard Wraith",
+            "health": 60,
+            "damage": 15,
+            "weakness": "The Shard Wraith is vulnerable to the 'Shadow Dagger' — a melee weapon the player must acquire from a fallen scout. It has a 30% chance to shatter when struck with the dagger, causing a short burst of damage to nearby enemies and revealing a hidden path."
+          },
+          "hazard": "The corridor flickers with static. Every 30 seconds, a crimson pulse spreads — if the player is caught in it, they take 25% of their health and are temporarily blinded for 5 seconds.",
+          "pickup": {
+            "name": "Shadow Dagger (Scout's Relic)",
+            "effect": "Unlocks the 'Shadow Dagger' as a weapon. When equipped, it reduces damage taken by 10% during melee attacks and increases critical hit chance to 20%."
+          },
+          "trigger": "After defeating the Shard Wraith, the corridor collapses into a vortex. A low hum begins — a frequency detectable through audio cues. This hum becomes a repeating pulse that slowly rises in pitch. When the pitch reaches a certain frequency, the next encounter is triggered in a submerged chamber beneath the floor."
+        },
+        {
+          "location": "The Submerged Chamber",
+          "enemy": {
+            "name": "Grazer Maw",
+            "health": 90,
+            "damage": 25,
+            "weakness": "The Grazer Maw is weakened by the 'Void Pulse' ability — a skill unlocked after the first encounter. When the player activates it, the Maw’s head splits in half and its movement becomes erratic. The player can exploit this to strike it with a melee attack for a 2x damage bonus."
+          },
+          "hazard": "The chamber is submerged in a black liquid. Each time the player moves, a wave of corrosive mist emits — if the player is caught in it, they take 10% of their health and are slowed by 30% for 3 seconds.",
+          "pickup": {
+            "name": "Void Pulse (Echo Resonator)",
+            "effect": "Unlocks the 'Void Pulse' ability. When active, the player can emit a null-field pulse that suppresses nearby enemy movement and causes them to briefly freeze. Duration: 4 seconds."
+          },
+          "trigger": "After the player defeats the Grazer Maw, a crack in the ceiling emits a deep, subsonic frequency. This resonates through the floor and begins to vibrate the structure. The vibrations shift the environment — floor tiles shift, and a dark fissure opens upward. The fissure emits a faint pulse that matches the frequency of the Void Pulse. This sets the stage for the final confrontation: the Hollow Core is awakening beneath the floor."
+        },
+        {
+          "location": "The Fractured Spire",
+          "enemy": {
+            "name": "Revenant Sentinel",
+            "health": 180,
+            "damage": 40,
+            "weakness": "The Revenant Sentinel is vulnerable to the 'Cryo-Scythe' — a weapon that must be acquired during the third encounter. When struck with the scythe during the sentinel's energy surge phase, it causes a chain reaction that drains 30% of its health and exposes its core (which is later used in the final fight)."
+          },
+          "hazard": "The environment is slowly being pulled into a gravitational well. The player takes 1% damage per second as time passes. Every 10 seconds, the floor shifts and creates a temporary chasm that can't be crossed without using a bridge (which vanishes if not crossed within 2 seconds).",
+          "pickup": {
+            "name": "Cryo-Scythe (Frostbound Blade)",
+            "effect": "Unlocks the 'Cryo-Scythe' — a long, blade-like weapon that emits cold energy. When used, it deals 1.5x damage to enemies with high HP and has a 15% chance to freeze an enemy for 2 seconds."
+          },
+          "trigger": "After defeating the Revenant Sentinel, the floor trembles violently and a dark rift opens upward. The core pulses with a frequency that matches the Void Pulse — the player is teleported into the boss room, where the Hollow Core awaits. The player must now use the Void Pulse and the Cryo-Scythe to defeat it."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Core",
+        "health": 300,
+        "damage": 100,
+        "weakness": "The player must use the 'Void Pulse' ability (acquired from the second enemy) to damage the Hollow Core. The core emits a resonance frequency only active when the Void Pulse is active, allowing the player to phase through its energy field and deal critical damage. Failure to use the ability results in being locked in a resonance cycle that increases damage over time.",
+        "victory_condition": "Deal 150 damage with the 'Cryo-Scythe' weapon while using the 'Void Pulse' ability"
+      },
+      "objective": "Reach the core chamber and defeat the Hollow Core using the weapons and abilities obtained from prior encounters.",
+      "reward": "Upon victory, the player gains 'Eclipse Protocol' — a passive ability that increases damage when fighting enemies with high HP."
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "eerie",
+      "player_class": "alchemist",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Eerie sci-fi decay, alien biochemistry, AI memory, forgotten research",
+      "setting": "The Hollow Station: Vessel-9",
+      "player_weapon": "Chemical Reactor (can be set to Acid, Plasma, Freeze, Vacuum)",
+      "player_weapon_damage": 50,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Corridor of Shifting Veins",
+          "enemy": {
+            "name": "The Crawler",
+            "health": 400,
+            "damage": 35,
+            "weakness": "Acid Beam (from player's Chemical Reactor weapon)"
+          },
+          "hazard": "Scavenging Marks (cause floor collapse)",
+          "pickup": {
+            "name": "Bio-Scrap Vial",
+            "effect": "Grants a temporary decay field on enemies when used"
+          },
+          "trigger": "After defeating Crawler, a console activates with message: 'Only those who understand decay may proceed.'"
+        },
+        {
+          "location": "Rotting Core Chamber",
+          "enemy": {
+            "name": "The Lichen Core",
+            "health": 700,
+            "damage": 50,
+            "weakness": "Bio-Scrap Vial (used as a field effect to cause decay)"
+          },
+          "hazard": "Spore Clouds (reduce visibility and movement speed)",
+          "pickup": {
+            "name": "Bio-Scrap Vial (used in field)",
+            "effect": "Causes temporary disorganization of the Lichen Core when activated"
+          },
+          "trigger": "After defeating Lichen Core, a floor fracture reveals the Heart Vault with message: 'The Weaver has seen you. It knows what you carry.'"
+        }
+      ],
+      "boss": {
+        "name": "The Weaver's Echo",
+        "health": 1200,
+        "damage": 85,
+        "weakness": "Bio-Scrap Vial (used during Encounter 2) placed directly into the core",
+        "victory_condition": "Player uses the Bio-Scrap Vial in the core to trigger resonance"
+      },
+      "objective": "Defeat The Weaver's Echo by using the Bio-Scrap Vial from earlier encounters.",
+      "reward": "Echo Resonance Crystal (can recreate enemy weaknesses in future levels)"
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "whimsical",
+      "player_class": "rogue",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whimsical space absurdity — where aliens are friendly, tech is playful, and chaos is a game to be mastered with creativity and charm.",
+      "setting": "A whimsical, candy-colored space station orbiting a rotating nebula made of pink and blue dust. Floating islands, glowing jelly planets, and sentient tech with quirky personalities populate the environment. The tone is playful, with robots that talk in riddles and music that plays in the background. The level is full of surreal, colorful puzzles and gentle hazards.",
+      "player_weapon": "Glowstick Energy Rod",
+      "player_weapon_damage": 20,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Floating Goo-Grid Lab (a platform of floating, slightly wobbly planks over a candy-colored void).",
+          "enemy": {
+            "name": "Blinky Bounce Bot",
+            "health": 80,
+            "damage": 25,
+            "weakness": "The player's Glowstick Energy Rod (weapon). When the player attacks with the Glowstick, the bot's bounce is disrupted and it freezes mid-step. It emits a high-pitched 'beep' when hit, which can be used to trigger a mini-puzzle later in the level (e.g., unlock a path)."
+          },
+          "hazard": "The floor occasionally turns into a bouncy goo that makes movement slow. Players can avoid it by holding a 'sturdy stance' (a move that can only be used after the first pickup).",
+          "pickup": {
+            "name": "Sparkle Orb",
+            "effect": "The Sparkle Orb appears after victory. It glows gently and can be used to stabilize reality distortions (like in the next encounter). It cannot be used in combat directly but is essential for the second enemy."
+          },
+          "trigger": "After defeating Blinky Bounce Bot, the platform shifts and reveals a new path leading into the 'Jelly Fog Chamber'. This path is blocked by a pulsing red curtain that only opens when the Sparkle Orb is in the player's inventory."
+        },
+        {
+          "location": "The Jelly Fog Chamber (a room with walls made of translucent, shifting jelly).",
+          "enemy": {
+            "name": "Jiggly Jellipod",
+            "health": 120,
+            "damage": 35,
+            "weakness": "The Sparkle Orb (pickup from first encounter). When the player throws the Sparkle Orb into the Jellipod's core, it emits a 'purr' and stops distorting reality. The Jellipod will freeze and play a soft 'chime' for 3 seconds, allowing the player to move freely through the fog for 10 seconds. This is critical for reaching the next area or avoiding hazards that only appear after the distortion is resolved."
+          },
+          "hazard": "Reality shifts—walls move, doors close, and gravity inverts for 5 seconds every 30 seconds. These shifts are random but become predictable after the first use of the Sparkle Orb.",
+          "pickup": {
+            "name": "Whistle of Possibility",
+            "effect": "The Whistle of Possibility appears after victory. It's a small, wind-chime-like device that emits a soft, musical tone when activated. When used on the final enemy, it disrupts its song and creates a temporary silence."
+          },
+          "trigger": "After defeating Jiggly Jellipod, the fog clears slightly, and a musical note echoes through the chamber. A glowing path appears, leading upward to the 'Sky Singing Spire'—a high platform where the final enemy awaits. The Whistle must be collected to reach it."
+        },
+        {
+          "location": "The Sky Singing Spire (a tall, spiral tower with rotating music notes as walls).",
+          "enemy": {
+            "name": "Soggy Soprano Singing Bot",
+            "health": 200,
+            "damage": 50,
+            "weakness": "The Whistle of Possibility (pickup from second encounter). When the player holds the Whistle and activates it during the bot's song, the melody shifts into dissonance, causing the bot to freeze and become vulnerable for 5 seconds. The bot sings a long, looping tune that makes the player's vision flicker and distracts them, but the whistle breaks the rhythm and stops the song mid-phrase, allowing a successful attack."
+          },
+          "hazard": "The bot sings a long, soothing tune that causes the player’s movement to slow and sound effects to distort. The player must use the whistle to interrupt it.",
+          "pickup": {
+            "name": "Final Path Key (not a pickup, but a state achieved after defeating this enemy)",
+            "effect": "The player gains access to the Boss Fight after defeating the Soggy Soprano. No new pickup is given, but the Sparkle Orb is required to unlock the boss’s vulnerability."
+          },
+          "trigger": "Upon defeating the Soggy Soprano Singing Bot, the Spire’s music stops, and a golden path appears leading directly to the center of the level. A soft chime echoes—Zippy the Ziggurat begins to hum and float slowly into view. The player is now ready to fight the boss."
+        }
+      ],
+      "boss": {
+        "name": "Zippy the Ziggurat",
+        "health": 500,
+        "damage": 100,
+        "weakness": "The Sparkle Orb (pickup from first encounter). When thrown into the core, it emits a soft chime that resets the Ziggurat’s chaotic song pattern, making it vulnerable to attack for 10 seconds. Only works if the Sparkle Orb is in the player’s inventory and has not been used in battle.",
+        "victory_condition": "Player uses the Sparkle Orb to stabilize the core, causing it to play a tune and collapse into a harmless jelly of glitter."
+      },
+      "objective": "Defeat all three enemies to unlock the boss fight. The boss can only be defeated using the Sparkle Orb, which was obtained from the first encounter.",
+      "reward": "After defeating the boss, the player receives a 'Cosmic Whim' badge and a new weapon: the 'Sunny Beam Stick', which can now be used to create temporary light paths in dark areas."
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "serene",
+      "player_class": "geomancer",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "The balance of tectonic forces is fragile. The planet was once stable, but a dormant core anomaly is awakening. The player must use their geomancy to restore balance — but each step risks triggering a cascade of collapse. The deeper they go, the more unstable the world becomes. Success requires precision, foresight, and the use of acquired tools.",
+      "setting": "A serene, floating ring of crystalline geodes orbiting a dead gas giant. The planet is calm — glowing rivers of molten light flow slowly, bioluminescent flora pulse in rhythm with tectonic activity. The environment feels peaceful, but beneath the surface, deep tectonic pressure builds. As the player progresses, the serenity erodes, replaced by instability, light pulses, and seismic tremors.",
+      "player_weapon": "Geomagnetic Resonator",
+      "player_weapon_damage": 50,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Cradle Chamber – a dome of translucent crystal where tectonic plates rest in equilibrium.",
+          "enemy": {
+            "name": "Tectonic Echo",
+            "health": 800,
+            "damage": 300,
+            "weakness": "Geomagnetic Resonator (player's primary weapon). Firing the weapon at its core causes a resonance that temporarily disrupts its seismic frequency, allowing the player to reposition or deliver a critical strike. Using it during attack phase causes a 25% damage multiplier for the next 3 seconds, but the Echo reactivates after 4 seconds."
+          },
+          "hazard": "The floor is a stable, floating geode platform. Bioluminescent vines pulse slowly, reacting to player movements.",
+          "pickup": {
+            "name": "Stabilized Core Shard",
+            "effect": "Stabilized Core Shard (a fragment of solidified tectonic material). When held, increases the player's tectonic shielding by 20% and allows one use of 'Tectonic Lock' (a passive spell that stops nearby ground shifts)."
+          },
+          "trigger": "After defeating the Tectonic Echo, a slow, subterranean tremor ripples through the chamber. A fissure opens in the floor, splitting the chamber into two halves. The environment shifts to unstable terrain. The player is teleported into the Fractured Corridor — a narrow corridor where the ground shifts and moves unpredictably. The Crustal Shiver appears in a distant zone, monitoring player movement."
+        },
+        {
+          "location": "Fractured Corridor – a narrow, twisting passage through a fractured ring of ancient crust.",
+          "enemy": {
+            "name": "Crustal Shiver",
+            "health": 1500,
+            "damage": 600,
+            "weakness": "Stabilized Core Shard (must be actively held to use). When used within 2 seconds of enemy contact, it causes a localized tectonic lock that freezes the Shiver's movement and reduces its damage output by 40% for 6 seconds. Using it late results in the Shiver escaping into a new rift zone. If the shard is not used before the enemy attacks, it gains a 'Movement Surge' ability (moves 3 units faster and attacks with ground bursts)."
+          },
+          "hazard": "The corridor floor is unstable and shifts every 15 seconds. The walls emit low-frequency hums that can cause geomancy spells to fail.",
+          "pickup": {
+            "name": "Gravity Well Lens",
+            "effect": "Gravity Well Lens (a crystalline gravity focus device). When activated, creates a localized gravity well that pulls nearby enemies into a central point. Can be used to trap the Crustal Shiver for 5 seconds. However, overuse causes a temporary 30% drop in geomancy charge."
+          },
+          "trigger": "After defeating the Crustal Shiver, a massive rift erupts from the ground, splitting the ring. The environment becomes fully unstable — floating debris, light pulses, and gravitational waves. The player is pulled into the Core Chasm. The Luminous Rift begins to glow with pulsing light, sensing the player’s presence. The rift emits a low-frequency hum that disrupts the player’s geomancy spells, forcing them to use defensive powers to maintain stability."
+        },
+        {
+          "location": "Core Chasm – the heart of the planet’s tectonic core, where the gravitational field is strongest.",
+          "enemy": {
+            "name": "The Luminous Rift",
+            "health": 5000,
+            "damage": 1400,
+            "weakness": "Gravity Well Lens (must be active during the final phase). The Rift is a sentient geological anomaly that grows stronger by absorbing ambient energy. It emits light waves that disorient players and trigger seismic tremors. When the player activates the Gravity Well Lens, the Rift's core becomes unstable and begins to collapse. If the lens is not used within 10 seconds, the Rift regenerates 15% health and spawns a new light wave that disables all player abilities for 4 seconds."
+          },
+          "hazard": "The Core Chasm is a deep, glowing void with floating light constructs that move like tectonic plates. The Rift pulses with energy, causing terrain shifts and audio distortions.",
+          "pickup": {
+            "name": "Gravity Well Lens (critical for boss defeat)",
+            "effect": "None – the Gravity Well Lens is the only critical pickup needed for victory."
+          },
+          "trigger": "None — this is the final confrontation."
+        }
+      ],
+      "boss": {
+        "name": "The Luminous Rift",
+        "health": 5000,
+        "damage": 1200,
+        "weakness": "Gravity Well Lens (acquired from Encounter 2 during the Crustal Shiver fight). Must be held in hand during the final attack phase. The lens focuses gravity to nullify the Rift's self-repairing field, causing a chain reaction that collapses its light-based structure.",
+        "victory_condition": "Apply Gravity Well Lens to the Rift's core, triggering a gravitational collapse that stabilizes the planet's core."
+      },
+      "objective": "Stabilize the planet’s core to prevent a catastrophic tectonic collapse. This requires defeating each enemy and collecting key pickups to counter their weaknesses. Failure to use the Gravity Well Lens within the boss fight window results in a total planetary collapse (game over).",
+      "reward": "Access to the Core Resonance Chamber, where the player can craft new geomancy tools using stabilized materials from the level."
+    }
+  }
+]

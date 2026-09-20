@@ -1,0 +1,585 @@
+[
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "tense",
+      "player_class": "engineer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "The player must navigate through three increasingly hostile encounters, each granting a critical tool for the final battle. The mood is tense, with limited resources and high stakes.",
+      "setting": "A decaying cyberpunk data center, filled with flickering neon lights, leaking coolant, and malfunctioning AI.",
+      "player_weapon": "Plasma welder (upgrades available)",
+      "player_weapon_damage": 80,
+      "player_health": 300,
+      "encounters": [
+        {
+          "location": "Rusted Pipeline Sector",
+          "enemy": {
+            "name": "Welding Drone",
+            "health": 150,
+            "damage": 60,
+            "weakness": "Tesla coil (acquired from encounter 1)"
+          },
+          "hazard": "Explosive welds on the floor that can be triggered by a shockwave.",
+          "pickup": {
+            "name": "Tesla Coil",
+            "effect": "Tesla coil"
+          },
+          "trigger": "Destroying the welding drone triggers an alarm, causing the next encounter to activate."
+        },
+        {
+          "location": "Mainframe Corridor",
+          "enemy": {
+            "name": "Circuit Guardian",
+            "health": 180,
+            "damage": 70,
+            "weakness": "Thermal lancer (acquired from encounter 2)"
+          },
+          "hazard": "Electrical surges that damage the player if not dodged.",
+          "pickup": {
+            "name": "Thermal Lancer",
+            "effect": "Thermal lancer"
+          },
+          "trigger": "Destroying the circuit guardian releases a data burst that the player can intercept, leading to the final encounter."
+        },
+        {
+          "location": "Core Access Tunnel",
+          "enemy": {
+            "name": "Overclocked Sentinel",
+            "health": 220,
+            "damage": 90,
+            "weakness": "Plasma capacitor (acquired from encounter 3)"
+          },
+          "hazard": "Overclocking radiation that temporarily slows the player.",
+          "pickup": {
+            "name": "Plasma Capacitor",
+            "effect": "Plasma capacitor"
+          },
+          "trigger": "Defeating the sentinel unlocks access to the core chamber, leading to the boss fight."
+        }
+      ],
+      "boss": {
+        "name": "The Catalyst",
+        "health": 800,
+        "damage": 200,
+        "weakness": "Charged plasma capacitor (acquired from encounter 3)",
+        "victory_condition": "Destroy the core with a charged plasma capacitor."
+      },
+      "objective": "Infiltrate the data core and destroy 'The Catalyst' before the facility self-destructs.",
+      "reward": "Data core blueprint (unlocks new cybernetic upgrades for the player's engineer class)."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "chaotic",
+      "player_class": "shadowblade",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Chaotic, fast-paced combat in a crumbling, high-tech environment.",
+      "setting": "A collapsing cyberpunk facility with flickering neon signs, malfunctioning AI, and explosive energy surges.",
+      "player_weapon": "Plasma Blade with Overheat State",
+      "player_weapon_damage": 80,
+      "player_health": 300,
+      "encounters": [
+        {
+          "location": "Derelict Data Core",
+          "enemy": {
+            "name": "Scrapper Drone",
+            "health": 120,
+            "damage": 45,
+            "weakness": "Scrapper Drone's shielding is weakened by the player's plasma blade if it's in its 'overheat' state."
+          },
+          "hazard": "Explosive debris in the air—avoid or risk damage.",
+          "pickup": {
+            "name": "Cortex Burner Module",
+            "effect": "Unlock 'Cortex Burner' module for the player's weapon."
+          },
+          "trigger": "After defeating Scrapper Drone, the data core explodes, revealing a hidden corridor leading to the second encounter."
+        },
+        {
+          "location": "Cybernetic Overdrive Chamber",
+          "enemy": {
+            "name": "Sentinel Reaver",
+            "health": 180,
+            "damage": 60,
+            "weakness": "Sentinel Reaver's armor is weakened by the 'Cortex Burner' module from the first encounter."
+          },
+          "hazard": "Electric traps that trigger when the player moves too quickly.",
+          "pickup": {
+            "name": "Overdrive Stim",
+            "effect": "Restore 30% of the player's health and grant a short duration of 'Overheat' boost to the plasma blade."
+          },
+          "trigger": "After defeating Sentinel Reaver, the energy grid destabilizes, triggering a power surge that activates the final corridor leading to the boss."
+        },
+        {
+          "location": "Neuro-Cortex Core",
+          "enemy": {
+            "name": "Neuro-Commander Zeta",
+            "health": 300,
+            "damage": 85,
+            "weakness": "Neuro-Commander Zeta's neural processors are vulnerable to the 'Cortex Burner' module acquired in the first encounter."
+          },
+          "hazard": "Neuro-Commander Zeta summons drones during the fight, which must be dispatched or they will overload the room and damage the player.",
+          "pickup": {
+            "name": "Neural Overload Tech",
+            "effect": "Unlock a new combat ability: 'Neural Overload' that briefly disables all enemies in the area."
+          },
+          "trigger": "The boss encounter is triggered immediately after the second encounter, with the unstable energy core acting as a countdown to a system collapse."
+        }
+      ],
+      "boss": {
+        "name": "Neuro-Commander Zeta",
+        "health": 500,
+        "damage": 200,
+        "weakness": "Neuro-Commander Zeta's neural processors are vulnerable to the 'Cortex Burner' module acquired in the first encounter.",
+        "victory_condition": "Defeat Neuro-Commander Zeta"
+      },
+      "objective": "Navigate through the unstable core of a cyberpunk megacorp facility, defeat three enemies, and finally dismantle the Neuro-Commander Zeta to prevent a system meltdown.",
+      "reward": "Neural Overload Tech and access to a secret cybernetic upgrade."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "mysterious",
+      "player_class": "artificer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Mysterious, cyberpunk, and mechanical with a hint of forgotten purpose.",
+      "setting": "A decaying, neon-lit cyberpunk facility with flickering holograms, rusted metal, and overgrown circuitry. The atmosphere is thick with mystery and decay, with hidden clues embedded in the environment.",
+      "player_weapon": "Arc Welder (a high-voltage weapon effective against mechanical enemies and circuitry)",
+      "player_weapon_damage": 35,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Abandoned Data Core",
+          "enemy": {
+            "name": "Scavenger Drone",
+            "health": 30,
+            "damage": 15,
+            "weakness": "Arc Welder (player weapon)"
+          },
+          "hazard": "Static Discharge (5% chance to shock the player)",
+          "pickup": {
+            "name": "Energy Conductor Chip",
+            "effect": "Increases energy capacity by 20%"
+          },
+          "trigger": "The player finds the circuit map hidden within the drone’s core, leading them to the next location."
+        },
+        {
+          "location": "Security Hub",
+          "enemy": {
+            "name": "Warden Sentinel",
+            "health": 50,
+            "damage": 20,
+            "weakness": "Energy Conductor Chip (pickup from previous encounter)"
+          },
+          "hazard": "Laser Grid (player must navigate through without triggering alarm)",
+          "pickup": {
+            "name": "Code Cracker Module",
+            "effect": "Reveals hidden paths and enemy weaknesses"
+          },
+          "trigger": "The player decodes a fragment of data from the Sentinel, revealing the location of the Revenant."
+        },
+        {
+          "location": "Mainframe Access Terminal",
+          "enemy": {
+            "name": "Hacker Phantom",
+            "health": 60,
+            "damage": 25,
+            "weakness": "Arc Welder (player weapon)"
+          },
+          "hazard": "System Overload (causes temporary vision blur)",
+          "pickup": {
+            "name": "Circuit Breaker Core",
+            "effect": "Disables enemy targeting systems for 10 seconds"
+          },
+          "trigger": "After defeating the Phantom, the core activates the final security lockdown, allowing the player to enter the boss chamber."
+        }
+      ],
+      "boss": {
+        "name": "The Revenant",
+        "health": 120,
+        "damage": 45,
+        "weakness": "Circuit Breaker Core (acquired in the third encounter)",
+        "victory_condition": "Defeat the Revenant using the Circuit Breaker Core"
+      },
+      "objective": "Infiltrate the abandoned cybernetic facility and defeat the Revenant, a rogue AI that once protected the city’s data networks.",
+      "reward": "Access to the data vault containing blueprints for the next mission and a permanent boost to energy weapon effectiveness"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "ominous",
+      "player_class": "chronomancer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Ominous: The air is thick with tension, and time seems to fracture around you.",
+      "setting": "A decaying cyberpunk research facility, filled with flickering lights, static-laced monitors, and echoes of a forgotten past.",
+      "player_weapon": "Chrono-Blade",
+      "player_weapon_damage": 20,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Corridor of Echoes",
+          "enemy": {
+            "name": "Drone Warden",
+            "health": 50,
+            "damage": 15,
+            "weakness": "Chrono-Blade"
+          },
+          "hazard": "Chrono-Blade (Pickup)",
+          "pickup": {
+            "name": "Chrono-Blade",
+            "effect": "Enhances your Chrono-Blade with temporal energy"
+          },
+          "trigger": "After defeating the Drone Warden, a hidden passage opens revealing a distorted mirror."
+        },
+        {
+          "location": "Mirror Chamber",
+          "enemy": {
+            "name": "Cyber-Sentinel",
+            "health": 70,
+            "damage": 18,
+            "weakness": "Chrono-Blade"
+          },
+          "hazard": "Temporal Distortion Field",
+          "pickup": {
+            "name": "Temporal Key",
+            "effect": "Allows you to bypass the Temporal Distortion Field"
+          },
+          "trigger": "Using the Temporal Key, you unlock a door leading to the final encounter."
+        },
+        {
+          "location": "Core Chamber",
+          "enemy": {
+            "name": "Chrono-Saboteur",
+            "health": 100,
+            "damage": 25,
+            "weakness": "Chrono-Surge Core (dropped after defeat)"
+          },
+          "hazard": "Temporal Storm",
+          "pickup": {
+            "name": "Chrono-Surge Core",
+            "effect": "Power-up to amplify your Chrono-Blade into a Chrono-Surge Core"
+          },
+          "trigger": "After obtaining the Chrono-Surge Core, the chamber trembles as The Echo awakens."
+        }
+      ],
+      "boss": {
+        "name": "The Echo",
+        "health": 120,
+        "damage": 30,
+        "weakness": "Chrono-Surge Core (from encounter 3)",
+        "victory_condition": "Defeat The Echo"
+      },
+      "objective": "Navigate through the abandoned cyberpunk research facility and defeat The Echo, the guardian of time.",
+      "reward": "Access to the Temporal Archive"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "eerie",
+      "player_class": "alchemist",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Eerie exploration and strategic alchemical combat.",
+      "setting": "A forgotten cyberpunk research facility, filled with flickering neon lights, malfunctioning AI, and toxic spills. The air is thick with static, and the walls whisper forgotten warnings.",
+      "player_weapon": "Alchemy Vial (can be upgraded with pickups)",
+      "player_weapon_damage": 40,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Abandoned Chem Lab",
+          "enemy": {
+            "name": "Synth-Rat",
+            "health": 300,
+            "damage": 35,
+            "weakness": "Vaporized Alchemy (a pickup from this encounter)."
+          },
+          "hazard": "Toxic Fog",
+          "pickup": {
+            "name": "Vaporized Alchemy",
+            "effect": "Vaporized Alchemy – enhances alchemical reactions to burn enemies on contact."
+          },
+          "trigger": "After defeating the Synth-Rat, the fog begins to clear, revealing a hidden tunnel that leads to the next location."
+        },
+        {
+          "location": "Glitch Core Server Room",
+          "enemy": {
+            "name": "Cyber-Wraith",
+            "health": 500,
+            "damage": 50,
+            "weakness": "Vaporized Alchemy (from first encounter)."
+          },
+          "hazard": "Corrupted Data Streams",
+          "pickup": {
+            "name": "Neuro-Disruptor",
+            "effect": "Neuro-Disruptor – emits a pulse that scrambles enemy AI for 5 seconds."
+          },
+          "trigger": "After defeating the Cyber-Wraith, the data streams stabilize, revealing a hidden terminal that unlocks the path to the boss chamber."
+        },
+        {
+          "location": "Neuro-Specter Core Access",
+          "enemy": {
+            "name": "Neuro-Specter Fragment",
+            "health": 800,
+            "damage": 70,
+            "weakness": "Neuro-Disruptor (from second encounter)."
+          },
+          "hazard": "Flickering Reality",
+          "pickup": {
+            "name": "Neural Catalyst",
+            "effect": "Neural Catalyst – allows you to bypass the Neuro-Specter's defenses and overload its core."
+          },
+          "trigger": "After defeating the Neuro-Specter Fragment, the flickering ceases, and a hidden door opens to reveal the final confrontation with the Neuro-Specter."
+        }
+      ],
+      "boss": {
+        "name": "Neuro-Specter",
+        "health": 1500,
+        "damage": 80,
+        "weakness": "Neural Catalyst (must be obtained from the third encounter).",
+        "victory_condition": "Defeat the Neuro-Specter using the \"Neural Catalyst\"."
+      },
+      "objective": "Navigate through three encounters in a decaying cyberpunk facility, gathering alchemical upgrades to overcome the final boss.",
+      "reward": "Neuro-Specter’s Core – a powerful alchemical upgrade that enhances all potion effects for the next mission."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "desolate",
+      "player_class": "rogue",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Desolate Cyberpunk",
+      "setting": "A derelict megacorp facility buried beneath the neon-lit slums of Neo-Kowloon. The air reeks of ozone and rust, and the only sounds are the distant hum of malfunctioning machinery and the occasional mechanical groan of collapsing walls.",
+      "player_weapon": "Plasma Cutter (unlocked in first encounter)",
+      "player_weapon_damage": 60,
+      "player_health": 300,
+      "encounters": [
+        {
+          "location": "Abandoned Server Room",
+          "enemy": {
+            "name": "Rusted Drone",
+            "health": 300,
+            "damage": 30,
+            "weakness": "Plasma Cutter"
+          },
+          "hazard": "Static Fields",
+          "pickup": {
+            "name": "Plasma Cutter",
+            "effect": "Unlocks plasma cutter"
+          },
+          "trigger": "Defeat Rusted Drone to unlock access to the next level via the corrupted mainframe."
+        },
+        {
+          "location": "Maintenance Tunnel",
+          "enemy": {
+            "name": "Cybernetic Janitor",
+            "health": 400,
+            "damage": 40,
+            "weakness": "Circuit Breaker"
+          },
+          "hazard": "Collapsing Ceiling",
+          "pickup": {
+            "name": "Circuit Breaker",
+            "effect": "Restores 25% health and grants +10% damage to all weapons"
+          },
+          "trigger": "After collecting the Circuit Breaker, the maintenance tunnel collapses, leading to the boss chamber."
+        },
+        {
+          "location": "Data Core Corridor",
+          "enemy": {
+            "name": "Hacker Bot",
+            "health": 600,
+            "damage": 60,
+            "weakness": "Plasma Cutter"
+          },
+          "hazard": "Malfunctioning Turrets",
+          "pickup": {
+            "name": "Agility Chip",
+            "effect": "Increases agility for 10 seconds"
+          },
+          "trigger": "Defeating Hacker Bot clears the path to the final boss chamber, 'The Hollow Code'."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Code",
+        "health": 1500,
+        "damage": 120,
+        "weakness": "Circuit Breaker",
+        "victory_condition": "Defeat the boss with the 'Circuit Breaker' pickup."
+      },
+      "objective": "Infiltrate the data core and destroy the corrupted AI 'The Hollow Code'.",
+      "reward": "Data Core Encryption Key (unlocks a new mission in the city)"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "whimsical",
+      "player_class": "stormcaller",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whimsical Cyberpunk - A world where technology and fantasy collide, filled with glitching holograms, eccentric AI, and dancing code.",
+      "setting": "Cyberpunk city with neon signs, rain-soaked streets, and augmented reality overlays.",
+      "player_weapon": "Storm Shocker",
+      "player_weapon_damage": 35,
+      "player_health": 300,
+      "encounters": [
+        {
+          "location": "Data Docks - A maze of floating terminals and broken drones.",
+          "enemy": {
+            "name": "Wired Wraith",
+            "health": 60,
+            "damage": 15,
+            "weakness": "The Wired Wraith is vulnerable to electricity. Use the 'Storm Shocker' weapon from the player's inventory."
+          },
+          "hazard": "A data spike in the air causes static to build up, making the player's 'Storm Shocker' more powerful.",
+          "pickup": {
+            "name": "Static Amplifier",
+            "effect": "Boosts the player's 'Storm Shocker' damage by 25% for the next encounter."
+          },
+          "trigger": "Defeating the Wired Wraith unlocks a data path that leads to the second encounter."
+        },
+        {
+          "location": "Neon Alley - A bustling street filled with augmented vendors and flickering holograms.",
+          "enemy": {
+            "name": "Cybernetic Crawler",
+            "health": 80,
+            "damage": 20,
+            "weakness": "The Crawler's joints can be shattered by the 'Static Amplifier' pickup obtained in the first encounter."
+          },
+          "hazard": "The Crawler leaves behind a trail of corrupted data that slows the player's movement.",
+          "pickup": {
+            "name": "Neon Pulse",
+            "effect": "Unlocks a temporary 'Neon Pulse' energy field that can damage the final boss."
+          },
+          "trigger": "Destroying the Crawler's joints reveals a hidden passageway leading to the final boss."
+        },
+        {
+          "location": "The Core Server Room - A massive chamber of flickering servers and pulsing energy.",
+          "enemy": {
+            "name": "System Overlord",
+            "health": 120,
+            "damage": 30,
+            "weakness": "The System Overlord can be damaged by the 'Neon Pulse' pickup from the second encounter, but only when the player is inside its corrupted data field."
+          },
+          "hazard": "The Overlord summons a data shield that blocks most attacks unless the player is inside the 'Neon Pulse' field.",
+          "pickup": {
+            "name": "Neon Pulse (Final)",
+            "effect": "Grants the player a one-time use of the 'Neon Pulse' energy field to weaken the final boss."
+          },
+          "trigger": "Defeating the System Overlord triggers a system-wide crash, causing the Glitch Lord to emerge from the corrupted mainframe."
+        }
+      ],
+      "boss": {
+        "name": "The Glitch Lord",
+        "health": 500,
+        "damage": 100,
+        "weakness": "The corrupted core of The Glitch Lord can only be damaged by the 'Neon Pulse' energy pickup acquired from the final encounter.",
+        "victory_condition": "Defeat the Glitch Lord by targeting his corrupted core with the 'Neon Pulse' pickup from the third encounter."
+      },
+      "objective": "Navigate through the neon-lit streets of Neo-Tokyo and defeat the Glitch Lord, a corrupted AI that has taken over the city's mainframe.",
+      "reward": "Access to the Cybernetic Overlord's data core and a new 'Neon Pulse' energy ability."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "serene",
+      "player_class": "geomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Serene destruction — a place where the player must act with precision, not rage, to reclaim the peace buried beneath corrupted code.",
+      "setting": "A decaying cyberpunk server complex, bathed in neon light and flickering static, where silence is more powerful than fire.",
+      "player_weapon": "Earthshaker Gauntlet (elemental ground manipulation)",
+      "player_weapon_damage": 50,
+      "player_health": 300,
+      "encounters": [
+        {
+          "location": "Abandoned Server Hall",
+          "enemy": {
+            "name": "Data Wraith",
+            "health": 80,
+            "damage": 30,
+            "weakness": "Ethereal Focus (obtained in this encounter)"
+          },
+          "hazard": "Ethereal Rift",
+          "pickup": {
+            "name": "Ethereal Focus",
+            "effect": "Ethereal Focus - boosts elemental damage against ethereal enemies"
+          },
+          "trigger": "A corrupted data stream triggers a rift, summoning the Data Wraith."
+        },
+        {
+          "location": "Power Core Access",
+          "enemy": {
+            "name": "Tainted Bot",
+            "health": 120,
+            "damage": 45,
+            "weakness": "Quantum Resonator"
+          },
+          "hazard": "Static Overload",
+          "pickup": {
+            "name": "Quantum Resonator",
+            "effect": "Quantum Resonator - emits a focused energy field that disrupts crystalline structures"
+          },
+          "trigger": "A malfunctioning bot attempts to reprogram the core. The player must stop it before the system destabilizes."
+        },
+        {
+          "location": "Architect's Chamber",
+          "enemy": {
+            "name": "Echo of the Architect",
+            "health": 180,
+            "damage": 60,
+            "weakness": "Ethereal Focus (from encounter 1)"
+          },
+          "hazard": "Fractured Reality",
+          "pickup": {
+            "name": "Catalyst Crystal",
+            "effect": "Catalyst Crystal - allows the geomancer to amplify elemental control temporarily"
+          },
+          "trigger": "The Echo of the Architect is drawn to the Quantum Resonator, manifesting as the final test of the player's control over the environment."
+        },
+        {
+          "location": "Core Nexus",
+          "enemy": {
+            "name": "The Hollow Sentinel",
+            "health": 400,
+            "damage": 120,
+            "weakness": "Quantum Resonator (from encounter 2)"
+          },
+          "hazard": "Spiraling Core Instability",
+          "pickup": {
+            "name": "Final Seal",
+            "effect": "Final Seal - a rune that permanently stabilizes the core"
+          },
+          "trigger": "The Sentinel, now fully awakened, seeks to consume the unstable core. The player must use the Quantum Resonator to break through its defenses."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Sentinel",
+        "health": 400,
+        "damage": 120,
+        "weakness": "Quantum Resonator (obtained from encounter 1)",
+        "victory_condition": "Destroy the Sentinel's core with the Quantum Resonator from the first encounter"
+      },
+      "objective": "Restore stability to the Core Nexus by defeating the corrupted entities and using the tools they leave behind.",
+      "reward": "Catalyst Crystal and Final Seal for restoring balance to the system"
+    }
+  }
+]

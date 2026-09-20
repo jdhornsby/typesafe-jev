@@ -1,0 +1,1168 @@
+[
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "ominous",
+      "player_class": "geomancer",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Volcanic",
+      "setting": "The Heart of Vesuvia Caldera",
+      "player_weapon": "Geothermal Drill",
+      "player_weapon_damage": 30,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Cracked Fissure Zone",
+          "enemy": {
+            "name": "Fissure Sprawl",
+            "health": 180,
+            "damage": 15,
+            "weakness": "Geothermal Drill - Lava Pulse (causes temporary lava suppression in fissures)"
+          },
+          "hazard": "Shifting tectonic plates. Ground pulses every 12 seconds. Standing still causes a 10% chance of falling into a collapsing fissure.",
+          "pickup": {
+            "name": "Cracked Lava Shard",
+            "effect": "When used, reflects 30% of incoming damage from magma-based attacks. Can be used as a weapon to pierce volcanic barriers or to activate lava suppression fields."
+          },
+          "trigger": "Upon defeating Fissure Sprawl, the ground splits open beneath the player, forming a deep lava pit with a pulsing red glow. A new vent appears in the center, emitting a low hum. The air thickens with sulfur gas—visibility drops to 15 meters. The Lava Maw begins to stir at the pit’s edge."
+        },
+        {
+          "location": "Lava Maw Chasm",
+          "enemy": {
+            "name": "Lava Maw",
+            "health": 300,
+            "damage": 25,
+            "weakness": "Cracked Lava Shard (reflects 40% of its fire breath attacks)"
+          },
+          "hazard": "The lava pit emits heat pulses every 4 seconds. Each pulse reduces player movement speed by 20% and adds 10% fire burn. Standing in the pit causes instant burn if unattended.",
+          "pickup": {
+            "name": "Pressure Sensor Array",
+            "effect": "When activated, detects enemy movement and emits a seismic shockwave that damages nearby enemies. Can be used to trigger a tectonic collapse in the area. Requires activation after being placed in a stable zone (e.g. a solid rock platform)."
+          },
+          "trigger": "After defeating Lava Maw, the vent above the chasm opens fully. A massive crack emerges from the volcano's core, releasing a thick, pulsing red gas. The ground trembles violently. The environment becomes unstable—lava begins to surge upward in waves. A dark, metallic structure rises from the core—cracked, glowing, and breathing. This is the Heartstone Beast, the final form of the volcano’s consciousness."
+        },
+        {
+          "location": "Heartstone Chamber",
+          "enemy": {
+            "name": "Heartstone Beast",
+            "health": 800,
+            "damage": 40,
+            "weakness": "Pressure Sensor Array (activating it during combat causes a 50% damage multiplier and a 10-second suppression of its core pulse, halting its regeneration)"
+          },
+          "hazard": "The chamber is filled with volatile magma and toxic gas. Every 8 seconds, a wave of magma surges through the chamber, pushing players backward. The Heartstone Beast emits a low frequency pulse that damages player geomancy power regeneration.",
+          "pickup": {
+            "name": "Volcanic Core Fragment",
+            "effect": "A glowing piece of the original magma heart. Once used, permanently increases the Geothermal Drill’s energy output by 20% and grants the ability to 'shatter' terrain to create temporary safe zones. Acquired upon defeating the Heartstone Beast."
+          },
+          "trigger": "Final confrontation. The player must activate the Pressure Sensor Array (acquired in Encounter 2) during combat to trigger a counter-pulse. If not used, the beast regenerates rapidly and becomes immune to all damage after 30 seconds. Victory requires the precise timing of activation and control of terrain."
+        }
+      ],
+      "boss": {
+        "name": "Heartstone Beast",
+        "health": 800,
+        "damage": 40,
+        "weakness": "Pressure Sensor Array (activation during combat causes a 50% damage multiplier and halts regeneration for 10 seconds)",
+        "victory_condition": "Activate Pressure Sensor Array during combat and reduce Heartstone Beast health to zero within 3 minutes. Failure results in a lava surge that consumes the player's equipment and causes permanent stamina loss."
+      },
+      "objective": "Survive and defeat all enemies. The Heartstone Beast can only be defeated with the Pressure Sensor Array activated during combat. The final fight requires the player to use the Cracked Lava Shard to disrupt its early phase, and the Pressure Sensor Array to counter its core pulse.",
+      "reward": "Volcanic Core Fragment – grants permanent geomancy power boost and terrain-shaping ability."
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "chaotic",
+      "player_class": "pyromancer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Volcanic Chaos",
+      "setting": "The Shattered Crater of Magmafen - A collapsed volcanic caldera where lava rivers pulse beneath cracked obsidian floors, geothermal vents explode with erratic frequency, and the air is thick with sulfur and ash. The ground shifts unpredictably. Fissures breathe fire and steam. The environment itself seems alive and hostile.",
+      "player_weapon": "Flameflame Cannon (a high-damage, short-range pyro-weapon that fires sustained bursts of superheated plasma, but drains energy rapidly)",
+      "player_weapon_damage": 120,
+      "player_health": 200,
+      "encounters": [
+        {
+          "location": "Lava Rift Corridor",
+          "enemy": {
+            "name": "Scorchspine Wyrmling",
+            "health": 80,
+            "damage": 30,
+            "weakness": "The player's Flameflame Cannon emits a plasma surge that ignites the wyrmling's scorch-scales. When hit by the cannon, it flinches and emits a weak flame burst—leaving it momentarily vulnerable to follow-up fire. This weakness is triggered only when the player uses the cannon within 2 seconds of the wyrmling's attack pattern (a timing-based exploit)."
+          },
+          "hazard": "The floor periodically cracks. If the player steps on it, they take 20 damage and are thrown back 3 meters. The cracks appear randomly, with increasing frequency every 10 seconds as the encounter progresses.",
+          "pickup": {
+            "name": "Ignition Shard (Cracked Volcanic Core)",
+            "effect": "When equipped, the player gains a passive ability: 'Lava Ignition' – when the player fires the Flameflame Cannon, the blast creates a small shockwave that briefly ignites nearby lava pools, turning them into temporary hazards (fire traps). This hazard can be used against future enemies and sets the stage for the next encounter's trigger."
+          },
+          "trigger": "After defeating the Scorchspine Wyrmling, if the player has used the Flameflame Cannon in the last 10 seconds, a deep crack opens in the floor beneath them. The ground emits a pulse of red-hot magma. This crack emits a low hum and begins to spread outward, forming a new fissure pattern—preparing the area for the next encounter."
+        },
+        {
+          "location": "Ashen Fissure Chasm",
+          "enemy": {
+            "name": "Ashfume Maw",
+            "health": 160,
+            "damage": 45,
+            "weakness": "The Ashfume Maw is vulnerable to *lava ignition* triggered by the Ignition Shard. When the player activates 'Lava Ignition' (by using the Flameflame Cannon in a specific arc), it creates a firestorm in the area, which burns the maw's ash-armor and causes it to stagger for 2 seconds. During this stagger, it takes 50% damage from the player's next attack."
+          },
+          "hazard": "The chasm has a rotating floor that shifts 30% of the time. If the player stands on it, they take 30 damage and are thrown off-balance. The rotation increases in speed every 15 seconds.",
+          "pickup": {
+            "name": "Magma Pulse Resonator (a glowing, pulsating orb embedded in a piece of volcanic rock)",
+            "effect": "Activates when the player is within 5 meters of the Ashfume Maw. When activated, it causes the ground to emit a low-frequency pulse that disrupts the maw’s movement and causes it to stagger, but only if the player has used the Ignition Shard at least once before. This pickup is required to unlock the final boss's weakness."
+          },
+          "trigger": "After defeating the Ashfume Maw, the chasm collapses into a vortex of superheated steam. A jagged, obsidian pillar rises from the center—carved with runes of ancient pyro-rituals. The pillar pulses rhythmically, syncing with the player’s Flameflame Cannon fire. This sets the stage for a final encounter. The ground begins to vibrate with increasing frequency, and the air fills with a low, resonant hum—indicating the arrival of the boss."
+        },
+        {
+          "location": "Pyre Core Chamber",
+          "enemy": {
+            "name": "Magmafen Overlord (The Boss)",
+            "health": 600,
+            "damage": 80,
+            "weakness": "The Overlord is vulnerable to the **Magma Pulse Resonator**. When the player holds the Resonator and fires the Flameflame Cannon *in sync with the pillar's pulse (exactly on the 3-second interval of the pulse cycle)*, a chain reaction activates. This creates a localized surge of magma that disables the Overlord’s fire-shield, allowing it to take 2x damage from the player’s next attack. The player must time the shot perfectly to trigger this effect—only once per fight. Failing to trigger it results in a 40% damage reduction on the next attack due to the Overlord’s adaptive fire immunity."
+          },
+          "hazard": "The chamber has a shifting lava core at the center. If the player stands still for more than 5 seconds, the lava begins to rise and can consume them. The Overlord periodically shoots fireballs that create shockwaves, knocking players back. The environment shifts every 30 seconds—walls rotate, and lava pools form unpredictably.",
+          "pickup": {
+            "name": "Magma Pulse Resonator",
+            "effect": "Only usable once during the boss fight. Must be equipped and activated in rhythm with the pillar’s pulse to trigger the boss's vulnerability. Without it, the boss has no weakness and will take 30% more damage per attack. This pickup is acquired in the second encounter and is essential to victory."
+          },
+          "trigger": "If the player defeats the Overlord and successfully triggers the Resonator pulse, the volcanic core explodes in a wave of controlled plasma. The screen flashes crimson. A final message appears: 'The Volcano Stirs... Perhaps it is not a beast. Perhaps it is a memory.' The level ends with a post-encounter environment: a new lava basin glowing with dormant power, hinting at a future expansion."
+        }
+      ],
+      "boss": {
+        "name": "Magmafen Overlord",
+        "health": 600,
+        "damage": 80,
+        "weakness": "Must use the Magma Pulse Resonator (acquired from second encounter) and fire the Flameflame Cannon *in sync with the pillar’s 3-second pulse* to disable the Overlord’s fire-shield. The resonance creates a temporary gap in its flame defense (6 seconds), during which the player can deal 2x damage.",
+        "victory_condition": "The player must land the correct pulse-based shot within 1.5 seconds of the pillar's pulse cycle. This triggers the vulnerability. The Overlord must be defeated in under 3 minutes, or it reactivates and spawns a second wave of corrupted wyrmlings (hard mode)."
+      },
+      "objective": "Reach the Pyre Core Chamber and defeat the Magmafen Overlord by leveraging the specific pickups earned from prior encounters. The level ends only when the boss is defeated using the Resonator in perfect sync with the pillar’s pulse.",
+      "reward": "Pyro-Insight Core – grants a new passive ability: 'Flame Resonance' – increases fire damage by 25% when within range of the Magma Pulse Resonator, and allows the player to reset the Flameflame Cannon’s cooldown after a successful critical shot (on boss defeat)."
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "tense",
+      "player_class": "paladin",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Volcanic",
+      "setting": "The Shattered Crater of Magma Spire",
+      "player_weapon": "Holy Avenger’s Sword",
+      "player_weapon_damage": 35,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Lava Vent Gully",
+          "enemy": {
+            "name": "Ember Wyrms",
+            "health": 40,
+            "damage": 15,
+            "weakness": "Holy Flame (from Holy Avenger’s Sword) | 2x damage on hit, critical on full stack of flame effect"
+          },
+          "hazard": "Lava pools shift every 30 seconds; stepping into one deals 15 damage and slows movement by 50%.",
+          "pickup": {
+            "name": "Frost Shard",
+            "effect": "Can be used to freeze lava flows or slow enemy movement for 4 seconds. Duration: 10 seconds. Can be used once per encounter."
+          },
+          "trigger": "After defeating the Ember Wyrms, the lava vent collapses slightly, revealing a narrow path leading upward through a fissure. As the player approaches, a rumbling grows. A new lava geyser erupts — the path is now unstable. The player must cross to reach the next zone. If they don’t use the Frost Shard to stabilize the geyser, it erupts violently, trapping them in molten flow."
+        },
+        {
+          "location": "Lava Geyser Path",
+          "enemy": {
+            "name": "Lava Gargantua",
+            "health": 100,
+            "damage": 25,
+            "weakness": "Ice (Frost Shard) | If player uses Frost Shard on the enemy, movement is halted for 5 seconds and damage is halved for 10 seconds"
+          },
+          "hazard": "The path is covered in moving lava and toxic ash. Every 20 seconds, a lava wave surges forward. Player must avoid or redirect it using the Frost Shard to freeze the flow.",
+          "pickup": {
+            "name": "Blessed Shield Fragment",
+            "effect": "Can be used to activate a temporary Holy Barrier (15s duration). When active, player gains +20 armor, and all holy damage (from weapon or abilities) is amplified by 50%. The barrier also prevents damage from fire or lava contact."
+          },
+          "trigger": "After defeating the Gargantua, the volcano's core begins to glow. A deep fissure splits open, leading into a volcanic chamber. The air thickens. The Magma Guardian emerges slowly, its eyes glowing red. The player must now use the Blessed Shield Fragment to create the Holy Barrier. Without it, the Magma Guardian is immune to all attacks."
+        },
+        {
+          "location": "Volcanic Core Chamber",
+          "enemy": {
+            "name": "Magma Guardian",
+            "health": 300,
+            "damage": 40,
+            "weakness": "Holy Barrier (activated with Blessed Shield Fragment) | When active, all holy damage is amplified by 100% and deals 3x damage to Magma Guardian. Also, Magma Guardian’s fire attack is disabled for 10 seconds when hit by holy damage."
+          },
+          "hazard": "The core is unstable. If the player fails to activate the Holy Barrier, the chamber cracks open and lava pours in, reducing player health by 20 per second.",
+          "pickup": {
+            "name": "Holy Light Core",
+            "effect": "Hidden power: After defeating the Magma Guardian, this pickup grants a permanent 20% increase to divine attack power and heals player on death."
+          },
+          "trigger": "The Magma Guardian emerges from the core. It is fire-resistant, immune to fire and lava attacks, and moves slowly. However, if the player uses the Blessed Shield Fragment to activate the Holy Barrier, all holy attacks become devastating. The player must use their Holy Avenger’s Sword to hit the Guardian during the vulnerable phase — once the barrier is active. If they fail, the guardian crushes the chamber, and the player is trapped."
+        }
+      ],
+      "boss": {
+        "name": "Magma Guardian",
+        "health": 300,
+        "damage": 40,
+        "weakness": "Holy Barrier (activated via Blessed Shield Fragment)",
+        "victory_condition": "Deal 150+ holy damage while Holy Barrier is active. Magma Guardian must be stunned for 3 seconds after the final hit."
+      },
+      "objective": "Reach the core, defeat the Magma Guardian, and recover the Holy Light Core.",
+      "reward": "Holy Light Core + 50 experience + 10% increased divine power on next level."
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "desolate",
+      "player_class": "berserker",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Volcanic Desolation",
+      "setting": "The Crater Core of Shattered Spire — a dead, magma-scorched volcano where ash falls like snow, geothermal vents pulse with red light, and the ground cracks with each breath of the world. The air is thick with sulfur and silence. The player, a berserker named Kael, moves through shattered obsidian, lava pools, and collapsing tunnels, driven by rage and desperation.",
+      "player_weapon": "Molten Sledgehammer — a heavy, fire-laced hammer that deals massive area damage when swung. Its fire burst (a secondary attack) causes burning damage over time. However, it is vulnerable to heat resistance and can overheat if used too much.",
+      "player_weapon_damage": 90,
+      "player_health": 80,
+      "encounters": [
+        {
+          "location": "Magma Gorgon Rift",
+          "enemy": {
+            "name": "Magma Gorgon",
+            "health": 120,
+            "damage": 60,
+            "weakness": "Vulnerable to the Molten Sledgehammer's fire burst. Fire burst deals 35% extra damage and burns for 3 seconds (over time damage). Each hit from the fire burst triggers a minor lava spout that increases enemy movement speed, creating a loop of pressure."
+          },
+          "hazard": "Lava pools that spill over when player is near — deal 25 damage per second if standing in them.",
+          "pickup": {
+            "name": "Ashen Shroud",
+            "effect": "Reduces all fire and heat-based damage by 50%. Can be worn. Critical for survival in fire-heavy encounters. No cooldown. Can be lost if player dies in fire zone."
+          },
+          "trigger": "After defeating Magma Gorgon, a collapsed fissure opens, revealing a chamber of black ash. The player must cross through it to reach the next zone. If the player fails to survive the fire exposure (e.g., loses the Ashen Shroud), the path closes and the player must restart from a fixed checkpoint with 30% health."
+        },
+        {
+          "location": "Ashen Cavern",
+          "enemy": {
+            "name": "Ashen Hulker",
+            "health": 180,
+            "damage": 75,
+            "weakness": "Vulnerable to thrown Cinder Shards. A single shard thrown directly at the Hulker causes a 5-second detonation that deals 80 damage and stuns the enemy for 1.5 seconds. This damage is amplified by 20% if the player has the Ashen Shroud equipped."
+          },
+          "hazard": "The cavern has unstable walls. Every 40 seconds, a section collapses, reducing player health by 20. The Hulker’s roar causes nearby walls to crack, triggering a chain reaction of falling debris.",
+          "pickup": {
+            "name": "Cinder Shard",
+            "effect": "A jagged, black shard that can be thrown. When thrown into lava pools or enemy, it detonates, dealing damage and creating a shockwave. Can be thrown 3 times. Used to trigger boss activation in final stage. Cannot be used without prior encounter success."
+          },
+          "trigger": "The Ashen Hulker appears when the player enters the cavern. The player must first survive the collapse hazard and defeat the Hulker using thrown Cinder Shards. The Hulker drops the Cinder Shard upon defeat. If the player fails to use the Ashen Shroud during the fight, they take 40% more damage and may die instantly to the Hulker’s fire breath."
+        },
+        {
+          "location": "Gehenna Maw Crater",
+          "enemy": {
+            "name": "Gehenna Maw",
+            "health": 500,
+            "damage": 100,
+            "weakness": "Immune to all attacks except when the Cinder Shard is thrown into its core. This triggers a 10-second geothermal surge, during which it becomes vulnerable to the Molten Sledgehammer’s fire burst (now dealing 150% damage). The surge only activates if the player throws the Cinder Shard into a lava pool at the center of the crater — which must be done *after* defeating the Ashen Hulker and acquiring the shard. Once active, the Maw cannot heal and takes 300% damage from the fire burst in a 5-second window."
+          },
+          "hazard": "The ground is unstable. Every 30 seconds, the crater floor cracks, dealing 50 damage. The Maw emits a sound wave that triggers seismic vibrations, knocking the player back and reducing movement speed.",
+          "pickup": {
+            "name": "Volcanic Core Fragment",
+            "effect": "Rare pickup. When activated by the fire burst during the boss fight, it causes a temporary 30% damage increase for 6 seconds. Required for maximum DPS during final phase. Not essential, but increases player win chance."
+          },
+          "trigger": "The Maw only spawns when the player successfully defeats the Ashen Hulker and throws the Cinder Shard into the central lava pool. If the player does not have the Cinder Shard, the Maw spawns immediately and is immune to all attacks. The player must fight in full rage mode (no pause, no healing) and must use the fire burst on the Maw during the geothermal surge to win."
+        }
+      ],
+      "boss": {
+        "name": "Gehenna Maw",
+        "health": 500,
+        "damage": 100,
+        "weakness": "The Maw is immune to all attacks unless the Cinder Shard is thrown into its core, triggering a 10-second geothermal surge. During this time, it is vulnerable to the Molten Sledgehammer’s fire burst, which deals 150% damage. The surge can only be initiated by the player throwing the Cinder Shard into a lava pool at the center of the crater — a sequence that must be completed after defeating the Ashen Hulker.",
+        "victory_condition": "The player must throw the Cinder Shard into the lava pool and then use the fire burst on the Maw during the geothermal surge. The Maw takes 150% damage, and if the player hits it at least once during the surge, the fight ends. Failure results in immediate death or a respawn with 20% health loss."
+      },
+      "objective": "Survive all three encounters to defeat the Gehenna Maw and claim the Volcanic Core Fragment. Each encounter must be completed in sequence, with no skipping. The player must use the weaknesses learned in prior encounters to survive.",
+      "reward": "Volcanic Core Fragment — a rare item that enhances the Molten Sledgehammer’s fire burst by 30% and gives a 10-second rage buff. This gives the player a final edge in future runs or challenges."
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "mysterious",
+      "player_class": "artificer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Volcanic Mysterium: The Forged Heart",
+      "setting": "A buried subterranean chamber beneath a dormant volcano, sealed by ancient crystalline lattices. Faint geothermal pulses create shifting shadows. The air hums with resonance, and walls etch runes in glowing, pulsing patterns. A central forge core pulses with red light — it is both the source of power and the final obstacle. The environment feels forgotten, yet purposeful, like a machine built by a forgotten race of artificers.",
+      "player_weapon": "Lava-Quenched Resonance Torch (crafted by player)",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Ashen Chamber",
+          "enemy": {
+            "name": "Magma Sigher",
+            "health": 30,
+            "damage": 5,
+            "weakness": "The player's Lava-Quenched Resonance Torch (emits a low-frequency hum that disrupts the Sigher's resonance), activated when the player uses it on the first encounter. The torch is crafted in the first room with a crystal shard and a piece of cooled magma (player picks up from floor). Enemy weak when torch is active (reduces damage by 50%). "
+          },
+          "hazard": "Lava pools pulse every 40 seconds. Avoid stepping on them. Use the torch to illuminate and mark safe paths.",
+          "pickup": {
+            "name": "Crystal Shard of the First Flame",
+            "effect": "When equipped, the player can emit a soft pulse that increases their weapon's resonance (adds +5 damage to next torch use). This is a key progression item. It can be used in later encounters to unlock stronger effects."
+          },
+          "trigger": "After defeating the Magma Sigher, a wall cracks open. A faint hum echoes — the ground shifts slightly. The floor reveals a narrow path leading to a dark, steaming alcove. The runes on the wall change from ash to deep crimson, indicating activation of the next phase. The air grows warmer."
+        },
+        {
+          "location": "The Steam Grotto",
+          "enemy": {
+            "name": "Echo-Drift",
+            "health": 45,
+            "damage": 4,
+            "weakness": "The player’s Crystal Shard of the First Flame. When the shard is active and the Echo-Drift is hit with the Resonance Torch, it causes a feedback loop that temporarily disables the Echo-Drift for 3 seconds. This is a unique mechanic — the shard must be equipped to trigger it. The weakness is tied to both the pickup and weapon usage from the prior fight."
+          },
+          "hazard": "Steam vents occasionally release fog that reduces visibility by 50%. The player must move slowly and use the torch to navigate.",
+          "pickup": {
+            "name": "Fossilized Gear (Copper Gear Fragment)",
+            "effect": "Allows the player to create a temporary alchemical device that creates a slow, glowing light for 10 seconds when activated. This will be used in the final encounter to stabilize the boss’s environment."
+          },
+          "trigger": "After defeating the Echo-Drift, a large geothermal vent opens. The ground trembles, and a deep hum grows — a stone door seals at the far end. On the wall, runes spell: 'The Heart is waiting… but it must be guided.' A faint vibration pulses in the air — a sign that the forge core is now active. The path to the boss is now visible."
+        },
+        {
+          "location": "The Forge Core Chamber",
+          "enemy": {
+            "name": "Volcanic Warden (Boss)",
+            "health": 120,
+            "damage": 8,
+            "weakness": "The player’s Fossilized Copper Gear Fragment. When the player activates it and places it into the central forge console (a stone device in the center), the Warden’s magma aura is disrupted, reducing its damage by 40% and slowing it by 30%. The gear must be used *exactly* when the Warden attacks. This is the only way to defeat it without taking excessive damage. The gear was obtained in the second encounter as a reward."
+          },
+          "hazard": "Magma surges from the core every 15 seconds. If the player is in the pool, they take 20 damage. The core pulses with a red light when the Warden attacks.",
+          "pickup": {
+            "name": "Key of the Unforged",
+            "effect": "Once obtained, allows the player to open the exit — a final door to the surface. It is dropped by the Warden when defeated and only available after the boss fight ends. Not required for gameplay but marks completion."
+          },
+          "trigger": "The Warden appears in the center, surrounded by molten runes. It attacks slowly, like a guard. The player must use the Copper Gear to weaken it during an attack. After the first successful use, the Warden pauses, and a crack spreads in the walls — revealing a narrow path to the surface. The game ends with a cinematic showing the first forge's ancient design, now restored by the player’s craft."
+        }
+      ],
+      "boss": {
+        "name": "Volcanic Warden",
+        "health": 120,
+        "damage": 8,
+        "weakness": "Fossilized Copper Gear Fragment (pickup from second encounter). Must be activated during an attack to trigger a 30% damage and 30% speed reduction. Failure means full damage. The player must have already acquired and equipped the gear to fight the boss. This ties progression directly to discovery and experimentation.",
+        "victory_condition": "Player reduces boss health to 0 using the gear during an attack. Then, the final door unlocks."
+      },
+      "objective": "Reach the Forge Core and defeat the Warden by using the tools crafted from volcanic discoveries. The deeper you go, the more mysterious the environment becomes — runes shift, the air hums, and the forge pulses with ancient energy.",
+      "reward": "The player earns the 'Forged Flame' title and the 'Resonance Almanac' — a book that teaches about crafting weapons with natural frequencies."
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "eerie",
+      "player_class": "stormcaller",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Volcanic Eerie",
+      "setting": "The Crater Spire – a collapsed volcanic peak at the center of a dead caldera. Fissures glow with blue-black magma, ash rains in slow, thick sheets, and the air hums with low-frequency vibrations. Flickering red and violet light pulses from unstable vents. A distant, unnatural silence is broken only by distant groans, whispers, and the sound of stone cracking under unseen pressure. The terrain is unstable — lava flows shift, geysers erupt unpredictably, and shadows move independently of the player.",
+      "player_weapon": "Stormcaller's Lightning Staff – a jagged, lightning-etched staff that channels storm energy. It emits brief, high-voltage bolts and can summon localized lightning storms when fully charged.",
+      "player_weapon_damage": 80,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Lower Fissure Vents (Zone 1)",
+          "enemy": {
+            "name": "Fumarole Wraith",
+            "health": 150,
+            "damage": 40,
+            "weakness": "Lightning (player weapon - Lightning Staff). Direct lightning strikes cause 2x damage and stun for 1.5 seconds. Vulnerable to 3 consecutive hits from the staff in close range, which triggers a brief static burst and causes the wraith to shudder and emit a shriek of pain (sound effect: distorted whisper)."
+          },
+          "hazard": "Acid Mist – when the wraith is hit by lightning, it releases a thick, corrosive mist that reduces player movement speed and damages armor by 15% per second. If exposed for >5 seconds, player takes 20 damage.",
+          "pickup": {
+            "name": "Lava Shatter Shard",
+            "effect": "When collected, enables a unique ability: 'Shatter Blast' – a short-range, high-damage pulse that shatters lava structures and creates a temporary fissure. This ability can be used to redirect lava flow or expose hidden paths. Only usable after defeating the Fumarole Wraith and after the player has 30 seconds of cooldown post-battle. This pickup is essential for defeating the next enemy and is found within a collapsing vent after the fight ends, hidden under a slab of solidified lava that shatters upon a successful lightning strike (triggered by player using the staff at close range)."
+          },
+          "trigger": "Upon victory, a vent directly to the northeast opens, revealing a narrow path through a rising lava flow. The player must cross it while avoiding a geothermal pulse. If the player fails to reach it within 20 seconds, the lava flow floods the zone, killing all nearby enemies and reducing health by 40. This zone begins to shift — the ground trembles, and ash density increases. The Lava Shatter Shard must be used to clear a temporary lava wall blocking the next path."
+        },
+        {
+          "location": "Geyser Plateau (Zone 2)",
+          "enemy": {
+            "name": "Lava Geyser Stalker",
+            "health": 220,
+            "damage": 55,
+            "weakness": "Lava Shatter Shard (pickup from previous encounter). When the shard is active, a single use of 'Shatter Blast' reduces the Stalker’s health by 45% and forces it to stagger for 3 seconds. The Stalker's lava jets become erratic and less effective during this phase. It can also be stunned by a direct hit from the Shatter Blast if the player uses it at range, but the blast only works if the shard is fully charged (requires 15 seconds of cooldown)."
+          },
+          "hazard": "Lava Jets – the Stalker fires vertical lava streams that explode when they hit the ground, creating explosive terrain hazards. Players must avoid standing in zones where jets land. Each hit causes a 10-second delay in movement speed.",
+          "pickup": {
+            "name": "Ash Siphon Core",
+            "effect": "Found hidden inside a collapsed geothermal vent that appears only after the Stalker is defeated. The core is a glowing, pulsating orb that emits a low hum. When activated via the Stormcaller’s ability 'Storm Still,' it creates a localized field of still air, slowing down enemy movement by 60% and causing ash to fall in reverse, temporarily neutralizing enemy ash-based attacks. This ability can be used once per battle. Critical: The Ash Siphon Core is the only thing that can damage the final boss directly. It cannot be used until after defeating the Lava Geyser Stalker and after a 20-second cooldown from the previous encounter's finish."
+          },
+          "trigger": "After defeating the Stalker, a massive fissure in the plateau opens to the south, leading into a deep chasm. The ground begins to crack, and thick ash falls. If the player fails to cross within 10 seconds, they are caught in a collapsing tunnel and lose 50 health. The Ash Siphon Core appears only after a successful traversal and must be collected before proceeding. This zone begins to destabilize — the volcano emits a deep, rhythmic pulse, signaling the arrival of the final phase."
+        },
+        {
+          "location": "Heartmaw's Chasm (Zone 3 - Final Encounter)",
+          "enemy": {
+            "name": "Ash Sentinel",
+            "health": 300,
+            "damage": 65,
+            "weakness": "Ash Siphon Core (pickup from previous encounter). When activated, the core causes the Sentinel to emit a visible static wave that shatters its ash shields and causes it to freeze for 4 seconds. If the core is used during its initial attack phase (the moment it begins to emit ash), it causes a 3-second stun and reduces its health by 70% instantly. The Sentinel does not regenerate health during this phase. This weakness is only active after the core is acquired and charged via player proximity to a still point (a small rock formation in the center)."
+          },
+          "hazard": "Ash Clouds – the Sentinel emits thick, slow-moving clouds that reduce visibility and cause players to move slowly. When combined with player movement, these clouds trigger a 'slow fog' effect, reducing all movement and attack speed by 50% for 3 seconds per cloud. If the player stands still in a cloud for 5 seconds, it triggers a 'dormant state' where player cannot act for 8 seconds.",
+          "pickup": {
+            "name": "Ash Siphon Core (final activation)",
+            "effect": "Once collected, the core must be activated during the final encounter. The core becomes active only when the player uses 'Storm Still' while standing within 3 meters of the Sentinel's core. It causes the Sentinel to freeze and emit a high-pitched shriek. The player must use the core *during* the Sentinel’s attack phase (when it releases a wave of ash) to trigger the critical damage. Failure to use it in time results in a 30-second cooldown and no damage. This is the only way to defeat the Sentinel."
+          },
+          "trigger": "After defeating the Ash Sentinel, the volcano's core pulses violently. A massive fissure opens at the center — the **Volcanic Heartmaw** emerges from a lava pool, its form a shifting mass of magma tendrils, glowing red eyes, and a pulsing heart. The Heartmaw emits a deep, resonant hum that causes all equipment to vibrate. The zone transitions to full boss engagement mode."
+        },
+        {
+          "location": "The Crater Heart (Boss Fight)",
+          "enemy": {
+            "name": "Volcanic Heartmaw",
+            "health": 750,
+            "damage": 85,
+            "weakness": "Ash Siphon Core (specific pickup from the Ash Sentinel encounter). When the player activates the Ash Siphon Core *during* the Heartmaw's core pulse phase (when it emits a low-frequency wave and its tendrils pulse red), the Heartmaw is stunned for 5 seconds and takes 120 damage. This must be done within 3 seconds of the pulse. The core must be active and in range (within 5 meters). If used incorrectly or late, the Heartmaw regenerates 50 health per second until the next pulse. The core can only be used once per boss fight, and it must be activated within the first pulse of the fight. The Heartmaw has 3 phases, each lasting 45 seconds, and it adapts to player movement by shifting terrain during each phase."
+          },
+          "hazard": "Magma Tendrils – the Heartmaw extends long, hot tendrils that slash at players and deal damage. Each hit reduces movement speed by 30% for 4 seconds. If the player is caught in a tendril, they take 100 damage and are dragged to a lava pool (instant death if not rescued by a weather ability). The environment pulses with red and black light every 15 seconds.",
+          "pickup": {
+            "name": "Ash Siphon Core (final activation)",
+            "effect": "This core must be used *exactly* at the start of the Heartmaw’s first pulse phase. The player must collect it in Zone 3 and activate it during the initial wave. Failure to do so results in the Heartmaw entering a 'regeneration mode' for the rest of the fight, and the player must fight through three phases with no recovery. Using it at the right time causes a massive wave of ash to erupt, freezing all movement in the area and dealing 150 damage to the Heartmaw directly."
+          },
+          "trigger": "After defeating the Heartmaw, the volcano stabilizes. A single, faint light pulses from the crater — the storm clouds above begin to shift. The Stormcaller feels a surge of energy, and the final weather pattern manifests: a perfect, still storm with a single lightning bolt striking the peak. The level ends, and a new quest begins: 'The Sky's Whisper'."
+        }
+      ],
+      "boss": {
+        "name": "Volcanic Heartmaw",
+        "health": 750,
+        "damage": 85,
+        "weakness": "Ash Siphon Core (acquired from Ash Sentinel fight). Must be used during the first pulse phase (0–3 seconds of the fight) when the Heartmaw emits a low-frequency pulse. Activation causes 120 damage and 5-second stun. This is the only known weakness. The Heartmaw adapts to player movement, shifting terrain and attacking in patterns that become more aggressive after each failed attack.",
+        "victory_condition": "Player must use the Ash Siphon Core during the first pulse phase. After success, the Heartmaw collapses into a still pool of magma. The screen fades to black and the final storm wave forms in the sky."
+      },
+      "objective": "Defeat all three enemies and the Heartmaw to restore balance to the volcano. The journey must be completed in under 12 minutes, with no health drops below 60% during any encounter. Failure results in a volcanic collapse and a reset.",
+      "reward": "Stormcaller's Core – a rare artifact that allows the player to summon a weather storm with infinite duration. Also unlocks the ability to 'still' volcanic activity, preventing eruptions in future levels. The player gains a +15% damage bonus against volcanic enemies and can now use the Ash Siphon Core as a permanent passive ability in the next world."
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "whimsical",
+      "player_class": "beastmaster",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whimsical Volcano: The Candy Lava Caverns",
+      "setting": "A surreal, candy-colored volcano where lava flows like pink syrup and bubbling pools form giggling fountains. Volcanic vents glow with soft neon hues, and the ground is dotted with glittering obsidian rocks. Tiny, colorful creatures dance in the steam — it’s like a candy factory that’s had a meltdown. The air hums with cheerful tunes and the occasional *pffft* of a lava bubble popping.",
+      "player_weapon": "Lava-Stick (a wobbly, rainbow-tinted stick that wiggles when the player swings it)",
+      "player_weapon_damage": 1,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Lava Puddle Park",
+          "enemy": {
+            "name": "Lava Frog (Giggle-Jump)",
+            "health": 20,
+            "damage": 1,
+            "weakness": "The player’s Lava-Stick — when the stick is swung at the frog, it makes a *bloop* sound and the frog jumps in a silly loop, weakening it by 10% each time. After 2 hits, it emits a high-pitched *squeak* and retreats, leaving a bubble trail behind it."
+          },
+          "hazard": "Lava pools that glow softly — avoid stepping in. If touched, the player gets a 'Slippery Glitch' (a minor delay in movement).",
+          "pickup": {
+            "name": "Bubble Blower (a wobbly, squishy toy that pops bubbles)",
+            "effect": "When the player holds it, they can launch harmless, sparkling bubbles that float and bounce off walls. Bubbles can distract or confuse enemies with visual noise. It does not attack directly but is essential for the next encounter."
+          },
+          "trigger": "After defeating the Lava Frog, the ground shivers and a glowing archway appears — a rainbow bubble bridge leading to the Firefly Caves. The Bubble Blower drops from the frog’s back like a gift, floating gently toward the player."
+        },
+        {
+          "location": "Firefly Caves",
+          "enemy": {
+            "name": "Firefly Swarm (Dazzle-Flitter)",
+            "health": 30,
+            "damage": 1,
+            "weakness": "The Bubble Blower — when a bubble is released in the air, the fireflies spin and scatter, becoming disoriented. After two bubble bursts, the swarm stumbles, drops a glowing spark, and freezes for a beat (they can't move or attack). This gives the player time to retreat or use their Beastmaster animal (e.g., a friendly lava-bat or firefly-horse) to flank them."
+          },
+          "hazard": "Cave walls emit soft hums — if the player stands still too long, the cave echoes with a playful 'tinkle' noise.",
+          "pickup": {
+            "name": "Frost-Lily (a tiny, icy flower that blooms in hot lava)",
+            "effect": "Grows slowly when exposed to cool lava (a specific zone). When the player picks it up, it glows with a soft blue light and radiates a chill. This flower is vital for the final encounter — it can be used to freeze warm creatures or disrupt heat-based enemies."
+          },
+          "trigger": "After defeating the Firefly Swarm, the cave floor splits open. A shimmering path leads upward into the Volcano Summit Garden. The Frost-Lily sprouts from a crack in the floor, pulsing once and then falling into the player's hand with a soft *plink*."
+        },
+        {
+          "location": "Volcano Summit Garden",
+          "enemy": {
+            "name": "Volcano Marmoset (Sizzle-Squeak)",
+            "health": 40,
+            "damage": 1,
+            "weakness": "The Frost-Lily — when the player places the lily on the ground, it emits a gentle frost pulse that freezes the marmoset’s tail, making it wobble and unable to swing its arms. This causes it to collapse in a silly, floppy posture. The player can then use their Beastmaster pet (a small, brave lava fox) to pounce and finish the fight with a gentle *whimper*."
+          },
+          "hazard": "The air is hot — stepping too close makes the player feel dizzy. Avoid the central heat zone.",
+          "pickup": {
+            "name": "Frost-Lily (final form)",
+            "effect": "The original Frost-Lily from the cave has now fully bloomed. It can be used in the boss fight — it must be placed directly on the ground during the boss encounter to activate its power."
+          },
+          "trigger": "After defeating the Marmoset, the ground shakes violently, and a glowing dome rises from the summit. The dome opens to reveal the Volcanic Bubbling Golem. The path is now sealed, and the Frost-Lily glows brighter — it is now the key to defeating the boss."
+        },
+        {
+          "location": "Volcano Summit: The Bubbling Golem",
+          "enemy": {
+            "name": "Volcanic Bubbling Golem (The Jolly Gloop)",
+            "health": 100,
+            "damage": 2,
+            "weakness": "The Frost-Lily — if the player uses the Frost-Lily on the golem’s core, a cascade of freezing bubbles bursts, freezing the gloop’s internal lava flow. Once frozen, the golem stops bubbling, and the player can finish it with a single swing of the Lava-Stick. After the freeze, the golem giggles and transforms into a friendly, glowing lava-bubble bear that gives the player a souvenir plushie and a new power: 'Lava-Smirk' (a slow, silly attack)."
+          },
+          "hazard": "The golem emits steam that can temporarily blind the player (shown as a shimmering fog).",
+          "pickup": {
+            "name": "Lava-Smirk (new ability)",
+            "effect": "A playful, slow attack that makes the Lava-Stick swing in a wobble — it's not powerful, but it adds charm to the player’s style."
+          },
+          "trigger": "After defeating the Golem, the volcano emits a warm glow, and a rainbow crack spreads across the land. A message appears: 'You’ve made lava laugh! Welcome to the next level.'"
+        }
+      ],
+      "boss": {
+        "name": "Volcanic Bubbling Golem (The Jolly Gloop)",
+        "health": 100,
+        "damage": 2,
+        "weakness": "Frost-Lily — a specific item acquired from the third encounter (Volcano Marmoset)",
+        "victory_condition": "Place the Frost-Lily on the ground to trigger freeze. Then, use the Lava-Stick to finish the boss with one hit."
+      },
+      "objective": "Defeat all three enemies and the boss to restore balance to the volcano. Each step is whimsical and joyful — the player learns new tools, and the environment reacts with playful animations and sounds.",
+      "reward": "A new pet: 'Lava-Bat (The Jester)' — a small bat that flies in circles and drops harmless confetti when it sees fireflies or bubbles."
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "serene",
+      "player_class": "chronomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Volcanic Serenity",
+      "setting": "A deep, geothermal cavern beneath a dormant volcanic peak. Lava flows like slow-moving glass, floating geode crystals emit soft amber light, and the air is filled with warm steam and distant echoes. Time feels fluid and eternal — as if the volcano breathes in slow motion.",
+      "player_weapon": "Chrono-Siphon",
+      "player_weapon_damage": 0,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Ash Veil Pool",
+          "enemy": {
+            "name": "Emissary of Ash",
+            "health": 50,
+            "damage": 15,
+            "weakness": "Chrono-Siphon (player weapon) or Time Shard (pickup from prior encounter — not available yet, so only weapon applies initially). The Emissary emits a slow ash mist that spreads, reducing visibility. When hit by Chrono-Siphon, it shudders and its ash cloud collapses, temporarily freezing it in place for 2 seconds. This gives the player time to reposition or use time-dilation on it. If not hit, it drifts slowly toward the player, building tension. The enemy is intelligent: it can detect time anomalies and will avoid direct confrontation if time is manipulated too aggressively, making it a subtle threat."
+          },
+          "hazard": "Ash mist that reduces movement speed and vision. Visibility drops by 30% after 3 seconds.",
+          "pickup": {
+            "name": "Time Shard",
+            "effect": "When activated, the player gains a 2-second slow-movement buff (15% time dilation) for all abilities. This effect is temporary and recharges after 10 seconds. Can be used during combat or to safely navigate hazards. This pickup is crucial for the next enemy's weakness and also helps in pacing the level."
+          },
+          "trigger": "After defeating the Emissary, a glowing geode crystal (frozen in time) ascends from the pool’s center. It emits a soft chime and slowly rotates. When the crystal completes one full rotation, the floor shifts, revealing a hidden path to the next zone: the Fractured Cavern. The path is unstable and appears only after the player uses a time-dilation ability to stabilize the crystal's rotation."
+        },
+        {
+          "location": "The Fractured Cavern",
+          "enemy": {
+            "name": "Shattered Crater",
+            "health": 80,
+            "damage": 20,
+            "weakness": "Time Shard (pickup from previous encounter). When the player uses the Time Shard, the enemy splits into two phases: a slow, stable phase and a burst of explosive movement. The Time Shard weakens the first phase, causing the golem to shatter into pieces and become vulnerable to all attacks for 3 seconds. If the player fails to use Time Shard during the fight, the enemy enters a faster, uncontrolled state and becomes immune to time-based effects for 5 seconds. It moves in two phases: slow (4 seconds), then fast (1 second). The player must time their use of Time Shard to coincide with the slow phase to break it effectively."
+          },
+          "hazard": "Cracklines in the floor that activate when player steps on them. Triggering a small seismic pulse (2 seconds) that damages nearby enemies or the player.",
+          "pickup": {
+            "name": "Time Resonance Core",
+            "effect": "A pulsing, blue crystal that when activated, forces the next enemy or boss to enter a time-loop for 5 seconds. During this loop, their movement is mirrored back in reverse, and they cannot attack. This effect can be used only once per encounter. This pickup is essential for defeating the boss, as it directly triggers Ignis Chronos's vulnerability. The player must have acquired it before facing the boss."
+          },
+          "trigger": "After defeating the Shattered Crater, a seismic tremor shakes the cavern. A large fissure opens in the floor, revealing a central chamber with glowing lava flows and a suspended orb — the Time Resonance Core. The orb begins to pulse slowly and is now active. The player must retrieve it by stepping through the fissure. If the player fails to reach it, the core becomes unstable and triggers a time-loop that resets the encounter. The core is now available for the final boss fight."
+        },
+        {
+          "location": "The Core Chamber",
+          "enemy": {
+            "name": "Ignis Chronos",
+            "health": 250,
+            "damage": 35,
+            "weakness": "Time Resonance Core (specific pickup from the second encounter). When the player activates the Time Resonance Core, the boss enters a 10-second time-loop where it repeats its movement in reverse, causing it to freeze and become vulnerable to all damage. During this loop, the boss is also surrounded by a temporal vortex that makes it visible in a time-stopped state. The boss has three phases: lava surge (fast), time-dilation (slow), and eruption (burst). Each phase must be interrupted by the core to break the cycle. The core can only be used once per battle. If the core is not used within 6 seconds of activation, it is lost, and the fight continues in full mode (difficulty increases)."
+          },
+          "hazard": "Lava flows that move in time with the boss’s phases — when the boss is in eruption mode, lava surges upward and can damage the player if not timed correctly.",
+          "pickup": {
+            "name": "Time Resonance Core (final)",
+            "effect": "Activates only when used during the boss fight. Causes Ignis Chronos to enter a fixed time-loop, during which it is completely immobile and vulnerable for 10 seconds. This is the only way to defeat the boss. The core is not available outside of this encounter."
+          },
+          "trigger": "The player enters the chamber. The walls glow with ancient runes that pulse in sync with volcanic cycles. The boss appears slowly, surrounded by glowing lava. It begins moving in a slow, rhythmic pattern. After the player defeats the previous enemies and collects the Time Resonance Core, the boss manifests as a towering, lava-scaled entity that mimics time loops. The fight begins with the boss in lava surge mode. The player must use the Time Resonance Core within 6 seconds of the boss appearing to initiate the loop."
+        }
+      ],
+      "boss": {
+        "name": "Ignis Chronos",
+        "health": 250,
+        "damage": 35,
+        "weakness": "Time Resonance Core (specific pickup from second encounter)",
+        "victory_condition": "Use the Time Resonance Core during the boss’s first phase to initiate a 10-second time-loop where the boss is frozen and vulnerable. After the loop, the boss collapses into a pool of still lava. The core is consumed and cannot be reused."
+      },
+      "objective": "Defeat Ignis Chronos using the chain of encounters and pickups. The serene mood is maintained through slow pacing, ambient sound design, and time-based environmental effects. The player must use their chronomancer abilities to anticipate enemy movements and manage time effectively.",
+      "reward": "The Chrono-Resonance Key — unlocks access to the next level: 'The Eternal Echoes'. This level features time-locked puzzles and memories of past volcanic eruptions. The player gains a new ability: 'Temporal Echo' (a skill that replays a previous action for a short duration)."
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "serene",
+      "player_class": "paladin",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "celestial",
+      "setting": "The Orbiting Spire of Aelthar — a crystalline celestial tower suspended in the void between two drifting nebulae. Time moves slowly here. Stars drift like fallen leaves. The air hums with soft harmonic frequencies. Light filters through floating constellations, casting shifting patterns on ancient, glowing stone. A quiet reverence permeates the environment. Every surface pulses faintly with bioluminescent energy, and distant chimes echo like prayers.",
+      "player_weapon": "Luminous Cross of Aelthar",
+      "player_weapon_damage": 80,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "The Whispering Atrium",
+          "enemy": {
+            "name": "Sylph of Stillness",
+            "health": 60,
+            "damage": 30,
+            "weakness": "Luminous Cross of Aelthar — the cross's radiant pulse inflicts 2x damage when used at full charge. Sylph is vulnerable during the 3-second cooldown of the player’s pulse ability (available after the first encounter). Use the cross to generate a pulse burst at the start of combat to weaken Sylph’s ethereal form and reduce its movement speed by 40% for 5 seconds. This movement limitation sets up the second encounter’s environmental challenge (movement-based trap)."
+          },
+          "hazard": "The Atrium floor subtly shifts — if the player steps too far from a central pillar, a soft ripple creates a temporary gravity well, slowing movement and causing minor health drain. This reinforces the need for precise positioning.",
+          "pickup": {
+            "name": "Shard of Harmonic Echo",
+            "effect": "Grants a passive ability: 'Resonant Step' — when the player moves, they emit a harmonic frequency that increases damage by 10% for 3 seconds against all enemies. This stacks up to 3 times. This is the only pickup that will later be used against the boss, but it must be earned from the first encounter."
+          },
+          "trigger": "After defeating Sylph, the floor of the atrium glows in a new pattern — a spiral of light emerges from the center. The player is then prompted to enter the Hall of Echoing Steps, where the path begins to shift dynamically based on player movement. This movement instability directly sets up the next encounter’s spatial trap."
+        },
+        {
+          "location": "Hall of Echoing Steps",
+          "enemy": {
+            "name": "Echo-Spider of the Shifting Path",
+            "health": 100,
+            "damage": 40,
+            "weakness": "The player’s 'Resonant Step' pickup — when the player moves on the platform, the spider’s webbing shivers. After 10 seconds of movement, it becomes vulnerable for 3 seconds. The player can trigger this by maintaining movement (e.g., walking or jumping across platforms). The enemy will emit a feedback loop if the player moves too slowly — this creates a time pressure that rewards precise timing and movement."
+          },
+          "hazard": "The platforms are not fixed. Every 15 seconds, they shift position. The player must time their movement to avoid falling into voids. The enemy can also generate short-lived webbing traps that slow the player down and prevent movement.",
+          "pickup": {
+            "name": "Fragile Comet Core",
+            "effect": "Grants a passive: 'Cosmic Pulse' — when the player takes damage, they absorb 15% of the damage as energy, which can be spent to activate a short burst of defensive shield (reduces incoming damage by 30% for 5 seconds). This is used during the final encounter to mitigate boss damage. However, it must be activated only once per fight — a tactical choice."
+          },
+          "trigger": "After defeating the Echo-Spider, a new constellational pattern emerges in the sky above — a pulsing chain of stars begins to form a bridge toward the outer spire. The bridge flickers and requires the player to move through it at a specific frequency. If the player fails to match the frequency, the bridge collapses, forcing a repeat of the second encounter or a failed progression. This movement requirement directly creates tension for the final encounter’s environmental setting."
+        },
+        {
+          "location": "The Final Spire — Nexus of Still Light",
+          "enemy": {
+            "name": "Voidwarden Aethelis",
+            "health": 300,
+            "damage": 70,
+            "weakness": "The **Shard of Harmonic Echo** — when the player uses the shard’s passive (Resonant Step) in sequence (3 times within 10 seconds), Aethelis becomes vulnerable to radiant damage. The player can then unleash a radiant burst from the Luminous Cross of Aelthar that deals 3x normal damage and reduces enemy health by 40% for 12 seconds. This burst can only be activated if the player has used the shard’s ability three times during the fight. The weakness is triggered only when the player *initiates* the resonance sequence at the start of the fight, after a specific sequence of movement and timing in the final hall."
+          },
+          "hazard": "The spire is floating and slowly rotating. The player’s position in the arena changes every 30 seconds. The voidwarden teleports to new positions in a circular path, and can only be hit when the player is facing a specific alignment (determined by a celestial alignment marker — a floating star that rotates in sync with the spire’s rotation).",
+          "pickup": {
+            "name": "Shard of Harmonic Echo (Final Form)",
+            "effect": "This is the same shard, now fully empowered. The player can now channel its resonance as a continuous harmonic field that weakens Aethelis by reducing their health by 5% every 3 seconds while the player remains in alignment. This is the key to defeating the boss, and it can only be activated after both prior pickups are collected and the player has successfully navigated the previous encounters."
+          },
+          "trigger": "The voidwarden appears in full form, floating above a fractured mirror of the stars. The player must use all prior knowledge: movement timing, harmonic resonance, and precise positioning. If the player fails to trigger the Resonant Step sequence three times within 10 seconds at the start, the fight fails and the player must replay from the second encounter. The victory condition is strict: the final burst must be used at the right moment after the resonance is triggered."
+        }
+      ],
+      "boss": {
+        "name": "Voidwarden Aethelis",
+        "health": 300,
+        "damage": 70,
+        "weakness": "Shard of Harmonic Echo (used 3 times in a row within 10 seconds at the start of the fight) — triggers a resonance cascade that reduces Aethelis’s health by 40% and enables a radiant burst from the Luminous Cross of Aelthar. This burst deals 3x the normal damage (240 base damage) and cannot be interrupted. This is the only way to win.",
+        "victory_condition": "Trigger the Resonant Step ability three times within 10 seconds of the fight starting, then immediately activate the Luminous Cross of Aelthar's radiant burst. The burst must land before Aethelis uses its final phase — which includes a teleport to the edge of the spire and a devastating null-field pulse that drains 50% of the player’s health if not interrupted."
+      },
+      "objective": "Navigate the celestial spire, overcome three encounters through strategic movement and use of pickups, and defeat the Voidwarden by activating the harmonic resonance sequence using the Shard of Harmonic Echo — a pickup earned in the first encounter. The serene celestial mood emphasizes harmony, patience, and rhythm over brute force.",
+      "reward": "The player gains access to the Celestial Sanctuary, a new area where they can refine their paladin abilities using celestial energy. The Luminous Cross of Aelthar is permanently upgraded to deal 10% more damage, and the Resonant Step effect is now active continuously for 30 seconds after use in any fight, making it a core ability in future gameplay."
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "mysterious",
+      "player_class": "chronomancer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Celestial Mysterious",
+      "setting": "The Shattered Nebula of Chronos Varn",
+      "player_weapon": "Chrono-Claw",
+      "player_weapon_damage": 100,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "The Fractured Veil",
+          "enemy": {
+            "name": "Temporal Echo of Vesper-9",
+            "health": 180,
+            "damage": 75,
+            "weakness": "Chrono-Claw (Time-Slice ability). The Echo is vulnerable to attacks that slice time and disrupt its temporal echo loop. A single successful time-slice from the Chrono-Claw shatters the echo's loop and causes it to disintegrate into static noise. Cannot be attacked directly due to time-ghosting; must be cut in its loop."
+          },
+          "hazard": "Time-Drift Field (10-second cycles): The player is pulled into brief loops where time repeats. After 3 loops, the player loses 10% health. Can be mitigated by using a 'Time-Slice' to break the loop instantly.",
+          "pickup": {
+            "name": "Fragment of Stillness",
+            "effect": "Allows the player to create a 5-second 'temporal stasis bubble' around themselves. During this bubble, all time effects (like drift fields, enemy movement) are paused. Can be used to safely reposition or prepare for next encounter. Duration: 5 seconds. Requires cooldown: 10 seconds after use. (This pickup becomes essential for survival in future encounters.)"
+          },
+          "trigger": "After defeating the Echo, a faint time-signal pulses from the far nebula. The stars shift into a spiral pattern — the 'Orb of Tachyons' emerges. The environment begins to ripple with faint echoes of a distant, pulsing entity. This signal marks the approach of the Entropy Vulture and triggers the next zone transition."
+        },
+        {
+          "location": "The Entropy Spiral",
+          "enemy": {
+            "name": "Entropy Vulture",
+            "health": 300,
+            "damage": 100,
+            "weakness": "Fragment of Stillness. The Vulture attacks by consuming time from its prey. When the player uses the Fragment of Stillness to create a stasis bubble, the Vulture's time-drain attacks are nullified. In stasis, it becomes motionless and vulnerable to direct attack. If the bubble is broken prematurely, the Vulture regains 50% health and gains 30% faster attack speed."
+          },
+          "hazard": "Time-Reverse Zones (spatial loops): The player walks into areas where movement reverses. A step forward becomes a backward movement. If the player walks back into the zone, they gain 20% health, but if they step forward again, they take 50% damage. This zone is unstable and may shift position after the player enters.",
+          "pickup": {
+            "name": "Tachyon Echo",
+            "effect": "Allows the player to emit a pulse of tachyonic energy (faster-than-light temporal waves). This pulse can pass through time-dilated zones and disrupt enemies. Can be used to trigger a time-reversal on the next enemy. However, using it consumes 50% of the player's current health. (This item becomes critical in facing the final confrontation.)"
+          },
+          "trigger": "After defeating the Vulture, a dark vortex opens in the center of the spiral. The stars collapse into a single point — the 'Ecliptic Pulse'. A shadowy form begins to pulse in the core. The path forward is blocked by a time-dilation barrier. To proceed, the player must use the Tachyon Echo to 'reframe' time — a ritual that triggers the Chrono-Claw’s ultimate ability, 'Temporal Recalibration'. This ability is required to access the final zone. The player must now face the Chronophage."
+        },
+        {
+          "location": "The Chrono-Scar",
+          "enemy": {
+            "name": "Chronophage (Time Devourer)",
+            "health": 500,
+            "damage": 150,
+            "weakness": "Tachyon Echo. The Chronophage absorbs time from the environment. It cannot be harmed by normal attacks, but when the Tachyon Echo is used, it creates a tachyonic shockwave that disrupts the Chronophage’s internal time structure. The shockwave causes the enemy to emit a 'temporal scream' — a burst of time-reversed attacks that reverse the enemy’s movement for 3 seconds. This creates a window where the player can counter-attack. If the echo is not used in time, the enemy grows stronger by absorbing 20% of the player's time energy (shown as a slow, dark wave around the player)."
+          },
+          "hazard": "Chrono-Scorched Ground: The ground emits a pulse that drains 10% health every 2 seconds. The player must use the Fragment of Stillness to create a stasis bubble to survive. The Tachyon Echo can be used to briefly freeze the ground pulse, but only once per encounter.",
+          "pickup": {
+            "name": "Stasis Shard",
+            "effect": "A crystallized fragment of time-stasis. When activated, it creates a 10-second 'absolute stasis field' that freezes all time effects — including enemy attacks, movement, and environmental hazards. This field can be used to safely escape or reposition. It can only be used once per encounter. (This is the key item needed to defeat the Ecliptic Maw.)"
+          },
+          "trigger": "The Chronophage emits a final scream and the Chrono-Scar shatters into a vortex. The center of the nebula reveals a swirling black eye — the Ecliptic Maw. The player is teleported into a temporal rift. The stars freeze in place. A slow, deep hum echoes through the void. The player must now face the final boss, whose health is tied to the player's time energy and whose only vulnerability is the Stasis Shard."
+        }
+      ],
+      "boss": {
+        "name": "Ecliptic Maw",
+        "health": 1000,
+        "damage": 200,
+        "weakness": "Stasis Shard (from the Chronophage encounter). The Maw feeds on time-energy and creates a 'time tide' that pulls players into cycles. When the player activates the Stasis Shard, it creates a complete temporal lock — all time around the Maw freezes. This allows the player to attack the Maw with full power and for 10 seconds, all time effects are nullified. The Maw cannot regenerate or attack during this window. If the Shard is not used, the Maw grows stronger by absorbing the player’s time energy, and after 40 seconds, it begins to emit time fragments that spawn a new Chronophage at the edge of the rift.",
+        "victory_condition": "The player must activate the Stasis Shard during a time when the Maw is not in a feeding phase (which occurs every 75 seconds). The shard must be used during a time of low Maw aggression to maximize damage. The Maw will attempt to consume the player’s time energy after every failed attack, so the player must remain in stasis to survive the final phase. After 3 successful attacks with the Stasis Shard active, the Maw shatters and the level ends in victory. The player gains a new skill: 'Cosmic Stasis' — a permanent ability to create stasis fields."
+      },
+      "objective": "Reach the center of the Shattered Nebula and defeat the Ecliptic Maw. The player must survive escalating time distortions and master the use of pickups from prior encounters. Each encounter teaches a new temporal skill, and only by combining them in the right sequence can the player overcome the final challenge.",
+      "reward": "Cosmic Stasis (new skill), Fragment of Stillness (for future use), and a unique Chrono-Claw upgrade: 'Time-Forged Edge' — increases damage by 20% when used in a stasis state. Also unlocks the 'Chrono-Song' mode: a passive ability that creates harmonic echoes that can disrupt time-locked enemies in future levels."
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "ominous",
+      "player_class": "shadowblade",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Celestial",
+      "setting": "The Fractured Nebula of Vael’Thar",
+      "player_weapon": "Shadow Edge",
+      "player_weapon_damage": 75,
+      "player_health": 200,
+      "encounters": [
+        {
+          "location": "Shattered Star Spire",
+          "enemy": {
+            "name": "Nebula Wraith",
+            "health": 180,
+            "damage": 40,
+            "weakness": "Shadow Edge (direct strike during pulse phase, 20% chance to shatter form and reduce damage by 40%)"
+          },
+          "hazard": "Pulsing starlight causes 10% shadow decay every 5 seconds if unattended.",
+          "pickup": {
+            "name": "Fragile Shard of the Shattered Sky",
+            "effect": "When activated in a dark rift, creates a breathing shadow zone. Grants temporary shadow regeneration (50% regen per second) for 30 seconds. Can be used to disrupt phase fields in later encounters."
+          },
+          "trigger": "After defeating the Wraith, a dark rift appears in the nebula's edge. The Shard activates when the player enters. If not collected, the rift collapses and the player loses 30% shadow health."
+        },
+        {
+          "location": "Void Maw Corridor",
+          "enemy": {
+            "name": "Void Maw Construct",
+            "health": 320,
+            "damage": 60,
+            "weakness": "Fragile Shard of the Shattered Sky (placed on the enemy's phase node triggers 15-second vulnerability: all damage reduced by 50%, and phase resistance drops to 20%)"
+          },
+          "hazard": "The Construct phases through walls every 8 seconds. Players must track its position or risk being consumed by residual void.",
+          "pickup": {
+            "name": "Echo of the First Shade",
+            "effect": "A corrupted reflection of the player’s shadow. Can be held to mirror enemy pulses. Used in Encounter 3 to prevent shadow decay. If lost, player’s shadows become unstable and regenerate slower by 75%."
+          },
+          "trigger": "After defeat, the Construct’s core emits unstable light. The Echo appears in a floating rift. If not collected within 10 seconds, the rift collapses and the player is teleported to a random point in the nebula with no health restoration."
+        },
+        {
+          "location": "Eclipse Spire",
+          "enemy": {
+            "name": "Eclipse Vessel",
+            "health": 480,
+            "damage": 80,
+            "weakness": "Echo of the First Shade (held during pulse phase, player must mirror the enemy’s pulse to freeze it. 5-second freeze, no damage taken during freeze)"
+          },
+          "hazard": "Every pulse (every 12 seconds), the player loses 10% of shadow health. If shadow health drops to 0, the player is paralyzed for 10 seconds.",
+          "pickup": {
+            "name": "Void Seed",
+            "effect": "If collected after defeat, activates a temporary void bubble. Grants 20% damage resistance and slows enemy attacks by 40%. Cannot be used until the player defeats the Eclipse Vessel."
+          },
+          "trigger": "Upon defeat, the Vessel collapses. The Void Seed appears in the core. If not collected, the boss fight begins immediately with a 30% damage bonus to all attacks."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Star’s Core",
+        "health": 800,
+        "damage": 120,
+        "weakness": "Fragile Shard of the Shattered Sky (must be held during Core Exposure phase, which occurs after the second pulse. 10-second window for a 200% damage burst that destroys the enemy)",
+        "victory_condition": "The player must use the Fragile Shard during the Core Exposure phase. Failure results in the player being consumed by the Core and losing all progress. Victory triggers a slow fade to black, with a single star rekindling in the void."
+      },
+      "objective": "Defeat all three encounters and the core. The Fragile Shard must be used in the final fight to end the celestial decay.",
+      "reward": "The Shard of Resonance – a fragment of the original celestial balance. Cannot be used without the Shadow Edge, and requires a 15-second time lock to activate."
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "whimsical",
+      "player_class": "illusionist",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whimsical Celestial",
+      "setting": "A floating island of sugar-pearl clouds, where gravity bends into spirals and planets hang like lanterns. Floating candy moons drift, casting shifting shadows. The air hums with soft chimes and bouncy melodies.",
+      "player_weapon": "Glimmer Staff",
+      "player_weapon_damage": 0,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Glittered Gully",
+          "enemy": {
+            "name": "Twinkling Snail",
+            "health": 15,
+            "damage": 1,
+            "weakness": "Glimmer Staff (creates illusion of duplicate self to confuse and freeze it)"
+          },
+          "hazard": "Gravitational wobble — small floating rocks shift positions when the player casts an illusion",
+          "pickup": {
+            "name": "Luminous Dust",
+            "effect": "Creates a temporary glowing shield or allows creation of a light ring that can disorient enemies with mirrors"
+          },
+          "trigger": "After defeat, a candy moon drifts down and releases a single particle of Luminous Dust into the player’s hand."
+        },
+        {
+          "location": "Mirror Maze of the Floating Canyons",
+          "enemy": {
+            "name": "Mirror Moth",
+            "health": 30,
+            "damage": 2,
+            "weakness": "Luminous Dust (when used to create a glowing ring, the moth reflects it and crashes into itself)"
+          },
+          "hazard": "Reflections of the player and enemies multiply when the moth is near",
+          "pickup": {
+            "name": "Stabilized Luminous Core",
+            "effect": "A refined version of Luminous Dust that can be used to create a stable, central glowing orb during boss fight"
+          },
+          "trigger": "After defeat, the sky begins to spin. A central planet (Heart Orb) pulses gently. A crack appears in the sky, revealing a doorway to the Sky Weeper’s domain. The stage shifts subtly to prepare for the boss."
+        },
+        {
+          "location": "The Sky Weeper’s Hollow",
+          "enemy": {
+            "name": "Sky Weeper",
+            "health": 100,
+            "damage": 3,
+            "weakness": "Stabilized Luminous Core (must create a glowing orb in the center — the sky weeper sees it as a true self and collapses)"
+          },
+          "hazard": "Creates illusions of the player’s past selves, making it hard to distinguish real from false",
+          "pickup": {
+            "name": "Stabilized Luminous Core",
+            "effect": "Only available as a result of combining two Luminous Dust particles during encounter 2. Used in boss fight to break illusion of self."
+          },
+          "trigger": "None — this is the final encounter."
+        }
+      ],
+      "boss": {
+        "name": "Sky Weeper",
+        "health": 100,
+        "damage": 3,
+        "weakness": "Stabilized Luminous Core",
+        "victory_condition": "The player must create a single glowing orb using the Stabilized Luminous Core at the center of the battlefield. When activated, the Sky Weeper collapses into a soft, star-dusted glow, releasing a chorus of chimes."
+      },
+      "objective": "Destroy all enemies to awaken the Heart Orb and defeat the Sky Weeper to restore balance to the floating world.",
+      "reward": "Cosmic Dream Fragment — used to create new illusions or unlock a new celestial form."
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "chaotic",
+      "player_class": "stormcaller",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Celestial",
+      "setting": "The Fractured Nebula of Shattered Skies",
+      "player_weapon": "Stormfist - a weapon that channels lightning and storm winds from the player’s core, capable of overloading with sustained pressure.",
+      "player_weapon_damage": 45,
+      "player_health": 80,
+      "encounters": [
+        {
+          "location": "The Whispering Vortex",
+          "enemy": {
+            "name": "Corrupted Stormshaper",
+            "health": 60,
+            "damage": 30,
+            "weakness": "Stormfist Overload Mode (activated by sustained lightning pulses from the Stormfist). When the Stormfist is used in rapid succession for over 2 seconds, it triggers a backlash that deals 50% more damage and reduces the Stormshaper’s resistance to lightning by 40% for 3 seconds. The enemy is vulnerable during this phase. This is the player’s primary weapon ability, but overuse risks player burnout, adding tension."
+          },
+          "hazard": "The vortex spins faster as the player approaches—pulling them toward unstable gravity wells. Each successful kill causes a localized storm to erupt and create a new rift in the nebula's structure.",
+          "pickup": {
+            "name": "Nebula Shard",
+            "effect": "A jagged piece of crystallized starlight. When equipped, the Stormfist gains a temporary passive ability: 'Stellar Surge'—when the player takes damage, they gain 10% of their current health as a temporary shield (up to 30% max). This shield recharges every 3 seconds. Cannot be used in overpressure mode."
+          },
+          "trigger": "Upon defeating the Stormshaper, the vortex collapses into a fissure, releasing a pulse of chaotic wind that collapses the nearby nebula zone. This creates a pressure wave that destabilizes the upper atmospheric layer, revealing a new rift—activating the second encounter in the 'Collapsed Sky Rift'."
+        },
+        {
+          "location": "The Collapsed Sky Rift",
+          "enemy": {
+            "name": "Void-Spinner",
+            "health": 85,
+            "damage": 40,
+            "weakness": "The Nebula Shard. When the Void-Spinner is attacked with the Nebula Shard equipped, its core emits a dissonant frequency that causes it to freeze for 2 seconds. During this time, the player can move freely and deal double damage. This is the only way to break its rotational defense pattern. If the shard is not equipped, the enemy is immune to this effect and attacks in a spiral motion, increasing in speed over time."
+          },
+          "hazard": "The rift is a spiraling vortex of vacuum and micro-black holes. The Void-Spinner emits psychic echoes that cause temporary hallucinations—players may misidentify terrain or enemy types. Each hit from the Void-Spinner causes a micro-decay of the environment, making the next zone less predictable.",
+          "pickup": {
+            "name": "Stormlight Tether",
+            "effect": "A frayed thread made of storm energy. When equipped, the player gains a passive ability: 'Tethered Storm'. When the player takes damage, they are briefly pulled into a storm core, where they gain a 20% damage boost and a shield of 10% health, lasting 4 seconds. This can only be used after the Nebula Shard is equipped and the Void-Spinner is defeated."
+          },
+          "trigger": "The Void-Spinner's defeat causes a massive energy surge through the rift. This creates a temporary magnetic instability that opens a fissure in the nebula’s core—a dark, pulsing void that pulses with unnatural rhythms. This instability triggers the final boss to appear as a shadow-form in the core of the nebula."
+        },
+        {
+          "location": "The Core of Shattered Skies",
+          "enemy": {
+            "name": "Nebula Siphon",
+            "health": 200,
+            "damage": 50,
+            "weakness": "The Nebula Shard must be equipped *and* the player must have used the Stormfist’s Overload Mode *at least once* during the earlier encounters. The Siphon has three phases: Phase 1 (idle), Phase 2 (energy surge), Phase 3 (absorption). When the player uses the Stormfist with the Nebula Shard equipped, and during the Overload Mode phase, it triggers a critical vulnerability in the Siphon’s core. This causes a 70% damage reduction and a 30-second vulnerability window where it can be damaged at 150% of normal damage. Without the shard or the Overload history, the Siphon is fully resistant to all attacks."
+          },
+          "hazard": "The Core is a collapsing stellar engine. The Siphon emits gravitational tides that pull the player toward it, causing rapid health drain. Time slows in the core—movement and actions are delayed by 25% during the Siphon’s phases. The player must manage both movement and damage. A misstep can result in a permanent health drain of 30%.",
+          "pickup": {
+            "name": "Nebula Shard (Final)",
+            "effect": "The shard reactivates in the core with a final, resonant frequency. It now acts as a core power source. When used in Overload Mode with the Nebula Shard, the Stormfist triggers a final burst: a lightning surge that damages the Siphon by 250% (independent of health). This is the only way to end the fight."
+          },
+          "trigger": "After defeating the Nebula Siphon, the nebula stabilizes—though the player is left with the final shard, which now floats in their inventory. The game ends with a post-encounter sequence showing the storm calming, stars reassembling, and the player standing in a new celestial field."
+        }
+      ],
+      "boss": {
+        "name": "Nebula Siphon",
+        "health": 200,
+        "damage": 50,
+        "weakness": "The player must have equipped the Nebula Shard from the first encounter AND used the Stormfist’s Overload Mode during either the first or second encounter. Only then does the Siphon have a 3-second window where it is vulnerable to a 'Resonance Pulse' (a high-frequency storm burst from the Stormfist when using Overload Mode with the shard). Without either condition, the boss is fully immune to all attacks.",
+        "victory_condition": "The player must trigger the Resonance Pulse at least once during the fight. This causes a massive storm wave that deals 1000% of the player’s base damage to the Siphon. After 3 successful pulses, the fight ends with a complete collapse of the nebula."
+      },
+      "objective": "Defeat the Nebula Siphon by using the Nebula Shard and Overload Mode during prior encounters. Without both, the boss is invincible.",
+      "reward": "The player gains access to the 'Stellar Storm' skill tree and a new celestial region: the Shattered Orbit."
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "desolate",
+      "player_class": "ranger",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "celestial",
+      "setting": "The Shattered Orbit of Veyra — a fractured orbital ring around a dying star, frozen in time. Jagged ruins, drifting ice, and silent constellations pierce the void.",
+      "player_weapon": "Luminous Bow",
+      "player_weapon_damage": 100,
+      "player_health": 300,
+      "encounters": [
+        {
+          "location": "crack_in_ring",
+          "enemy": {
+            "name": "Fractured Sentinel",
+            "health": 250,
+            "damage": 30,
+            "weakness": "Starburst shot (from Luminous Bow)"
+          },
+          "hazard": "crystalline shards fall during attack",
+          "pickup": {
+            "name": "Fragment of the First Light",
+            "effect": "Passive: increases attack range by 10%, allows use of Focus Pulse ability"
+          },
+          "trigger": "After defeat, a dark rift opens, revealing a cold corridor beneath the platform"
+        },
+        {
+          "location": "frozen_corridor",
+          "enemy": {
+            "name": "Echo-Walker",
+            "health": 180,
+            "damage": 25,
+            "weakness": "Focus Pulse (requires Fragment of the First Light)"
+          },
+          "hazard": "drifts in unpredictable patterns, leaving light trails",
+          "pickup": {
+            "name": "Frost Shard",
+            "effect": "When held during boss phase, triggers Resonant Freeze — reduces boss damage by 30% for 5 seconds"
+          },
+          "trigger": "After defeat, a frozen lake activates. The player collects the Frost Shard. A gravitational tremor opens a central chamber."
+        },
+        {
+          "location": "core_chamber",
+          "enemy": {
+            "name": "Hollow Star Core",
+            "health": 600,
+            "damage": 40,
+            "weakness": "Frost Shard (must be used during a red pulse phase to trigger Resonant Freeze)"
+          },
+          "hazard": "gravity wells pull player toward walls",
+          "pickup": {
+            "name": "None",
+            "effect": "None — victory achieved by using Frost Shard"
+          },
+          "trigger": "Accessed only after Frost Shard is collected. Core pulses with warning light as battle begins."
+        }
+      ],
+      "boss": {
+        "name": "Hollow Star Core",
+        "health": 600,
+        "damage": 40,
+        "weakness": "Frost Shard",
+        "victory_condition": "Use Frost Shard during red pulse phase to trigger Resonant Freeze (critical hit)"
+      },
+      "objective": "Defeat the Hollow Star Core by overcoming the Fractured Sentinel, the Echo-Walker, and using the Frost Shard in the final phase.",
+      "reward": "The player gains access to the 'Celestial Outpost' and unlocks the 'Luminous Pulse' skill tree."
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "eerie",
+      "player_class": "artificer",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Celestial",
+      "setting": "The Hollow Crater of Veyra",
+      "player_weapon": "Glowing Tesseract Core",
+      "player_weapon_damage": 15,
+      "player_health": 40,
+      "encounters": [
+        {
+          "location": "Crater Floor, Zone A",
+          "enemy": {
+            "name": "Drift-Swarm Drone",
+            "health": 180,
+            "damage": 8,
+            "weakness": "Glowing Tesseract Core (sustained pulse over 3 seconds; pulse must be continuous to disable phase-shifting)."
+          },
+          "hazard": "Static Resonance Field — every 4 seconds, the drone swarm emits a frequency pulse that disrupts player movement and weapon cooldowns.",
+          "pickup": {
+            "name": "Fractured Resonance Shard",
+            "effect": "When used in the Harmonic Resonator (crafted by player), creates a frequency counter that weakens Drift-Swarm Drones and can be used against the Mire-Entity. Cannot be used without the device. Found when a drone core shatters during combat, if player fails to destroy it in under 60 seconds, it becomes unstable and emits a shockwave that destroys nearby items and harms the player."
+          },
+          "trigger": "If the player fails to destroy all drones within 2 minutes, a void fissure opens in the floor, spilling corrupted energy and spawning the Mire-Entity (Encounter 2). The player is teleported to Zone B, with 10 seconds of time dilation in effect (all actions slow by 30%)."
+        },
+        {
+          "location": "Mire Chamber, Zone B",
+          "enemy": {
+            "name": "Mire-Entity",
+            "health": 600,
+            "damage": 25,
+            "weakness": "Fractured Resonance Shard (must be activated in the Harmonic Resonator; device must be fully charged and active). If the shard is not present, the entity gains immunity to all attacks and spawns 20 additional drones that mimic player movement."
+          },
+          "hazard": "Time Distortion — every 10 seconds, the player’s actions repeat once, and enemies gain a 20% damage boost.",
+          "pickup": {
+            "name": "Stitched Circuit Core",
+            "effect": "Can be combined with the Fractured Resonance Shard to activate the ultimate Harmonic Resonator (required for boss fight). When used in the Resonator, it amplifies the resonance, allowing it to damage the Core-Scourge. Found inside a sealed vault in the chamber’s center, activated only when the Mire-Entity is defeated or after 15 seconds of player inactivity — otherwise, it remains locked and corrupted."
+          },
+          "trigger": "If the player fails to defeat the Mire-Entity within 4 minutes, the chamber collapses. A gravitational pulse emits, triggering the Core-Scourge (Final Boss). The player is dropped into the core chamber with reduced stamina (50% HP), and all enemies become invulnerable for 30 seconds. The player must survive until 10 minutes pass to unlock the boss fight — if they die, the game ends in failure."
+        },
+        {
+          "location": "Core Chamber, Zone C",
+          "enemy": {
+            "name": "Core-Scourge",
+            "health": 2000,
+            "damage": 40,
+            "weakness": "Harmonic Resonator activated using the Fractured Resonance Shard + Stitched Circuit Core. Must be sustained for 10 seconds with uninterrupted pulses to trigger a critical resonance burst that damages the Core-Scourge. If the resonance is interrupted, the entity absorbs the energy and grows stronger. The Core-Scourge can split into three fragments, each with independent movement and attacks. If any fragment is damaged, it regenerates instantly unless the full resonance is active."
+          },
+          "hazard": "Cosmic Fracture — the environment shifts every 30 seconds, changing terrain, breaking bridges, and repositioning enemies. Time perception is distorted: every 10 seconds, a 15-second time skip occurs, reducing player reaction time.",
+          "pickup": {
+            "name": "None (requires prior pickups)",
+            "effect": "The Fractured Resonance Shard and Stitched Circuit Core are the only required pickups. The Harmonic Resonator is not a physical object — it must be constructed by the player using the two pickups as components. The player must carry both items at all times to engage the boss."
+          },
+          "trigger": "Appears only if the player survives the Mire-Entity encounter or completes it successfully. If the player fails to activate the Harmonic Resonator before 30 seconds of the boss fight, the Core-Scourge becomes invincible and the player loses all health. If activated, the boss fight begins after a 30-second countdown from the moment of entry."
+        }
+      ],
+      "boss": {
+        "name": "Core-Scourge",
+        "health": 2000,
+        "damage": 40,
+        "weakness": "Harmonic Resonator (activated with Fractured Resonance Shard + Stitched Circuit Core). Must be sustained for 10 seconds to trigger a critical resonance burst. Failure results in absorption of player's energy and regeneration of the boss.",
+        "victory_condition": "Player must complete the 10-second resonance burst without interruption. Any interruption results in the boss absorbing 10% of the player’s health and regenerating 50% of its own health. The player must win three consecutive resonance bursts to win the fight. Failure means defeat."
+      },
+      "objective": "Defeat the Core-Scourge by constructing and activating the Harmonic Resonator using the Fractured Resonance Shard (from Encounter 1) and the Stitched Circuit Core (from Encounter 2).",
+      "reward": "Access to the Celestial Engine Core — a new crafting station that allows the player to build custom weapons and devices using cosmic energy. The player gains a new passive ability: 'Resonant Echo' — allows the player to reactivate a previous device after a short delay, even after death (if not in combat)."
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "tense",
+      "player_class": "engineer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "celestial",
+      "setting": "The Shattered Orbit — a decaying lunar ring station drifting through a fractured asteroid belt. Cracked conduits hum with unstable energy. Gravity fluctuates. Faint warnings emit from damaged systems. The station's core is failing, and every system failure is a step closer to collapse.",
+      "player_weapon": "Gravity Clamp (a tool that stabilizes unstable structures by applying controlled force)",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Main Conduit Hub",
+          "enemy": {
+            "name": "Corrupted Node",
+            "health": 20,
+            "damage": 5,
+            "weakness": "The player's Gravity Clamp can destabilize its energy core. When used within 2 tiles of the enemy, it triggers a critical override and deals 50% extra damage. The Corrupted Node emits a low hum that grows louder as the player approaches — it's a warning of instability."
+          },
+          "hazard": "Gravity fluctuation — every 15 seconds, gravity shifts, causing the player to lose balance. The player must use the Gravity Clamp to anchor themselves or fall into a trench that ends the level.",
+          "pickup": {
+            "name": "Stabilized Core Fragment",
+            "effect": "Grants +10% defense and allows the player to temporarily stabilize nearby structures (like walls or platforms) when used. This helps prevent falling in gravity shifts later in the level. Can be used once per encounter."
+          },
+          "trigger": "After defeating the Corrupted Node, the station's emergency beacon activates. A faint pulse from the central reactor flickers — a new corridor opens toward the Lower Core. The warning tone changes from hum to a low, rising drone."
+        },
+        {
+          "location": "Lower Core Corridor",
+          "enemy": {
+            "name": "Fracture Golem",
+            "health": 30,
+            "damage": 8,
+            "weakness": "The Fracture Golem is weak to the Stabilized Core Fragment. When the player uses the fragment on the enemy, it causes a micro-surge in its internal structure, reducing its health by 30% and causing it to stutter. This is the only way to defeat it efficiently."
+          },
+          "hazard": "Radiation leak — every 20 seconds, a pulse of radiation causes temporary blindness (one turn of invisibility). The player must rely on environmental cues (e.g., light flickers) to avoid danger. Using the Stabilized Core Fragment can deflect radiation pulses by 30%.",
+          "pickup": {
+            "name": "Phase Resonator Disk",
+            "effect": "When held, allows the player to create a temporary energy field that reflects incoming damage from any enemy. This is useful against the final boss, who uses high-damage phase attacks. Can be used once per encounter."
+          },
+          "trigger": "After defeating the Fracture Golem, the station's core pulses with erratic rhythm. The walls begin to vibrate. A red warning beacon flashes in the center — the main reactor is now visible. The player must cross a bridge that activates when a specific sequence of events is met: the bridge only appears when the player has used both the Gravity Clamp and the Stabilized Core Fragment."
+        },
+        {
+          "location": "Core Reactor Chamber",
+          "enemy": {
+            "name": "Void Nexus",
+            "health": 60,
+            "damage": 12,
+            "weakness": "The Void Nexus is vulnerable to the Phase Resonator Disk. When the player uses the disk, it emits a harmonic frequency that disrupts the enemy’s energy field. This causes it to phase into a vulnerable state for 3 seconds, during which it takes double damage from the player’s Gravity Clamp. This is the only way to defeat it in one hit."
+          },
+          "hazard": "Core instability — every 10 seconds, the reactor destabilizes and emits a shockwave that knocks the player backward and removes 20% of their health. The player must use the Gravity Clamp to counteract the shockwave before it hits.",
+          "pickup": {
+            "name": "Primary Stabilizer (final pickup)",
+            "effect": "Once used, it permanently increases the player’s Gravity Clamp damage by +20% and allows it to stabilize platforms instantly. This is the key to defeating the final boss. The pickup is dropped by the Void Nexus upon defeat and is only available if the player completes all prior encounters with the correct sequence of pickups."
+          },
+          "trigger": "After defeating the Void Nexus, the station emits a final harmonic tone. The screen flickers with data. A message appears: 'System restored. But the void is still watching.' The level ends."
+        }
+      ],
+      "boss": {
+        "name": "The Fractured Core Entity",
+        "health": 120,
+        "damage": 15,
+        "weakness": "The entity is vulnerable to the Phase Resonator Disk. When activated, it triggers a resonance field that exposes the entity to the player’s Gravity Clamp for 5 seconds. During this window, the Gravity Clamp does +30% extra damage and the player can perform a precise anchor move that freezes the boss in place.",
+        "victory_condition": "Use the Phase Resonator Disk to activate the resonance, then use the Gravity Clamp on the entity to finish it in one hit. The player must have used both the Stabilized Core Fragment and the Phase Resonator Disk in prior encounters to access this weakness."
+      },
+      "objective": "Repair the core and stabilize the station before it collapses. Each enemy represents a corrupted system. Use the engineering tools and pickups to counteract failures. The final boss is a manifestation of the station’s core failure — but it can be stopped if the player uses the correct tools learned from earlier encounters.",
+      "reward": "Completion unlocks the 'Engineer's Integrity' skill: increased damage with Gravity Clamp and immunity to gravity shifts for 30 seconds in future levels. The player gains access to a new tool: the Core Siphon, which can extract energy from unstable systems to power future missions."
+    }
+  }
+]

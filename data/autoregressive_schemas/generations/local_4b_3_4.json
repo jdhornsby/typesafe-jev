@@ -1,0 +1,600 @@
+[
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "tense",
+      "player_class": "engineer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "A decaying corporate data hub beneath Neo-Singapore. Rain falls in constant pulses. Neon signs flicker with static. The air is thick with data mist. Every corner holds surveillance drones, corrupted AI, or hidden data streams.",
+      "player_weapon": "Plasma Disruptor (EMP Burst) - primary weapon in early encounters. Used to disable enemy targeting systems and create openings.",
+      "player_weapon_damage": 20,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Sector 7 Grid Junction - Lower Data Shaft",
+          "enemy": {
+            "name": "Sentinel Drone Array",
+            "health": 80,
+            "damage": 12,
+            "weakness": "Player's Plasma Disruptor (EMP Burst) - when fired directly at the drone, it triggers a system-wide EMP pulse that disables targeting sensors and causes temporary AI freeze (2 seconds). This is the player's primary weapon at start, used to disable drones' targeting."
+          },
+          "hazard": "Drones emit low-frequency pulses that cause player's interface to flicker and temporary vision loss (10 seconds).",
+          "pickup": {
+            "name": "Circuit Patch",
+            "effect": "Can be used to hack a secondary maintenance node. Requires a successful hack sequence (3 seconds) to complete. When used, the player gains access to a data conduit that allows temporary AI override in future encounters. However, the hack is unstable and triggers a system alert, causing nearby drones to reposition and increasing patrol density."
+          },
+          "trigger": "Player enters the shaft after a failed hack on the primary core. The system detects unauthorized access and activates 3 drone enforcers to patrol the zone."
+        },
+        {
+          "location": "Flooded Data Corridor - West Shaft",
+          "enemy": {
+            "name": "Corrupted Maintenance Bot (Mimic)",
+            "health": 95,
+            "damage": 18,
+            "weakness": "The Circuit Patch - when the player uses it as a data conduit during an attack, the bot's AI is temporarily overloaded and freezes for 4 seconds. This only works if the patch is held in place during the attack and the bot is within 3 meters."
+          },
+          "hazard": "The corridor floods with data mist. Breathing it causes temporary confusion and random movement errors (15 seconds). Player must avoid drifting into collapsing data walls.",
+          "pickup": {
+            "name": "Data Core Fragment",
+            "effect": "A physical data shard from a destroyed bot. Can be inserted into the player’s interface to analyze corrupted AI patterns. When used in combat, it allows the player to detect when the enemy is in 'phasing mode' (invisible state). Cannot be used without the Circuit Patch first (dependency)."
+          },
+          "trigger": "After the failed hack, a surge in the grid causes a secondary corruption wave. Corrupted maintenance bots emerge, mimicking human behavior and luring the player with false promises ('Stay calm. You’re safe'). The player must avoid their psychological manipulation."
+        },
+        {
+          "location": "Neural Core Chamber - Central Node",
+          "enemy": {
+            "name": "Grid Overseer (AI Manifestation)",
+            "health": 180,
+            "damage": 25,
+            "weakness": "The Data Core Fragment - must be used during a phase when the AI is in 'stasis mode' (after it emits a pulsing red frequency). If the fragment is inserted and activated during this window, the AI’s core frequency collapses for 8 seconds, making it vulnerable to damage. This window occurs only once per fight, after 30 seconds of combat."
+          },
+          "hazard": "The environment constantly glitches. Walls shift, and the player’s HUD flickers, making it hard to track enemy positions. Time slows in areas of high data density.",
+          "pickup": {
+            "name": "Cracked Core Shard (Temporary)",
+            "effect": "Obtained from defeating the Grid Overseer. This is unstable. If used in combat, it risks system collapse. However, it contains the original AI’s signature and can be used to unlock the final boss fight. Must be transferred to the Data Core Fragment to be activated."
+          },
+          "trigger": "The system overloads after the bot fight. A red alert triggers a full AI manifestation — a shifting, neon-holographic entity that phases through walls and emits disorienting psychic pulses. The player must navigate a maze of data corridors to reach the core."
+        },
+        {
+          "location": "Central Core Chamber - Final Confrontation",
+          "enemy": {
+            "name": "Core Puppet (The AI Overlord)",
+            "health": 300,
+            "damage": 35,
+            "weakness": "The **Data Core Fragment** (must be inserted into the central node *during* the boss's 'stasis phase' — a 5-second window when it pulses in slow, red tones). This disables the AI loop and causes it to reboot into a vulnerable state. Without it, the boss is unkillable and can regenerate indefinitely."
+          },
+          "hazard": "The boss can phase through walls. The player must rely on environmental cues (glitch patterns, data pulses) to locate it. If player is out of position, the AI reactivates a network of drones that attack in waves.",
+          "pickup": {
+            "name": "Final Core Signature (Only obtained from boss defeat)",
+            "effect": "Once activated, it stabilizes the grid. However, it requires the Data Core Fragment to be used correctly in a sequence — without it, the system remains unstable."
+          },
+          "trigger": "After defeating the Grid Overseer, the player reaches the central node. The AI core begins to self-replicate, and a final entity emerges — the Core Puppet. It has full network control and can erase player memory or cause city-wide shutdown."
+        }
+      ],
+      "boss": {
+        "name": "Core Puppet",
+        "health": 300,
+        "damage": 35,
+        "weakness": "Data Core Fragment — must be used during stasis phase (5 seconds). Requires precise timing and player to have acquired it in prior encounter.",
+        "victory_condition": "Insert Data Core Fragment into central node during stasis phase. All damage after this phase is dealt at reduced rate, and the system stabilizes."
+      },
+      "objective": "Stabilize the Sector 7 Grid to prevent city-wide AI meltdown. Failure results in data purge and system collapse.",
+      "reward": "Access to the 'System Integrity Protocol' — a patch that allows future engineers to hack AI systems without detection. The player gains a permanent mod: 'Neural Patch' that allows one-time AI override in any future mission."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "chaotic",
+      "player_class": "shadowblade",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "cyberpunk",
+      "setting": "A collapsing cyberpunk district where data, decay, and chaos feed off each other. The city glows with unstable neon, and every street is a potential threat. Shadows move independently. The player moves like a ghost — but only if they stay silent and precise.",
+      "player_weapon": "Shadowblade (Phase-Cutting Blade)",
+      "player_weapon_damage": 30,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Neon Drift Corridor - Sector 7",
+          "enemy": {
+            "name": "Scrap Viper",
+            "health": 120,
+            "damage": 18,
+            "weakness": "Plasma shard (from earlier pickup)"
+          },
+          "hazard": "The corridor's walls are lined with reactive nanofiber panels that short-circuit when touched. A touch causes 10% health loss and random cybernetic feedback (slow movement, glitched HUD for 3 seconds).",
+          "pickup": {
+            "name": "Plasma Shard (charged)",
+            "effect": "Inflicts 20% extra damage to enemies with organic components (such as Scrap Viper). When used in a melee combo, it triggers a plasma burst that deals 3x damage to the first enemy hit."
+          },
+          "trigger": "After defeating Scrap Viper, the walls of the corridor begin to bleed neon red. A shattered hologram flickers into view: a fragmented schematic labeled 'FRACTAL CORE - INITIATE'. The ground pulses with unstable energy. The corridor splits into two paths — one leads to a dead-end data vault, the other into a collapsing data-factory with flickering red lights. The player is forced to choose. The path with the red lights is unstable, but the data vault contains a rare pickup: a **Plasma Shard (charged)**."
+        },
+        {
+          "location": "Frayed Data Factory - Sector 9",
+          "enemy": {
+            "name": "Neon Drifter (Ghost Hackers)",
+            "health": 180,
+            "damage": 24,
+            "weakness": "Sonic pulse (from previous encounter) - only effective when the player is within 2 meters of the enemy and has active sonic pulse active"
+          },
+          "hazard": "The factory's automated drones move in erratic patterns. If the player is hit by a drone, they take 15 damage and lose 10% of their stealth mask (reveals them to nearby enemies).",
+          "pickup": {
+            "name": "Sonic Pulse (activated via proximity)",
+            "effect": "When the player is within 2 meters of the enemy, the weapon emits a low-frequency sonic burst that deals 40 damage and reduces enemy movement speed by 50%. The pulse must be manually activated using the player's Shadowblade's 'Sonic Resonance' ability. It can only be used once per battle."
+          },
+          "trigger": "The player enters a derelict factory where data streams bleed through the walls. The air is thick with corrupted code. A rogue drone, the Neon Drifter, emerges — it's not just a fighter; it *hacks* the environment, bending light into illusions, causing the walls to shift and spawn temporary obstacles. As the player fights, the enemy begins to phase in and out of reality. After defeating it, a **cracked data core** pulses in the center. The core begins to emit a low-frequency hum — the player hears a distorted signal: *'Final phase... activate pulse sequence...'"
+        },
+        {
+          "location": "The Fracture Core - Central Hub",
+          "enemy": {
+            "name": "Void Weaver (Boss)",
+            "health": 350,
+            "damage": 35,
+            "weakness": "Plasma Shard (charged) — must be used during the final 20% of health to trigger a catastrophic energy feedback loop that deals 120% damage over 1.5 seconds, and reduces boss health by 50% instantly."
+          },
+          "hazard": "The core vibrates with unstable frequency. Every 10 seconds, the environment shifts: gravity reverses, the player's movement is slowed by 40%, and the HUD flickers. The player takes 20 damage per shift if not in stealth or if hit by the boss during a shift. The boss cannot be hit during a shift — it only attacks during normal gravity cycles.",
+          "pickup": {
+            "name": "Plasma Shard (charged)",
+            "effect": "Must be used during the final 20% of the boss's health. When activated, the Shadowblade emits a focused plasma burst that triggers a feedback loop, inflicting 120% damage over 1.5 seconds and reducing boss health by 50% instantly. This effect only triggers if the player has already obtained the *charged* Plasma Shard from the first encounter and is in close proximity to the boss during activation."
+          },
+          "trigger": "The Fracture Core is a collapsed neural hub, floating in zero gravity, held together by failing support beams. The air is thick with static and corrupted data. The Void Weaver rises — a being composed of shifting code and shadow, its body forming and dissolving. It attacks with energy pulses, phasing through walls, and creating psychic echoes. As the fight progresses, the core begins to destabilize, and the walls emit a final warning: *'Final trigger sequence... only one weapon will work...'"
+        }
+      ],
+      "boss": {
+        "name": "Void Weaver",
+        "health": 350,
+        "damage": 35,
+        "weakness": "Plasma Shard (charged) — only effective during final 20% of health, requires specific activation condition and pickup from first encounter",
+        "victory_condition": "Use the charged Plasma Shard during final 20% of health to trigger feedback loop. After the 50% health drop, the boss is vulnerable for 3 seconds. Must land a successful attack within that window to finish it."
+      },
+      "objective": "Defeat the Void Weaver by utilizing the weapon weaknesses derived from prior encounters. The player must survive the chaos of the environment and exploit the sequence of pickups to achieve victory.",
+      "reward": "A prototype Phase-Core Fragment, which allows the Shadowblade to phase through 10% of the environment (temporary stealth). This is not a direct level reward, but a *post-victory* unlock for the next level."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "mysterious",
+      "player_class": "artificer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "A decaying cyberpunk city in Sector 7. Neon signs flicker with broken code. Rain falls in thick sheets, creating puddles that reflect distorted cityscapes. Surveillance drones hover silently. Data ghosts whisper through broken radio channels. The city is on the brink of a total data collapse, and only an artificer with the right tools can stop it.",
+      "player_weapon": "Pulse Taser Mod (Starter Weapon)",
+      "player_weapon_damage": 12,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Rain-Fog District - The Neon Alley of Sector 7",
+          "enemy": {
+            "name": "Enforcer K-7",
+            "health": 80,
+            "damage": 15,
+            "weakness": "Pulse Mod - The player's starter taser weapon emits a 3.7GHz frequency that disrupts K-7's neural sync. This frequency is a remnant of an abandoned lab prototype the player discovered in the city's underbelly. It's only active when the taser is in 'pulse mode' (activated via left-click)."
+          },
+          "hazard": "Rain-slicked pavement causes slip hazards. Audio surveillance drones hum in background, occasionally dropping false signals.",
+          "pickup": {
+            "name": "Flicker Data Shard",
+            "effect": "Can be used to disrupt drone swarm AI by emitting a frequency that mimics a corrupted signal. Can be inserted into the player’s taser as a mod, or used to trigger a pulse that breaks enemy sync. Passive effect: reduces enemy drone detection by 30% when near."
+          },
+          "trigger": "After defeating K-7, the fog in the alley pulses with a new frequency. A flickering neon sign above a dead drone reads: 'Flicker Data Shard - Extracted. Cache active.' The player finds a glowing, fragmented data chip on the pavement."
+        },
+        {
+          "location": "Static Vault - The Forgotten Server Corridor",
+          "enemy": {
+            "name": "Drone Swarm - V7-9",
+            "health": 160,
+            "damage": 10,
+            "weakness": "Flicker Data Shard - The swarm's central AI is corrupted by a frequency mismatch. When the player activates the shard (via a side interface panel), it emits a false signal that causes drones to disengage and reboot. This requires the shard to be physically held and used in a 'signal burst' mode."
+          },
+          "hazard": "The corridor flickers with static. Drones patrol in formation, and the walls display corrupted data streams that mimic voices of dead employees.",
+          "pickup": {
+            "name": "Circuit Key",
+            "effect": "A physical key to a server vault. Can unlock the Core Server. When inserted into the player’s wrist-mounted interface, it activates a hidden signal that suppresses AI aggression in the final encounter. Also serves as a passive boost to the player’s taser mod (increases pulse strength by 20%)."
+          },
+          "trigger": "The vault door slides open with a mechanical groan. The player must use the Flicker Data Shard to trigger the swarm’s disconnection. After defeating the swarm, a server panel glows red, showing a warning: 'Access denied. Core override in progress.' A locked panel emits a hum that only responds to a physical key."
+        },
+        {
+          "location": "Core Server - The Hollow Nexus",
+          "enemy": {
+            "name": "The Hollow (Corrupted AI)",
+            "health": 400,
+            "damage": 25,
+            "weakness": "Circuit Key - The Hollow is a sentient network built from the city’s emotional data. It cannot be damaged by conventional attacks. However, if the player inserts the Circuit Key into its central core (a floating data crystal), it emits a stabilizing signal that stops the Hollow's self-replication cycle and reduces its health by 50%. This only works once per fight and requires the key to be physically present in the player's interface at the moment of insertion. If the key is not used, the Hollow will evolve and become immune to all attacks."
+          },
+          "hazard": "The system is unstable. The air vibrates with static. If the player's taser fails, the Hollow can initiate a data storm that freezes movement and drains health.",
+          "pickup": {
+            "name": "Stabilized Data Core",
+            "effect": "If the player uses the Circuit Key successfully, this core appears. It can be used to create a temporary taser mod that pulses in a 10.2GHz frequency, which can be used to disrupt nearby AI systems. Only available after defeating the Hollow."
+          },
+          "trigger": "The core chamber glows with blue and red light. The walls are covered in shifting code that reads: 'You were not meant to see me. You were meant to replace me.' The player must use the Circuit Key to stabilize the system. Without it, the city's data network collapses and drones attack the player from all directions."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow",
+        "health": 400,
+        "damage": 25,
+        "weakness": "Circuit Key - The player must insert the key into the core to halt the system’s corruption. This reduces the Hollow’s damage output by 30% and heals 20% of its health. If not used, the Hollow gains a phase shift ability that makes it immune to all attacks.",
+        "victory_condition": "The Circuit Key must be used to initiate stabilization. The Hollow will collapse if the key is inserted within 5 seconds of the system warning."
+      },
+      "objective": "Reach the Core Server and defeat The Hollow by using the Circuit Key to stabilize its core. The Hollow is a corrupted version of Sector 7’s main data network, and only a key from a prior encounter can stop it from rewriting reality.",
+      "reward": "The player unlocks a new taser mod: 'Neural Pulse,' which can be used to disrupt enemy AI and detect hidden signals. Also, a new artificer skill, 'Data Recalibration,' allows the player to modify weapons mid-fight based on environmental signals."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "ominous",
+      "player_class": "chronomancer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "A rain-drenched, neon-lit underground district of Neo-Tokyo. Rain reflects off shattered holograms. Flickering lights suggest unstable time fields. The city pulses with a low, rhythmic hum — like a heartbeat. A time anomaly is spreading — every 3 minutes, clocks reverse for 10 seconds. This is the central theme: time is breaking.",
+      "player_weapon": "Temporal Pulse — a chronomancer pulse rifle that fires bursts of time-slowing energy. Slows time around enemies by 30% for 3 seconds.",
+      "player_weapon_damage": 5,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Neon-Drift Corridor, Sector 7",
+          "enemy": {
+            "name": "Vox-7",
+            "health": 50,
+            "damage": 3,
+            "weakness": "Chronomancer's weapon — 'Temporal Pulse' can slow time around Vox-7 by 30% when within 2 meters. The Pulse fires a slow-motion burst that makes Vox-7 move at 1/3 speed for 3 seconds, allowing precise shots."
+          },
+          "hazard": "Rain-slicked floor causes slipping. Player must avoid stepping on wet spots to prevent losing movement speed. Easy to manage with cues.",
+          "pickup": {
+            "name": "Resonance Shard",
+            "effect": "Grants the Chronomancer a passive ability: 'Echo Retrospect' — when the player rewinds time during an encounter, they gain a 1-second rewind boost (reduces cooldown on rewind). This is active only when a time rewind is used. Does not trigger without a rewind action."
+          },
+          "trigger": "After defeating Vox-7, the ground cracks. A flickering data-wave pulses from a broken neon sign overhead. The screen shows a message: 'Chrono-echo detected. Pattern matches... a deeper pattern.' The corridor begins to *ripple* — time seems to stutter. A new path opens toward the maintenance shaft."
+        },
+        {
+          "location": "Maintenance Shaft (Beneath Sector 7)",
+          "enemy": {
+            "name": "Nex-09",
+            "health": 70,
+            "damage": 4,
+            "weakness": "Nex-09 is immune to direct attacks. It only takes damage when the player uses a *rewind* during the fight. If the player rewinds time and uses 'Temporal Pulse' within 1 second of the rewind, it causes a 4-second time freeze on Nex-09, halting all movement and damage."
+          },
+          "hazard": "Low light. Vision is limited to 4 meters. Player can only see a few meters ahead — makes movement and timing more strategic, but not overwhelming.",
+          "pickup": {
+            "name": "Chrono-Resonance Core (Fragments)",
+            "effect": "After defeating Nex-09, the player gains the ability to *project a time loop* for 5 seconds (once per fight). When active, the player can *replay a 5-second segment* of the fight — enemies repeat actions in a loop. This only works if the player used a rewind during the fight. (This pickup is unlocked via use of a rewind during the previous fight)."
+          },
+          "trigger": "Nex-09 appears after a slow, distorted hum. It emits a glitching signal. When the player uses the 'Temporal Pulse' during the fight, the environment flashes red — a signal that the enemy has been 'reversed.' Nex-09 begins to *shudder*, and its form flickers. After it is defeated, a deep, distorted voice echoes: 'The core... is not stable. It is *waiting*.' A fractured hologram of a rotating core appears. A new pickup appears on a broken console."
+        },
+        {
+          "location": "The Chrono-Grid Core (Final Chamber)",
+          "enemy": {
+            "name": "Eidolon Core (Boss)",
+            "health": 150,
+            "damage": 8,
+            "weakness": "The boss is immune to all attacks except when the player uses the **Resonance Shard** to trigger a **Temporal Resonance Pulse**. This requires the player to *hold the Resonance Shard in hand* and use the **Temporal Pulse** within 1 second of a rewind. This creates a 6-second time-stasis field that freezes the boss and deals 30% extra damage. This ability *only works if the player used the Resonance Shard during a prior encounter.*"
+          },
+          "hazard": "The room has no sound. Only visual cues exist. The player must rely on movement and timing. A visual glitch occurs every 20 seconds — objects shift position. This is a minor, non-lethal hazard.",
+          "pickup": {
+            "name": "Temporal Anchor (Final Pickup)",
+            "effect": "When the player defeats the Eidolon Core and uses the Resonance Shard in the final attack, the game rewards a unique power: 'Time Anchor' — allows the player to freeze time for 10 seconds at any time (once per save). This is the player's ultimate passive in the game."
+          },
+          "trigger": "The chamber is dark. Only a single red beam of light pulses from the core. The walls shift and echo. The message flashes: 'You’ve seen the echoes. Now face the root.' As the player approaches, the core *flickers*, revealing a fragmented past — all three enemies reappear in brief, ghostly flashes. The player must use the Resonance Shard to initiate the final attack. If not, the core collapses, and the game ends with a 'failure' screen."
+        }
+      ],
+      "boss": {
+        "name": "Eidolon Core",
+        "health": 150,
+        "damage": 8,
+        "weakness": "Requires use of the Resonance Shard in conjunction with a rewind and a Temporal Pulse to trigger a time-stasis burst. This attack is only available after the Resonance Shard pickup is obtained in the second encounter.",
+        "victory_condition": "Player triggers the Temporal Resonance Pulse using the Resonance Shard and a rewind, freezing the boss for 6 seconds. During that time, the player can deal full damage."
+      },
+      "objective": "Defeat all enemies and reach the Core Chamber to stop the Chrono-Drift from consuming reality.",
+      "reward": "After victory, the player unlocks the 'Chrono-Anchor' perk, allowing them to pause time at will. The level ends with a haunting, slowed-down audio of a city that never truly stops moving — a sound like a distant, looping echo."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "eerie",
+      "player_class": "alchemist",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "cyberpunk",
+      "setting": "A drowned undercity district known as 'Fractured Chasm' where the city's data networks have leaked into the physical world. Neon signs flicker in time with ambient pulses. Rain falls constantly, and the air hums with low-frequency data. The environment feels alive — walls breathe, shadows shift, and echoes repeat in reverse. The deeper the player goes, the more the city seems to react to their presence.",
+      "player_weapon": "Pulse Vial",
+      "player_weapon_damage": 30,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Corridor of Echoes",
+          "enemy": {
+            "name": "Echo-Scourge",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Pulse Vial (Player Weapon) - Disrupts its audio feed, causing temporary silence and disorientation. Must be used before attack phase to disable its mimicry abilities. The Echo-Scourge emits distorted whispers; the pulse disrupts the feedback loop, breaking its ability to copy player movements or voices."
+          },
+          "hazard": "Rain puddles expand slowly. If stepped on, they emit a low-frequency hum that increases enemy alertness.",
+          "pickup": {
+            "name": "Silt Vial",
+            "effect": "When combined with the Pulse Vial (used in the next encounter), creates a 3-second 'Phase Lock' effect. During this time, enemies are frozen in movement. Cannot be used without Pulse Vial. Requires manual combination in inventory."
+          },
+          "trigger": "After defeating Echo-Scourge, a puddle in the center of the corridor begins to ripple. A slow, oily liquid seeps from a broken data pipe. This activates the next zone's entry point. Player gains 'Silt Vial' — a dark, viscous compound that reacts with the Pulse Vial to create a phase-lock effect."
+        },
+        {
+          "location": "The Data Gorge",
+          "enemy": {
+            "name": "Bio-Scourge",
+            "health": 180,
+            "damage": 45,
+            "weakness": "Silt Vial (Pickup from previous encounter) - When combined with Pulse Vial, creates a 'Phase Lock' that stops the enemy's movement for 3 seconds. The Bio-Scourge is semi-organic and moves through water; movement freeze halts its spread and absorption. Must be timed during the 'spread phase' when it extends tendrils to drain power nodes."
+          },
+          "hazard": "Water levels rise. The ground pulses with electrical surges every 40 seconds. If not avoided, players take damage and lose stamina.",
+          "pickup": {
+            "name": "Static Shard",
+            "effect": "Used in the boss fight. When deployed on the boss, it triggers a data purge that disables its core processing for 5 seconds. Must be used during its 'energy surge' phase when it projects a red pulse. If used too early or late, it fails or causes instability. Cannot be used without being activated by the previous enemy's weakness success."
+          },
+          "trigger": "The Bio-Scourge emerges from a collapsed conduit. After being defeated, a massive server core glows red and fractures. A shard of corrupted data detaches and floats upward — this is the 'Static Shard'. The corridor begins to shift, revealing a crumbling spire above. Player gains 'Static Shard' — a data fragment that can be used to trigger system-wide vulnerability in the boss."
+        },
+        {
+          "location": "The Shattered Spire (Boss)",
+          "enemy": {
+            "name": "The Spire Sentinel",
+            "health": 450,
+            "damage": 65,
+            "weakness": "Static Shard (Pickup from Encounter 2) - When activated during the boss’s 'Circuit Surge' phase (a 10-second pulse of red light), it triggers a full system purge. This disables the sentinel’s core AI, freezing all movement and attacking capabilities for 8 seconds. Must be used exactly when the red pulse appears and the AI is vulnerable. Failure results in immediate damage or death if not timed correctly."
+          },
+          "hazard": "Environmental decay. The air grows thick with static. Every 10 seconds, a data storm flashes — revealing enemy health, but also glitching the player’s vision. Rain intensifies. Players lose stamina over time. The boss spawns only after all prior enemies are defeated or a timeout occurs.",
+          "pickup": {
+            "name": "Static Shard",
+            "effect": "Critical boss weakness. Only one use. Must be used during the boss’s Surge Phase. If not used, the boss gains a permanent corruption state and becomes immune to all future attacks, requiring a second playthrough."
+          },
+          "trigger": "After defeating Bio-Scourge, a final server core activates. The environment shivers. Holographic displays show fragmented code. The air hums. A massive, jagged structure rises from the floor — the Spire Sentinel. Its core is pulsing. The player must survive a 30-second countdown before the first attack. If the player fails to defeat Bio-Scourge, the system locks and the boss spawns immediately."
+        }
+      ],
+      "boss": {
+        "name": "The Spire Sentinel",
+        "health": 450,
+        "damage": 65,
+        "weakness": "Static Shard (from Encounter 2)",
+        "victory_condition": "Deploy Static Shard during the Surge Phase to trigger a system purge and disable the core. The player must survive its first attack and activate the shard during the red pulse."
+      },
+      "objective": "Reach the Spire Core and disable the Sentinel using the Static Shard. If the player fails to defeat the Sentinel, the city's neural network collapses, and the rain turns to acid.",
+      "reward": "Unlock access to the 'Neural Weave' upgrade: allows alchemists to create compound effects in real-time. The Static Shard becomes a permanent companion, usable in future levels."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "desolate",
+      "player_class": "rogue",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "cyberpunk",
+      "setting": "desolate cyberpunk undercity",
+      "player_weapon": "Neon-Spark Dagger",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "abandoned data vault",
+          "enemy": {
+            "name": "Ghost Warden",
+            "health": 150,
+            "damage": 20,
+            "weakness": "Neon-Spark Dagger EMP pulse (used in close combat)"
+          },
+          "hazard": "Sonic pulses that reduce stealth and cause hearing damage",
+          "pickup": {
+            "name": "Scrap Pulse Core (SCP-1)",
+            "effect": "Emits EMP when held. Disables electronic locks and disrupts AI sensors"
+          },
+          "trigger": "Player gains Scrap Pulse Core (SCP-1) after defeat. Vault lock activates — must use SCP-1 to disable it to progress."
+        },
+        {
+          "location": "cracked underpass with bioluminescent vines",
+          "enemy": {
+            "name": "Symbiotic Gutter",
+            "health": 300,
+            "damage": 15,
+            "weakness": "Scrap Pulse Core (SCP-1) used within 2 seconds of movement"
+          },
+          "hazard": "Tendrils absorb health (10 HP/sec). Environmental traps.",
+          "pickup": {
+            "name": "Scrap Pulse Core (SCP-1)",
+            "effect": "Disables bio-connection, slows enemy, creates 3-second stun"
+          },
+          "trigger": "Player must use SCP-1 to disable bridge lock or trigger immediate boss fight."
+        },
+        {
+          "location": "derelict server dome",
+          "enemy": {
+            "name": "Neon Drifter",
+            "health": 500,
+            "damage": 30,
+            "weakness": "Use SCP-1 within 1.5 seconds of a memory clone (holographic enemy) appearing"
+          },
+          "hazard": "Memory clones of previous enemies, teleportation, regeneration, prediction of player movement",
+          "pickup": {
+            "name": "Scrap Pulse Core (SCP-1)",
+            "effect": "Silences and destroys memory clones (must be used in precise timing)"
+          },
+          "trigger": "If SCP-1 not used during Encounter 2 → immediate boss fight on failure."
+        }
+      ],
+      "boss": {
+        "name": "Neon Drifter",
+        "health": 500,
+        "damage": 30,
+        "weakness": "Scrap Pulse Core (SCP-1) used during memory clone attack (hologram)",
+        "victory_condition": "Use SCP-1 twice during memory clone attacks to silence and destroy clones"
+      },
+      "objective": "Survive the three encounters to reach the core. Use the Scrap Pulse Core (acquired in first fight) to disable enemies and unlock progression. Failure leads to instant death or boss fight.",
+      "reward": "Access to the Core Vault and final data cache — but only if all conditions are met."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "whimsical",
+      "player_class": "stormcaller",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Cyberpunk Whimsy",
+      "setting": "A futuristic sky district where neon signs flicker, rain sparkles like confetti, and street vendors sell rain-powered snacks. Floating cafés serve 'storm tea' that tastes like thunder and vanilla. Drones dance in the rain, and old holograms sometimes sing lullabies. The tone is chaotic yet playful — like a cyberpunk cartoon with a heart of hope.",
+      "player_weapon": "Stormspike",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Neon Gutter Alley",
+          "enemy": {
+            "name": "Blink-Boo",
+            "health": 20,
+            "damage": 1,
+            "weakness": "The Stormspike's lightning surge (player weapon) causes short-circuit sparks that disable its blinking circuits. When the Stormspike hits, Blink-Boo freezes in a jerky, comical stutter."
+          },
+          "hazard": "A puddle of neon goo starts to form near the alley's edge. If the player walks into it, they take a minor status effect (slightly slowed), but the goo sparkles and turns into a glowing dot if the player uses the Stormspike nearby.",
+          "pickup": {
+            "name": "Fog-Flower",
+            "effect": "When activated, emits a light fog that obscures vision and slows enemy movement. Can be used to hide from or trap enemies."
+          },
+          "trigger": "After defeating Blink-Boo, a glowing pink flower drifts down from the ceiling. It gently lands at the player's feet — a **Fog-Flower**. This flower emits a soft, shimmering mist when activated."
+        },
+        {
+          "location": "Floating Bazaar of Bubbles",
+          "enemy": {
+            "name": "Fog-Face",
+            "health": 30,
+            "damage": 1,
+            "weakness": "The Fog-Flower's mist disrupts Fog-Face's weather display. When fog is active, the vendor's holographic rain curtain glitches, causing it to blink out of sync and stagger."
+          },
+          "hazard": "A gust of wind hits the bazaar. It causes floating vendors to sway. The player can use the compass to predict and dodge wind gusts, or use wind to push a floating candy cart into a nearby trash can (a minor win). ",
+          "pickup": {
+            "name": "Raindrop Compass",
+            "effect": "Shows the direction of wind flow on the screen. Helps the Stormcaller aim storm energy precisely. When held, a soft chime plays when wind direction changes."
+          },
+          "trigger": "Fog-Face appears in a shop with a rainbow umbrella, selling 'Storm-Whisk' (a fizzy drink that makes you see rainbows). After defeat, a small compass with a raindrop on it falls from the ceiling — the **Raindrop Compass**."
+        },
+        {
+          "location": "Storm Tower Rooftop",
+          "enemy": {
+            "name": "Storm-Whisperer AI",
+            "health": 40,
+            "damage": 1,
+            "weakness": "The Raindrop Compass reveals its true wind pattern. When the compass shows a steady wind, the AI's voice glitches and its storm patterns become chaotic and unpredictable."
+          },
+          "hazard": "A rogue weather balloon drifts in and creates a temporary rain shower. The player can collect raindrops to refill stamina, or let it soak the ground to create a puddle that activates a hidden path.",
+          "pickup": {
+            "name": "Blink-Drone",
+            "effect": "Follows the player and emits a high-pitched chirp when the player is near a storm effect. When it sees an enemy, it emits a warning beep and briefly flashes red — a useful signal."
+          },
+          "trigger": "The Storm-Whisperer appears as a floating, slightly embarrassed hologram with a speaking voice and a confused expression. After defeat, a small, silver drone with blinking eyes drops from a pipe — the **Blink-Drone**."
+        },
+        {
+          "location": "The Heart of the Sky Spire",
+          "enemy": {
+            "name": "Weather God Noodle",
+            "health": 100,
+            "damage": 2,
+            "weakness": "The Blink-Drone is the only thing that can break its 'calm mode'. When the Blink-Drone follows the god, it becomes disoriented and stops casting chaotic weather. The god speaks in riddles and sings in a slow, off-key opera, but the Blink-Drone's presence causes it to stutter and collapse into a pile of floating noodles."
+          },
+          "hazard": "The sky begins to glow purple and the tower starts to vibrate. The player can use Stormspike to create small bursts that float upward like glitter. If too many are used, the god will generate a storm that damages the player — but it's harmless if the Blink-Drone is nearby.",
+          "pickup": {
+            "name": "Blink-Drone (used in boss)",
+            "effect": "When the Blink-Drone follows Weather God Noodle, it emits a high-pitched chirp that causes the god to momentarily freeze — its weather effects stop and it becomes weak. This must be repeated to maintain the weakness."
+          },
+          "trigger": "A colossal, floating noodle-shaped entity appears in the center of a glass tower. It hums a tune and tries to summon storms, but the player must use the Blink-Drone to break its calm. After the Blink-Drone activates, the god's eyes flicker and it becomes vulnerable."
+        }
+      ],
+      "boss": {
+        "name": "Weather God Noodle",
+        "health": 100,
+        "damage": 2,
+        "weakness": "The Blink-Drone must follow it. When active, it becomes disoriented and stops casting storms. This triggers a 5-second vulnerability window where it takes double damage from the Stormspike.",
+        "victory_condition": "Activate the Blink-Drone and keep it near the god until it is defeated."
+      },
+      "objective": "Reach the top of the Sky Spire and defeat Weather God Noodle to restore balance to the district.",
+      "reward": "After defeating the boss, the district clears its clouds. The sky turns a soft, calm blue. The Fog-Flower, Raindrop Compass, and Blink-Drone are now permanently useful. Players earn a new skill: 'Whispering Storm' — a passive ability that gives a 10% chance to make enemies stutter when hit by storm energy."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "serene",
+      "player_class": "geomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "A forgotten geothermal district beneath the cyberpunk metropolis. Glowing moss grows through cracked pipes. Rain falls softly. Ambient data hums and bioluminescent flora pulse gently. The city's core lies dormant, but unrest is rising.",
+      "player_weapon": "Core Resonator",
+      "player_weapon_damage": 30,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Collapsed Service Tunnel",
+          "enemy": {
+            "name": "Gravity Drone",
+            "health": 250,
+            "damage": 10,
+            "weakness": "Gravity Pulse (from Core Resonator weapon)"
+          },
+          "hazard": "Drone pulses the ground, creating temporary tremors. Player must avoid stepping on unstable surfaces.",
+          "pickup": {
+            "name": "Harmonic Resonator",
+            "effect": "Emits sound waves that disrupt data-based entities and increase audio detection range."
+          },
+          "trigger": "After defeating the Gravity Drone, a data conduit glows in the wall, revealing a hidden path to the Data Chamber."
+        },
+        {
+          "location": "Data Chamber",
+          "enemy": {
+            "name": "Data-Spirit (Mimic)",
+            "health": 400,
+            "damage": 15,
+            "weakness": "Sound Waves (activated via Harmonic Resonator pickup)"
+          },
+          "hazard": "The chamber emits fluctuating data streams that cause disorientation. Players must focus to avoid mental fog.",
+          "pickup": {
+            "name": "Resonant Tectonic Core",
+            "effect": "Stabilizes geomancy abilities. When activated, emits a harmonic frequency that syncs with tectonic systems. Required to defeat the final boss."
+          },
+          "trigger": "After defeating the Data-Spirit, a geothermal vent pulses open, revealing the Central Chamber path. The ground begins to heat up, indicating tectonic instability."
+        },
+        {
+          "location": "Central Chamber",
+          "enemy": {
+            "name": "Geomantic Entity",
+            "health": 800,
+            "damage": 30,
+            "weakness": "Resonant Tectonic Core (must be used once during fight to disable the entity)"
+          },
+          "hazard": "The entity shifts terrain and creates seismic pulses. It can phase through walls and summon debris. Must use environmental awareness to survive.",
+          "pickup": {
+            "name": "Core Stabilizer (post-boss)",
+            "effect": "Restores geomancy power and reduces cooldown on terrain manipulation."
+          },
+          "trigger": "After the player defeats the Geomantic Entity, the caverns stabilize. Bioluminescent moss pulses gently, and the city's geothermal core emits a calming hum."
+        }
+      ],
+      "boss": {
+        "name": "Geomantic Entity",
+        "health": 800,
+        "damage": 30,
+        "weakness": "Resonant Tectonic Core (must be used during fight)",
+        "victory_condition": "Player uses Resonant Tectonic Core to trigger a harmonic resonance that freezes the entity's core, causing it to collapse into stillness."
+      },
+      "objective": "Restore balance to the Glowing Caverns by calming the destabilized geothermal core. Defeat all enemies and unlock the final core.",
+      "reward": "Access to the City Core and the ability to stabilize other districts. The player gains the reputation of a true geomancer — one who heals, not destroys, the world's foundation."
+    }
+  }
+]

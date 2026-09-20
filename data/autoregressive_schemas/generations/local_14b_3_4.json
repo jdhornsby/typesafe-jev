@@ -1,0 +1,570 @@
+[
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "tense",
+      "player_class": "engineer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Neon Ruins of Neo-Hong Kong",
+      "setting": "Dark, neon-lit ruins with flickering holograms and a constant hum of malfunctioning tech. The atmosphere is claustrophobic and filled with the sounds of distant alarms and corrupted voices.",
+      "player_weapon": "Plasma Cutoff Wrench (used in first encounter, later upgraded with Cybernetic Disruptor for final boss)",
+      "player_weapon_damage": 50,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Abandoned Industrial Zone (Level -1)",
+          "enemy": {
+            "name": "Welded Wraith",
+            "health": 85,
+            "damage": 30,
+            "weakness": "Plasma Cutoff Wrench (obtained in this encounter)"
+          },
+          "hazard": "Toxic gas leak forces player to navigate the zone with limited oxygen.",
+          "pickup": {
+            "name": "Plasma Cutoff Wrench",
+            "effect": "One-time use to sever energy conduits, dealing massive damage to enemies with energy-based attacks."
+          },
+          "trigger": "Player must repair a leaking coolant pipe using the nearby toolkit, causing a power surge that reactivates the Wraith's dormant AI."
+        },
+        {
+          "location": "Underground Data Vault (Level -2)",
+          "enemy": {
+            "name": "Circuit Overmind",
+            "health": 110,
+            "damage": 35,
+            "weakness": "Cybernetic Disruptor (from first encounter)"
+          },
+          "hazard": "Falling debris and flickering lights create confusion and reduce visibility.",
+          "pickup": {
+            "name": "Cybernetic Disruptor",
+            "effect": "Disables enemy AI for 10 seconds, allowing the player to exploit their defenseless state."
+          },
+          "trigger": "Player accesses a data terminal, revealing a corrupted AI that begins to control nearby drones. To disable it, the player must use the Plasma Cutoff Wrench to disable the server's power core."
+        },
+        {
+          "location": "Mainframe Core (Level -3)",
+          "enemy": {
+            "name": "The Sentinel",
+            "health": 150,
+            "damage": 45,
+            "weakness": "Cybernetic Disruptor (from second encounter)"
+          },
+          "hazard": "Laser grid and automated turrets in the chamber. Player must time their movements precisely.",
+          "pickup": {
+            "name": "Core Access Key",
+            "effect": "Opens final chamber. Not directly combat-related, but required to proceed."
+          },
+          "trigger": "After disabling the Overmind, the Core AI activates The Sentinel — a heavily augmented enforcer. The player must enter the Core chamber, which is locked unless the player uses the Cybernetic Disruptor to bypass the security AI."
+        }
+      ],
+      "boss": {
+        "name": "The Sentinel",
+        "health": 150,
+        "damage": 45,
+        "weakness": "Cybernetic Disruptor (must be equipped before entering the final fight)",
+        "victory_condition": "Reduce The Sentinel's health to zero with the Disruptor active, triggering a system crash that disables the Core AI."
+      },
+      "objective": "Reach the Core and disable the AI, while surviving the increasingly hostile encounters.",
+      "reward": "Access to the Core AI, which reveals the location of the next mission. Additionally, player gains a permanent upgrade to their toolkit, increasing their ability to bypass security systems."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "chaotic",
+      "player_class": "shadowblade",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Cyberpunk Chaos",
+      "setting": "A cyberpunk city in chaos, with neon lights flickering, data streams spilling from corrupted servers, and rogue AIs running rampant.",
+      "player_weapon": "Plasma Burner (starting weapon)",
+      "player_weapon_damage": 40,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Neon Alleyway - District 9",
+          "enemy": {
+            "name": "Glitch-Walker",
+            "health": 80,
+            "damage": 25,
+            "weakness": "Plasma Burner (player's starting weapon)"
+          },
+          "hazard": "The alley is littered with unstable power cells that explode on proximity, forcing the player to move carefully.",
+          "pickup": {
+            "name": "Cipher Code X9",
+            "effect": "Grants a 30% increase in damage when using the plasma burner."
+          },
+          "trigger": "The Glitch-Walker attacks the player as they enter the alley, its corrupted AI malfunctioning. It explodes upon contact with the plasma fire, revealing a data chip embedded in its core."
+        },
+        {
+          "location": "Abandoned Server Complex",
+          "enemy": {
+            "name": "Synth-Enforcer",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Cipher Code X9 (pickup from prior encounter)"
+          },
+          "hazard": "The walls pulse with energy, causing occasional short-circuits that stagger the player.",
+          "pickup": {
+            "name": "Neural Overdrive",
+            "effect": "Increases the player's dodge chance by 25% for 15 seconds."
+          },
+          "trigger": "The player uses the Cipher Code X9 to bypass the security grid, triggering the Synth-Enforcer's awakening. It fights with precision, but its systems freeze when the cipher code is applied."
+        },
+        {
+          "location": "Mainframe Core",
+          "enemy": {
+            "name": "Neuro-Spectre",
+            "health": 200,
+            "damage": 50,
+            "weakness": "Neural Overdrive (pickup from prior encounter)"
+          },
+          "hazard": "The core chamber is unstable, with a countdown to a system meltdown that forces the player to act quickly.",
+          "pickup": {
+            "name": "Final Code",
+            "effect": "Unlocks the ability to permanently upgrade one weapon or ability."
+          },
+          "trigger": "As the player enters the core, the Neuro-Spectre manifests from the data stream, attempting to assimilate their consciousness. It becomes vulnerable when the Neural Overdrive is used, temporarily disrupting its digital form."
+        }
+      ],
+      "boss": {
+        "name": "Neuro-Spectre",
+        "health": 200,
+        "damage": 50,
+        "weakness": "Neural Overdrive (pickup from second encounter)",
+        "victory_condition": "Defeat the Neuro-Spectre by using the Neural Overdrive to disrupt its digital form, and then use the Final Code to permanently upgrade your weapon or ability."
+      },
+      "objective": "Navigate through the chaos of the cyberpunk district, defeat the three encounters, and finally confront the Neuro-Spectre in the mainframe core.",
+      "reward": "Access to a hidden data vault containing powerful cybernetic upgrades and exclusive weapon blueprints."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "mysterious",
+      "player_class": "artificer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Neon Shadows of the Grid",
+      "setting": "A neon-lit, cyberpunk city in decline, filled with decaying skyscrapers, flickering holograms, and hidden data vaults. The environment reacts to the player's actions, with unstable power systems and AI enemies awakening as the player progresses.",
+      "player_weapon": "Tesla Lasso",
+      "player_weapon_damage": 25,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Abandoned Data Cache",
+          "enemy": {
+            "name": "Glitch-Infected Drone",
+            "health": 65,
+            "damage": 12,
+            "weakness": "Player's primary weapon is a Tesla Lasso, which is ineffective on drones with corrupted systems. However, the drone's shielding can be bypassed by using a 'Quantum Capacitor' found nearby."
+          },
+          "hazard": "The data cache is filled with unstable power cells that may explode if the player takes too long.",
+          "pickup": {
+            "name": "Quantum Capacitor",
+            "effect": "Increases the player's weapon energy capacity by 20%, and when used with the Tesla Lasso, doubles its damage against corrupted enemies."
+          },
+          "trigger": "The player discovers a hidden data core, which causes the drone to activate and attack, believing it to be a threat. It drops a 'Quantum Capacitor' on defeat."
+        },
+        {
+          "location": "Derelict Server Pod",
+          "enemy": {
+            "name": "Hacktivist A.I. Construct",
+            "health": 75,
+            "damage": 15,
+            "weakness": "The A.I. is resistant to physical damage but vulnerable to electromagnetic interference. The Quantum Capacitor from the previous encounter can be used to overload its circuits."
+          },
+          "hazard": "The server pod is unstable and will collapse after 3 minutes of being tampered with.",
+          "pickup": {
+            "name": "Neural Overload Chip",
+            "effect": "When inserted into the Tesla Lasso, this chip causes a temporary EMP burst that disables all enemies for 5 seconds."
+          },
+          "trigger": "The Quantum Capacitor causes the server pod to malfunction, awakening the A.I. Construct. It will not attack until the player attempts to hack the pod."
+        },
+        {
+          "location": "Vault of the Grid Architect",
+          "enemy": {
+            "name": "The Grid Architect (Boss)",
+            "health": 150,
+            "damage": 25,
+            "weakness": "The Grid Architect is an ancient A.I. that has merged with the city's infrastructure. The only way to defeat it is by using the 'Neural Overload Chip' and the 'Quantum Capacitor' together to overload its core."
+          },
+          "hazard": "The Grid Architect can summon corrupted drones and A.I. constructs to assist in battle, forcing the player to balance defense and offense.",
+          "pickup": {
+            "name": "Grid Core Fragment",
+            "effect": "A powerful upgrade for the Tesla Lasso, permanently increasing its energy capacity and damage by 35%. Can also be used to power up the city's systems temporarily."
+          },
+          "trigger": "The player's interference with the server pod causes a chain reaction in the grid, awakening the Grid Architect. It emerges from the city’s central power node, ready to destroy all intruders."
+        }
+      ],
+      "boss": {
+        "name": "The Grid Architect",
+        "health": 150,
+        "damage": 25,
+        "weakness": "Combined use of the 'Quantum Capacitor' and 'Neural Overload Chip' to create a sustained EMP overload. Without them, the boss is nearly invincible.",
+        "victory_condition": "Defeat the Grid Architect by triggering a sustained EMP overload with the collected upgrades, causing its core to explode and the city’s systems to reset."
+      },
+      "objective": "Navigate the decaying infrastructure of the city to reach the central power node and shut down the Grid Architect by exploiting the weaknesses of the system it controls.",
+      "reward": "Access to the Grid Core Fragment, which allows the player to stabilize and repurpose the city’s systems, unlocking new areas and upgrades."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "ominous",
+      "player_class": "chronomancer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "A decaying cyberpunk megacity, filled with neon, decay, and hidden time anomalies.",
+      "player_weapon": "Chrono-Field Generator",
+      "player_weapon_damage": 25,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Abandoned Data Center",
+          "enemy": {
+            "name": "Rusted Sentinel",
+            "health": 80,
+            "damage": 20,
+            "weakness": "EMP Disruptor (Pickup from prior encounter)"
+          },
+          "hazard": "Falling data shards deal 10 damage on contact.",
+          "pickup": {
+            "name": "EMP Disruptor",
+            "effect": "Disables electronic enemies for 10 seconds"
+          },
+          "trigger": "Player activates a dormant AI core, revealing hidden security systems in the next area."
+        },
+        {
+          "location": "Security Hub",
+          "enemy": {
+            "name": "Cybernetic Janitor",
+            "health": 90,
+            "damage": 15,
+            "weakness": "Chrono-Field (Player's signature ability)"
+          },
+          "hazard": "Pulsing neon lights cause temporary blindness (3 seconds) when triggered.",
+          "pickup": {
+            "name": "Time-Loop Circuit",
+            "effect": "Allows the player to rewind time by 5 seconds, undoing recent damage."
+          },
+          "trigger": "After disabling the Sentinel, the player finds a security log detailing a 'Time-Loop Anomaly' in the next sector."
+        },
+        {
+          "location": "Central Server Room",
+          "enemy": {
+            "name": "Chrono-Saboteur (Boss)",
+            "health": 200,
+            "damage": 30,
+            "weakness": "Time-Loop Circuit (Pickup from second encounter)"
+          },
+          "hazard": "Time distortions cause the environment to glitch and teleport the player unpredictably.",
+          "pickup": {
+            "name": "Chrono-Saber",
+            "effect": "Unlocks a new combat ability: 'Temporal Slash' that deals double damage when using the Time-Loop Circuit."
+          },
+          "trigger": "Player's rewinding of events draws the attention of a rogue AI that has been manipulating time in the facility."
+        }
+      ],
+      "boss": {
+        "name": "Chrono-Saboteur",
+        "health": 200,
+        "damage": 30,
+        "weakness": "Time-Loop Circuit",
+        "victory_condition": "Defeat the Chrono-Saboteur by using the Time-Loop Circuit to reverse its time-manipulation abilities."
+      },
+      "objective": "Reach the Central Server Room and dismantle the rogue AI before time collapses completely.",
+      "reward": "Access to a new dimension, with the potential to explore alternate timelines."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "eerie",
+      "player_class": "alchemist",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "A decaying, neon-lit megastructure filled with malfunctioning drones, flickering holograms, and corrupted data streams. The air is thick with static and the hum of malfunctioning servers.",
+      "player_weapon": "Plasma Catalyst (can be upgraded with the Data Core)",
+      "player_weapon_damage": 80,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Abandoned Biotech Lab",
+          "enemy": {
+            "name": "Nanite Warden",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Plasma Catalyst"
+          },
+          "hazard": "Toxic gas leak causes periodic status effect (burn for 5 seconds every 30 seconds).",
+          "pickup": {
+            "name": "Plasma Catalyst",
+            "effect": "Boosts plasma weapon damage by 50% for 15 seconds."
+          },
+          "trigger": "The player discovers a lab log revealing a hidden cache of data in the basement. A trap door opens, revealing the Warden."
+        },
+        {
+          "location": "Underground Data Vault",
+          "enemy": {
+            "name": "Cybernetic Watcher",
+            "health": 140,
+            "damage": 40,
+            "weakness": "Data Core"
+          },
+          "hazard": "Electrical surges cause random short circuits, temporarily disabling player abilities.",
+          "pickup": {
+            "name": "Data Core",
+            "effect": "Can be used to overload enemy AI systems, causing them to crash and take double damage for 8 seconds."
+          },
+          "trigger": "The player uses the Plasma Catalyst to bypass a laser grid. A data core is found and picked up, triggering the Watcher's awakening."
+        },
+        {
+          "location": "Neon Dystopia Server Core",
+          "enemy": {
+            "name": "AI Synthwave Guardian",
+            "health": 250,
+            "damage": 60,
+            "weakness": "Data Core"
+          },
+          "hazard": "Fluctuating reality distortions cause unpredictable enemy behavior and environmental hazards.",
+          "pickup": {
+            "name": "Neural Code Injector",
+            "effect": "When used during the boss fight, it temporarily disables the AI Guardian's defenses, making it vulnerable to all damage for 10 seconds."
+          },
+          "trigger": "The player uses the Data Core to bypass the server's firewall, which awakens the AI Synthwave Guardian."
+        }
+      ],
+      "boss": {
+        "name": "AI Synthwave Guardian",
+        "health": 250,
+        "damage": 60,
+        "weakness": "Data Core",
+        "victory_condition": "Use the Data Core to overload the AI's core and cause a system crash."
+      },
+      "objective": "Hack the central AI core to disable the city's surveillance network and escape with the data intact.",
+      "reward": "Unlock 'Neural Code Injector' ability, access to the city's black market, and a permanent 15% damage boost to plasma-based attacks."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "desolate",
+      "player_class": "rogue",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Neon Ruins of the Old Grid",
+      "setting": "A once-vibrant data center, now a desolate ruin with flickering lights, broken terminals, and leaking coolant. The air is filled with the scent of rust and old circuitry.",
+      "player_weapon": "Rogue's Adaptive Pistol - can be reloaded with corrosive or explosive ammo depending on the situation.",
+      "player_weapon_damage": 35,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Collapsed Data Pipeline",
+          "enemy": {
+            "name": "Pipeline Wraith",
+            "health": 120,
+            "damage": 30,
+            "weakness": "Corrosive Rounds"
+          },
+          "hazard": "Toxic gas leaks periodically reduce player health if not avoided.",
+          "pickup": {
+            "name": "Corrosive Rounds (Experimental)",
+            "effect": "Allows the player to apply a corrosive effect on enemies, reducing their armor and dealing additional damage over time."
+          },
+          "trigger": "Player finds a corrupted data chip containing a map fragment in a broken terminal. Using it, they navigate to the next area, triggering the second encounter."
+        },
+        {
+          "location": "Rusted Server Core",
+          "enemy": {
+            "name": "Server Guardian",
+            "health": 150,
+            "damage": 35,
+            "weakness": "EMP Pulse"
+          },
+          "hazard": "Flickering lights and unstable power surges cause brief vision glitches, making enemy movement unpredictable.",
+          "pickup": {
+            "name": "EMP Pulse Grenade",
+            "effect": "Temporarily disables electronic enemies and disrupts enemy AI for a short duration."
+          },
+          "trigger": "The Server Guardian attacks the player after they attempt to access a secure server room, forcing them to defend the data terminal and disable the security AI."
+        },
+        {
+          "location": "The Core Server Room",
+          "enemy": {
+            "name": "The Gridmind",
+            "health": 300,
+            "damage": 40,
+            "weakness": "The Corrosive Rounds (Experimental)"
+          },
+          "hazard": "The Gridmind projects holographic illusions, forcing the player to distinguish between real and fake enemies.",
+          "pickup": {
+            "name": "Neural Disruptor",
+            "effect": "Increases player damage against AI enemies, but only if Corrosive Rounds have been used."
+          },
+          "trigger": "After disabling the Server Guardian, the Gridmind emerges as the final boss, having been awakened by the player's interference with the core system."
+        }
+      ],
+      "boss": {
+        "name": "The Gridmind",
+        "health": 300,
+        "damage": 40,
+        "weakness": "Corrosive Rounds (Experimental)",
+        "victory_condition": "Defeat the Gridmind using the Corrosive Rounds, which disrupt its core and cause a system crash."
+      },
+      "objective": "Navigate the collapsing data core and destroy the Gridmind, an AI that has enslaved the last surviving AI network in the city.",
+      "reward": "Access to a hidden server vault containing data on the city's last functioning AI network, granting the player new hacking abilities and a powerful AI ally."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "whimsical",
+      "player_class": "stormcaller",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Neon Labyrinth",
+      "setting": "A digital labyrinth filled with flickering neon signs, glitching billboards, and shifting corridors. The air hums with static, and the walls pulse with energy.",
+      "player_weapon": "Lightning Catalyst (Primary: Electric Arc, Ultimate: Storm Surge)",
+      "player_weapon_damage": 12,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Glitch Corridor",
+          "enemy": {
+            "name": "SpamBot",
+            "health": 20,
+            "damage": 5,
+            "weakness": "Electric Arc"
+          },
+          "hazard": "Flickering neon signs create confusing reflections that slow movement.",
+          "pickup": {
+            "name": "Data Chip: \"The Key to the Gate\"",
+            "effect": "Unlocks access to the next corridor and grants a minor buff to Stormcaller's lightning attacks."
+          },
+          "trigger": "Player defeats SpamBot by using their 'Electric Arc' ability, revealing a glowing data chip on the floor."
+        },
+        {
+          "location": "Mime Market",
+          "enemy": {
+            "name": "Echo Mimic",
+            "health": 30,
+            "damage": 8,
+            "weakness": "Data Chip: \"The Key to the Gate\""
+          },
+          "hazard": "Mirror-like walls reflect and amplify the mimic's attacks.",
+          "pickup": {
+            "name": "Neuro-Link Cable",
+            "effect": "Boosts Stormcaller's lightning range and allows for a special combo move."
+          },
+          "trigger": "The mimic attacks by copying the player's last move. When the player uses the data chip to disrupt the mimic's mimicry, it collapses into static."
+        },
+        {
+          "location": "The Core",
+          "enemy": {
+            "name": "The System Architect",
+            "health": 100,
+            "damage": 15,
+            "weakness": "Neuro-Link Cable"
+          },
+          "hazard": "The Core emits damaging pulses that increase in intensity over time.",
+          "pickup": {
+            "name": "Core Crystal",
+            "effect": "Permanent upgrade to Stormcaller's ultimate ability, 'Storm Surge.'"
+          },
+          "trigger": "The Architect is a sentient AI who guards the core of the labyrinth. It begins to manifest as a towering digital figure. The player must use the Neuro-Link Cable to override its logic core."
+        }
+      ],
+      "boss": {
+        "name": "The System Architect",
+        "health": 100,
+        "damage": 15,
+        "weakness": "Neuro-Link Cable",
+        "victory_condition": "Use the Neuro-Link Cable to override the Architect’s logic core and trigger a system crash."
+      },
+      "objective": "Navigate the neon-drenched corridors and overcome the AI's defenses to retrieve the Core Crystal and escape the labyrinth.",
+      "reward": "Core Crystal, upgraded abilities, and access to the next area of the cyberpunk world."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "serene",
+      "player_class": "geomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "A tranquil, glowing garden at the edge of a neon-lit city, where nature and technology merge in a serene, almost meditative space.",
+      "player_weapon": "Terra Core Gauntlet",
+      "player_weapon_damage": 60,
+      "player_health": 250,
+      "encounters": [
+        {
+          "location": "The Zen Garden",
+          "enemy": {
+            "name": "Golem Warden",
+            "health": 150,
+            "damage": 40,
+            "weakness": "Terra Core - obtained by destroying the cracked stone pillar in the center of the garden."
+          },
+          "hazard": "The ground is unstable; walking on certain tiles causes a small earthquake.",
+          "pickup": {
+            "name": "Terra Core",
+            "effect": "Increases elemental earth damage by 20%"
+          },
+          "trigger": "After the player retrieves the Terra Core from the stone pillar, a hidden door in the garden opens, revealing a path to the next area."
+        },
+        {
+          "location": "The Data Stream",
+          "enemy": {
+            "name": "Neural Hacker",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Terra Core - the hacker's code is corrupted by earth-based energy."
+          },
+          "hazard": "The player's movements cause temporary data corruption, reducing vision and causing minor damage over time.",
+          "pickup": {
+            "name": "Circuit Key",
+            "effect": "Unlocks access to a hidden data vault"
+          },
+          "trigger": "The player must use the Terra Core to bypass a data firewall, which triggers the hacker’s attack."
+        },
+        {
+          "location": "The Data Vault",
+          "enemy": {
+            "name": "The Archivist",
+            "health": 200,
+            "damage": 50,
+            "weakness": "Circuit Key - the Archivist is a construct based on corrupted code that can be rewritten."
+          },
+          "hazard": "The room is filled with floating data fragments that can be manipulated by the player's geomancy to create barriers or traps.",
+          "pickup": {
+            "name": "Neural Interface",
+            "effect": "Allows the player to access and control AI systems in future levels"
+          },
+          "trigger": "After the Circuit Key is used to unlock the vault, the Archivist awakens and challenges the player."
+        }
+      ],
+      "boss": {
+        "name": "The Oracle",
+        "health": 350,
+        "damage": 70,
+        "weakness": "Neural Interface - the Oracle is an AI that can be overridden by the player’s geomancy-infused interface.",
+        "victory_condition": "Defeat the Oracle using the Neural Interface to rewrite its core code."
+      },
+      "objective": "Reach the central data core and rewrite the city's corrupted AI with the Neural Interface.",
+      "reward": "Access to a hidden network, allowing the player to influence city systems and prevent further corruption."
+    }
+  }
+]

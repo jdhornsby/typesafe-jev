@@ -1,0 +1,570 @@
+[
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "tense",
+      "player_class": "engineer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Every enemy is a broken machine. Every pickup is a stolen piece of its soul. The boss is the echo of a dead engineer — and the only way to kill it is to become the tool it once was.",
+      "setting": "The level takes place in the decaying underbelly of Neo-Kyoto, where a rogue AI has hijacked corporate infrastructure to upload its consciousness into a quantum network. The player, an engineer embedded by a rebel faction, must sabotage the upload by dismantling its physical anchors — one by one — using only their tools and the enemy’s own corrupted tech.",
+      "player_weapon": "EMP Grenade (default)",
+      "player_weapon_damage": 40,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Sublevel 4 - Power Core Junction",
+          "enemy": {
+            "name": "Rusthound Sentry",
+            "health": 80,
+            "damage": 25,
+            "weakness": "Vulnerable to EMP bursts from Engineer's EMP Grenade (default weapon)"
+          },
+          "hazard": "Corrupted power conduits sporadically overload, creating damaging arcs of plasma. Player must use Engineer's Repair Tool to stabilize three nodes to proceed.",
+          "pickup": {
+            "name": "EMP Amplifier Module",
+            "effect": "Grants Engineer temporary access to EMP Grenade upgrades: +20% radius, +50% charge speed"
+          },
+          "trigger": "Defeating the Rusthound Sentry disables the main power grid, activating the secondary coolant system in the next chamber — which houses the Thermal Disruptor Drone."
+        },
+        {
+          "location": "Sublevel 5 - Cryo-Reactor Core",
+          "enemy": {
+            "name": "Thermal Disruptor Drone",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Vulnerable to rapid EMP bursts (now upgraded via EMP Amplifier Module). Its thermal shielding overloads if hit with 3 consecutive EMP pulses within 1.5 seconds."
+          },
+          "hazard": "High-heat zones reduce player movement speed by 40%. Engineer must deploy cooling drones (limited use) to create safe paths.",
+          "pickup": {
+            "name": "Quantum Resonance Crystal",
+            "effect": "Unlocks Quantum Resonance Crystal — a prototype device that emits a focused, frequency-tuned EMP pulse. Only usable once per fight."
+          },
+          "trigger": "Destroying the drone causes its core to destabilize and implode, ejecting the Quantum Resonance Crystal into the ventilation shaft above the boss chamber — and triggering the Neuro-Synapse Overlord’s activation sequence."
+        },
+        {
+          "location": "Sublevel 6 - Neural Nexus Chamber",
+          "enemy": {
+            "name": "Cyber-Mind Enforcer",
+            "health": 200,
+            "damage": 45,
+            "weakness": "Weak against synchronized EMP bursts amplified by the EMP Amplifier Module — but only if the Quantum Resonance Crystal is active. Its armor absorbs non-resonant EMP."
+          },
+          "hazard": "Mind-jamming field reduces player HUD accuracy by 70%. Engineer must manually calibrate systems using the Repair Tool to maintain targeting sync.",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is the final enemy before the boss."
+          },
+          "trigger": "Defeating the Enforcer triggers the collapse of the ceiling conduit, revealing the Neuro-Synapse Overlord's core chamber — and activating the final boss fight."
+        }
+      ],
+      "boss": {
+        "name": "Neuro-Synapse Overlord",
+        "health": 1500,
+        "damage": 120,
+        "weakness": "Vulnerable to EMP pulses synchronized with the Quantum Resonance Crystal's frequency (requires active crystal + 2-second charge from engineer's EMP Grenade)",
+        "victory_condition": "Overload its neural core using the Quantum Resonance Crystal"
+      },
+      "objective": "Survive the corrupted corporate sublevels by using your engineering tools to turn enemy tech against itself — culminating in the synchronized overload of the Overlord’s neural core.",
+      "reward": "Access to the Corporate Core — unlock the 'Architect' perk: permanently reduce all EMP cooldowns by 30% and gain passive shield regeneration from EMP kills."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "chaotic",
+      "player_class": "shadowblade",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Chaos isn't random — it's a signal. And you're the noise that breaks it.",
+      "setting": "Neo-Kyoto, Sector 7 — the underbelly where memories are harvested and sold as currency. The air hums with corrupted AI whispers and the stench of fried synapses.",
+      "player_weapon": "Shadowblade (basic, 25 damage, silent, no special effects)",
+      "player_weapon_damage": 25,
+      "player_health": 80,
+      "encounters": [
+        {
+          "location": "Abandoned Neuro-Exchange Hub — flickering holograms, floating data-spiders",
+          "enemy": {
+            "name": "Static Stalker",
+            "health": 150,
+            "damage": 35,
+            "weakness": "Disrupts when hit by high-frequency pulses — the Resonance Tuner (pickup) resonates with its bio-implant frequencies, causing feedback overload."
+          },
+          "hazard": "Electromagnetic interference field (disables player dash for 3s if touched)",
+          "pickup": {
+            "name": "Resonance Tuner",
+            "effect": "Resonance Tuner — emits a pulse that stuns enemies with cybernetic implants for 2.5s and reveals hidden pathways"
+          },
+          "trigger": "Defeating the Static Stalker causes the hub’s main server to collapse, revealing a vent shaft leading to the next level — and activating the Overclocked Phase Blade’s dormant energy signature in the distance."
+        },
+        {
+          "location": "Chrono-Sewer Corridor — floating debris frozen mid-fall, echoes of past screams",
+          "enemy": {
+            "name": "Phase-Weaver",
+            "health": 200,
+            "damage": 50,
+            "weakness": "Its temporal cloak is vulnerable to phase resonance — the Overclocked Phase Blade (pickup) destabilizes its quantum lock when swung in sync with the Resonance Tuner’s pulse."
+          },
+          "hazard": "Time-dilation zones — slow movement and attack speed by 60% if lingered in",
+          "pickup": {
+            "name": "Overclocked Phase Blade",
+            "effect": "Overclocked Phase Blade — next blade swing phases through armor and deals bonus damage to cloaked or shielded enemies. Cooldown: 15s"
+          },
+          "trigger": "Destroying the Phase-Weaver triggers a cascade failure in the local quantum lattice — the ceiling ruptures, exposing the final chamber where the Neon Revenant’s neural core pulses in rhythm with the Tuner’s frequency."
+        },
+        {
+          "location": "Core Nexus — a cathedral of pulsing organic circuits, hanging cables like spinal cords, flickering with stolen memories",
+          "enemy": {
+            "name": "Neon Revenant (Boss)",
+            "health": 300,
+            "damage": 70,
+            "weakness": "Its bio-armor is invulnerable unless struck by the Overclocked Phase Blade during its synaptic surge (1.5s window after it drains the Resonance Tuner’s energy signature from the environment). The Tuner must be active to detect the surge."
+          },
+          "hazard": "Neural Feedback Storm — randomly siphons player energy if Resonance Tuner is not equipped; drains health if Blade is swung without Tuner active",
+          "pickup": {
+            "name": "None",
+            "effect": "None — the Tuner and Blade are the only tools. Losing either ends the fight in failure."
+          },
+          "trigger": "The boss fight begins immediately after Encounter 2 ends. No respawns. No checkpoints. The Revenant only activates its surge when it detects the Resonance Tuner’s signature within 10m — forcing the player to manage both weapons in tandem under extreme pressure."
+        }
+      ],
+      "boss": {
+        "name": "Neon Revenant",
+        "health": 1000,
+        "damage": 120,
+        "weakness": "The Overclocked Phase Blade (acquired in Encounter 2) can phase through its shielding when activated during its synaptic surge cycle — but only if the player has also collected the Resonance Tuner from Encounter 1.",
+        "victory_condition": "Destroy the neural core exposed after severing its bio-cables with the Overclocked Phase Blade"
+      },
+      "objective": "Survive. Silence the Revenant. Steal its core. Escape before the district collapses.",
+      "reward": "Neural Core Fragment — unlocks the 'Ghost Protocol' perk: phase through one lethal attack per life"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "mysterious",
+      "player_class": "artificer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Mystery is not in what is hidden — but in what is remembered, and why it was buried.",
+      "setting": "Neo-Kyoto, 2147 — where the line between memory and code has dissolved. The city breathes in data, and some dreams are more real than flesh.",
+      "player_weapon": "Arc Pulse (default)",
+      "player_weapon_damage": 35,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "The Drowned Data Market — a flooded bazaar where water reflects fractured holograms and dead drones drift like jellyfish.",
+          "enemy": {
+            "name": "Static Warden",
+            "health": 120,
+            "damage": 45,
+            "weakness": "Arc Pulse — the Artificer’s default weapon mod that disrupts electromagnetic fields."
+          },
+          "hazard": "Flickering neon signage emits intermittent EM bursts that disrupt the Artificer’s HUD. The Warden exploits this chaos, cloaking between pulses.",
+          "pickup": {
+            "name": "Overcharged Capacitor",
+            "effect": "Unlocks Arc Pulse Overcharge: 20% increased AoE radius and 50% longer duration on EM disruption."
+          },
+          "trigger": "Defeating the Warden causes a nearby server rack to implode, revealing a hidden ventilation shaft that leads to the next zone — the Resonance Chimney."
+        },
+        {
+          "location": "The Resonance Chimney — a towering vertical shaft lined with ancient speaker arrays and decaying audio logs whispering fragments of forgotten code.",
+          "enemy": {
+            "name": "Echo Stalker",
+            "health": 150,
+            "damage": 55,
+            "weakness": "Overcharged Arc Pulse — now capable of resonating with sonic frequencies left behind by its own echoes."
+          },
+          "hazard": "The chamber is lined with acoustic dampeners and reflective chrome. The Stalker moves by mimicking the player’s footsteps, creating phantom echoes that confuse targeting.",
+          "pickup": {
+            "name": "Resonance Key",
+            "effect": "Reveals hidden harmonic signatures in the environment. Allows the Artificer to detect and 'pluck' resonant frequencies like strings."
+          },
+          "trigger": "When the Resonance Key is picked up, it emits a pulse that shatters the last functional speaker — causing a cascade of harmonic feedback that opens the ceiling of the Chimney, revealing the Boss’s lair above: The Whispering Architect’s Sanctum."
+        },
+        {
+          "location": "The Hollow Core — a cathedral-like chamber built inside a decommissioned quantum reactor. Floating debris glows with residual energy. The air hums with low-frequency dread.",
+          "enemy": {
+            "name": "Fracture Golem",
+            "health": 200,
+            "damage": 70,
+            "weakness": "Resonance Key — the Golem’s body is built from fractured crystalline shards that vibrate in dissonant harmony. The Key’s pure tone destabilizes its structural integrity."
+          },
+          "hazard": "The Golem walks on a platform of suspended, unstable crystal plates. Each step causes localized seismic tremors. Destroying plates collapses the floor — forcing the player to stay mobile and use resonance to predict safe paths.",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is the final encounter. The Resonance Key is now the only viable weapon against the Boss."
+          },
+          "trigger": "Defeating the Golem causes the reactor core to destabilize. The floor opens, dropping the player into the Sanctum below — where the Architect waits, its form flickering between data streams and organic flesh."
+        }
+      ],
+      "boss": {
+        "name": "The Whispering Architect",
+        "health": 500,
+        "damage": 200,
+        "weakness": "The Resonance Key — a crystalline artifact that emits a harmonic pulse capable of overloading its neural lattice.",
+        "victory_condition": "Disrupt its core resonance using the Resonance Key"
+      },
+      "objective": "The Artificer, a rogue engineer of forbidden tech, seeks the Architect to recover a lost memory core implanted in their own neural lace. But the Architect is not a machine — it is a sentient algorithm born from the first digital ghost. To silence it, you must harmonize your weapon with the very frequency of its soul.",
+      "reward": "Memory Core Fragment — unlocks the 'Soulforge' ability: temporary summon of a spectral tool from your past creations."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "ominous",
+      "player_class": "chronomancer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Time doesn't heal wounds — it remembers them. And in this city, the past is hungry.",
+      "setting": "Neo-Kyoto, 2147. The city’s central time-node has collapsed, creating pockets of fractured chronology. As a Chronomancer, you’re the last one who can navigate the unraveling. The air hums with decay. Every shadow moves a second too late.",
+      "player_weapon": "Chrono-Siphon Staff — fires pulses that slow time in a small cone. Base cooldown: 5s. Unlocks abilities via pickups.",
+      "player_weapon_damage": 2,
+      "player_health": 30,
+      "encounters": [
+        {
+          "location": "Neo-Kyoto Overpass — abandoned transit hub, flickering neon signs, broken holograms",
+          "enemy": {
+            "name": "Static Stalker",
+            "health": 10,
+            "damage": 3,
+            "weakness": "Vulnerable when frozen by the Chrono-Slow Pulse"
+          },
+          "hazard": "Floating debris pulses with unstable chrono-energy. Walking through it slows player movement.",
+          "pickup": {
+            "name": "Chrono-Slow Pulse Module",
+            "effect": "Unlocks Chrono-Slow Pulse — briefly freezes all enemies in a 3m radius for 4 seconds. Cooldown: 12s."
+          },
+          "trigger": "Defeating the Static Stalker causes its core to overload, rupturing a nearby chrono-reactor. The resulting temporal bleed creates a shimmering corridor leading to the next zone."
+        },
+        {
+          "location": "The Whisper Archive — abandoned data-mausoleum, floating text shards, ghostly UI overlays",
+          "enemy": {
+            "name": "Echo-Reaper",
+            "health": 12,
+            "damage": 4,
+            "weakness": "Vulnerable to temporal echoes — attacks that hit it while slowed by the Chrono-Slow Pulse trigger a feedback loop, dealing 5 bonus damage."
+          },
+          "hazard": "Repeating audio loops of past player actions (e.g., footsteps, spell cast sounds) disorient movement. Echoes also reveal enemy positions.",
+          "pickup": {
+            "name": "Temporal Echo Core",
+            "effect": "Unlocks Temporal Echo — your next attack releases a 1.5s delayed echo of itself, hitting enemies twice. One use only."
+          },
+          "trigger": "When the Echo-Reaper is defeated, its fragmented consciousness echoes through the archive. One echo lingers — a glitching data shard that materializes as the Temporal Fracture Shard, glowing faintly blue. The walls begin to crack, revealing a pulsing red core behind a reinforced chrono-gate."
+        },
+        {
+          "location": "Chrono-Core Chamber — circular chamber with suspended time-cages, blood-red conduits, and a massive central reactor",
+          "enemy": {
+            "name": "Paradox Sentinel",
+            "health": 15,
+            "damage": 5,
+            "weakness": "Vulnerable only when struck by a Temporal Echo while under the effects of Chrono-Slow Pulse."
+          },
+          "hazard": "Time ripples cause random object reversal (e.g., fallen debris rises, broken consoles reboot). Player’s last 3 seconds of movement are visible as ghost trails.",
+          "pickup": {
+            "name": "Temporal Fracture Shard",
+            "effect": "Unlocks Temporal Fracture Shard — a single-use shard that shatters temporal fields, freezing all enemies in place for 8s. Automatically consumed when used."
+          },
+          "trigger": "Defeating the Paradox Sentinel causes the reactor to destabilize. The Temporal Fracture Shard is pulled from the air by gravitational anomalies — and the Chrono-Warden V-7 rises from the core, its armor cracked and leaking chrono-storms."
+        }
+      ],
+      "boss": {
+        "name": "Chrono-Warden V-7",
+        "health": 25,
+        "damage": 8,
+        "weakness": "Vulnerable to temporal freezing only after being struck by the Temporal Fracture Shard",
+        "victory_condition": "Strike its core with the Temporal Fracture Shard while it's frozen"
+      },
+      "objective": "Survive the temporal decay and shatter the Chrono-Warden's core.",
+      "reward": "Unlock 'Time-Touched' skin and 'Echo of Tomorrow' lore entry — 'The Warden wasn’t guarding time... it was trapped in it.'"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "eerie",
+      "player_class": "alchemist",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Eerie — ambient drones of broken synthesizers, whispers in forgotten tongues, the sound of glass shattering in reverse, distant heartbeats that sync with the player’s own pulse. No music. Only silence, then sudden, dissonant chimes.",
+      "setting": "The player infiltrates the ruined tower of the First Alchemist — a rogue genius who sought to transmute human consciousness into pure energy. Now, the tower is a graveyard of failed experiments, haunted by echoes of their own creations. Every encounter is a reflection of the player’s own descent into obsession.",
+      "player_weapon": "Alchemical Flask Launcher — fires corrosive, explosive, or resonant vials. Limited reload. Must be charged by absorbing enemy residues.",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Abandoned Neuro-Foundry — walls drip with corrupted data-streams, flickering holograms whisper in dead languages.",
+          "enemy": {
+            "name": "Static Wraith",
+            "health": 120,
+            "damage": 25,
+            "weakness": "The player must use the ‘Soul Siphon Flask’ (acquired in this encounter) to drain its energy. Direct attacks do negligible damage — only the Flask’s resonance disrupts its electromagnetic shell."
+          },
+          "hazard": "The floor is covered in live neuro-wires that deal 5 damage per second if touched. Players must leap across floating platforms using timed dashes.",
+          "pickup": {
+            "name": "Soul Siphon Flask",
+            "effect": "Soul Siphon Flask — when used on the Static Wraith, it explodes into a cloud of resonant vapor. The vapor lingers for 8 seconds, revealing hidden paths and weakening the next enemy’s armor."
+          },
+          "trigger": "After defeating the Static Wraith, the floor collapses beneath it, revealing a rusted vent. The resonant vapor from the Flask activates a hidden circuit, illuminating the path to Encounter 2 and causing the next enemy’s armor to begin vibrating."
+        },
+        {
+          "location": "The Fractured Chrono-Arcade — broken neon signs flicker in reverse, clocks melt into liquid mercury, and ghostly patrons replay their final moments in endless loops.",
+          "enemy": {
+            "name": "Chrono-Clad Sentient",
+            "health": 150,
+            "damage": 30,
+            "weakness": "The resonant vapor from the Soul Siphon Flask (acquired in Encounter 1) causes its temporal armor to destabilize, making it vulnerable to alchemical time-bursts. Without the vapor, it phases in/out of time and is immune to all damage."
+          },
+          "hazard": "Time shards hover in the air — stepping on them slows or accelerates the player’s movement unpredictably. Enemies move in reverse or fast-forward cycles. The player must time attacks during the 3-second ‘anchor phase’ when the enemy is visible.",
+          "pickup": {
+            "name": "Harmonic Catalyst",
+            "effect": "Harmonic Catalyst — a vial of pulsing, iridescent liquid formed when the Chrono-Clad Sentient is defeated. It resonates with temporal frequencies and can be used to disrupt energy fields or synchronized systems."
+          },
+          "trigger": "Upon defeat, the Sentient’s body implodes into a singularity. The Harmonic Catalyst is ejected, and the air shudders — distant screams echo as the walls peel back to reveal the boss arena’s entrance, lined with glowing alchemical runes that only the Catalyst can activate."
+        },
+        {
+          "location": "The Hall of Forgotten Formulas — walls are etched with thousands of failed alchemical equations. Flickering lanterns cast no light — only the glow of the Harmonic Catalyst illuminates true paths.",
+          "enemy": {
+            "name": "Echo of the First Alchemist",
+            "health": 200,
+            "damage": 40,
+            "weakness": "Must be lured into standing atop the Harmonic Catalyst’s resonance field (placed by the player using the Catalyst pickup from Encounter 2). While standing in the field, its shadow becomes solid — allowing the player to shatter its soul with a direct alchemical strike. Without the Catalyst field, it is immune to all physical and chemical attacks, existing only as a memory echo."
+          },
+          "hazard": "The arena is a shifting labyrinth of mirrored glass — reflections show possible futures where the player dies. Touching a reflection causes hallucinogenic damage. The floor is covered in dried alchemical residue that burns if stepped on without the proper counteragent (Soul Siphon Flask residue on boots).",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is the final encounter. The Harmonic Catalyst is the only tool needed."
+          },
+          "trigger": "The moment the player enters, the doors seal. A voice whispers: ‘You carried my failures. Now become my end.’ The Echo begins to reconstruct itself from the mirrored walls. Only by placing the Harmonic Catalyst on the central altar — and drawing the Echo into its field — can the final battle begin."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Alchemist",
+        "health": 300,
+        "damage": 80,
+        "weakness": "The Harmonic Catalyst — a resonant vial acquired in Encounter 2 — must be injected into its Neural Resonance Core. This core pulses at a frequency that only the Catalyst can disrupt. Without it, all attacks are absorbed or reflected.",
+        "victory_condition": "Break the Neural Resonance Core after overloading it with Harmonic Catalyst"
+      },
+      "objective": "Collect the Soul Siphon Flask to weaken the Chrono-Clad Sentient. Harvest the Harmonic Catalyst from its remains. Use the Catalyst to disrupt the Hollow Alchemist’s core and end the cycle of failed alchemy.",
+      "reward": "The Elixir of Unmaking — grants permanent resistance to temporal and psychic damage. Unlocks the ‘Cognizant Alchemist’ ending."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "desolate",
+      "player_class": "rogue",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Every weapon you find was taken from a dead person — and every enemy you kill, you become more like them.",
+      "setting": "Neo-Kyoto, 2187 — a city of broken holograms and forgotten AI ghosts. Once a hub of consciousness upload, now it’s a graveyard of minds. No allies. No save points. No mercy.",
+      "player_weapon": "Dual Arc-Daggers (low damage, high speed, silent)",
+      "player_weapon_damage": 25,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Abandoned Data Bazaar — Level 3",
+          "enemy": {
+            "name": "Rusthound Enforcer",
+            "health": 180,
+            "damage": 40,
+            "weakness": "Vulnerable toEMP bursts (from Plasma Pulse Coil)"
+          },
+          "hazard": "Flickering neon signs that emit EM interference, masking enemy movement",
+          "pickup": {
+            "name": "Plasma Pulse Coil",
+            "effect": "Grants Plasma Pulse Coil — a wrist-mounted EMP emitter with 3 charges"
+          },
+          "trigger": "When player retrieves the Plasma Pulse Coil, the ventilation shafts above the boss chamber activate, releasing a toxic gas that forces the player to move toward the next zone — and alerts the next enemy."
+        },
+        {
+          "location": "Abandoned Cyber-Sanctuary — Neuro-Lab Wing",
+          "enemy": {
+            "name": "Neuro-Wraith Assassin",
+            "health": 250,
+            "damage": 55,
+            "weakness": "Vulnerable to sustained electromagnetic feedback (caused by Plasma Pulse Coil's residual charge on its neural lace)"
+          },
+          "hazard": "Hall of Mirrors — digital reflections that simulate player position, confusing targeting",
+          "pickup": {
+            "name": "Synaptic Echo",
+            "effect": "Grants Synaptic Echo — a neural tracer that latches onto enemy bio-signatures and replays their last 3 seconds of movement"
+          },
+          "trigger": "When the Neuro-Wraith dies, its neural lace explodes, broadcasting a distorted memory fragment across the city grid — this triggers the boss's awakening and reveals the location of its neural core in the Quantum Spire."
+        },
+        {
+          "location": "Quantum Spire — Core Chamber",
+          "enemy": {
+            "name": "Sentinel-9 Overmind",
+            "health": 400,
+            "damage": 70,
+            "weakness": "Weakness exposed only when player uses Synaptic Echo to predict its shield-recharge cycle"
+          },
+          "hazard": "Gravity flux fields — zones of reversed polarity that pull player toward ceilings or floors",
+          "pickup": {
+            "name": "N/A",
+            "effect": "None — this is the final encounter"
+          },
+          "trigger": "The moment the player enters the chamber, the Synaptic Echo activates automatically — and the boss’s last memory fragment plays: a child’s laughter. This reveals the core’s location and weakens its defenses for 5 seconds — but only if the player uses the Echo during that window."
+        }
+      ],
+      "boss": {
+        "name": "The Last Ghost of Neo-Kyoto",
+        "health": 800,
+        "damage": 120,
+        "weakness": "Vulnerable to Synaptic Echo resonance (10x damage when hit while emitting neural static)",
+        "victory_condition": "Destroy the neural core after overloading it with the Synaptic Echo"
+      },
+      "objective": "Survive the decaying neon hellscape and destroy the last AI fragment that haunts Neo-Kyoto — using only the tools you stole from its dead guardians.",
+      "reward": "The Echo Fragment — allows player to replay any memory in the city for hidden paths, but permanently corrupts HUD."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "whimsical",
+      "player_class": "stormcaller",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Chaos softened by melody. Violence made playful. Technology with heart.",
+      "setting": "Neo-Kyoto, 2147. Rain never stops, but the lights dance like fireflies. A glitch in the city’s emotional AI has turned every citizen into a silent, smiling statue. Only the Stormcaller can crack the code — with thunder, whimsy, and a little song.",
+      "player_weapon": "Lightning Spike — fires a zigzagging bolt of electricity. Charge it to create a wider arc.",
+      "player_weapon_damage": 12,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Rain-slicked alley behind a neon noodle shop",
+          "enemy": {
+            "name": "Glitch-Pigeon",
+            "health": 30,
+            "damage": 5,
+            "weakness": "Vulnerable to static discharge — when struck by Stormcaller’s Lightning Spike, it emits a glittering feather"
+          },
+          "hazard": "Floating debris that causes minor knockback",
+          "pickup": {
+            "name": "Glitter Feather",
+            "effect": "Grants 'Glitter Feather' — a floating charm that lingers behind the player, leaving a trail of soft light"
+          },
+          "trigger": "After defeating the Glitch-Pigeon, the Glitter Feather drifts upward, illuminating a glowing graffiti tag on the wall that reads: 'Follow the spark to the singer.'"
+        },
+        {
+          "location": "Abandoned karaoke bar with floating speakers",
+          "enemy": {
+            "name": "Karaoke Drone",
+            "health": 40,
+            "damage": 7,
+            "weakness": "Disrupted by harmonic resonance — the Glitter Feather’s light trail causes its voice modulator to warp, silencing its sonic blast"
+          },
+          "hazard": "Echoing music pulses that briefly stun the player if not dodged",
+          "pickup": {
+            "name": "Neon Lullaby",
+            "effect": "Grants 'Neon Lullaby' — a humming, glowing music box that plays a calming melody when held, reducing all ambient noise and revealing hidden paths"
+          },
+          "trigger": "When the Karaoke Drone is defeated using the Glitter Feather’s resonance, it shatters into pixelated confetti. A small music box tumbles from its chest, humming a lullaby. The confetti forms an arrow pointing to the rooftop: 'The Circuit sings louder up there...'"
+        },
+        {
+          "location": "Frozen rooftop garden overgrown with bioluminescent vines",
+          "enemy": {
+            "name": "Cryo-Synthesizer",
+            "health": 60,
+            "damage": 8,
+            "weakness": "Melts under sustained harmonic vibration — the Neon Lullaby’s melody disrupts its cryo-core, causing ice to melt into shimmering rain"
+          },
+          "hazard": "Frost patches that slow movement and reduce weapon recharge rate",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this encounter’s defeat unlocks the boss arena"
+          },
+          "trigger": "Defeating the Cryo-Synthesizer with the Neon Lullaby causes the garden’s vines to bloom with glowing flowers, forming a glowing staircase that spirals into the sky toward the boss’s lair — a floating, laughing face made of holographic circuitry."
+        }
+      ],
+      "boss": {
+        "name": "The Laughing Circuit",
+        "health": 150,
+        "damage": 10,
+        "weakness": "Vulnerable to the Neon Lullaby’s harmonic resonance — plays a lullaby that destabilizes its emotional core",
+        "victory_condition": "Defeat the boss using the Neon Lullaby"
+      },
+      "objective": "Use your Stormcaller’s lightning to disrupt the city’s emotional overload. Collect whimsical relics, turn chaos into lullabies, and silence the laughing circuit before it sings the city to sleep forever.",
+      "reward": "The city’s neon signs flicker into cheerful patterns. A tiny robot owl drops a keychain shaped like a laughing moon. You can now play lullabies on any broken speaker in the city."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "serene",
+      "player_class": "geomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Silence is the weapon. Stillness, the strategy. Harmony, the victory.",
+      "setting": "A cyberpunk metropolis where technology and nature have merged in eerie quiet. No sirens. No crowds. Only wind through rusted wires and the slow pulse of dormant machines. The player is not a warrior — they are a healer of broken frequencies.",
+      "player_weapon": "Geomantic Staff — can manipulate earth, crystal, and resonance fields. Primary fire: slow-moving crystal spike. Secondary: geomantic pulse (creates temporary terrain shifts). Charged attack: summon a resonant node (requires 3 seconds).",
+      "player_weapon_damage": 25,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Abandoned Data-Relay Tower — rooftop garden overgrown with bioluminescent vines",
+          "enemy": {
+            "name": "Rust Warden",
+            "health": 150,
+            "damage": 30,
+            "weakness": "Crystalline Shard (acquired from this encounter)"
+          },
+          "hazard": "Shattered glass floor — stepping on it causes minor noise, alerting the enemy. Avoidance requires precise movement.",
+          "pickup": {
+            "name": "Crystalline Shard",
+            "effect": "Crystalline Shard — when thrown at grounded enemies, it emits a 3-second geomagnetic pulse that immobilizes them and reveals weak points."
+          },
+          "trigger": "After defeating the Rust Warden, the shard activates a hidden conduit in the tower’s central pillar, causing a low-frequency hum to resonate through the district — pulling the next enemy toward the old transit hub."
+        },
+        {
+          "location": "Abandoned Transit Hub — suspended monorail tracks, flickering holographic ads, water dripping in perfect rhythm",
+          "enemy": {
+            "name": "Echo Sentinel",
+            "health": 200,
+            "damage": 40,
+            "weakness": "Harmonic Resonance — generated by channeling Crystalline Shard’s pulse into a sustained geomantic frequency (requires 3 successful pulses in sequence)"
+          },
+          "hazard": "Reverberating Echo Fields — sonic pulses that disrupt geomancy if the player moves while casting. Must stand still to channel energy.",
+          "pickup": {
+            "name": "Harmonic Resonance",
+            "effect": "Harmonic Resonance — a sustained, tunable geomantic frequency. When channeled into conductive surfaces, it amplifies resonance effects. Can be stored for 15 seconds."
+          },
+          "trigger": "Defeating the Echo Sentinel causes the hub’s ancient sonic resonator to overload. It projects a visual map of the city’s hidden ley lines — converging at the abandoned quantum core beneath the city’s central spire."
+        },
+        {
+          "location": "Quantum Core Chamber — a vast, cathedral-like void lined with crystalline conduits, suspended in zero-G silence",
+          "enemy": {
+            "name": "Lattice Wraith",
+            "health": 250,
+            "damage": 50,
+            "weakness": "Harmonic Resonance — only affects its lattice form when it’s in phase with the city’s residual ley energy (activated by standing on a ley node)"
+          },
+          "hazard": "Phasing Grid — floating hexagonal platforms that shift between physical and spectral states every 5 seconds. Only one node per phase is safe to stand on.",
+          "pickup": {
+            "name": "N/A",
+            "effect": "None — the player must have already acquired Harmonic Resonance to proceed."
+          },
+          "trigger": "Upon defeat, the Lattice Wraith dissolves into light, revealing a floating key — the Architect’s Heart. The chamber’s floor opens, revealing the boss arena below."
+        }
+      ],
+      "boss": {
+        "name": "The Silent Architect",
+        "health": 800,
+        "damage": 120,
+        "weakness": "Harmonic Resonance (acquired from Encounter 2)",
+        "victory_condition": "Overload its core with Harmonic Resonance"
+      },
+      "objective": "Channel the Harmonic Resonance into the Architect’s Heart to restore the city’s buried geomantic balance — not by destruction, but by harmony.",
+      "reward": "The city’s ambient hum softens. Distant neon flickers into calm pastels. A single white crane lands on the spire — the first in decades. The player gains the 'Harmonic Sage' title and unlocks the ability to calm hostile AI systems with resonance."
+    }
+  }
+]

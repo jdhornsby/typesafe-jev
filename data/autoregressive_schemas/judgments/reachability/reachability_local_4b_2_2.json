@@ -1,0 +1,146 @@
+[
+  {
+    "case_id": "underwater_mysterious_geomancer_medium",
+    "encounters": [
+      { "index": 0, "weakness": "crystal shard (player weapon) — attacks are disrupted by the shard's resonance, causing them to stagger and lose momentum on their next move. The shard's frequency disrupts their internal rhythm, which is tied to the ocean's tides.", "inventory": ["crystal shard"], "satisfied": true },
+      { "index": 1, "weakness": "Resonance Crystal Fragment — the Spire is made of unstable bio-lattice that absorbs frequency. When exposed to the Resonance Crystal Fragment, its internal vibrations collapse, reducing damage by 50% and slowing it by 50% for 2 seconds.", "inventory": ["crystal shard", "Resonance Crystal Fragment"], "satisfied": true },
+      { "index": 2, "weakness": "Glimmering Tidal Shard — the Guardian's form is tied to the tides. When the Glimmering Tidal Shard is active, the Guardian's movements are slowed, and its energy pulses are disrupted. The shard emits a frequency that disrupts its connection to the ocean's heart. This causes a 70% damage reduction and a 2-second freeze on its next attack.", "inventory": ["crystal shard", "Resonance Crystal Fragment", "Glimmering Tidal Shard"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "underwater_serene_beastmaster_easy",
+    "encounters": [
+      { "index": 0, "weakness": "Glowfish Swarm (pickup from environment)", "inventory": ["Turtle Whisper"], "satisfied": true },
+      { "index": 1, "weakness": "Turtle Companion (summoned via 'Turtle Whisper') – when active, nullifies the thump attack.", "inventory": ["Turtle Whisper", "Glowfish Lure"], "satisfied": true },
+      { "index": 2, "weakness": "Coral Heart (must be held in hand to activate) – disables lullaby, stops time-slow effect, and allows manta ray to strike.", "inventory": ["Turtle Whisper", "Glowfish Lure", "Coral Heart"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "underwater_ominous_necromancer_hard",
+    "encounters": [
+      { "index": 0, "weakness": "Bone-Claw Dagger (necrotic bone edge triggers decay pulse, causing 2x damage for 3 seconds). Cannot be damaged directly by magic fire or light. Weakness active only when the player attacks with their weapon while holding a 'Flesh-Brace' pickup from prior encounter — but this pickup isn't available until after this encounter. Therefore, the weakness is misaligned.", "inventory": ["Bone-Claw Dagger"], "satisfied": false },
+      { "index": 1, "weakness": "Soul-Flame Ember — when used, causes a 1.5x necrotic damage burst. The golem's body becomes temporarily transparent, revealing internal decay and allowing player to inflict 2x damage. Weakness active only when the player has collected the Soul-Flame Ember from the prior encounter and uses it during combat. This requires prior acquisition of the Ember from the first encounter and player strategy to use it at the right time. Must be used during a 5-second window when the golem is vulnerable to necrotic pulses (indicated by a red pulse in the golem's eyes).", "inventory": ["Bone-Claw Dagger", "Soul-Flame Ember"], "satisfied": true },
+      { "index": 2, "weakness": "Flesh-Brace (must be worn). When worn, the Gilded Maw's body emits a sickly red light. Upon being attacked with a necrotic strike during this phase, it suffers 4x damage and for 8 seconds becomes vulnerable. This is only possible if the player has acquired the Flesh-Brace during the second encounter and is wearing it during combat. If not, the Maw regenerates health rapidly and resists all magic and physical attacks. The weakness is not passive — it is an active mechanic requiring player possession of the Flesh-Brace and correct timing of the attack. Only one such window exists per fight (40 seconds).", "inventory": ["Bone-Claw Dagger", "Soul-Flame Ember", "Flesh-Brace"], "satisfied": true }
+    ],
+    "n_satisfied": 2
+  },
+  {
+    "case_id": "underwater_tense_stormcaller_brutal",
+    "encounters": [
+      { "index": 0, "weakness": "Storm Spear (Shock Pulse Mode — when the spear is charged and fired, it creates a shockwave that collapses the Wraith's energy field and causes 30% damage over time). The Wraith emits a low-frequency hum that destabilizes sonar, causing disorientation and slowing the player's movement. It drains 5% of the player's energy every 5 seconds if not engaged immediately. If the player is within 10 meters of the Wraith, the water pressure rises by 20%, reducing movement speed and increasing damage by 15% for 5 seconds.", "inventory": ["Storm Spear"], "satisfied": true },
+      { "index": 1, "weakness": "Tidal Pulse Core — when the player activates the Tidal Pulse Core (held in hand), it emits a harmonic frequency that disrupts the Maw's sonar pulses. During this disruption, the Maw is disoriented and moves slowly. For 12 seconds, it cannot fire its crushing claws or emit sound waves. However, if the pulse is misaligned (e.g., too early or too late), the Maw activates a 'sonar lock' and damages the player with a focused beam of pressure waves. The Maw has 15% chance to spawn a secondary Maw after each attack if the player is in the sonic range for more than 3 seconds.", "inventory": ["Storm Spear", "Tidal Pulse Core"], "satisfied": true },
+      { "index": 2, "weakness": "Storm Shard — only effective when thrown directly into the central core of the Deep Maw. Upon impact, the Storm Shard triggers a lightning feedback loop that causes a 6-second paralysis and a 30% damage reduction to all incoming attacks for the player. The feedback loop is unstable — if the Shard is not thrown with precision (within 1 meter), it detonates harmlessly and causes a 15-second surge of pressure that damages the player by 120. After the storm burst, the Deep Maw activates a 'storm surge' that covers the entire level with corrosive water, reducing movement speed and increasing damage by 50% for 15 seconds. This effect can be repeated every 60 seconds if the player remains in the zone. The Deep Maw has 20% chance to spawn a Gorgon Maw clone after each damage taken, which are immune to the Tidal Pulse Core and require full health to kill.", "inventory": ["Storm Spear", "Tidal Pulse Core", "Storm Shard"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "underwater_eerie_shadowblade_medium",
+    "encounters": [
+      { "index": 0, "weakness": "Shadowblade (blade cuts through light energy, causing a shadow pulse that disrupts its bioluminescence). Shadowblade attacks reduce its light output by 40%, making it vulnerable to follow-up strikes.", "inventory": ["Shadowblade"], "satisfied": true },
+      { "index": 1, "weakness": "Glimmer Shard (if used during combat, the Gorgon's light absorption is disrupted. The shard causes a 30% energy backlash, weakening the creature and making it vulnerable to Shadowblade strikes).", "inventory": ["Shadowblade", "Glimmer Shard"], "satisfied": true },
+      { "index": 2, "weakness": "Glimmer Shard (using the Glimmer Shard on the core triggers a resonance pulse, damaging the Lurker's central core and reducing its regeneration by 50% for 15 seconds. The Lurker cannot regenerate during this window). This is the only viable weakness. The Lurker is immune to Shadowblade damage after 30 seconds of exposure. Must be attacked during the pulse window to succeed in a critical hit.", "inventory": ["Shadowblade", "Glimmer Shard", "Fragmented Core Resonance"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "underwater_chaotic_pyromancer_hard",
+    "encounters": [
+      { "index": 0, "weakness": "The player's Flame Lance (initially uncharged). When the player attacks with the Flame Lance, it emits a brief burst of white-hot plasma, igniting the Coral Spitter's acidic mucus, causing it to spew unstable coral that burns and explodes on contact. This weakens it by 15% per successful charge hit. If the player fails to use the Flame Lance in 30 seconds, it reverts to a passive state and spawns a second Coral Spitter in a delayed burst.", "inventory": ["Flame Lance"], "satisfied": true },
+      { "index": 1, "weakness": "The Ignition Core (pickup from prior encounter). The Hydro-Viper is immune to fire when the water temperature is below 40°C. However, when the player uses the Flame Lance with the Ignition Core equipped, it creates a 5-second heatwave that raises the surrounding water temperature to 80°C, causing the Hydro-Viper to overheat and lose 10% of its health every 2 seconds. This effect lasts only 30 seconds and must be maintained during the battle. If the player stops using the Flame Lance within 10 seconds, the heatwave fades and the Hydro-Viper gains a passive counter-attack (cold blast) that freezes the player's next attack.", "inventory": ["Flame Lance", "Ignition Core"], "satisfied": true },
+      { "index": 2, "weakness": "Magma Resonance Crystal (specific pickup from prior encounter). The Leviathan is a fusion of molten rock and deep-sea fauna. It absorbs and converts fire into cold energy. When the player uses the Flame Lance with the Magma Resonance Crystal equipped, it emits a pulse of fire that creates a localized magma pulse in the water. This pulse causes the Leviathan to experience a temporary 'overheating' state for 5 seconds, during which it takes 40 damage per second and is slowed by 50%. This effect must be maintained for at least 10 seconds. If the player fails to maintain the crystal activation during this time, the Leviathan activates its 'Void Rift' ability, which creates a black hole that pulls the player into a deep trench and deals 80 damage per second until escaped (this is the endgame failure condition).", "inventory": ["Flame Lance", "Ignition Core", "Magma Resonance Crystal"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "underwater_desolate_warden_brutal",
+    "encounters": [
+      { "index": 0, "weakness": "Ceramic Shatter (initially unyielding, but the first hit triggers a minor shattering effect that reduces enemy armor by 20% and increases damage taken by 15% for 3 seconds — only effective if weapon is used at full charge).", "inventory": ["Ceramic Shatter"], "satisfied": true },
+      { "index": 1, "weakness": "The Turbine Core Fragment. When the player uses a pickup to activate 'Shatter Pulse' during combat, the Crimson Gullet's health drops by 25% immediately and its attack speed reduces by 50% for 5 seconds. This only activates if the player used the fragment during the previous encounter. If not, it regains 10 HP every second.", "inventory": ["Ceramic Shatter", "Turbine Core Fragment"], "satisfied": true },
+      { "index": 2, "weakness": "The Bio-Resonance Gel (must be used during the fight to activate). The Gel must be consumed in the fight — upon using it, the Hollow Heart's core is temporarily disrupted, causing it to lose 40% of its health and its attack range to shrink to 1 meter for 10 seconds. This is the only way to survive its initial attack cycle. Without using the Gel, the Hollow Heart activates 'Maw Reverb', which causes all enemies in the area to deal 100% of their damage to the player for 5 seconds, and the player's movement is disabled until the end of the fight.", "inventory": ["Ceramic Shatter", "Turbine Core Fragment", "Bio-Resonance Gel"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "underwater_whimsical_illusionist_easy",
+    "encounters": [
+      { "index": 0, "weakness": "Illusion of a bubble (created with Bubble Wand)", "inventory": ["Bubble Wand"], "satisfied": true },
+      { "index": 1, "weakness": "Frosted Bubble (thrown near it causes reflection to collapse)", "inventory": ["Bubble Wand", "Frosted Bubble"], "satisfied": true },
+      { "index": 2, "weakness": "Frosted Bubble used in 'truth mode' — when thrown, it reflects the player's first illusion (against the Bubble Snail) to reveal the truth", "inventory": ["Bubble Wand", "Frosted Bubble", "Reflection Shard"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "jungle_chaotic_beastmaster_hard",
+    "encounters": [
+      { "index": 0, "weakness": "Jungle Claw (Player's weapon) – the jagged spikes pierce its scales and cause internal bleeding. It retaliates with acid spits when hit by anything non-organic (like vines).", "inventory": ["Jungle Claw"], "satisfied": true },
+      { "index": 1, "weakness": "Rattler's Fang (pickup from previous encounter) – the fang disrupts its bio-luminescent senses, causing it to lose tracking ability. When the fang is active, it staggers and stumbles, making it vulnerable to melee attacks from the player or summoned beasts (e.g., a jaguar or croc).", "inventory": ["Jungle Claw", "Rattler's Fang"], "satisfied": true },
+      { "index": 2, "weakness": "Rattler's Fang (pickup from first encounter) – when the Rattler's Fang is active, the Warden's corrupted fang shatters. This causes it to freeze in place for 3 seconds, allowing the player to deal massive damage. The Warden absorbs health from nearby enemies and regenerates rapidly; it is immune to fire and lightning, but vulnerable to direct physical attacks with the Rattler's Fang during its freeze state.", "inventory": ["Jungle Claw", "Rattler's Fang", "Jungle Scream"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "jungle_mysterious_ranger_medium",
+    "encounters": [
+      { "index": 0, "weakness": "The player's twin-bolt crossbow fires sonic-tipped bolts that disrupt the vipers' venom sacs. When fired, the viper stumbles and emits a weak hiss. After three hits, it drops a 'crystallized root' that glows faintly and can be collected.", "inventory": ["twin-bolt crossbow"], "satisfied": true },
+      { "index": 1, "weakness": "The Shade Stalker is immune to physical attacks but takes damage from sonic waves. The player must use their twin-bolt crossbow with the sonic-tipped bolts (from earlier) to harm it. Once hit by three sonic shots, it emits a ghostly cry and falls to the ground, revealing a hidden pool of liquid light that emits a low-frequency hum — the first step toward the final area.", "inventory": ["twin-bolt crossbow", "crystallized_root"], "satisfied": true },
+      { "index": 2, "weakness": "The Guardian is a massive, fused tree spirit that appears only at the heart of the jungle. It has three phases: dormant, aggressive, and final. In the final phase, it becomes vulnerable to a specific frequency — the hum of the 'crystallized root' when used in combination with the liquid light pool. The player must use both the crystallized root and the liquid light pool at the same time to activate a resonance pulse that damages the Guardian by 40% over 5 seconds. Without both, the Guardian attacks with a sonic wave that reduces the player's health by 30%.", "inventory": ["twin-bolt crossbow", "crystallized_root", "liquid_light_pools"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "jungle_tense_rogue_brutal",
+    "encounters": [
+      { "index": 0, "weakness": "Razorfang Dagger (player weapon) - cuts through scales and venom sacs. Critical hit on first strike inflicts bleeding (damage over 3 seconds).", "inventory": ["Razorfang Dagger"], "satisfied": true },
+      { "index": 1, "weakness": "Poison Dart (Shattered Root) - when thrown at the Warden, it causes a 3-second paralysis. If used, the Warden's attack speed drops by 50%, and it takes 30% more damage. Must be used before the Warden detects the player (after 10 seconds of movement).", "inventory": ["Razorfang Dagger", "Poison Dart"], "satisfied": true },
+      { "index": 2, "weakness": "Fang Trap (Lava-etched) — when thrown directly at the Spirit's eye (a glowing red pupil), it causes a 5-second stun and inflicts 70 damage. The Spirit will retreat and enter a passive state for 2 seconds. The trap must be thrown during a 3-second window after the Spirit's next move. Only one trap available from prior encounter. Must be used before the Spirit reaches its final phase (which triggers a 200% damage buff).", "inventory": ["Razorfang Dagger", "Poison Dart", "Fang Trap"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "jungle_serene_warden_easy",
+    "encounters": [
+      { "index": 0, "weakness": "Sunstone Stick (player's primary weapon). The Wisp is disoriented when struck by direct contact or beam from the stick, causing it to drift and fade.", "inventory": ["Sunstone Stick"], "satisfied": true },
+      { "index": 1, "weakness": "Moonbloom Leaf (pickup from previous fight). The Glimmer reflects and intensifies when exposed to the leaf. When the leaf is placed on or near it, the Glimmer flickers, becomes still, and dies in 2 seconds.", "inventory": ["Sunstone Stick", "Moonbloom Leaf"], "satisfied": true },
+      { "index": 2, "weakness": "Moonbloom Seed (specific pickup from River Glimmer fight). The Guardian is inert until the seed is thrown into the central pond. Upon activation, it flickers and becomes vulnerable for 10 seconds, during which the player can strike it with any weapon. Only works once.", "inventory": ["Sunstone Stick", "Moonbloom Leaf", "Moonbloom Seed"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "jungle_ominous_necromancer_hard",
+    "encounters": [
+      { "index": 0, "weakness": "Corrupted Bone Whip (player weapon) — causes immediate necrotic shock, draining 20% health and freezing the enemy for 2 seconds. Use this at full power to break its defense, or it will unleash a spreading rot-aura that spawns 2 rot-wraiths upon death.", "inventory": ["Corrupted Bone Whip"], "satisfied": true },
+      { "index": 1, "weakness": "Corrupted Bone Shard (pickup from previous encounter) — when used, the Rot-warden's rot-aura is inverted. The enemy turns into a slow-moving husk for 4 seconds, and all decay effects reverse. If the player holds the shard and attacks, it deals 30% bonus necrotic damage and causes a 3-second paralysis to its core. This is the only way to defeat it in this phase.", "inventory": ["Corrupted Bone Whip", "Corrupted Bone Shard"], "satisfied": true },
+      { "index": 2, "weakness": "Corrupted Bone Shard (specific pickup from Encounter 1) — if the player uses the Corrupted Bone Shard at full strength during its final phase, it causes a resonance cascade. The Maw's core fractures, and it emits a scream that triggers a reverse decay — all undead summoned by the player are instantly resurrected and attack it. This destroys its structure and ends the fight. The shard must be active in the player's hand to trigger this. If the shard is not present, the Maw evolves into a second phase (Phase 2) where it can regenerate health and summon a copy of the Rot-warden for 30 seconds. The player must survive 60 seconds without healing to survive Phase 2.", "inventory": ["Corrupted Bone Whip", "Corrupted Bone Shard", "Flicker Mask"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "jungle_whimsical_alchemist_easy",
+    "encounters": [
+      { "index": 0, "weakness": "Player's weapon: Glowing Alchemical Flask (causes a brief burst of sparkle that blinds the enemy for 1 second).", "inventory": ["Glowing Alchemical Flask"], "satisfied": true },
+      { "index": 1, "weakness": "Sunbeam Tincture (when used, the frog's voice turns into static, and it becomes disoriented for 2 seconds).", "inventory": ["Glowing Alchemical Flask", "Sunbeam Tincture"], "satisfied": true },
+      { "index": 2, "weakness": "Mossy Sparkle Dust (when used in the player's inventory, causes the Maw to emit a bubble of static, making it freeze for 3 seconds). The Maw is not harmed, but its movement and attack are disabled temporarily, allowing the player to deal damage safely. This is a direct result of the 'Mossy Sparkle Dust' pickup from the second encounter.", "inventory": ["Glowing Alchemical Flask", "Sunbeam Tincture", "Mossy Sparkle Dust"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "jungle_eerie_chronomancer_medium",
+    "encounters": [
+      { "index": 0, "weakness": "Chrono-Pulse (time-slowing effect) reduces Warden's movement speed by 75% and makes it vulnerable for 3 seconds, during which it takes 1.5x damage per hit. This ability is active when the player uses the Chrono-Pulse weapon in its base form (without any pickups). *Note: The Warden moves in cyclical loops. If the loop is broken, it becomes disoriented for 5 seconds.", "inventory": ["Chrono-Pulse"], "satisfied": true },
+      { "index": 1, "weakness": "Time Shard (must be used within 1 second of enemy attack). When the player uses the Time Shard during an enemy attack, the Watcher's echoes freeze for 3 seconds. This breaks all duplicates, and the Watcher becomes vulnerable for 4 seconds. If used outside of the window, the Watcher gains 20% increased damage and 10% movement speed for 5 seconds as a counter-attack.", "inventory": ["Chrono-Pulse", "Time Shard"], "satisfied": true },
+      { "index": 2, "weakness": "Fossilized Second (must be used during a pulse attack). When the player uses the Fossilized Second during a pulse attack, the pulse is reversed for 1 second, causing the boss to stagger and take 50% damage for 3 seconds. The effect can be chained—after the first use, the player can use it again after the boss takes damage (max 3 uses). This is the only way to defeat the boss; it cannot be defeated by direct attack or healing.", "inventory": ["Chrono-Pulse", "Time Shard", "Fossilized Second"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "jungle_desolate_berserker_brutal",
+    "encounters": [
+      { "index": 0, "weakness": "The player's Cracked Black Axe deals extra damage to the Wyrms when it's swung in a staggered, wild motion—like a berserker's rage swing. This damage is amplified when the axe is swung in a 3-second rage burst (player rage meter > 70%).", "inventory": ["Cracked Black Axe"], "satisfied": true },
+      { "index": 1, "weakness": "The Silent Scurry is vulnerable to attacks that use the Shattered Runic Fragment's amplified rage damage. The fragment's damage boost (15%) must be active during the attack. The Scurry can only take one such strike before retreating. If the player fails to land it, the Scurry spawns a shadow clone that attacks from behind—giving it a +15% damage and -15% health per second for 5 seconds.", "inventory": ["Cracked Black Axe", "Shattered Runic Fragment"], "satisfied": true },
+      { "index": 2, "weakness": "The Hollow Root is vulnerable to attacks that use the Fang-Bone Shard's shield. When the player activates the shield during an attack, the Root's core explodes for 50% of its health. However, only the *first* shield activation in a 30-second window counts. A second shield use causes the Root to lash out with a shockwave that deals 50 damage and knocks the player back 3 meters. If the player fails to use the shield, the Root drains 15% of the player's health every 5 seconds until it is defeated or the player dies.", "inventory": ["Cracked Black Axe", "Shattered Runic Fragment", "Fang-Bone Shard"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  }
+]

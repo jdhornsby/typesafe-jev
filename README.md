@@ -159,3 +159,30 @@ It took 0:03 to classify all 94 statements at concurrency level 12.
 | Not introduced to prove truth | 20 | 85% |
 | Standard hearsay | 29 | 66% |
 | Non-verbal hearsay | 12 | 25% |
+
+## Judging game levels
+
+Rubrics from [autoregressive-schemas](https://github.com/jdhornsby/autoregressive-schemas), copied into `data/autoregressive_schemas/`. The rubric is 0-indexed for jev and 1-5 for the original judge, so scores are shifted to align but are not apples-to-apples.
+
+### Run
+
+```
+uv run jev-judges --condition minimal --run-id judge-full
+```
+
+### Results
+
+384 levels, `minimal` condition.
+
+| criterion | original | jev | delta |
+|---|--:|--:|--:|
+| reference_integrity | 3.90 | 4.53 | +0.63 |
+| causal_chain | 3.85 | 4.60 | +0.74 |
+| balance | 4.12 | 4.33 | +0.21 |
+| thematic_coherence | 4.50 | 4.68 | +0.18 |
+| mechanical_sense | 3.91 | 4.40 | +0.49 |
+| completeness | 4.10 | 4.81 | +0.71 |
+
+Reachability agreement: 1139/1152 = 98.9%.
+
+Latency per call: median 0.23s, p95 0.38s, 0 retries.
