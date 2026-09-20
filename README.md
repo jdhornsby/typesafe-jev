@@ -172,17 +172,48 @@ uv run jev-judges --condition minimal --run-id judge-full
 
 ### Results
 
-384 levels, `minimal` condition.
+384 levels, `minimal` thinking, run `judge-full-01`.
 
-| criterion | original | jev | delta | jev range, 10 runs |
+Schema-variant scores (weighted likert, and reachability break %):
+
+| variant | original | jev | original break % | jev break % |
 |---|--:|--:|--:|--:|
-| reference_integrity | 3.90 | 4.53 | +0.63 | 4.53–4.54 |
-| causal_chain | 3.85 | 4.60 | +0.74 | 4.59–4.60 |
-| balance | 4.12 | 4.33 | +0.21 | 4.32–4.33 |
-| thematic_coherence | 4.50 | 4.68 | +0.18 | 4.68–4.68 |
-| mechanical_sense | 3.91 | 4.40 | +0.49 | 4.39–4.40 |
-| completeness | 4.10 | 4.81 | +0.71 | 4.80–4.81 |
+| flat_alpha | 3.84 | 4.46 | 5.2 | 3.6 |
+| alpha_nested | 3.84 | 4.47 | 4.2 | 2.6 |
+| ui_contract | 3.89 | 4.56 | 1.0 | 1.0 |
+| append_order | 4.18 | 4.55 | 8.9 | 7.8 |
+| grouped_by_type | 4.18 | 4.62 | 1.6 | 1.0 |
+| nested_narrative | 4.32 | 4.64 | 0.0 | 0.0 |
 
-Reachability agreement: 1139/1152 = 98.9%.
+Per criterion - means, spread, rank agreement:
 
-Latency per call: median 0.23s, p95 0.38s, 0 retries.
+| criterion | original | jev | original SD | jev SD | Spearman |
+|---|--:|--:|--:|--:|--:|
+| reference_integrity | 3.90 | 4.53 | 1.14 | 0.54 | 0.68 |
+| causal_chain | 3.85 | 4.60 | 1.19 | 0.38 | 0.48 |
+| balance | 4.12 | 4.33 | 1.00 | 0.20 | 0.41 |
+| thematic_coherence | 4.50 | 4.68 | 0.68 | 0.24 | 0.35 |
+| mechanical_sense | 3.91 | 4.40 | 0.90 | 0.49 | 0.34 |
+| completeness | 4.10 | 4.81 | 0.88 | 0.09 | 0.40 |
+| weighted | 4.04 | 4.55 | 0.59 | 0.20 | 0.58 |
+
+Reachability differences (11 of 13 disagreements, where jev read reachable but the original broke it):
+
+| category | verdict | jev confidence | n |
+|---|---|--:|--:|
+| semantic match | jev more accurate — Haiku missed it reading literally | 0.71–0.96 | 6 |
+| plausible inference | debatable | 0.60–0.83 | 3 |
+| semantic overreach | Haiku more accurate — jev too generous | 0.50–0.67 | 2 |
+
+Other metrics:
+
+| metric | value |
+|---|--:|
+| reachability agreement | 1139/1152 = 98.9% |
+| jev confidence, agreements | 0.89 |
+| jev confidence, disagreements | 0.49 |
+| per-item scores identical across 10 runs | 0/2304 |
+| per-item score range across 10 runs, mean / max | 0.11 / 1.06 |
+| variant-mean range across 10 runs | ≤0.006 |
+| latency per call, median / p95 | 0.23s / 0.38s |
+| retries | 0/3840 |
