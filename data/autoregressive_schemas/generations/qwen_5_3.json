@@ -1,0 +1,1108 @@
+[
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "ominous",
+      "player_class": "geomancer",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "The land remembers. The earth speaks. But only those who listen — and collect its whispers — may survive.",
+      "setting": "A volcanic temple carved by ancient geomancers to contain a primordial magma entity. Smoke chokes the sky. Distant screams echo from lava tubes. The air hums with dying frequencies — remnants of those who failed before.",
+      "player_weapon": "Geomantic Staff — channels earth magic: create barriers, summon tremors, or reshape terrain. Each ability consumes ‘Stability’ (regenerates slowly). Overuse causes minor rockfall damage to self.",
+      "player_weapon_damage": 25,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Scorched Threshold",
+          "enemy": {
+            "name": "Ash Golem",
+            "health": 200,
+            "damage": 35,
+            "weakness": "Cracked Lava Core (acquired from this enemy)"
+          },
+          "hazard": "Floating obsidian shards that home in on player movement. Ground tremors periodically fracture the floor, exposing magma pits. Slow movement penalty if standing on cracked earth.",
+          "pickup": {
+            "name": "Cracked Lava Core",
+            "effect": "Cracked Lava Core — When thrown at a solid surface, it emits a shockwave that destabilizes nearby rock. Can be used to break brittle terrain or disrupt enemy shielding."
+          },
+          "trigger": "Defeating the Ash Golem causes its core to rupture, collapsing a ceiling pillar that reveals a hidden vent beneath the next chamber — exposing the path to the Magma Forge. The core also emits a low harmonic resonance (heard as a distant bell) that lingers for 60 seconds, priming the player for the next encounter."
+        },
+        {
+          "location": "The Magma Forge",
+          "enemy": {
+            "name": "Furnace Warden",
+            "health": 300,
+            "damage": 45,
+            "weakness": "Harmonic Resonance (triggered by Cracked Lava Core)"
+          },
+          "hazard": "Pulsating magma jets that fire in sync with the environment’s harmonic frequency. Floor tiles glow red when resonant frequency is active — stepping on them heals the Warden. Wind gusts from vents push the player toward hazards unless grounded by geomantic grip.",
+          "pickup": {
+            "name": "Lava-Touched Rune",
+            "effect": "Lava-Touched Rune — A glowing obsidian sigil that, when held, absorbs harmonic frequencies from the environment. After 3 resonant pulses, it glows violet and emits a piercing tone that destabilizes crystalline structures."
+          },
+          "trigger": "When the Warden is defeated using the Cracked Lava Core’s resonance, its body implodes into a magma vortex. The vortex collapses into a sealed stone door marked with three vent glyphs. The Lava-Touched Rune glows brighter, aligning its frequency with the glyphs — revealing the path to the Heart’s chamber. The Rune’s resonance lingers, now synchronized to the boss’s pulse."
+        },
+        {
+          "location": "The Heart’s Sanctum",
+          "enemy": {
+            "name": "The Magma Heart",
+            "health": 450,
+            "damage": 55,
+            "weakness": "Obsidian Core (activated by the Lava-Touched Rune)"
+          },
+          "hazard": "The chamber is a cathedral of molten rock. Six magma vents pulse in sequence every 12 seconds. The boss’s core is encased in a rotating obsidian shell. Standing near vents increases damage taken by 15%. The floor melts and reforms randomly, forcing constant repositioning. Player’s geomancy abilities are dampened by 40% unless standing on a resonant tile (glowing violet).",
+          "pickup": {
+            "name": "Lava-Touched Rune (Fused)",
+            "effect": "None — the Lava-Touched Rune is now permanently fused to the player’s hand. Its power is the key."
+          },
+          "trigger": "The encounter begins with the boss already active. The Lava-Touched Rune pulses in sync with the vents. If the player has not acquired and used the Cracked Lava Core in Encounter 1, the Rune will not resonate — rendering the boss immune. If the Rune was not charged by the Furnace Warden’s defeat, the vents will not respond to harmonic input. The trigger is locked: only by completing both prior encounters correctly does the boss’s weakness become exploitable."
+        }
+      ],
+      "boss": {
+        "name": "The Magma Heart",
+        "health": 1500,
+        "damage": 120,
+        "weakness": "The Obsidian Core (activated by the Lava-Touched Rune) is vulnerable only to harmonic resonance — a frequency unlocked by the Rune’s full charge. Direct damage does nothing. The Core must be struck while pulsing at its nadir, after the player channels the Rune’s energy through three exposed magma vents.",
+        "victory_condition": "Shatter the Obsidian Core with the Lava-Touched Rune"
+      },
+      "objective": "Use the environment and the echoes of past victories to dismantle the Magma Heart’s core. Each encounter’s loot is not optional — it is the key. Fail to collect or use them, and the Heart cannot be slain.",
+      "reward": "The Core of the Mountain — grants the player the ability to ‘Anchor the Earth’ — once per level, freeze all terrain and hazards for 8 seconds. Only usable after defeating the Magma Heart."
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "chaotic",
+      "player_class": "pyromancer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Chaos is the only constant — fire is both weapon and curse. The environment itself is hostile, and every victory demands reckless courage. The Pyromancer doesn’t conquer the volcano — they become part of its fury.",
+      "setting": "A collapsing volcanic caldera torn open by ancient fire magic. Lava rivers carve through crumbling obsidian bridges, toxic ash storms swirl in the upper caverns, and the air shudders with the heartbeat of a slumbering magma titan. The player is the last surviving Pyromancer, tasked with extinguishing the ancient beast before the volcano consumes the world — but the fire within them is the only thing that can kill it.",
+      "player_weapon": "Pyroblast Staff — fires slow, high-damage firebolts. Can be charged for a larger blast. Overcharge ability unlocks after first encounter.",
+      "player_weapon_damage": 25,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Cinder Dunes",
+          "enemy": {
+            "name": "Ash Wraith",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Susceptible to sustained Pyroblast chains — any 3 consecutive hits without pause detonates its volatile core"
+          },
+          "hazard": "Ash storms reduce visibility and slow movement; fire-based attacks clear the air temporarily",
+          "pickup": {
+            "name": "Ember Shard",
+            "effect": "Unlocks Pyroblast Overcharge — next 3 Pyroblasts fire in rapid succession"
+          },
+          "trigger": "Defeating the Ash Wraith causes the ground to crack open, releasing geothermal vents that lead to the next chamber — the vents also ignite flammable gas deposits, which will explode if the player lingers too long, forcing movement"
+        },
+        {
+          "location": "Lava Forge Cavern",
+          "enemy": {
+            "name": "Magma Goliath",
+            "health": 200,
+            "damage": 50,
+            "weakness": "Shielded by cooled rock — must be broken by hitting it with a Pyroblast Overcharge burst (from Ember Shard) to expose its molten core"
+          },
+          "hazard": "Pulsing lava flows create timed platforms; standing too long on a platform causes it to collapse. The Goliath is immune to damage unless its shield is broken.",
+          "pickup": {
+            "name": "Lava Core",
+            "effect": "Summons a temporary Lava Core — a floating orb of concentrated magma that homes in on enemies and explodes on contact. Lasts 15 seconds. Can only be used once."
+          },
+          "trigger": "When the Magma Goliath is defeated, the Lava Core is ejected from its chest and hovers above the central platform. The ceiling begins to collapse, forcing the player to sprint toward the final chamber — but the Lava Core is attracted to the Ember Maw’s heartbeat, guiding the player’s path"
+        },
+        {
+          "location": "The Heartfire Spire",
+          "enemy": {
+            "name": "Obsidian Sentinel",
+            "health": 300,
+            "damage": 60,
+            "weakness": "Vulnerable only when struck by the Lava Core during its resonance phase — its obsidian armor absorbs all other fire damage"
+          },
+          "hazard": "Searing wind gusts knock the player back and extinguish all active fire effects unless the player is standing in a lava pool. The Sentinel teleports between pools, making positioning critical.",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is the final encounter before the boss"
+          },
+          "trigger": "Defeating the Obsidian Sentinel causes the chamber’s lava to drain upward, revealing the Ember Maw’s lair beneath the platform. The Lava Core, still active from the prior encounter, begins to pulse in rhythm with the boss’s heartbeat — signaling the final battle"
+        }
+      ],
+      "boss": {
+        "name": "Ember Maw",
+        "health": 1000,
+        "damage": 200,
+        "weakness": "Vulnerable to the Lava Core's resonance pulse — must be activated while standing in its molten heart to trigger a 5-second chain reaction",
+        "victory_condition": "Reduce to 0 HP using the Lava Core"
+      },
+      "objective": "Survive the three escalating volcanic trials and destroy the Ember Maw using the Lava Core's resonance pulse, activated only while standing in its molten heart.",
+      "reward": "The Heartflame — a passive ability that regenerates health when standing in lava and increases fire damage by 30% for all future levels"
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "tense",
+      "player_class": "paladin",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Sacred light vs. corrupted fire — the paladin must purify the land not by force, but by faith and the tools forged in trial.",
+      "setting": "A crumbling cathedral built into the heart of an active volcano, where ancient paladins once sealed a demon god. Now the seals are breaking, and the volcano is alive with malice.",
+      "player_weapon": "Sword of the Dawnbrand (Holy Light ability can be charged for increased AoE)",
+      "player_weapon_damage": 20,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Ashen Threshold",
+          "enemy": {
+            "name": "Magma Gargoyle",
+            "health": 40,
+            "damage": 12,
+            "weakness": "Player's Holy Light ability (deals 2x damage when used during its vulnerable phase)"
+          },
+          "hazard": "Cracking lava fissures that spawn after 15 seconds, forcing movement",
+          "pickup": {
+            "name": "Sanctified Ember Shard",
+            "effect": "Grants the Holy Light ability (cone AoE heal/damage)"
+          },
+          "trigger": "Defeating the Magma Gargoyle causes the ceiling to collapse, revealing a hidden shaft leading to the Obsidian Spire — and activating the next encounter."
+        },
+        {
+          "location": "Obsidian Spire",
+          "enemy": {
+            "name": "Ashflame Wraith",
+            "health": 60,
+            "damage": 15,
+            "weakness": "Holy Light ability (burns through spectral form, dealing true damage)"
+          },
+          "hazard": "Toxic ash clouds that reduce visibility and drain health over time unless purified by Holy Light",
+          "pickup": {
+            "name": "Ashbound Amulet",
+            "effect": "Grants the Ashbound Amulet — a relic that absorbs volcanic energy and channels it into targeted strikes"
+          },
+          "trigger": "Destroying the Wraith causes the amulet to be pulled from the altar by volcanic winds, and the ground beneath the paladin trembles — revealing the final chamber below, where the Emberheart Tyrant stirs."
+        },
+        {
+          "location": "Chamber of the Furnace Heart",
+          "enemy": {
+            "name": "Scorchclaw Brute",
+            "health": 80,
+            "damage": 18,
+            "weakness": "Ashbound Amulet (disrupts its magma armor, exposing its core for 5 seconds)"
+          },
+          "hazard": "Rising magma pools that flood the arena every 20 seconds — only safe zones remain",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this encounter is a direct setup for the boss"
+          },
+          "trigger": "Defeating the Brute causes the ceiling to rupture, revealing the Emberheart Tyrant’s chamber. The amulet glows intensely, and the Tyrant awakens, its core pulsing with stolen divine energy."
+        }
+      ],
+      "boss": {
+        "name": "Emberheart Tyrant",
+        "health": 150,
+        "damage": 30,
+        "weakness": "Ashbound Amulet (must be equipped to deal bonus damage to the core)",
+        "victory_condition": "Destroy the core after weakening it with the Ashbound Amulet"
+      },
+      "objective": "Survive the volcanic descent and destroy the Emberheart Tyrant using the Ashbound Amulet to shatter its core.",
+      "reward": "Crown of the Purified Flame — grants permanent Holy Light radius increase and resistance to fire damage"
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "desolate",
+      "player_class": "berserker",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Desolation is not emptiness — it is the echo of a world that burned itself alive.",
+      "setting": "A dead supervolcano where the earth weeps fire and the sky is choked with ash. No birds. No wind. Only the groan of magma and the screams of the damned. The player, a lone berserker clad in scorched bone armor, walks alone — weapon in hand, vengeance in heart.",
+      "player_weapon": "Heavy Cleaver — slow, high-damage melee weapon with a 3-hit combo. Base damage: 45 per swing. Cooldown between combos: 1.8s.",
+      "player_weapon_damage": 45,
+      "player_health": 180,
+      "encounters": [
+        {
+          "location": "Ashen Maw",
+          "enemy": {
+            "name": "Scorchmaw Stalker",
+            "health": 150,
+            "damage": 30,
+            "weakness": "Exposed molten veins — vulnerable to cleave attacks from the Berserker’s Heavy Cleaver"
+          },
+          "hazard": "Fissure Fields — ground cracks open randomly, dealing 15 damage per second to standing players",
+          "pickup": {
+            "name": "Sundered Fang (fragment 1/3)",
+            "effect": "Unlocks Heavy Cleaver’s 'Molten Cleave' — +40% damage to enemies with exposed molten anatomy"
+          },
+          "trigger": "After defeating the Stalker, the ground trembles. A volcanic vent explodes behind the player, revealing a tunnel choked with obsidian shards — leading to the next arena."
+        },
+        {
+          "location": "The Crucible of Silence",
+          "enemy": {
+            "name": "Ashen Warden",
+            "health": 250,
+            "damage": 40,
+            "weakness": "Armor fused with cooled lava — vulnerable to shattering impacts from the Sundered Fang (fragment 1/3)"
+          },
+          "hazard": "Pyroclastic Surge — every 30 seconds, a wave of superheated ash sweeps the arena, reducing visibility and dealing 20 damage per second unless the player is moving or blocking",
+          "pickup": {
+            "name": "Sundered Fang (fragment 2/3)",
+            "effect": "Unlocks Heavy Cleaver’s 'Shatterstrike' — next 3 attacks pierce armor and ignore 50% of enemy defense"
+          },
+          "trigger": "When the Warden falls, its shattered armor forms a jagged bridge over a chasm. The bridge glows red-hot. As the player crosses, the ground behind them collapses — and the roar of molten stone echoes from the heart of the volcano. The final path ignites."
+        },
+        {
+          "location": "The Heart’s Chalice",
+          "enemy": {
+            "name": "The Hollow Maw",
+            "health": 400,
+            "damage": 50,
+            "weakness": "Chest cavity exposed after being stunned — vulnerable to empowered Sundered Fang (fragment 2/3) strikes that trigger 'Cryofrost Surge' from the frozen magma pool"
+          },
+          "hazard": "Frozen Magma Pool — a large pool of supercooled lava in the center. Stepping into it freezes the player for 2 seconds but grants temporary immunity to fire and +30% damage on next attack",
+          "pickup": {
+            "name": "Sundered Fang (fragment 3/3)",
+            "effect": "Unlocks Heavy Cleaver’s 'Frostbite Strike' — when used in the Frozen Magma Pool, applies 'Glacial Echo' debuff to enemies, slowing them by 70% for 5s"
+          },
+          "trigger": "Defeating the Hollow Maw causes the Frozen Magma Pool to boil violently. A massive obsidian spire erupts from the center — the Ember Titan’s core. The Sundered Fang now glows with full power. The Titan awakens."
+        }
+      ],
+      "boss": {
+        "name": "The Ember Titan",
+        "health": 800,
+        "damage": 120,
+        "weakness": "Obsidian Core — vulnerable only to damage from the Sundered Fang",
+        "victory_condition": "Break the Obsidian Core with the Sundered Fang"
+      },
+      "objective": "Survive the volcanic hellscape. Collect all three fragments of the Sundered Fang. Use them to shatter the Ember Titan’s Obsidian Core.",
+      "reward": "The Titan's Heart — grants 'Berserker’s Unyielding Flame' — 20% damage resistance and 10% life steal when below 30% HP. Permanent upgrade."
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "mysterious",
+      "player_class": "artificer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Mystery is not hidden in shadows — it is hidden in the rhythm of the earth.",
+      "setting": "An ancient, half-buried temple deep within an extinct volcano. The air hums with forgotten magic. Bioluminescent moss pulses with rhythmic patterns. Steam curls from fissures like whispered secrets. No birds sing here. Only echoes remain.",
+      "player_weapon": "Arcane Spark — fires short-range bursts of enchanted energy. Charges every 4 seconds.",
+      "player_weapon_damage": 6,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Ashen Grotto — a narrow tunnel lined with glowing obsidian veins",
+          "enemy": {
+            "name": "Lava Wisp",
+            "health": 25,
+            "damage": 8,
+            "weakness": "Player's Artificer's Arcane Spark (starting weapon)"
+          },
+          "hazard": "Intermittent geysers of superheated steam that deal 3 damage per second if stood in",
+          "pickup": {
+            "name": "Steam-Siphon Lens",
+            "effect": "Temporarily allows the player to pass through steam geysers unharmed and reveals hidden pressure plates"
+          },
+          "trigger": "Defeating the Lava Wisp causes the floor pressure plates to activate, opening a hidden passage into the next chamber — and the lens is embedded in the Wisp’s corpse"
+        },
+        {
+          "location": "The Harmonic Furnace — a vast chamber with floating crystal monoliths and echoing magma rivers",
+          "enemy": {
+            "name": "Resonant Golem",
+            "health": 30,
+            "damage": 10,
+            "weakness": "Steam-Siphon Lens (pickup from Encounter 1)"
+          },
+          "hazard": "Pulsing harmonic crystals that emit sonic pulses — if hit by two pulses in sequence, the player is stunned",
+          "pickup": {
+            "name": "Resonant Ember",
+            "effect": "Amplifies the player's Arcane Spark to fire a resonant pulse that disrupts harmonic fields"
+          },
+          "trigger": "Using the Steam-Siphon Lens to navigate safely through the sonic pulses reveals the Golem’s core. Destroying it causes the central crystal to fracture and release the Resonant Ember — and the ceiling cracks open above the final chamber"
+        },
+        {
+          "location": "The Echoing Maw — a circular arena with a central altar and walls covered in singing runes",
+          "enemy": {
+            "name": "Molten Echo",
+            "health": 40,
+            "damage": 12,
+            "weakness": "Resonant Ember (pickup from Encounter 2)"
+          },
+          "hazard": "Shifting lava tiles that change pattern every 10 seconds — stepping on the wrong tile causes burn damage and resets your Resonant Ember charge",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is the final encounter before the boss"
+          },
+          "trigger": "Defeating the Molten Echo causes the runes on the wall to glow in sequence, projecting a path to the boss chamber — and the Resonant Ember’s charge fully recharges, ready for the final fight"
+        }
+      ],
+      "boss": {
+        "name": "The Ember Veil",
+        "health": 80,
+        "damage": 15,
+        "weakness": "The Resonant Ember (acquired in Encounter 2)",
+        "victory_condition": "Destroy the Core Crystal on its chest after weakening it with the Resonant Ember"
+      },
+      "objective": "Reach the Ember Veil’s core and shatter it using the Resonant Ember.",
+      "reward": "Emberforged Codex — unlocks the ability to craft temporary elemental traps in future levels"
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "eerie",
+      "player_class": "stormcaller",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Eerie silence punctuated by sudden, violent eruptions. The player’s own lightning is the only sound in a world that has forgotten how to scream.",
+      "setting": "A dying volcano, long forgotten by gods. The air hums with the whispers of dead stormcallers. The ground glows faintly red. No birds. No wind. Only the slow, rhythmic pulse of magma deep below — and the distant, echoing cries of something that was once human.",
+      "player_weapon": "Storm Bolt — a lightning-infused gauntlet that charges over time. Can be upgraded via pickups. Primary attack: bolt. Hold to charge. Max 4 stacks.",
+      "player_weapon_damage": 3,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Ashen Gorge — a narrow canyon choked with pyroclastic debris",
+          "enemy": {
+            "name": "Ash Revenant",
+            "health": 60,
+            "damage": 5,
+            "weakness": "Player’s Stormcaller Storm Bolt — when charged to 3 stacks, it overloads the Revenant’s ash-core"
+          },
+          "hazard": "Floating ash clouds that reduce visibility and drain stamina; player must use Storm Bolt to clear paths",
+          "pickup": {
+            "name": "Resonant Ash Core",
+            "effect": "Grants Storm Bolt +1 charge capacity (max 3 → 4)"
+          },
+          "trigger": "After defeating the Ash Revenant, the Resonant Ash Core activates, sending a pulse through the ground — cracking open the canyon floor, revealing the path to the Lava Wells."
+        },
+        {
+          "location": "Lava Wells — a cavern with floating obsidian platforms above boiling rivers",
+          "enemy": {
+            "name": "Magma Golem",
+            "health": 80,
+            "damage": 6,
+            "weakness": "Hollowed Lava Shard — the shard’s resonance disrupts the golem’s core-melting rhythm, freezing its movements for 5 seconds"
+          },
+          "hazard": "Lava geysers erupt unpredictably; player must time movement between stable obsidian platforms",
+          "pickup": {
+            "name": "Hollowed Lava Shard",
+            "effect": "Grants player the Hollowed Lava Shard — a glowing, humming fragment of solidified magma with eerie whispers"
+          },
+          "trigger": "When the Magma Golem dies, it collapses into a pool of magma. The Hollowed Lava Shard rises from the center — as it’s collected, the cavern trembles. A fissure opens above, revealing the boss chamber’s entrance: the Heart Maw."
+        },
+        {
+          "location": "Whispering Vault — a circular chamber lined with petrified stormcallers, their eyes glowing with trapped lightning",
+          "enemy": {
+            "name": "Echo of the First Stormcaller",
+            "health": 100,
+            "damage": 7,
+            "weakness": "Player’s Storm Bolt + Resonant Ash Core — the combined resonance of 4+ charged Storm Bolts destabilizes its spectral form"
+          },
+          "hazard": "Echoes of past storms haunt the chamber — lightning strikes spawn randomly from the ceiling. Only when the player is holding the Hollowed Lava Shard can they see the true path of incoming strikes",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this encounter is purely a trial of mastery"
+          },
+          "trigger": "Defeating the Echo causes the ceiling to crack. The Hollowed Lava Shard begins to pulse violently — the final chamber opens, revealing The Magma Wraith, its core exposed, waiting for the shard’s return."
+        }
+      ],
+      "boss": {
+        "name": "The Magma Wraith",
+        "health": 200,
+        "damage": 8,
+        "weakness": "The Hollowed Lava Shard — a crystalized fragment of its own magma-core, collected from the Second Encounter",
+        "victory_condition": "Strike its core with the Hollowed Lava Shard while it’s in phase 3"
+      },
+      "objective": "Survive the volcanic hellscape by mastering the Stormcaller’s powers, harvesting the echoes of destruction, and using the enemy’s own essence against them. Only by returning the Hollowed Lava Shard to its source can you end the Wraith’s reign.",
+      "reward": "The Eye of the Storm — unlocks the Stormcaller’s ultimate ability: Tempest Surge (AoE lightning storm)"
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "whimsical",
+      "player_class": "beastmaster",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Fire is fun, not scary — especially when you’ve got a pet rock that winks at you.",
+      "setting": "A cartoonish volcanic realm where lava flows like syrup, rocks bounce like trampolines, and every creature is oddly cheerful despite living in a fiery hellscape. Background music is a playful ukulele version of ‘Flight of the Bumblebee’ played by fireflies.",
+      "player_weapon": "Whistle (default, emits calming sound waves that stun small enemies)",
+      "player_weapon_damage": 3,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Steamy Grotto",
+          "enemy": {
+            "name": "Bubblin’ Badger",
+            "health": 20,
+            "damage": 5,
+            "weakness": "Vulnerable to the Beastmaster’s Whistle (default weapon)"
+          },
+          "hazard": "Spewing steam vents that slow movement if stepped on",
+          "pickup": {
+            "name": "Lava Popper Satchel",
+            "effect": "Grants the player the ability to throw small, bouncing lava-filled balloons called 'Lava Poppers'"
+          },
+          "trigger": "After defeating Bubblin’ Badger, a crack in the wall opens, revealing a hidden alcove with a giggling geode. When touched, it erupts into a shower of sparkles, revealing the Lava Popper Satchel. As the glitter fades, the sound of distant, rhythmic stomping begins — leading to the next chamber."
+        },
+        {
+          "location": "Juggling Jamboree Cavern",
+          "enemy": {
+            "name": "Sizzlefoot the Juggling Salamander",
+            "health": 30,
+            "damage": 8,
+            "weakness": "Vulnerable to Lava Poppers (acquired in Encounter 1)"
+          },
+          "hazard": "Floating hot rocks that bounce unpredictably across the floor",
+          "pickup": {
+            "name": "Charm Charm Crystal",
+            "effect": "Grants the player the ability to temporarily charm one enemy into fighting alongside them for 15 seconds"
+          },
+          "trigger": "When Sizzlefoot is defeated, it drops a juggling ball that rolls into a crack. The ball ignites a string of floating lanterns, which form a glowing path leading upward — the path to the boss’s lair. The ground trembles gently, and the distant echo of a geyser’s giggle grows louder."
+        },
+        {
+          "location": "Chrono Crater",
+          "enemy": {
+            "name": "Tik-Tok the Ticking Toad",
+            "health": 40,
+            "damage": 10,
+            "weakness": "Vulnerable to Charm Charm Crystal’s charm effect (acquired in Encounter 2)"
+          },
+          "hazard": "Time-bomb mushrooms that explode after 10 seconds if not stepped on",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is the final encounter before the boss"
+          },
+          "trigger": "When Tik-Tok is charmed, it hops joyfully toward a glowing stone pedestal and sits on it. The pedestal emits a warm pulse — the entrance to Emberclaw’s throne room slides open with a *boing!* and a happy trumpet sound."
+        }
+      ],
+      "boss": {
+        "name": "Emberclaw the Giggling Geyser",
+        "health": 100,
+        "damage": 20,
+        "weakness": "Vulnerable to Lava Popper projectiles (acquired in Encounter 2)",
+        "victory_condition": "Strike the Glowing Pebble embedded in its chest with a Lava Popper"
+      },
+      "objective": "Guide your beast companion through three whimsical volcanic chambers, using your whistle and collected magical items to charm, pop, and pacify the eccentric denizens — until you face the giggling geyser who just wants to be tickled.",
+      "reward": "The player earns the title 'Giggling Guardian' and unlocks a new pet: a baby geyser that sneezes confetti and heals 5 HP every 30 seconds."
+    }
+  },
+  {
+    "case": {
+      "genre": "volcanic",
+      "mood": "serene",
+      "player_class": "chronomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Serene destruction — beauty born of entropy, where time heals as much as it breaks.",
+      "setting": "A dormant volcanic caldera, where rivers of lava glow softly like liquid amber, and time itself seems to breathe in slow, rhythmic pulses. Floating crystals hum with quiet energy. Ash falls in slow motion. The silence is profound — broken only by distant, melodic chimes of cooling rock.",
+      "player_weapon": "Chrono-Blade (basic slash, holds 1 charge of Temporal Freeze)",
+      "player_weapon_damage": 20,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Ashen Caldera Entrance",
+          "enemy": {
+            "name": "Lava Sprout",
+            "health": 60,
+            "damage": 15,
+            "weakness": "Chrono-Blade (player's starting weapon)"
+          },
+          "hazard": "Slow-mo lava pools that reduce movement speed by 40% unless slowed further by Chrono-Blade",
+          "pickup": {
+            "name": "Temporal Echo",
+            "effect": "Unlocks Chrono-Blade's 'Temporal Freeze' ability (freezes enemies for 3s)"
+          },
+          "trigger": "Defeating the Lava Sprout causes a crack in the ground, revealing a hidden path to the Obsidian Spire"
+        },
+        {
+          "location": "Obsidian Spire",
+          "enemy": {
+            "name": "Time-Siphon Wraith",
+            "health": 80,
+            "damage": 20,
+            "weakness": "Temporal Echo (pickup from Encounter 1)"
+          },
+          "hazard": "Time-dilation zones that accelerate player movement but drain mana rapidly",
+          "pickup": {
+            "name": "Temporal Shard",
+            "effect": "Grants the Temporal Shard — a crystallized fragment of paused time"
+          },
+          "trigger": "The Wraith’s death releases a pulse of reversed time, freezing the lava flow ahead and revealing the Heart of the Volcano"
+        },
+        {
+          "location": "Heart of the Volcano",
+          "enemy": {
+            "name": "Molten Chrono-Sentinel",
+            "health": 100,
+            "damage": 25,
+            "weakness": "Temporal Shard (acquired in Encounter 2)"
+          },
+          "hazard": "Fluctuating time rifts that randomly reverse player movement or freeze time for 2s",
+          "pickup": {
+            "name": "None",
+            "effect": "None — final encounter"
+          },
+          "trigger": "Defeating the Sentinel causes the lava to recede, exposing the Chrono-Lava Golem’s dormant core"
+        }
+      ],
+      "boss": {
+        "name": "The Chrono-Lava Golem",
+        "health": 200,
+        "damage": 50,
+        "weakness": "Temporal Shard (acquired in Encounter 2)",
+        "victory_condition": "Strike the Golem's core with the Temporal Shard while it is frozen"
+      },
+      "objective": "Navigate the serene yet time-warped volcanic labyrinth, mastering the flow of time to neutralize its guardians and shatter the heart of the eternal eruption.",
+      "reward": "Chrono-Cloak — grants brief invisibility after freezing an enemy"
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "serene",
+      "player_class": "paladin",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Serene devastation — beauty in decay, peace in silence, holiness in stillness.",
+      "setting": "A cosmic pilgrimage through the remnants of a forgotten pantheon. Time flows slowly. Silence is sacred. Light is prayer.",
+      "player_weapon": "Dawnblade — a radiant greatsword that emits soft holy light, damaging shadow-based foes passively",
+      "player_weapon_damage": 35,
+      "player_health": 250,
+      "encounters": [
+        {
+          "location": "Celestial Atrium — a floating cathedral of crystalline stars suspended in velvet void",
+          "enemy": {
+            "name": "Veilwraith Sentinel",
+            "health": 150,
+            "damage": 30,
+            "weakness": "Susceptible to holy light emitted by the Paladin’s Dawnblade (base weapon)"
+          },
+          "hazard": "Floating debris of dead constellations drift slowly, obscuring vision and occasionally dealing 5 damage on contact",
+          "pickup": {
+            "name": "Luminous Resonance Core",
+            "effect": "Grants the ability to emit a short-range pulse of holy radiance, temporarily repelling shadows"
+          },
+          "trigger": "Defeating the Veilwraith Sentinel causes its body to dissolve into starlight, revealing a hidden path into the Nebula Choir — the next encounter zone"
+        },
+        {
+          "location": "Nebula Choir — an endless ring of suspended chimes and ghostly vocal harmonies drifting through a violet nebula",
+          "enemy": {
+            "name": "Echoes of the Fallen Chorus",
+            "health": 200,
+            "damage": 40,
+            "weakness": "Disrupted by harmonic resonance — the Luminous Resonance Core pulses at a frequency that silences their mournful song"
+          },
+          "hazard": "Sonic waves from distant, invisible celestial singers cause stagger and reduce healing effectiveness by 50% every 8 seconds unless the player stands in a 'Still Point' (marked by floating orbs)",
+          "pickup": {
+            "name": "Shattered Star Shard",
+            "effect": "A shard of a dead star, pulsing with unstable radiant energy. When equipped, it empowers the Dawnblade with celestial radiance for 15 seconds after a successful heavy strike"
+          },
+          "trigger": "When the Echoes are silenced, their final harmony fractures into a single crystalline shard — the Shattered Star Shard — which drifts toward the Void Maw, the boss arena"
+        },
+        {
+          "location": "Void Maw — a collapsing orbital ring of broken moons and dying suns",
+          "enemy": {
+            "name": "Gravity Warden",
+            "health": 250,
+            "damage": 50,
+            "weakness": "Cannot maintain its gravitational field when struck by the Shattered Star Shard’s radiant energy — the shard disrupts its mass-anchor"
+          },
+          "hazard": "Localized gravity wells pull the player toward floating asteroids; failure to escape results in 20 damage per second",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is the final encounter before the boss"
+          },
+          "trigger": "Defeating the Gravity Warden causes its collapsed core to implode, tearing open a rift into the Hollow Star’s prison — the boss arena activates"
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Star",
+        "health": 1000,
+        "damage": 120,
+        "weakness": "Vulnerable to radiant energy infused by the Shattered Star Shard (acquired in Encounter 2)",
+        "victory_condition": "Strike its core with the Shattered Star Shard after channeling its light through your blade"
+      },
+      "objective": "Sanctify the Hollow Star by channeling the Shattered Star Shard through your Dawnblade during its moment of vulnerability",
+      "reward": "The Celestial Oath — unlocks the ability to heal allies with radiant light and temporarily suspend gravity in a 10m radius once per battle"
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "mysterious",
+      "player_class": "chronomancer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Mysterious, haunting, ethereal. Ambient sounds include reversed choral harmonies, ticking clocks in slow motion, and distant whispers in forgotten tongues. Lighting is dim, with glowing chrono-particles drifting like cosmic dust.",
+      "setting": "The Celestial Lattice — a non-Euclidean network of abandoned time-temples orbiting a dying star. Time flows in spirals here. Past, present, and future are not linear — they are layers, peeling apart.",
+      "player_weapon": "Chrono-Lens — fires beams that slow, reverse, or freeze time in short bursts. Cooldown-based. Can be upgraded with pickups.",
+      "player_weapon_damage": 12,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Whispering Spire — a spiraling tower of floating obsidian monoliths, each etched with frozen moments of forgotten timelines. Gravity shifts unpredictably.",
+          "enemy": {
+            "name": "Echo Wraith",
+            "health": 80,
+            "damage": 18,
+            "weakness": "Chrono-Siphon (acquired from this encounter)"
+          },
+          "hazard": "Time Echoes — repeated audiovisual echoes of past player actions (e.g., footsteps, spells) that spawn minor temporal duplicates. Must be silenced by using the player’s basic Chrono-Weave ability to unravel them before they overwhelm.",
+          "pickup": {
+            "name": "Chrono-Siphon",
+            "effect": "Chrono-Siphon — a glowing orb that, when collected, allows the player to drain 25% of an enemy’s temporal energy on hit, slowing them by 40% for 5 seconds. Only works on enemies with temporal signatures."
+          },
+          "trigger": "After defeating the Echo Wraith, the central monolith fractures and emits a pulse of distorted time. This pulse destabilizes the fabric of the next chamber, causing the floor of the Celestial Vault to collapse into the next level."
+        },
+        {
+          "location": "The Celestial Vault — a vast chamber suspended in zero-G, filled with crystalline time-locks encasing ancient celestial artifacts. Stars outside the windows blink in reverse.",
+          "enemy": {
+            "name": "The Time-Locked Sentinel",
+            "health": 110,
+            "damage": 22,
+            "weakness": "Chrono-Siphon (must be used to drain its temporal shield before it can be damaged)"
+          },
+          "hazard": "Temporal Lock Fields — zones where time freezes for 3 seconds unless the player is moving through them with the Chrono-Siphon active. If frozen mid-motion, the player becomes vulnerable to the Sentinel’s paralyzing chronokinesis attack.",
+          "pickup": {
+            "name": "Temporal Anchor",
+            "effect": "Temporal Anchor — a heavy, pulsing crystal that allows the player to briefly anchor themselves in time, negating all environmental time distortions for 8 seconds. Activated by holding down the secondary ability key."
+          },
+          "trigger": "When the Sentinel is defeated, its core explodes into a storm of reversed chronons. These chronons coalesce into a floating shard of pure temporal singularity — the Singularity Shard — which drifts toward the Event Horizon Chamber. The chamber’s door, previously sealed by frozen time, begins to dissolve as the shard approaches."
+        },
+        {
+          "location": "The Event Horizon Chamber — a circular arena at the edge of reality, where gravity points outward toward a swirling black hole. Stars are replaced by floating, decaying clocks. Time visibly frays at the edges.",
+          "enemy": {
+            "name": "The Chrono-Devourer",
+            "health": 150,
+            "damage": 25,
+            "weakness": "Temporal Anchor (must be activated to survive its Time Erosion Pulse — a 5-second area-of-effect that deletes the player’s past 3 seconds of movement and spell usage, leaving them disoriented and vulnerable unless anchored)"
+          },
+          "hazard": "Echoing Timelines — the player sees ghostly afterimages of themselves performing previous actions from earlier in the level. These echoes mimic the player’s movements but are hostile. Destroying them with Chrono-Siphon refunds 10% of the ability’s cooldown.",
+          "pickup": {
+            "name": "Singularity Shard",
+            "effect": "Singularity Shard — a jagged, iridescent crystal that absorbs temporal energy. When activated, it creates a localized time-sink for 7 seconds, pulling in all projectiles and enemy attacks within 10m and converting them into damage dealt to the next target. Only one use per boss fight."
+          },
+          "trigger": "Upon defeating the Chrono-Devourer, the Singularity Shard is fully charged. The Fractured Chronovore’s voice echoes: 'You have gathered the fragments… but can you shatter the whole?'"
+        }
+      ],
+      "boss": {
+        "name": "The Fractured Chronovore",
+        "health": 300,
+        "damage": 50,
+        "weakness": "Singularity Shard (acquired in Encounter 3)",
+        "victory_condition": "Shatter its temporal core with the Singularity Shard"
+      },
+      "objective": "Navigate the fractured timelines, harvest temporal fragments, and use them to unmake the Chronovore’s existence.",
+      "reward": "The player gains the ability to briefly rewind their own death once per run (10-second cooldown), unlocking the ‘Chronomancer’s Requiem’ achievement."
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "ominous",
+      "player_class": "shadowblade",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "The player is not hunting monsters — they are unraveling the final death rattle of a forgotten cosmos. The weapons are not tools — they are relics of the dead. To win, you must become the hollow star’s final memory.",
+      "setting": "A shattered celestial cathedral adrift in a dead star system. Floating ruins orbit a black hole. The air hums with dying starlight and whispers of dead gods. No sky, no ground — only gravity anomalies and echoing silence. Every step echoes in the void. Player is alone. The shadows watch. They always have.",
+      "player_weapon": "Shadowblade (basic slash)",
+      "player_weapon_damage": 40,
+      "player_health": 200,
+      "encounters": [
+        {
+          "location": "The Veil of Forgotten Orbits",
+          "enemy": {
+            "name": "Whispering Shade",
+            "health": 600,
+            "damage": 80,
+            "weakness": "Shadowblade’s Void Lash — if the player uses the Void Lash to sever the Shade’s tethered shadow, it collapses into a shimmering orb"
+          },
+          "hazard": "Gravity wells that pull the player toward floating obsidian shards — disorientation increases with each step",
+          "pickup": {
+            "name": "Void Lash",
+            "effect": "Grants the Void Lash — a whip of pure shadow that can sever spectral connections"
+          },
+          "trigger": "After defeating the Whispering Shade, the severed shadow orb drifts upward and detonates, tearing open a rift in the sky — revealing the next arena suspended in zero-G"
+        },
+        {
+          "location": "The Abyssal Carousel",
+          "enemy": {
+            "name": "Gravity Maw",
+            "health": 800,
+            "damage": 110,
+            "weakness": "Void Lash — if used to cut the Maw’s gravity tendrils, it collapses and drops a pulsing core fragment"
+          },
+          "hazard": "Reversing gravity fields — every 12 seconds, floor becomes ceiling. Player must time jumps or fall into black holes",
+          "pickup": {
+            "name": "Shattered Celestial Shard",
+            "effect": "Grants the Shattered Celestial Shard — a jagged fragment that resonates with gravitational anomalies"
+          },
+          "trigger": "When the Gravity Maw is slain, its core fragment implodes, creating a collapsing wormhole that drags the player toward the Hollow Star’s throne — the final arena"
+        },
+        {
+          "location": "The Throne of the Hollow Star",
+          "enemy": {
+            "name": "Echo of the Dying Sun",
+            "health": 1200,
+            "damage": 150,
+            "weakness": "Shattered Celestial Shard — when held, the Shard causes the Echo to phase into its true form, exposing its core"
+          },
+          "hazard": "Time echoes — repeating shadows of the player’s past actions haunt the field, damaging if touched. Player must move unpredictably",
+          "pickup": {
+            "name": "Shattered Celestial Shard (permanently equipped)",
+            "effect": "None — the Shard is now permanently equipped, but must be activated manually"
+          },
+          "trigger": "Upon defeating the Echo, the Hollow Star awakens — its core pulses in sync with the Shard’s resonance, activating the final phase"
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Star",
+        "health": 5000,
+        "damage": 999,
+        "weakness": "The Shattered Celestial Shard — only when held and activated during its gravity pulse, does it destabilize the core",
+        "victory_condition": "Strike the Hollow Star's core with the Shattered Celestial Shard while it is vulnerable to gravity manipulation"
+      },
+      "objective": "Defeat the Hollow Star by activating the Shattered Celestial Shard during its gravity pulse (triggered when it roars and swells with light). Hold the Shard in your grip and strike the core as it fractures — one precise hit ends the battle.",
+      "reward": "The Hollow Star’s core becomes a new celestial weapon: 'Black Sun Fang' — a blade that absorbs gravity and unleashes it as a crushing wave"
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "whimsical",
+      "player_class": "illusionist",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whimsical Celestial",
+      "setting": "A skyborne realm of floating islands, glowing vines, and candy-colored nebulae, where gravity is optional and stars hum lullabies",
+      "player_weapon": "Illusion Scepter — fires slow, glowing orbs that bend space",
+      "player_weapon_damage": 1,
+      "player_health": 10,
+      "encounters": [
+        {
+          "location": "Whispering Nebula",
+          "enemy": {
+            "name": "Glimmerwisp",
+            "health": 5,
+            "damage": 2,
+            "weakness": "Pierced by the Starshard"
+          },
+          "hazard": "Floating dust motes that distort vision",
+          "pickup": {
+            "name": "Starshard",
+            "effect": "Grants Starshard — a shimmering shard that can pierce ethereal foes"
+          },
+          "trigger": "Defeating the Glimmerwisp causes the dust motes to coalesce into a glowing portal leading to the next zone"
+        },
+        {
+          "location": "Chorus Hollow",
+          "enemy": {
+            "name": "Echo Specter",
+            "health": 7,
+            "damage": 3,
+            "weakness": "Disrupted by the Starshard’s resonance frequency"
+          },
+          "hazard": "Repeating sound echoes that disorient movement",
+          "pickup": {
+            "name": "Resonance Core",
+            "effect": "Amplifies Starshard’s resonance, creating a Starshard Cluster (3 shards orbiting player)"
+          },
+          "trigger": "The Echo Specter shatters upon defeat, releasing the Resonance Core and triggering a harmonic ripple that reveals the boss’s floating sanctuary"
+        },
+        {
+          "location": "Lullaby Spire",
+          "enemy": {
+            "name": "Dream Moth",
+            "health": 6,
+            "damage": 2,
+            "weakness": "Frightened by the pulsing Starshard Cluster"
+          },
+          "hazard": "Floating dream petals that induce sleep if touched",
+          "pickup": {
+            "name": "None",
+            "effect": "None — already holds the Cluster"
+          },
+          "trigger": "The Dream Moth’s final flutter sends a cascade of petals skyward, forming a staircase of light to the boss arena"
+        }
+      ],
+      "boss": {
+        "name": "The Celestial Mirage",
+        "health": 15,
+        "damage": 5,
+        "weakness": "Reflects only when struck by the Starshard Cluster",
+        "victory_condition": "Reflect all 3 collected starshards back at its core"
+      },
+      "objective": "Collect three celestial fragments by defeating illusions, then reflect them to banish the final mirage",
+      "reward": "Crown of the Starweaver — increases illusion duration by 50% and grants floating star trails"
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "chaotic",
+      "player_class": "stormcaller",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Chaos is the only law. Order is a memory. You are the storm that remembers how to scream.",
+      "setting": "A collapsed celestial battlefield where storm gods died in cataclysmic conflict. Gravity is fractured, time stutters, and lightning hangs in midair like shattered glass. The player is the last stormcaller — a being born from the storm’s final scream.",
+      "player_weapon": "Stormcaller's Gauntlet — primary fire: Storm Surge (rapid lightning bolts, builds charge for overload)",
+      "player_weapon_damage": 20,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Shattered Orbital Rings",
+          "enemy": {
+            "name": "Cyclone Wraith",
+            "health": 200,
+            "damage": 35,
+            "weakness": "Overloaded Storm Surge (from Stormcaller's primary weapon)"
+          },
+          "hazard": "Gravity Vortexes that pull player toward floating debris — forces movement and interrupts charging",
+          "pickup": {
+            "name": "Storm Surge Capacitor",
+            "effect": "Storm Surge Overload — Next 3 Storm Surge casts inflict 50% bonus damage and chain to 2 additional targets"
+          },
+          "trigger": "Defeating the Cyclone Wraith destabilizes the Orbital Rings, causing a cascade of debris to fall — revealing a path to the next zone and triggering the Aether Rift"
+        },
+        {
+          "location": "The Aether Rift Nexus",
+          "enemy": {
+            "name": "Static Harbinger",
+            "health": 300,
+            "damage": 45,
+            "weakness": "Charged Storm Surge (via Storm Surge Capacitor pickup)"
+          },
+          "hazard": "Flickering Void Fields that drain mana unless the player is in motion — forces constant dodging",
+          "pickup": {
+            "name": "Lightning Siphon",
+            "effect": "Absorbs 100% of incoming lightning damage and converts it into a temporary shield. On shield break, releases a shockwave that stuns all enemies within 8m"
+          },
+          "trigger": "The Static Harbinger’s death causes the Rift to collapse inward — pulling the player toward the core of the storm and summoning the Echo of the First Thunder"
+        },
+        {
+          "location": "The Eye of the Forgotten Storm",
+          "enemy": {
+            "name": "The Echoed Storm",
+            "health": 400,
+            "damage": 55,
+            "weakness": "Lightning Siphon shield break (must be activated deliberately)"
+          },
+          "hazard": "Time-fragmented lightning strikes — projectiles appear 1.5 seconds after being fired, forcing prediction-based dodging",
+          "pickup": {
+            "name": "Echo of the First Thunder",
+            "effect": "Echo of the First Thunder — A single, unblockable, high-damage (300) lightning strike that ignores all defenses and pierces through multiple targets. Only one use. Must be charged by absorbing 3 Lightning Siphon shield breaks."
+          },
+          "trigger": "Defeating The Echoed Storm causes the sky above to crack open — revealing the Shattered Sky-God's floating, broken corpse, hanging mid-air, its core pulsing with unstable energy. The final battle begins."
+        }
+      ],
+      "boss": {
+        "name": "The Shattered Sky-God",
+        "health": 1000,
+        "damage": 120,
+        "weakness": "Vulnerable to the Echo of the First Thunder (acquired from Encounter 3)",
+        "victory_condition": "Strike its core with the Echo of the First Thunder"
+      },
+      "objective": "Survive the chaotic celestial storm and strike the Shattered Sky-God with the Echo of the First Thunder to restore cosmic balance — or be consumed by the silence of a dead sky.",
+      "reward": "The Sky-God's Heart — grants permanent Storm Surge Overload and allows casting of 'Thunderclap' (AoE lightning shockwave) once per minute"
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "desolate",
+      "player_class": "ranger",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "The weight of silence. The beauty of endings. The power of memory.",
+      "setting": "Once the cradle of divine celestial beings, the realm now lies in silent ruin — skies are cracked, stars are dead, and only echoes remain. The ranger, last of the Skywardens, walks alone through the graveyard of gods, guided by the faint hum of a lost star.",
+      "player_weapon": "Starforged Longbow — fires arrows that leave faint trails of stardust; damage scales with distance traveled",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Ashen Spire — crumbling obsidian towers under a fractured moon",
+          "enemy": {
+            "name": "Veil Wraith",
+            "health": 40,
+            "damage": 12,
+            "weakness": "Echo Arrow (acquired in this encounter)"
+          },
+          "hazard": "Gravity Lattice — slows movement by 40% in a 15m radius",
+          "pickup": {
+            "name": "Echo Arrow",
+            "effect": "Fires an arrow that echoes through time — deals 15 damage to enemy and leaves a 3s afterimage that lures other entities toward it"
+          },
+          "trigger": "Defeating the Veil Wraith causes the gravity lattice to destabilize, pulling debris into the distance — revealing the path to the Celestial Maw"
+        },
+        {
+          "location": "Celestial Maw — a yawning void in space where stars go to die",
+          "enemy": {
+            "name": "Star-Eater Maw",
+            "health": 60,
+            "damage": 18,
+            "weakness": "Echo Arrow afterimage (acquired in Encounter 1)"
+          },
+          "hazard": "Null-Song — if player stands still for more than 5s, their movement is silenced and they take 5 damage/sec",
+          "pickup": {
+            "name": "Shattered Starlight Shard",
+            "effect": "A fractured shard of a dead star, humming with unstable energy. Can be thrown to disrupt gravitational fields and reveal hidden entities."
+          },
+          "trigger": "Using the Echo Arrow’s afterimage to lure the Star-Eater Maw into its own gravity well causes it to rupture — ejecting the Shattered Starlight Shard into the void. The shard’s resonance destabilizes the horizon, pulling a spectral rift open toward the Hollow Sovereign’s throne."
+        },
+        {
+          "location": "Throne of the Hollowed Sky — a floating ruin suspended above a black hole’s event horizon",
+          "enemy": {
+            "name": "Echo Sentinel",
+            "health": 80,
+            "damage": 25,
+            "weakness": "Shattered Starlight Shard (acquired in Encounter 2)"
+          },
+          "hazard": "Temporal Echoes — every 8s, a ghostly duplicate of the player appears, mimicking their last action (attack, dodge, etc.) and drawing aggro",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is the final encounter before the boss"
+          },
+          "trigger": "Destroying the Echo Sentinel causes its fragmented memories to collapse into the throne, awakening the Hollow Sovereign. The Shattered Starlight Shard glows in the ranger’s hand, vibrating in resonance with the throne’s core."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Sovereign",
+        "health": 150,
+        "damage": 30,
+        "weakness": "Shattered Starlight Shard (acquired in Encounter 2)",
+        "victory_condition": "Strike its core with the Shattered Starlight Shard while it is channeling"
+      },
+      "objective": "Survive the desolation. Use the echoes of the dead stars to break the cycle of silence.",
+      "reward": "Celestial Ascension — unlocks the 'Star-Whisperer' passive: every 3rd arrow fired ignores enemy armor"
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "eerie",
+      "player_class": "artificer",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "The universe is a broken instrument. The player, as an Artificer, is not a warrior — they are a tuner. Their weapons don’t kill. They recalibrate. To win, they must restore harmony to a broken cosmos — not by force, but by precision.",
+      "setting": "A derelict celestial observatory suspended in the void between dying stars. Gravity is inconsistent. Stars flicker in unnatural patterns. Whispers echo from nowhere — voices of the long-dead astronomers who tried to tune the universe into harmony. The air hums with residual magic. Everything is coated in a thin, glowing dust that glows when disturbed.",
+      "player_weapon": "Tuning Rod (primary: energy bolt; secondary: Arcane Resonance Pulse — unlocked after Encounter 1)",
+      "player_weapon_damage": 25,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Echoing Atrium",
+          "enemy": {
+            "name": "Whispering Shade",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Vulnerable to the Arcane Resonance Pulse (from Artificer’s default weapon, the Tuning Rod) — pulses disrupt its incorporeal form, forcing manifestation for 3 seconds"
+          },
+          "hazard": "Gravitational Echo Fields — zones that slow movement and distort audio cues, masking the Shade’s approach",
+          "pickup": {
+            "name": "Tuning Rod Resonance Core",
+            "effect": "Unlocks Arcane Resonance Pulse (secondary fire of Tuning Rod) — emits a 5m radial pulse that stuns ethereal enemies"
+          },
+          "trigger": "Defeating the Whispering Shade causes the ceiling to fracture, revealing a hidden conduit above the next chamber — it begins emitting a harmonic hum that draws the next enemy."
+        },
+        {
+          "location": "The Fractured Symphony Hall",
+          "enemy": {
+            "name": "Spectral Conductor",
+            "health": 200,
+            "damage": 45,
+            "weakness": "Vulnerable to the Resonance Core’s pulse when amplified — the pulse must be reflected off the Chromatic Prism (pickup from Encounter 1) to overload its control lattice"
+          },
+          "hazard": "Harmonic Static — periodic bursts of sound that scramble the player’s HUD and force them to rely on audio cues; the Conductor moves silently during bursts",
+          "pickup": {
+            "name": "Chromatic Prism",
+            "effect": "Grants the Chromatic Prism — a handheld mirror that reflects and amplifies Arcane Resonance Pulses over 15m"
+          },
+          "trigger": "Defeating the Conductor causes the Prism to embed into the central organ pipe. The pipe then begins to vibrate with unstable resonance — the Harmonic Core of The Hollow Choir above is awakened, and the final chamber opens."
+        },
+        {
+          "location": "The Celestial Choir Vault",
+          "enemy": {
+            "name": "The Hollow Choir",
+            "health": 350,
+            "damage": 60,
+            "weakness": "The Harmonic Core (exposed during Silence Phase) is vulnerable ONLY to the Resonant Tuning Fork — any other weapon causes resonance feedback, dealing 50% damage to the player"
+          },
+          "hazard": "Soul-Siphon Field — drains 2% max health per second unless the player stands in a resonance node (created by firing the Tuning Rod into the floor). Nodes decay after 8 seconds.",
+          "pickup": {
+            "name": "Resonant Tuning Fork",
+            "effect": "None — the Resonant Tuning Fork is obtained during the boss fight after activating the Prism in the organ"
+          },
+          "trigger": "The Chromatic Prism, embedded in the organ, must be activated by firing the Resonance Pulse into it — this causes the boss to emerge, and the Tuning Fork to materialize from the organ’s core. The Fork is the ONLY weapon that can damage the Harmonic Core. The Silence Phase occurs every 45 seconds — during this time, the Harmonic Core is exposed, and all sound (including enemy attacks) ceases. The player must use the Fork to strike the Core during this window."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Choir",
+        "health": 800,
+        "damage": 150,
+        "weakness": "The Harmonic Core (exposed during Silence Phase) is vulnerable ONLY to the Resonant Tuning Fork — any other weapon causes resonance feedback, dealing 50% damage to the player",
+        "victory_condition": "Strike the Harmonic Core with the Resonant Tuning Fork during its Silence Phase"
+      },
+      "objective": "Silence the Choir by striking the Harmonic Core with the Resonant Tuning Fork during Silence Phase. Failure to strike during Silence Phase causes the Choir to unleash a catastrophic resonance wave — instant death.",
+      "reward": "The Celestial Codex — unlocks the ability to craft Resonance-based upgrades and access hidden celestial zones"
+    }
+  },
+  {
+    "case": {
+      "genre": "celestial",
+      "mood": "tense",
+      "player_class": "engineer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Celestial Tension: A broken station orbits a dying star, pulsing with unstable gravity, flickering emergency lights, and groaning metal. Time is running out — the star’s radiation will consume the station in 5 minutes.",
+      "setting": "Orbital Ruin Station Sigma-7 — a derelict celestial construction platform drifting near a neutron star",
+      "player_weapon": "Repair Laser",
+      "player_weapon_damage": 3,
+      "player_health": 20,
+      "encounters": [
+        {
+          "location": "Debris Field A",
+          "enemy": {
+            "name": "Stasis Drone",
+            "health": 10,
+            "damage": 4,
+            "weakness": "Player's Repair Laser (default weapon)"
+          },
+          "hazard": "Interference Field (slows player movement)",
+          "pickup": {
+            "name": "Overcharge Capacitor",
+            "effect": "Repair Laser Overcharge (temporarily increases laser damage by 50%)"
+          },
+          "trigger": "Defeating the Stasis Drone disables the Interference Field and activates the gravity well in Debris Field B"
+        }
+      ],
+      "boss": {
+        "name": "The Gravity Loom",
+        "health": 25,
+        "damage": 8,
+        "weakness": "Overloaded Stabilizer Pickup (from Encounter 2)",
+        "victory_condition": "Destroy the core after overloading its stabilizer"
+      },
+      "objective": "Repair the Celestial Engine to restore orbital stability",
+      "reward": "Celestial Engine Key"
+    }
+  }
+]

@@ -1,0 +1,570 @@
+[
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "tense",
+      "player_class": "engineer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "Neon-lit underground tech district, rain-soaked streets, flickering holograms, and digital billboards.",
+      "player_weapon": "Railgun (High damage, slow fire rate)",
+      "player_weapon_damage": 12,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Abandoned Maintenance Tunnel",
+          "enemy": {
+            "name": "Cyborg Enforcer",
+            "health": 45,
+            "damage": 20,
+            "weakness": "Railgun (Player weapon)"
+          },
+          "hazard": "Flickering lights and collapsing pipes",
+          "pickup": {
+            "name": "Nanofiber Plating",
+            "effect": "Increases player defense by 15%"
+          },
+          "trigger": "Player uses railgun to destroy a control panel, causing a power surge that awakens the next encounter."
+        },
+        {
+          "location": "Rusted Data Core Room",
+          "enemy": {
+            "name": "Neural Implant Dealer",
+            "health": 50,
+            "damage": 22,
+            "weakness": "Nanofiber Plating (Pickup from first encounter)"
+          },
+          "hazard": "Glitching holograms and unstable data streams",
+          "pickup": {
+            "name": "Data Chip: Target Code",
+            "effect": "Reveals boss's vulnerability during final fight"
+          },
+          "trigger": "Player retrieves the data chip after defeating the dealer, which unlocks a hidden path leading to the boss."
+        },
+        {
+          "location": "Central AI Core Chamber",
+          "enemy": {
+            "name": "Mega Core AI",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Data Chip: Target Code (Pickup from second encounter)"
+          },
+          "hazard": "EMP pulses, collapsing architecture, and AI drones",
+          "pickup": {
+            "name": "Neural Interface",
+            "effect": "Allows player to hack systems and bypass security"
+          },
+          "trigger": "Player uses data chip to disable boss's defenses, revealing its core weakness."
+        }
+      ],
+      "boss": {
+        "name": "Mega Core AI",
+        "health": 150,
+        "damage": 40,
+        "weakness": "Data Chip: Target Code (Pickup from second encounter)",
+        "victory_condition": "Destroy the AI core using the data chip to bypass defenses and damage the core directly."
+      },
+      "objective": "Navigate through a decaying cyberpunk district, defeat three hostile AI-enhanced enemies, and destroy the AI core that controls the district.",
+      "reward": "Neural Interface (Pickup from boss fight) and access to the upper city levels."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "chaotic",
+      "player_class": "shadowblade",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Neon Waste",
+      "setting": "A decaying cyberpunk district littered with malfunctioning drones, neon graffiti, and flickering holograms. The air is thick with rain and the scent of burnt circuitry.",
+      "player_weapon": "Nano-Blade",
+      "player_weapon_damage": 20,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Dumped Circuit Yard",
+          "enemy": {
+            "name": "ScrapBot-7",
+            "health": 80,
+            "damage": 15,
+            "weakness": "player_weapon"
+          },
+          "hazard": "Malfunctioning drones occasionally detonate on contact.",
+          "pickup": {
+            "name": "Overclocked Capacitor",
+            "effect": "Increases player weapon damage by 20% for the duration of the level."
+          },
+          "trigger": "After defeating ScrapBot-7, the capacitor activates a hidden access panel leading to the next area."
+        },
+        {
+          "location": "Glitch Alley",
+          "enemy": {
+            "name": "Rogue Hacker",
+            "health": 110,
+            "damage": 22,
+            "weakness": "pickup"
+          },
+          "hazard": "Data rain corrupts player's HUD, reducing visibility and accuracy.",
+          "pickup": {
+            "name": "Neural Disruptor",
+            "effect": "Temporarily disables enemy AI and reduces their damage output by 50%."
+          },
+          "trigger": "After defeating the Rogue Hacker, the Neural Disruptor unlocks a hidden door guarded by the final boss."
+        },
+        {
+          "location": "Core Chamber",
+          "enemy": {
+            "name": "SynthBoss-Ω",
+            "health": 150,
+            "damage": 30,
+            "weakness": "pickup"
+          },
+          "hazard": "Falling debris and unstable energy fields can cause random status effects.",
+          "pickup": {
+            "name": "Cryo Core",
+            "effect": "Freezes the boss in place for 5 seconds, making them vulnerable to critical strikes."
+          },
+          "trigger": "After obtaining the Cryo Core in a hidden cache during the Rogue Hacker encounter, the final boss is awoken."
+        }
+      ],
+      "boss": {
+        "name": "SynthBoss-Ω",
+        "health": 200,
+        "damage": 35,
+        "weakness": "pickup",
+        "victory_condition": "Defeat the boss by exploiting its vulnerability to the Cryo Core."
+      },
+      "objective": "Survive and destroy the rogue AI core before it activates the district’s self-destruct protocol.",
+      "reward": "Data Chip - 'Project Eclipse: Unlocked'"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "mysterious",
+      "player_class": "artificer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "Neo-Los Angeles, 2145",
+      "player_weapon": "Cyber-Flame Torch",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Abandoned Data Vault",
+          "enemy": {
+            "name": "Glitch-Infected Drone",
+            "health": 60,
+            "damage": 10,
+            "weakness": "Cyber-Flame Torch"
+          },
+          "hazard": "Static Fields (reduce movement speed by 20%)",
+          "pickup": {
+            "name": "Nano-Catalyst Core",
+            "effect": "Increases player weapon damage by 5"
+          },
+          "trigger": "Defeating the drone unlocks the mainframe terminal, revealing a hidden passage to the next encounter."
+        },
+        {
+          "location": "Holographic Arcade",
+          "enemy": {
+            "name": "Neural Pirate",
+            "health": 80,
+            "damage": 12,
+            "weakness": "Nano-Catalyst Core"
+          },
+          "hazard": "Glitch Storm (randomly teleports the player or inflicts damage every 30 seconds)",
+          "pickup": {
+            "name": "Neuro-Link Adapter",
+            "effect": "Grants immunity to hacking attempts and increases damage against AI enemies by 10%"
+          },
+          "trigger": "After defeating the Neural Pirate, the player finds a data fragment that reveals the identity of the final boss: The Ghost in the Machine."
+        },
+        {
+          "location": "Mainframe Core Chamber",
+          "enemy": {
+            "name": "The Ghost in the Machine",
+            "health": 120,
+            "damage": 18,
+            "weakness": "Neuro-Link Adapter"
+          },
+          "hazard": "System Overload (causes a random system-wide malfunction every 10 seconds)",
+          "pickup": {
+            "name": "Quantum Key",
+            "effect": "Unlocks a hidden terminal in the next district, granting permanent access to a cybernetic upgrade"
+          },
+          "trigger": "The player must use the Neuro-Link Adapter to bypass the boss’s firewall and disable its core. Victory opens the exit to the district, revealing a path to the next mission."
+        }
+      ],
+      "boss": {
+        "name": "The Ghost in the Machine",
+        "health": 150,
+        "damage": 20,
+        "weakness": "Neuro-Link Adapter",
+        "victory_condition": "Disrupt the boss’s core using the Neuro-Link Adapter, forcing it to shut down."
+      },
+      "objective": "Recover a lost data fragment from the mainframe while avoiding AI sentinels and hacking systems.",
+      "reward": "Quantum Key and access to a hidden cybernetic upgrade in the next district."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "ominous",
+      "player_class": "chronomancer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "Neon-lit underground data vault in 2147",
+      "player_weapon": "Chrono Wristblaster",
+      "player_weapon_damage": 12,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Main Entryway - Glowing with red security lights and flickering holograms",
+          "enemy": {
+            "name": "Corrupted AI Drone",
+            "health": 30,
+            "damage": 8,
+            "weakness": "Chrono Wristblaster - Disrupts the drone's clock core"
+          },
+          "hazard": "Falling debris from unstable ceiling",
+          "pickup": {
+            "name": "Quantum Battery",
+            "effect": "Restores 20% of player's health"
+          },
+          "trigger": "Defeating the drone unlocks the vault's main door, revealing the path to the next encounter."
+        },
+        {
+          "location": "Server Room - Filled with floating data fragments and flickering screens",
+          "enemy": {
+            "name": "Ghost Hacker",
+            "health": 40,
+            "damage": 10,
+            "weakness": "Quantum Battery - Overloads the hacker's neural interface"
+          },
+          "hazard": "Random data bursts that temporarily blind the player",
+          "pickup": {
+            "name": "Temporal Link",
+            "effect": "Grants a 1-time use of 'Time Slow' ability"
+          },
+          "trigger": "Defeating the hacker unlocks a secure terminal that reveals a hidden room with the final boss."
+        },
+        {
+          "location": "Final Data Chamber - Surrounded by flickering time portals and digital echoes",
+          "enemy": {
+            "name": "The Chrono Warden",
+            "health": 60,
+            "damage": 14,
+            "weakness": "Temporal Link - Disrupts the warden's time-based shielding"
+          },
+          "hazard": "Time distortion zones that slow or speed up the player’s actions unpredictably",
+          "pickup": {
+            "name": "Chrono Core",
+            "effect": "Permanently increases player's weapon damage by 5"
+          },
+          "trigger": "Defeating the warden reveals the exit and grants a powerful upgrade to the player’s arsenal."
+        }
+      ],
+      "boss": {
+        "name": "The Chrono Warden",
+        "health": 80,
+        "damage": 16,
+        "weakness": "Temporal Link - Disrupts the warden's time-based shielding",
+        "victory_condition": "Defeat the warden and escape through the time portal"
+      },
+      "objective": "Retrieve the Chrono Core and escape the data vault before the time distortion collapses the structure.",
+      "reward": "Chrono Core permanently boosts the player's weapon damage and grants access to new time-based abilities."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "eerie",
+      "player_class": "alchemist",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "cyberpunk",
+      "setting": "Abandoned Biotech Lab, Sector 7, Neo-Tokyo",
+      "player_weapon": "Nano-Syringe",
+      "player_weapon_damage": 20,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Main Lab Entrance",
+          "enemy": {
+            "name": "Nano-Infected Drone",
+            "health": 60,
+            "damage": 15,
+            "weakness": "Nano-Syringe (player weapon)"
+          },
+          "hazard": "Flickering lights and malfunctioning security systems",
+          "pickup": {
+            "name": "Cryo-Compound",
+            "effect": "Freezes enemies for 3 seconds on use"
+          },
+          "trigger": "Upon defeating the drone, a hidden lab door opens, revealing the next encounter."
+        },
+        {
+          "location": "Sterilization Chamber",
+          "enemy": {
+            "name": "Synthetic Cleaner Unit",
+            "health": 80,
+            "damage": 20,
+            "weakness": "Cryo-Compound (pickup from prior encounter)"
+          },
+          "hazard": "Toxic gas leaks and flickering UV lights",
+          "pickup": {
+            "name": "Neuro-Suppressant",
+            "effect": "Stuns enemies for 5 seconds when applied"
+          },
+          "trigger": "After defeating the Cleaner Unit, a security terminal unlocks, revealing the location of the boss."
+        },
+        {
+          "location": "Biomechanical Core",
+          "enemy": {
+            "name": "Dr. Virel (Cybernetic Alchemist)",
+            "health": 150,
+            "damage": 25,
+            "weakness": "Neuro-Suppressant (pickup from second encounter)"
+          },
+          "hazard": "Falling debris and unstable energy fields",
+          "pickup": {
+            "name": "Nanite Catalyst",
+            "effect": "Increases player weapon damage by 30% for 15 seconds"
+          },
+          "trigger": "Upon defeating Dr. Virel, the lab collapses, but the player escapes with the Nanite Catalyst."
+        }
+      ],
+      "boss": {
+        "name": "Dr. Virel (Cybernetic Alchemist)",
+        "health": 150,
+        "damage": 25,
+        "weakness": "Neuro-Suppressant (pickup from second encounter)",
+        "victory_condition": "Defeat Dr. Virel after using the Neuro-Suppressant to stagger him."
+      },
+      "objective": "Retrieve the Nanite Catalyst from the core of the abandoned lab while surviving the corrupted AI and its creations.",
+      "reward": "Nanite Catalyst (increases weapon damage) + access to the next sector of the city."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "desolate",
+      "player_class": "rogue",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "Neon-lit dystopia",
+      "player_weapon": "Plasma Wristblade",
+      "player_weapon_damage": 25,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Abandoned Metro Station",
+          "enemy": {
+            "name": "Rusted Patrol Droid",
+            "health": 80,
+            "damage": 30,
+            "weakness": "Plasma Wristblade's energy discharge"
+          },
+          "hazard": "Flickering power surges can momentarily blind the player",
+          "pickup": {
+            "name": "Glitch Core",
+            "effect": "Increases player's energy discharge by 15%"
+          },
+          "trigger": "Defeat the droid to unlock the maintenance hatch leading to the next area."
+        },
+        {
+          "location": "Hacker's Den (pirated data hub)",
+          "enemy": {
+            "name": "Crimson Hacker",
+            "health": 120,
+            "damage": 40,
+            "weakness": "Glitch Core's energy interference"
+          },
+          "hazard": "Security drones will activate if the player lingers too long",
+          "pickup": {
+            "name": "Neural Interface Chip",
+            "effect": "Unlocks a hacking ability that disables enemy defenses"
+          },
+          "trigger": "Hack the terminal to override the security grid and unlock the access corridor to the boss arena."
+        },
+        {
+          "location": "The Architect's Core",
+          "enemy": {
+            "name": "The Architect",
+            "health": 250,
+            "damage": 60,
+            "weakness": "Neural Interface Chip"
+          },
+          "hazard": "The environment shifts and becomes unstable during the fight",
+          "pickup": {
+            "name": "Data Crystal: Last Broadcast",
+            "effect": "Reveals the true origin of the Architect"
+          },
+          "trigger": "The Architect is only vulnerable when its systems are overridden by the Neural Interface Chip."
+        }
+      ],
+      "boss": {
+        "name": "The Architect",
+        "health": 350,
+        "damage": 80,
+        "weakness": "Neural Interface Chip",
+        "victory_condition": "Override the Architect's mainframe using the Neural Interface Chip"
+      },
+      "objective": "Steal the Data Crystal from The Architect",
+      "reward": "Access to a high-level black market network, +15% critical hit chance"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "whimsical",
+      "player_class": "stormcaller",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Cyberpunk Whimsy",
+      "setting": "A neon-drenched city district known as 'Glowspire Heights', where rain falls in sync with the rhythm of glitching music and streets are lined with flickering holograms of dancing cats and robots with punny names.",
+      "player_weapon": "Electric Whip",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Bazaar of Baffling Bots",
+          "enemy": {
+            "name": "Glitch Snail",
+            "health": 20,
+            "damage": 6,
+            "weakness": "Electric Whip"
+          },
+          "hazard": "A flickering neon sign that briefly turns into a dancing robot, distracting the player.",
+          "pickup": {
+            "name": "Nano-Fluoride Chip",
+            "effect": "Increases Electric Whip damage by 5 for the next 3 encounters"
+          },
+          "trigger": "After defeating the Glitch Snail, the neon sign transforms into a floating portal, revealing the next encounter."
+        },
+        {
+          "location": "The Glitched Garden of Giggles",
+          "enemy": {
+            "name": "Pumpkin Drone",
+            "health": 25,
+            "damage": 8,
+            "weakness": "Nano-Fluoride Chip"
+          },
+          "hazard": "A sentient lawn gnome that follows the player and hums dissonant tunes.",
+          "pickup": {
+            "name": "Circuitry Snack",
+            "effect": "Heals 15 health and temporarily boosts movement speed."
+          },
+          "trigger": "After defeating the Pumpkin Drone, the gnome drops a key that unlocks the path to the final boss."
+        },
+        {
+          "location": "The Palace of Puns and Power",
+          "enemy": {
+            "name": "The Meme King",
+            "health": 50,
+            "damage": 12,
+            "weakness": "Nano-Fluoride Chip"
+          },
+          "hazard": "A giant, laughing robot throne that spits out floating joke bubbles which slow the player.",
+          "pickup": {
+            "name": "Quantum Confetti Grenade",
+            "effect": "Deals 20 damage to all enemies in the area, with a 50% chance to stun them."
+          },
+          "trigger": "Upon entering the throne room, the Meme King activates his defenses, demanding a 'dance-off' which triggers the boss fight."
+        }
+      ],
+      "boss": {
+        "name": "The Meme King",
+        "health": 60,
+        "damage": 15,
+        "weakness": "Nano-Fluoride Chip",
+        "victory_condition": "Defeat The Meme King by exploiting his weakness with the enhanced Electric Whip."
+      },
+      "objective": "Navigate the whimsical chaos of Glowspire Heights, defeat three quirky enemies, and outwit The Meme King using the powerful upgrades you've collected.",
+      "reward": "Unlock a new skin: 'Whimsical Stormcaller' with a glowing electric whip and a hat shaped like a dancing cat."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "serene",
+      "player_class": "geomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "cyberpunk",
+      "setting": "A hidden garden within the heart of Neo-Tokyo",
+      "player_weapon": "Geode Shaper",
+      "player_weapon_damage": 12,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Beneath the neon-lit cherry blossom trees",
+          "enemy": {
+            "name": "Holo-Patrol Drone",
+            "health": 40,
+            "damage": 10,
+            "weakness": "Geode Shaper"
+          },
+          "hazard": "Flickering lights cause temporary blindness",
+          "pickup": {
+            "name": "Crystalline Catalyst",
+            "effect": "Increases Geode Shaper damage by +5"
+          },
+          "trigger": "The drone's destruction reveals a hidden path through the trees."
+        },
+        {
+          "location": "In the center of the garden's floating water garden",
+          "enemy": {
+            "name": "Silicon Samurai",
+            "health": 60,
+            "damage": 12,
+            "weakness": "Crystalline Catalyst"
+          },
+          "hazard": "Reflective water surface distorts enemy positions",
+          "pickup": {
+            "name": "Serenity Core",
+            "effect": "Restores 25% of player's health and reduces incoming damage by 20% for 5 seconds"
+          },
+          "trigger": "The Samurai's defeat unlocks the final gate leading to the garden’s core."
+        },
+        {
+          "location": "At the heart of the garden, within a crystalline greenhouse",
+          "enemy": {
+            "name": "The Garden Architect",
+            "health": 120,
+            "damage": 18,
+            "weakness": "Serenity Core"
+          },
+          "hazard": "The environment shifts, creating unstable ground",
+          "pickup": {
+            "name": "Harmony Resonator",
+            "effect": "Temporarily disables enemy abilities for 3 seconds on hit"
+          },
+          "trigger": "The boss's presence is tied to the player's progression; defeating the two previous enemies is required to enter."
+        }
+      ],
+      "boss": {
+        "name": "The Garden Architect",
+        "health": 180,
+        "damage": 25,
+        "weakness": "Serenity Core",
+        "victory_condition": "Defeat the boss using the Serenity Core to disable its abilities and reduce incoming damage"
+      },
+      "objective": "Reach the heart of the garden and restore balance to the corrupted environment.",
+      "reward": "Harmony Resonator, a permanent ability boost, and a unique visual effect for the player's Geode Shaper"
+    }
+  }
+]

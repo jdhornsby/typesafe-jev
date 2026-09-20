@@ -1,0 +1,570 @@
+[
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "tense",
+      "player_class": "engineer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "A derelict corporate data vault beneath Neo-Tokyo, filled with flickering holograms, leaking coolant, and the hum of failing AI systems. Rain streaks the windows as the player navigates through a maze of server racks and security drones.",
+      "player_weapon": "Plasma Cutter",
+      "player_weapon_damage": 12,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Maintenance Tunnel",
+          "enemy": {
+            "name": "Rusted Enforcer",
+            "health": 80,
+            "damage": 15,
+            "weakness": "Plasma Cutter (player's starting weapon)"
+          },
+          "hazard": "Collapsing ceiling tiles and a flickering emergency light that reveals a hidden path to the server room.",
+          "pickup": {
+            "name": "EMP Charge",
+            "effect": "Disables electronic systems for 10 seconds"
+          },
+          "trigger": "After defeating the Enforcer, the player must use the EMP Charge to disable a security panel, revealing a hidden passage to the next area."
+        },
+        {
+          "location": "Server Room",
+          "enemy": {
+            "name": "Sentinel-7",
+            "health": 90,
+            "damage": 18,
+            "weakness": "EMP Charge (from prior pickup)"
+          },
+          "hazard": "A field of tripwires connected to explosive charges; the player must navigate carefully to avoid triggering them.",
+          "pickup": {
+            "name": "Hacking Module",
+            "effect": "Bypasses 1 cybernetic security system"
+          },
+          "trigger": "Defeating the Sentinel-7 unlocks a terminal. The player uses the Hacking Module to disable the vault’s outer defenses, exposing the boss chamber."
+        },
+        {
+          "location": "Main Control Chamber",
+          "enemy": {
+            "name": "Cybernetic Overmind",
+            "health": 150,
+            "damage": 25,
+            "weakness": "Hacking Module (from prior pickup)"
+          },
+          "hazard": "A constantly shifting maze of laser grids and holographic decoys.",
+          "pickup": {
+            "name": "Neural Override Code",
+            "effect": "Instantly disables the boss for 5 seconds"
+          },
+          "trigger": "The boss activates a countdown to destroy the vault. The player must use the Hacking Module during the boss fight to trigger the Neural Override Code, creating a window to deliver the final blow."
+        }
+      ],
+      "boss": {
+        "name": "Cybernetic Overmind",
+        "health": 150,
+        "damage": 25,
+        "weakness": "Hacking Module (from encounter 2)",
+        "victory_condition": "Use the Hacking Module to trigger the Neural Override Code, then attack during the 5-second window."
+      },
+      "objective": "Sabotage the vault’s core to prevent a corporate data leak.",
+      "reward": "Data Chip containing a blueprint for a prototype cybernetic upgrade"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "chaotic",
+      "player_class": "shadowblade",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "Neon-drenched underground server farm beneath Neo-Kowloon, with unstable power grids and collapsing infrastructure. Rain floods the corridors, and holographic ads flicker erratically.",
+      "player_weapon": "Plasma Blade",
+      "player_weapon_damage": 120,
+      "player_health": 200,
+      "encounters": [
+        {
+          "location": "Data Core Corridor",
+          "enemy": {
+            "name": "Cybernetic Enforcer",
+            "health": 180,
+            "damage": 75,
+            "weakness": "Plasma Blade (player's weapon)"
+          },
+          "hazard": "Falling debris triggers if the player takes more than 30 seconds to defeat the enforcer.",
+          "pickup": {
+            "name": "Neuro-Virus Chip",
+            "effect": "Disables AI-based enemies for 15 seconds"
+          },
+          "trigger": "Defeating the enforcer triggers a security lockdown, unlocking the sealed server chamber and summoning the next encounter."
+        },
+        {
+          "location": "Server Chamber",
+          "enemy": {
+            "name": "Drone Swarm",
+            "health": 220,
+            "damage": 60,
+            "weakness": "Neuro-Virus Chip (pickup from prior encounter)"
+          },
+          "hazard": "Explosive coolant tanks rupture when the player's health drops below 50%.",
+          "pickup": {
+            "name": "Neural Disruptor",
+            "effect": "Overloads enemy cybernetics for 10 seconds"
+          },
+          "trigger": "Destroying the drone swarm destabilizes the server room's force field, exposing the final encounter with the boss."
+        },
+        {
+          "location": "Core Processing Vault",
+          "enemy": {
+            "name": "Nexus Prime (Rogue AI)",
+            "health": 350,
+            "damage": 90,
+            "weakness": "Neural Disruptor (pickup from prior encounter)"
+          },
+          "hazard": "The boss periodically summons turrets that fire laser grids across the room.",
+          "pickup": {
+            "name": "Quantum Keycard",
+            "effect": "Unlocks the exit to the next level"
+          },
+          "trigger": "The player must use the Neural Disruptor during the boss's shield phase (180 seconds into the fight) to bypass its defenses."
+        }
+      ],
+      "boss": {
+        "name": "Nexus Prime",
+        "health": 350,
+        "damage": 90,
+        "weakness": "Neural Disruptor",
+        "victory_condition": "Destroy the central core while avoiding the boss's data storm attacks."
+      },
+      "objective": "Infiltrate the server farm, destroy the rogue AI, and escape with the Quantum Keycard.",
+      "reward": "Unlock the ability to hack enemy drones for 30 seconds"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "mysterious",
+      "player_class": "artificer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "cyberpunk",
+      "setting": "Neon Veil - A derelict tech facility in the heart of a neon-soaked cyberpunk metropolis. The air crackles with static, flickering holograms project cryptic warnings, and the hum of old machines echoes through decaying corridors.",
+      "player_weapon": "Plasma Cutter",
+      "player_weapon_damage": 12,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Data Vault Core",
+          "enemy": {
+            "name": "Cybernetic Warden",
+            "health": 60,
+            "damage": 20,
+            "weakness": "Player's current weapon: Plasma Cutter"
+          },
+          "hazard": "Flickering lights and unstable power surges cause temporary blindness (15% chance per step).",
+          "pickup": {
+            "name": "EMP Battery",
+            "effect": "One-time use: Overloads electronic enemies, dealing 50 damage"
+          },
+          "trigger": "After defeating the Warden, a hidden data chip is found on the console, displaying coordinates to the 'Server Room'"
+        },
+        {
+          "location": "Server Room",
+          "enemy": {
+            "name": "Rogue AI Construct",
+            "health": 80,
+            "damage": 25,
+            "weakness": "EMP Battery (pickup from prior encounter)"
+          },
+          "hazard": "The room is filled with tripwires linked to turrets; triggering them reduces player health by 20.",
+          "pickup": {
+            "name": "Hacking Tool",
+            "effect": "Allows bypassing of enemy defenses for 10 seconds"
+          },
+          "trigger": "After defeating the AI, a data core is found on the mainframe, revealing a hidden maintenance tunnel leading to the 'Bio-Lab'"
+        },
+        {
+          "location": "Bio-Lab",
+          "enemy": {
+            "name": "Biomechanical Hunter",
+            "health": 90,
+            "damage": 30,
+            "weakness": "Hacking Tool (pickup from prior encounter)"
+          },
+          "hazard": "Toxic gas leaks (reduces movement speed by 30% unless player has a gas mask, which is found here).",
+          "pickup": {
+            "name": "Thermal Module",
+            "effect": "One-time use: Deals 70 fire damage to a single target"
+          },
+          "trigger": "After defeating the Hunter, a terminal in the lab displays a cryptic message: 'The Overlord sleeps in the Heart of the Machine.' This leads to the final chamber."
+        }
+      ],
+      "boss": {
+        "name": "Cybernetic Overlord",
+        "health": 150,
+        "damage": 40,
+        "weakness": "Thermal Module (pickup from third encounter)",
+        "victory_condition": "Defeat the Overlord by exploiting its thermal vulnerability, destroying the core with the Thermal Module."
+      },
+      "objective": "Navigate the facility, uncover its secrets, and destroy the Cybernetic Overlord using pickups acquired through encounters.",
+      "reward": "Neural Implant Upgrade (increases player weapon damage by 20%)"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "ominous",
+      "player_class": "chronomancer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Neon-drenched derelict tech facility with flickering holograms and rain-slicked metal",
+      "setting": "Lower levels of a ruined megacorp server complex, patrolled by rogue AI and cyborg enforcers",
+      "player_weapon": "Temporal Blade",
+      "player_weapon_damage": 5,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Server Room 7",
+          "enemy": {
+            "name": "Chrono-Drone (Model X-9)",
+            "health": 40,
+            "damage": 10,
+            "weakness": "Temporal Blade (player weapon)"
+          },
+          "hazard": "Flickering neon signs cast unstable light, revealing hidden security drones when the player's blade disrupts time",
+          "pickup": {
+            "name": "Time Crystal (Stabilized)",
+            "effect": "Increases player's temporal blade damage by 50% for 15 seconds"
+          },
+          "trigger": "Destroying the drone's core with the Temporal Blade causes the room's time field to destabilize, unlocking a corridor leading to the next encounter."
+        },
+        {
+          "location": "Maintenance Trench B-3",
+          "enemy": {
+            "name": "Cyborg Enforcer (Rusted)",
+            "health": 60,
+            "damage": 12,
+            "weakness": "Time Crystal (pickup from prior encounter)"
+          },
+          "hazard": "Leaking coolant pools create slippery zones; the enforcer's cybernetic arm fires corrosive rounds",
+          "pickup": {
+            "name": "Chrono Core (Overclocked)",
+            "effect": "Allows the player to briefly freeze time for 3 seconds"
+          },
+          "trigger": "The Time Crystal's energy reacts with the enforcer's malfunctioning AI, causing it to overheat and reveal a hidden power conduit leading to the boss arena."
+        },
+        {
+          "location": "Mainframe Core",
+          "enemy": {
+            "name": "The Sentinel (Time-Locked AI)",
+            "health": 120,
+            "damage": 15,
+            "weakness": "Chrono Core (pickup from prior encounter)"
+          },
+          "hazard": "The boss warps reality, creating temporal rifts that spawn duplicate enemies unless the Chrono Core is activated",
+          "pickup": {
+            "name": "Chrono Key",
+            "effect": "Unlocks all time-locked doors in the facility"
+          },
+          "trigger": "The Chrono Core's energy destabilizes the Sentinel's time-loop programming, allowing the player to exploit its core vulnerability during the fight."
+        }
+      ],
+      "boss": {
+        "name": "The Sentinel (Time-Locked AI)",
+        "health": 120,
+        "damage": 15,
+        "weakness": "Chrono Core (pickup from Encounter 2)",
+        "victory_condition": "Destroy the Sentinel's central core while time is frozen using the Chrono Core"
+      },
+      "objective": "Reach the mainframe core and disable the rogue AI by exploiting temporal vulnerabilities",
+      "reward": "Chrono Key granting access to restricted time-manipulation tech"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "eerie",
+      "player_class": "alchemist",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "Derelict Alchemical Lab",
+      "player_weapon": "Vial Launcher (Corrosive Acid)",
+      "player_weapon_damage": 20,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Lab Entrance - Flickering Neon Corridors",
+          "enemy": {
+            "name": "Scavenger Drone",
+            "health": 80,
+            "damage": 25,
+            "weakness": "Corrosive Acid (Player's Weapon)"
+          },
+          "hazard": "Falling debris triggers if the drone is not disabled quickly.",
+          "pickup": {
+            "name": "Nanobiotic Catalyst",
+            "effect": "Boosts alchemical potency by 30% for 15 seconds."
+          },
+          "trigger": "Defeating the drone unlocks a hidden lab corridor via a malfunctioning security panel."
+        },
+        {
+          "location": "Alchemical Research Wing - Overgrown with Bioluminescent Fungi",
+          "enemy": {
+            "name": "Cybernetic Dealer",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Nanobiotic Catalyst (Pickup from Encounter 1)"
+          },
+          "hazard": "Toxic gas leaks activate if the dealer is not subdued within 60 seconds.",
+          "pickup": {
+            "name": "Toxic Syringe",
+            "effect": "Injects a debuff reducing enemy armor by 40% for 10 seconds."
+          },
+          "trigger": "Using the Nanobiotic Catalyst on the dealer reveals a hidden stash containing the Toxic Syringe."
+        },
+        {
+          "location": "Mutant Holding Cells - Soundproofed with Cracked Glass",
+          "enemy": {
+            "name": "Mutant Hybrid",
+            "health": 160,
+            "damage": 45,
+            "weakness": "Toxic Syringe (Pickup from Encounter 2)"
+          },
+          "hazard": "The hybrid's mutations cause random area-of-effect damage when aggroed.",
+          "pickup": {
+            "name": "Quantum Alchemical Core",
+            "effect": "Temporarily upgrades the Vial Launcher to deal 50% more damage."
+          },
+          "trigger": "Injecting the hybrid with the Toxic Syringe weakens its mutations, revealing a sealed vault containing the Quantum Alchemical Core."
+        }
+      ],
+      "boss": {
+        "name": "The Architect (Rogue AI)",
+        "health": 300,
+        "damage": 60,
+        "weakness": "Quantum Alchemical Core (Pickup from Encounter 3)",
+        "victory_condition": "Combine the Quantum Alchemical Core with the player's weapon to trigger a chain reaction that destabilizes the AI's core."
+      },
+      "objective": "Retrieve the Alchemical Formula from the lab's central server, but beware of the rogue AI's defenses.",
+      "reward": "Alchemical Formula: 'Neuro-Disruptive Elixir' (Instantly incapacitates enemies with 100% accuracy for 5 seconds)."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "desolate",
+      "player_class": "rogue",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "Derelict megacity outskirts",
+      "player_weapon": "Plasma Blade",
+      "player_weapon_damage": 120,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Ruined Data Vault",
+          "enemy": {
+            "name": "Neural Enforcer",
+            "health": 250,
+            "damage": 90,
+            "weakness": "Plasma Blade (player's starting weapon)"
+          },
+          "hazard": "Flickering neon lights reveal hidden enemy patrol routes.",
+          "pickup": {
+            "name": "Neural Dampener",
+            "effect": "Disrupts enemy cybernetics, reducing their damage by 40% for 10 seconds"
+          },
+          "trigger": "Hack a terminal to unlock the vault, triggering the enforcer's alert."
+        },
+        {
+          "location": "Abandoned Security Corridor",
+          "enemy": {
+            "name": "Cyborg Guard",
+            "health": 320,
+            "damage": 110,
+            "weakness": "Neural Dampener (pickup from first encounter)"
+          },
+          "hazard": "Collapsing ceiling panels force narrow, stealth-based navigation.",
+          "pickup": {
+            "name": "Viral Payload",
+            "effect": "Corrupts enemy AI systems, dealing 200 damage over 5 seconds"
+          },
+          "trigger": "Use Neural Dampener to bypass a security drone, revealing the cyborg guard's patrol path."
+        },
+        {
+          "location": "Corrupted Server Nexus",
+          "enemy": {
+            "name": "Rogue AI Core",
+            "health": 600,
+            "damage": 150,
+            "weakness": "Viral Payload (pickup from second encounter)"
+          },
+          "hazard": "The AI manipulates environmental hazards (e.g., electrified pools, falling debris).",
+          "pickup": {
+            "name": "System Override Key",
+            "effect": "Unlocks all city grid terminals (non-combat use)"
+          },
+          "trigger": "Trigger a lockdown sequence after defeating the cyborg guard, forcing a confrontation with the AI Core."
+        }
+      ],
+      "boss": {
+        "name": "The Architect",
+        "health": 1000,
+        "damage": 200,
+        "weakness": "Viral Payload (pickup from second encounter)",
+        "victory_condition": "Corrupt the AI's core with the payload while avoiding its hacking attempts."
+      },
+      "objective": "Infiltrate the server nexus and destroy the AI Core, using pickups to overcome escalating defenses.",
+      "reward": "System Override Key unlocks access to the city's neural grid, providing future mission options."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "whimsical",
+      "player_class": "stormcaller",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Cyberpunk Whimsy",
+      "setting": "A neon-drenched cityscape with floating platforms, glitchy holograms, and eccentric AI chatter. Rain falls in sync with the player's lightning strikes.",
+      "player_weapon": "Plasma Whip (Electricity-based, deals 5 damage per strike)",
+      "player_weapon_damage": 5,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Neon Alleyway",
+          "enemy": {
+            "name": "Drone-5 (The Overzealous Sentinel)",
+            "health": 20,
+            "damage": 5,
+            "weakness": "Player's Plasma Whip (Electricity)"
+          },
+          "hazard": "Glitching holograms create temporary barriers; player must time strikes between flashes.",
+          "pickup": {
+            "name": "Nano-Circuit Capacitor",
+            "effect": "Increases Plasma Whip damage by 2 for the next 3 encounters."
+          },
+          "trigger": "Defeating Drone-5 unlocks a floating keycard that activates the next encounter."
+        },
+        {
+          "location": "Glitch Core Data Room",
+          "enemy": {
+            "name": "Gigglesoft-7 (The Chaotic AI)",
+            "health": 30,
+            "damage": 7,
+            "weakness": "Nano-Circuit Capacitor (Boosted Electricity)"
+          },
+          "hazard": "AI projects confusing riddles; solving them (by attacking in rhythm) reduces enemy damage.",
+          "pickup": {
+            "name": "Quantum Sprocket",
+            "effect": "Allows player to temporarily summon a lightning shield (blocks 15 damage)."
+          },
+          "trigger": "Destroying Gigglesoft-7 triggers a hidden door leading to the boss arena."
+        },
+        {
+          "location": "The Throne of Thunder",
+          "enemy": {
+            "name": "The Glitch King (Floating Cyborg Tyrant)",
+            "health": 50,
+            "damage": 10,
+            "weakness": "Nano-Circuit Capacitor (Boosted Electricity)"
+          },
+          "hazard": "Boss summons duplicate drones that must be prioritized; player's shield (from Quantum Sprocket) is essential.",
+          "pickup": {
+            "name": "Stormcaller's Crown",
+            "effect": "Unlocks a final lightning burst ability (one-time use, 20 damage)."
+          },
+          "trigger": "Boss fight begins automatically after unlocking the door from the second encounter."
+        }
+      ],
+      "boss": {
+        "name": "The Glitch King (Floating Cyborg Tyrant)",
+        "health": 50,
+        "damage": 10,
+        "weakness": "Nano-Circuit Capacitor (Boosted Electricity)",
+        "victory_condition": "Defeat the boss using the capacitor's enhanced damage, then claim the Stormcaller's Crown."
+      },
+      "objective": "Navigate the whimsical cyberpunk city, defeat three eccentric enemies, and claim the Stormcaller's Crown to unlock a new ability.",
+      "reward": "Stormcaller's Crown (One-time use lightning burst) + 20 XP"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "serene",
+      "player_class": "geomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "cyberpunk",
+      "setting": "Neon Bloom - A serene rooftop garden in a cyberpunk city, where bioluminescent plants glow under neon lights and rain-slicked surfaces reflect the distant hum of the metropolis. The area is quiet, almost meditative, but hidden dangers lurk beneath the calm.",
+      "player_weapon": "Seismic Hammer",
+      "player_weapon_damage": 35,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Rooftop Garden",
+          "enemy": {
+            "name": "Iron Sentinel",
+            "health": 50,
+            "damage": 20,
+            "weakness": "Seismic shockwaves (player's Seismic Hammer)"
+          },
+          "hazard": "The Sentinel patrols near a cluster of glowing ferns. Its mechanical limbs are brittle from years of neglect.",
+          "pickup": {
+            "name": "Geothermal Core",
+            "effect": "Increases geomancy damage by 25% and enables fire-based earth manipulation."
+          },
+          "trigger": "Defeating the Sentinel causes a hidden hatch to open, revealing a tunnel leading to the next encounter."
+        },
+        {
+          "location": "Underground Tunnel",
+          "enemy": {
+            "name": "Rootfang",
+            "health": 60,
+            "damage": 25,
+            "weakness": "Heat (Geothermal Core)"
+          },
+          "hazard": "The tunnel is lined with glowing fungi. Rootfang's mutated body is entwined with plant matter, making it unpredictable.",
+          "pickup": {
+            "name": "Resonance Crystal",
+            "effect": "Creates vibrational waves that disrupt electronics and shatter brittle materials."
+          },
+          "trigger": "Destroying Rootfang triggers a holographic map on the wall, pointing to the data center where the third encounter lies."
+        },
+        {
+          "location": "Data Center",
+          "enemy": {
+            "name": "Cipher",
+            "health": 70,
+            "damage": 30,
+            "weakness": "Resonance interference (Resonance Crystal)"
+          },
+          "hazard": "Cipher's body is a mesh of wires and circuitry. It emits electromagnetic pulses that disrupt the player's abilities.",
+          "pickup": {
+            "name": "Access Code",
+            "effect": "Unlocks the central control room's security system, allowing passage to the final boss."
+          },
+          "trigger": "Disrupting Cipher's systems reveals a hidden elevator leading to the boss arena."
+        }
+      ],
+      "boss": {
+        "name": "The Core Sentinel",
+        "health": 150,
+        "damage": 40,
+        "weakness": "Resonance waves (Resonance Crystal)",
+        "victory_condition": "Overload the Sentinel's core by channeling resonance waves through the environment, causing structural collapse."
+      },
+      "objective": "Navigate the serene rooftop garden, defeat three hidden threats, and use their pickups to dismantle the final boss guarding the city's data core.",
+      "reward": "Neural Implant - Enhances geomancy abilities with a 10% chance to trigger random terrain effects."
+    }
+  }
+]

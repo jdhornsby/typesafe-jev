@@ -1,0 +1,1093 @@
+[
+  {
+    "case": {
+      "genre": "horror",
+      "mood": "eerie",
+      "player_class": "alchemist",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "The Forsaken Alchemy Lab",
+      "setting": "A decaying 19th-century alchemical laboratory filled with flickering gas lamps, shattered glass vials, and murals depicting twisted experiments. The air is thick with the scent of burning reagents and the sound of distant screams echoes through crumbling corridors.",
+      "player_weapon": "Alchemical Satchel (holds 3 custom potions, including the Corrosive Acid Bomb)",
+      "player_weapon_damage": 60,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Abandoned Reagent Storage",
+          "enemy": {
+            "name": "Reagent Warden",
+            "health": 150,
+            "damage": 40,
+            "weakness": "Corrosive Acid Bomb (crafted by player using a rare reagent found in this room)"
+          },
+          "hazard": "Flickering lights and eerie whispers intensify as the Warden dies, triggering a collapsing ceiling that blocks the exit, forcing the player into the next area.",
+          "pickup": {
+            "name": "Catalyst Shard",
+            "effect": "Reduces alchemical cooldowns by 30% and increases potion potency."
+          },
+          "trigger": "Player must solve a locked puzzle to access the storage room, revealing the Warden guarding a journal detailing the lab's failed experiments. Defeating it unlocks a hidden alcove containing a *Catalyst Shard* (pickup)."
+        },
+        {
+          "location": "Collapsing Alchemy Chamber",
+          "enemy": {
+            "name": "Feral Alchemist",
+            "health": 200,
+            "damage": 50,
+            "weakness": "Catalyst Shard (from prior pickup)"
+          },
+          "hazard": "After the fight, the chamber's floor cracks, revealing a descending staircase leading to the lab's core. Strange symbols on the walls hint at the final boss's presence.",
+          "pickup": {
+            "name": "Void Tincture",
+            "effect": "Temporarily grants immunity to poison and reduces enemy damage by 25% for 10 seconds."
+          },
+          "trigger": "The player must navigate debris to reach a sealed chamber. The Feral Alchemist attacks, using unstable potions to create explosive hazards. Defeating it with the Catalyst Shard reveals a trapped crate containing a *Void Tincture* (pickup)."
+        },
+        {
+          "location": "The Alchemist's Core",
+          "enemy": {
+            "name": "Grand Alchemist (Boss)",
+            "health": 500,
+            "damage": 80,
+            "weakness": "Void Tincture (from prior pickup) AND Corrosive Acid Bomb (from first encounter)"
+          },
+          "hazard": "The boss's defeat causes the lab to implode. The player must escape through a collapsing portal, with the final sequence featuring a haunting echo of the original alchemist's voice: 'You are the experiment now.'",
+          "pickup": {
+            "name": "Alchemist's Heart",
+            "effect": "Permanently increases maximum health and unlocks a new alchemical ability."
+          },
+          "trigger": "The player confronts the corrupted creator of the lab. The boss phases between reality and shadow, summoning clones. The player must alternate between using the Void Tincture to nullify the clones and the Acid Bomb to damage the boss's core. Failure to time the weaknesses results in instant death."
+        }
+      ],
+      "boss": {
+        "name": "Grand Alchemist",
+        "health": 500,
+        "damage": 80,
+        "weakness": "Void Tincture (nullifies clones) and Corrosive Acid Bomb (damages core) used in sequence",
+        "victory_condition": "Defeat the boss by exploiting the combined effects of both pickups."
+      },
+      "objective": "Survive the lab's corrupted experiments and reclaim the Alchemist's Heart, but the true horror lies in the player's own transformation through the alchemical process.",
+      "reward": "Alchemist's Heart (permanently upgrades player abilities) and a journal entry hinting at a larger, unseen threat."
+    }
+  },
+  {
+    "case": {
+      "genre": "horror",
+      "mood": "ominous",
+      "player_class": "pyromancer",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "The Hollow Asylum",
+      "setting": "A decaying, 19th-century psychiatric asylum with dripping ceilings, shattered windows, and ghostly whispers. The air is thick with the scent of burnt hair and rusted metal. Doors creak open on their own, revealing rooms filled with broken medical equipment and patient records covered in blood.",
+      "player_weapon": "Flamebrand Sword",
+      "player_weapon_damage": 80,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Lobby - Flickering Light Hall",
+          "enemy": {
+            "name": "Frostbound Wraith",
+            "health": 150,
+            "damage": 45,
+            "weakness": "Player's fire weapon (Flamebrand Sword)"
+          },
+          "hazard": "After defeating the wraith, the floor cracks, revealing a hidden passage to the next area.",
+          "pickup": {
+            "name": "Cursed Ember",
+            "effect": "A glowing red orb that temporarily ignites the player's weapon, doubling fire damage for 15 seconds."
+          },
+          "trigger": "The wraith's icy aura freezes the player's torch, plunging the lobby into darkness. To proceed, the player must burn through its frost with their Flamebrand Sword, shattering its form."
+        },
+        {
+          "location": "Hall of Mirrors - Shadow Veil",
+          "enemy": {
+            "name": "Shadow Stalker",
+            "health": 200,
+            "damage": 60,
+            "weakness": "Cursed Ember (pickup from prior encounter)"
+          },
+          "hazard": "Defeating the stalker causes the walls to bleed, leaving behind a trail of viscous black liquid that slows the player's movement.",
+          "pickup": {
+            "name": "Soul Key",
+            "effect": "A key that unlocks the sealed door to the asylum's basement, where the final boss awaits."
+          },
+          "trigger": "The player's torch flickers as the mirrors shatter, revealing the Shadow Stalker. Its form blends with darkness, but the Cursed Ember's light exposes its weaknesses."
+        }
+      ],
+      "boss": {
+        "name": "Hollow Warden",
+        "health": 500,
+        "damage": 100,
+        "weakness": "Soul Key (pickup from second encounter)",
+        "victory_condition": "Use the Soul Key to destroy the Warden's core, which is protected by a shield that only the key can penetrate."
+      },
+      "objective": "Reach the basement and confront the Hollow Warden.",
+      "reward": "Upon victory, the player gains the \"Inferno's Resolve\" power, allowing them to summon a firestorm that burns all enemies in the radius for 10 seconds."
+    }
+  },
+  {
+    "case": {
+      "genre": "horror",
+      "mood": "tense",
+      "player_class": "shadowblade",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Abandoned Asylum",
+      "setting": "A decaying 19th-century asylum with peeling wallpaper, rusted medical equipment, and cryptic patient journals. The air is thick with mildew and the sound of distant whispers.",
+      "player_weapon": "Shadowblade (a curved dagger that glows faintly in darkness, deals bonus damage to shadow-based foes)",
+      "player_weapon_damage": 35,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Echoing Corridor",
+          "enemy": {
+            "name": "Mutated Rat",
+            "health": 40,
+            "damage": 15,
+            "weakness": "Vulnerable to blade strikes (player's shadowblade weapon)"
+          },
+          "hazard": "Flickering lights and echoing footsteps increase tension. The player must navigate narrow passages while avoiding traps.",
+          "pickup": {
+            "name": "Shadow Cloak",
+            "effect": "Grants temporary invisibility (10 seconds) and reduces enemy detection range by 50%"
+          },
+          "trigger": "Player hears faint screeching sounds while exploring the corridor. The rat attacks when the player investigates the noise."
+        },
+        {
+          "location": "Supply Room",
+          "enemy": {
+            "name": "Corrupted Hunter",
+            "health": 70,
+            "damage": 25,
+            "weakness": "Vulnerable to stealth strikes (requires Shadow Cloak from prior encounter)"
+          },
+          "hazard": "The room is filled with tripwires and a fog machine that obscures vision. The player must time movements carefully to avoid triggering alarms.",
+          "pickup": {
+            "name": "Soul Shard",
+            "effect": "Deals 50 damage to shadow-based enemies when thrown; regenerates 25% player health on hit"
+          },
+          "trigger": "The Shadow Cloak's invisibility allows the player to bypass the hunter's patrols. The hunter becomes aggressive when the player steals a keycard from a desk."
+        },
+        {
+          "location": "Chapel of Shadows",
+          "enemy": {
+            "name": "Shadow Warden",
+            "health": 150,
+            "damage": 40,
+            "weakness": "Vulnerable to Soul Shard (pickup from second encounter)"
+          },
+          "hazard": "The chamber is pitch-black except for the warden's glowing eyes. The player must use the Soul Shard to temporarily blind the boss and land critical strikes.",
+          "pickup": {
+            "name": "Ember of Light",
+            "effect": "Permanently increases shadowblade damage by 30% and grants immunity to fear effects"
+          },
+          "trigger": "The Soul Shard's energy reacts with the altar in the chapel, revealing the shadow warden's true form. The boss emerges from the darkness to stop the player."
+        }
+      ],
+      "boss": {
+        "name": "Shadow Warden",
+        "health": 150,
+        "damage": 40,
+        "weakness": "Soul Shard (must be thrown during specific animation frames when the boss's shadow is exposed)",
+        "victory_condition": "Reduce boss health to 0 using the Soul Shard's damage and follow-up shadowblade strikes"
+      },
+      "objective": "Escape the asylum by overcoming three shadow-themed enemies and their environmental hazards, culminating in a showdown with the shadow warden.",
+      "reward": "Ember of Light (permanent upgrade) and access to the asylum's exterior, where the player can escape into the fog-drenched night."
+    }
+  },
+  {
+    "case": {
+      "genre": "horror",
+      "mood": "desolate",
+      "player_class": "ranger",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Desolate Horror",
+      "setting": "A derelict forest with twisted trees, fog, and remnants of a failed research facility. The air hums with corrupted magic, and the ground is littered with decayed animal remains.",
+      "player_weapon": "Compound Bow (can fire fire arrows or elemental projectiles)",
+      "player_weapon_damage": 60,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Abandoned Research Cabin",
+          "enemy": {
+            "name": "Corrupted Stag",
+            "health": 120,
+            "damage": 40,
+            "weakness": "Fire arrows from player's compound bow"
+          },
+          "hazard": "Fog reduces visibility by 50%, forcing player to rely on stealth.",
+          "pickup": {
+            "name": "Tainted Blood Sample",
+            "effect": "Can be used to create a chemical trap (reduces enemy resistance by 30% when deployed)"
+          },
+          "trigger": "Player discovers a crashed research vessel with a glowing sigil. Investigating the cabin triggers the stag's attack."
+        },
+        {
+          "location": "Twisted Root Cave",
+          "enemy": {
+            "name": "Hunter",
+            "health": 150,
+            "damage": 50,
+            "weakness": "Tainted Blood Sample trap (must be placed during encounter)"
+          },
+          "hazard": "Collapsing ceiling blocks escape routes, forcing player to fight in confined spaces.",
+          "pickup": {
+            "name": "Cursed Talisman",
+            "effect": "Temporarily disrupts magical defenses (required to damage the boss)"
+          },
+          "trigger": "Player uses the Tainted Blood Sample to create a trap in the cave, luring the Hunter into a confrontation."
+        },
+        {
+          "location": "Corrupted Forest Heart",
+          "enemy": {
+            "name": "Forest Warden (Boss)",
+            "health": 300,
+            "damage": 70,
+            "weakness": "Cursed Talisman (reduces boss's magical resistance to 0%)"
+          },
+          "hazard": "The boss summons spectral trees that attack the player, forcing them to dodge while managing the talisman's cooldown.",
+          "pickup": {
+            "name": "Purified Spirit",
+            "effect": "Restores 100% health and grants temporary invincibility (obtained after defeating the boss)"
+          },
+          "trigger": "After defeating the Hunter, the Cursed Talisman reveals a hidden path to the forest's corrupted core."
+        }
+      ],
+      "boss": {
+        "name": "Forest Warden",
+        "health": 300,
+        "damage": 70,
+        "weakness": "Cursed Talisman (must be activated during the boss fight to bypass magic immunity)",
+        "victory_condition": "Destroy the corrupted tree core after weakening it with the Cursed Talisman."
+      },
+      "objective": "Survive the corrupted forest and destroy the Forest Warden's corrupted essence.",
+      "reward": "Purified Spirit (grants temporary invincibility and full health restoration)"
+    }
+  },
+  {
+    "case": {
+      "genre": "horror",
+      "mood": "mysterious",
+      "player_class": "necromancer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "The Forgotten Crypt",
+      "setting": "A desolate, ancient crypt filled with skeletal remains, ghostly whispers, and faintly glowing runes. The air is thick with decay and the scent of old blood. Flickering lights cast long shadows that seem to move independently.",
+      "player_weapon": "Bone Staff (emits a necrotic aura)",
+      "player_weapon_damage": 30,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Entrance Hall",
+          "enemy": {
+            "name": "Spectral Guard",
+            "health": 50,
+            "damage": 15,
+            "weakness": "Necrotic aura of the player's bone staff"
+          },
+          "hazard": "Flickering torches cast shifting shadows that disorient the player.",
+          "pickup": {
+            "name": "Relic of the First King",
+            "effect": "Unlocks sealed doors and disrupts spectral entities"
+          },
+          "trigger": "Player enters the crypt, triggering a moan echoing through the hall."
+        },
+        {
+          "location": "Tombs of the Lost",
+          "enemy": {
+            "name": "Wraith Queen",
+            "health": 80,
+            "damage": 25,
+            "weakness": "Relic of the First King (must be activated)"
+          },
+          "hazard": "The walls are covered in cryptic runes that pulse with malevolent energy.",
+          "pickup": {
+            "name": "Shadowbinding Crystal",
+            "effect": "Absorbs dark energy to weaken the final boss"
+          },
+          "trigger": "The Relic of the First King glows when near the sealed tomb doors, causing them to creak open."
+        },
+        {
+          "location": "Sanctum of the Lich King",
+          "enemy": {
+            "name": "Lich King",
+            "health": 200,
+            "damage": 40,
+            "weakness": "Shadowbinding Crystal (must be placed in the sarcophagus)"
+          },
+          "hazard": "The floor is covered in unstable energy fields that explode on contact.",
+          "pickup": {
+            "name": "Soulforged Amulet",
+            "effect": "Permanent boost to necromantic abilities"
+          },
+          "trigger": "The Shadowbinding Crystal reacts to the Lich King's presence, revealing a path to his sanctum."
+        }
+      ],
+      "boss": {
+        "name": "Lich King",
+        "health": 200,
+        "damage": 40,
+        "weakness": "Shadowbinding Crystal",
+        "victory_condition": "Use the Shadowbinding Crystal to weaken the Lich King, then strike with the Bone Staff"
+      },
+      "objective": "Uncover the crypt's secrets and defeat the Lich King to break the curse.",
+      "reward": "Soulforged Amulet (grants +15% necromantic power)"
+    }
+  },
+  {
+    "case": {
+      "genre": "horror",
+      "mood": "chaotic",
+      "player_class": "berserker",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "The Hollow Asylum",
+      "setting": "Decaying mental asylum with flickering lights, hallucinogenic fumes, collapsing structures, and grotesque medical equipment.",
+      "player_weapon": "Jagged Axe (upgraded with Blood Rune for final boss fight)",
+      "player_weapon_damage": 80,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Flickering Hallway",
+          "enemy": {
+            "name": "Shadow Warden",
+            "health": 120,
+            "damage": 40,
+            "weakness": "Player's starting weapon: Jagged Axe (melee)"
+          },
+          "hazard": "Flickering lights and echoing whispers disorient the player.",
+          "pickup": {
+            "name": "Incendiary Bomb",
+            "effect": "Explosive fire damage (can be thrown or primed on the ground)"
+          },
+          "trigger": "Player progresses down the hallway, triggering a sudden ambush by the spectral guard."
+        },
+        {
+          "location": "Main Asylum Hall",
+          "enemy": {
+            "name": "Flesh Maw",
+            "health": 180,
+            "damage": 55,
+            "weakness": "Fire (via Incendiary Bomb from prior encounter)"
+          },
+          "hazard": "Collapsing ceiling debris and hallucinogenic fumes causing temporary vision distortion.",
+          "pickup": {
+            "name": "Blood Rune",
+            "effect": "Boosts melee damage by 30% and applies bleed to enemies"
+          },
+          "trigger": "After retrieving the Incendiary Bomb, the player must navigate collapsing floor panels to avoid traps, drawing the Flesh Maw's attention."
+        },
+        {
+          "location": "Abandoned Basement",
+          "enemy": {
+            "name": "Feral Guardian",
+            "health": 200,
+            "damage": 60,
+            "weakness": "Blood Rune (pickup from prior encounter)"
+          },
+          "hazard": "Lurking shadows and sudden wall collapses force the player to fight while navigating a narrowing corridor.",
+          "pickup": {
+            "name": "Operating Theater Key",
+            "effect": "Unlocks the final boss chamber"
+          },
+          "trigger": "The player must solve a puzzle to unlock the basement (using the Blood Rune's bleed effect to weaken a locked gate), triggering the Feral Guardian's attack."
+        }
+      ],
+      "boss": {
+        "name": "The Harbinger",
+        "health": 500,
+        "damage": 100,
+        "weakness": "Blood Rune (from prior encounter)",
+        "victory_condition": "Land 3 consecutive blows with the Blood Rune-boosted axe while dodging the Harbinger's area-of-effect attacks."
+      },
+      "objective": "Defeat the Harbinger in the Operating Theater.",
+      "reward": "Ancient Berserker Amulet (permanent damage boost and chaos resistance)"
+    }
+  },
+  {
+    "case": {
+      "genre": "horror",
+      "mood": "serene",
+      "player_class": "warden",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "The Serene Asylum",
+      "setting": "A decaying monastery surrounded by a serene but overgrown garden. The architecture is gothic, with ivy-covered stone walls and flickering candlelight in corridors. The serene atmosphere contrasts with the lurking horrors.",
+      "player_weapon": "Silver Net",
+      "player_weapon_damage": 50,
+      "player_health": 200,
+      "encounters": [
+        {
+          "location": "Overgrown Garden",
+          "enemy": {
+            "name": "Spectral Gardener",
+            "health": 120,
+            "damage": 30,
+            "weakness": "Silver net (player's weapon)"
+          },
+          "hazard": "Thick fog reduces visibility; player must navigate without light to avoid triggering the enemy's aggro.",
+          "pickup": {
+            "name": "Clergy Key",
+            "effect": "Unlocks the sealed corridor door ahead."
+          },
+          "trigger": "Player enters the garden; mist obscures vision, revealing spectral figures with rusted shears."
+        },
+        {
+          "location": "Shadowed Corridor",
+          "enemy": {
+            "name": "Shadow Doppelgänger",
+            "health": 150,
+            "damage": 35,
+            "weakness": "Light source (lantern acquired from prior encounter)"
+          },
+          "hazard": "Corridor walls close in; player must stay in the center to avoid the doppelgänger's touch, which drains stamina.",
+          "pickup": {
+            "name": "Rusted Lantern",
+            "effect": "Emits bright light to repel shadows; breaks the doppelgänger's mimicry."
+          },
+          "trigger": "Clergy Key unlocks a hidden door, revealing a corridor with flickering torches. The doppelgänger emerges when the player's shadow is disturbed."
+        },
+        {
+          "location": "Desecrated Chapel",
+          "enemy": {
+            "name": "Hollow Priest",
+            "health": 180,
+            "damage": 40,
+            "weakness": "Light source (Rusted Lantern)"
+          },
+          "hazard": "Broken glass shards litter the floor; stepping on them triggers a curse that slows the player.",
+          "pickup": {
+            "name": "Holy Symbol",
+            "effect": "Required to weaken the final boss; emits a divine aura when activated."
+          },
+          "trigger": "After defeating the doppelgänger, a hidden passage leads to a chapel with a shattered stained glass window. The priest emerges, his form flickering with darkness."
+        }
+      ],
+      "boss": {
+        "name": "Corrupted Warden",
+        "health": 300,
+        "damage": 60,
+        "weakness": "Holy Symbol (acquired in the chapel)",
+        "victory_condition": "Use the Holy Symbol to disrupt the boss's corrupted form, then finish with a net strike."
+      },
+      "objective": "Reach the crypt and confront the Corrupted Warden.",
+      "reward": "The player gains access to a secure zone and a permanent ability to summon light barriers."
+    }
+  },
+  {
+    "case": {
+      "genre": "horror",
+      "mood": "whimsical",
+      "player_class": "illusionist",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Twisted Carnival",
+      "setting": "A derelict carnival at midnight, with glowing lights, broken rides, and oversized whimsical props. The atmosphere is eerie but playful, with distorted laughter and creaking sounds.",
+      "player_weapon": "Prism (initial weapon; upgrades with Prismatic Lens)",
+      "player_weapon_damage": 30,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "The Creaking Carousel",
+          "enemy": {
+            "name": "Gigglehoof",
+            "health": 50,
+            "damage": 15,
+            "weakness": "Bright Light (Player's Prism Weapon)"
+          },
+          "hazard": "The carousel spins erratically, creating disorienting illusions.",
+          "pickup": {
+            "name": "Mirror Shard",
+            "effect": "Reflects light to create dazzling flashes, useful against shadow-based enemies."
+          },
+          "trigger": "Player uses Prism Weapon to shatter Gigglehoof's illusions, revealing a hidden pathway."
+        },
+        {
+          "location": "The Tea Party Tent",
+          "enemy": {
+            "name": "Madame Tumbler",
+            "health": 60,
+            "damage": 20,
+            "weakness": "Sound (Mirror Shard Pickup)"
+          },
+          "hazard": "Teacups float unpredictably, colliding with the player if not dodged.",
+          "pickup": {
+            "name": "Whimsical Whistle",
+            "effect": "Emits a high-pitched note that disrupts mechanical enemies."
+          },
+          "trigger": "Player uses Mirror Shard to reflect light into a chandelier, triggering a sound-based attack."
+        },
+        {
+          "location": "The Clockwork Workshop",
+          "enemy": {
+            "name": "Clockwork Golem",
+            "health": 70,
+            "damage": 25,
+            "weakness": "Sound (Whimsical Whistle Pickup)"
+          },
+          "hazard": "Gears drop from the ceiling, creating obstacles.",
+          "pickup": {
+            "name": "Prismatic Lens",
+            "effect": "Amplifies light output, crucial for defeating the final boss."
+          },
+          "trigger": "Player uses Whimsical Whistle to jam the Golem's gears, exposing its core."
+        }
+      ],
+      "boss": {
+        "name": "The Carnival Barker",
+        "health": 120,
+        "damage": 35,
+        "weakness": "Prismatic Lens Pickup",
+        "victory_condition": "Player uses Prismatic Lens to blind the Barker, exposing his shadow form for a final strike."
+      },
+      "objective": "Defeat the Carnival Barker in the Grand Tent",
+      "reward": "Carnival Master's Badge (unlocks new illusion spells)"
+    }
+  },
+  {
+    "case": {
+      "genre": "steampunk",
+      "mood": "chaotic",
+      "player_class": "engineer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Steampunk Chaos Factory",
+      "setting": "A derelict steampunk factory with unstable machinery, steam vents, and collapsing structures. Chaos is amplified by malfunctioning automatons and explosive hazards.",
+      "player_weapon": "Tesla Wrench (electricity-based attacks, upgradable with pickups)",
+      "player_weapon_damage": 45,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Collapsing Assembly Floor",
+          "enemy": {
+            "name": "Golem-Scuttler",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Electricity (player's Tesla Wrench)"
+          },
+          "hazard": "Collapsing platforms and falling gears",
+          "pickup": {
+            "name": "Steam Valve Core",
+            "effect": "Unlocks pressure-based weapon modifications"
+          },
+          "trigger": "Player enters the factory, triggering the Golem-Scuttler's patrol route."
+        },
+        {
+          "location": "Steam Power Chamber",
+          "enemy": {
+            "name": "Boiler Warden",
+            "health": 150,
+            "damage": 40,
+            "weakness": "Steam Valve Core (pickup from prior encounter)"
+          },
+          "hazard": "Explosive steam vents and pressure traps",
+          "pickup": {
+            "name": "Precision Gear",
+            "effect": "Restores 50% weapon durability or enhances attack speed"
+          },
+          "trigger": "Player uses the Steam Valve Core to activate the chamber's machinery, awakening the Boiler Warden."
+        },
+        {
+          "location": "Boss Chamber: The Overmind Spire",
+          "enemy": {
+            "name": "Overmind Spider",
+            "health": 250,
+            "damage": 55,
+            "weakness": "Precision Gear (pickup from prior encounter)"
+          },
+          "hazard": "Destructive energy beams and collapsing ceiling",
+          "pickup": {
+            "name": "Chrono Cog",
+            "effect": "Unlocks a temporary time-slow ability"
+          },
+          "trigger": "Player inserts the Precision Gear into the spire's control panel, destabilizing the Overmind Spider's core."
+        }
+      ],
+      "boss": {
+        "name": "Overmind Spider",
+        "health": 250,
+        "damage": 55,
+        "weakness": "Precision Gear (used to disrupt its movement and core)",
+        "victory_condition": "Destroy the core by inserting the Precision Gear into its chest"
+      },
+      "objective": "Reach the core of the factory and destroy the Overmind Spider.",
+      "reward": "Chrono Cog (temporary time-slow ability) and access to the next level"
+    }
+  },
+  {
+    "case": {
+      "genre": "steampunk",
+      "mood": "mysterious",
+      "player_class": "artificer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "steampunk",
+      "setting": "Ironspire Tower - A decaying steampunk fortress with fog-filled corridors, broken automata, and hidden clockwork traps. The air is thick with oil and the hum of dormant machinery.",
+      "player_weapon": "Wrench-Gun (modifies the wrench into a tool that can fire Lubricant Canister or Steam Core projectiles).",
+      "player_weapon_damage": 50,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "The Warden's Trial",
+          "enemy": {
+            "name": "Rustfang Warden",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Exposed piston vulnerable to mechanical jamming"
+          },
+          "hazard": "Rusted gears scatter across the floor, impeding movement.",
+          "pickup": {
+            "name": "Lubricant Canister",
+            "effect": "Disables mechanical enemies by jamming their moving parts"
+          },
+          "trigger": "Player enters the derelict workshop; the Warden activates to block the path."
+        },
+        {
+          "location": "The Spider's Web",
+          "enemy": {
+            "name": "Clockwork Spider",
+            "health": 150,
+            "damage": 40,
+            "weakness": "Core vulnerable to electrical surges"
+          },
+          "hazard": "The spider releases a web that slows the player's movement and damages their gear.",
+          "pickup": {
+            "name": "Steam Core",
+            "effect": "Power source that can overload mechanical enemies or enhance tools"
+          },
+          "trigger": "The sealed door from the first encounter opens, revealing the spider patrolling a control room."
+        },
+        {
+          "location": "The Chrono-Golem's Chamber",
+          "enemy": {
+            "name": "Chrono-Golem",
+            "health": 250,
+            "damage": 60,
+            "weakness": "Steam Core (specific pickup from Encounter 2) inserted into its chest to cause overheating"
+          },
+          "hazard": "The Golem manipulates time, creating duplicates of itself that fade after 5 seconds.",
+          "pickup": {
+            "name": "Gears of Progress",
+            "effect": "Upgrades the player's tools to disrupt the Golem's regeneration"
+          },
+          "trigger": "The Steam Core activates a hidden mechanism, summoning the Chrono-Golem."
+        }
+      ],
+      "boss": {
+        "name": "Chrono-Golem",
+        "health": 250,
+        "damage": 60,
+        "weakness": "Steam Core (must be used in conjunction with Gears of Progress to counteract regeneration)",
+        "victory_condition": "Insert Steam Core into the Golem's chest while using the Gears of Progress to dismantle its internal time mechanisms."
+      },
+      "objective": "Reach the core of Ironspire Tower and disable the Chrono-Golem.",
+      "reward": "Access to the upper levels of Ironspire Tower and a blueprint for a Chrono-Engine."
+    }
+  },
+  {
+    "case": {
+      "genre": "steampunk",
+      "mood": "whimsical",
+      "player_class": "alchemist",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whimsical Steampunk Alchemist's Workshop",
+      "setting": "A whimsical steampunk workshop filled with floating gears, animated brass birds, and a giant clockwork tree. The environment shifts colors as the player progresses, with gears and cogs visibly turning to guide them toward the boss chamber.",
+      "player_weapon": "Alchemical Fire Bomb (primary weapon; can be upgraded with rare components)",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Gears of Gigglesworth",
+          "enemy": {
+            "name": "Steam Golem (Bouncy Bubbles)",
+            "health": 50,
+            "damage": 10,
+            "weakness": "Fire-based attacks (e.g., alchemical fire bombs)"
+          },
+          "hazard": "The Golem's movements release steam clouds that slow the player's movement.",
+          "pickup": {
+            "name": "Steam Valve Core",
+            "effect": "Can be used with an alchemy station to brew 'Acidic Elixirs'"
+          },
+          "trigger": "Player ignites a floating lantern, awakening the Golem. Defeating it causes its core to explode, revealing a"
+        },
+        {
+          "location": "The Alchemy Garden",
+          "enemy": {
+            "name": "Clockwork Caterpillar (The Chompy Cog)",
+            "health": 40,
+            "damage": 8,
+            "weakness": "Acidic Elixirs (crafted using the Steam Valve Core from prior encounter)"
+          },
+          "hazard": "The Caterpillar leaves behind sticky residue that reduces the effectiveness of alchemical potions temporarily.",
+          "pickup": {
+            "name": "Clockwork Key",
+            "effect": "Unlocks the 'Cage of Chronos' (boss chamber)"
+          },
+          "trigger": "Player uses the Steam Valve Core at an alchemy station to brew an elixir, which attracts the Caterpillar. Defeating it drops a"
+        }
+      ],
+      "boss": {
+        "name": "The Clockwork Titan (Professor Chronos)",
+        "health": 150,
+        "damage": 20,
+        "weakness": "The Clockwork Key (from second encounter; inserts into the Titan's core to disable its armor)",
+        "victory_condition": "Insert the Clockwork Key into the Titan's chest, then strike its core with fire-based attacks."
+      },
+      "objective": "Reach the 'Cage of Chronos' and defeat the boss",
+      "reward": "Upon defeating the boss, the player earns the 'Chrono Alchemist' title and a glowing gear amulet that boosts potion potency by 20%."
+    }
+  },
+  {
+    "case": {
+      "genre": "steampunk",
+      "mood": "tense",
+      "player_class": "rogue",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Steampunk",
+      "setting": "A sprawling underground steampunk facility filled with grinding gears, hissing steam pipes, and flickering gas lamps. The air is thick with soot and the scent of oil. The walls are lined with rusted machinery and ancient blueprints of failed time experiments.",
+      "player_weapon": "High-Voltage Taser (unlocked via a prior quest)",
+      "player_weapon_damage": 60,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Ironworks Corridor",
+          "enemy": {
+            "name": "Grimoire Automaton",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Corrosive Gel (from prior pickup)"
+          },
+          "hazard": "Steam vents erupt when the automaton is damaged, reducing player visibility.",
+          "pickup": {
+            "name": "Rusted Keycard",
+            "effect": "Unlocks the Blast Furnace Gate"
+          },
+          "trigger": "Player triggers a pressure plate, activating the automaton's patrol route."
+        },
+        {
+          "location": "The Blast Furnace",
+          "enemy": {
+            "name": "Steam Golem",
+            "health": 180,
+            "damage": 50,
+            "weakness": "Player's primary weapon: High-Voltage Taser"
+          },
+          "hazard": "The furnace's heat weakens the player's armor over time.",
+          "pickup": {
+            "name": "Detonator Core",
+            "effect": "Required to damage the Boss in the final encounter"
+          },
+          "trigger": "The Rusted Keycard is used to open the gate, releasing the golem from its containment field."
+        },
+        {
+          "location": "The Clockwork Overlord's Sanctum",
+          "enemy": {
+            "name": "The Clockwork Overlord",
+            "health": 300,
+            "damage": 70,
+            "weakness": "Detonator Core (from prior encounter)"
+          },
+          "hazard": "The Overlord summons mechanical drones mid-fight, forcing the player to multitask.",
+          "pickup": {
+            "name": "Chrono-Engine Blueprints",
+            "effect": "Unlocks a permanent ability: Time Distortion (slow enemies)"
+          },
+          "trigger": "The Detonator Core is placed in the Overlord's gear mechanism, initiating the boss fight."
+        }
+      ],
+      "boss": {
+        "name": "The Clockwork Overlord",
+        "health": 300,
+        "damage": 70,
+        "weakness": "Detonator Core (must be planted in the Overlord's gear)",
+        "victory_condition": "Destroy the Overlord's core by detonating the Detonator Core while dodging its laser barrages."
+      },
+      "objective": "Steal the Chrono-Engine Blueprints and escape the facility.",
+      "reward": "Chrono-Engine Blueprints (permanent ability: Time Distortion)"
+    }
+  },
+  {
+    "case": {
+      "genre": "steampunk",
+      "mood": "ominous",
+      "player_class": "stormcaller",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Steampunk Ominous Chase",
+      "setting": "A decaying steampunk fortress with exposed gears, flickering gaslights, and constant mechanical grinding noises. The air is thick with smoke and the scent of burnt oil.",
+      "player_weapon": "Lightning Catalyst (primary weapon)",
+      "player_weapon_damage": 45,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "The Iron Foundry",
+          "enemy": {
+            "name": "Clockwork Warden",
+            "health": 120,
+            "damage": 30,
+            "weakness": "Lightning-infused weapon (player's primary weapon)"
+          },
+          "hazard": "Steam vents explode periodically, dealing 15 damage if player is caught in the blast.",
+          "pickup": {
+            "name": "Tesla Coil Core",
+            "effect": "Temporarily boosts lightning damage by 50% when equipped."
+          },
+          "trigger": "Player enters the foundry after navigating a collapsing bridge. The Warden activates a security protocol, blocking the exit."
+        },
+        {
+          "location": "The Golem's Forge",
+          "enemy": {
+            "name": "Steamforged Golem",
+            "health": 180,
+            "damage": 40,
+            "weakness": "Tesla Coil Core (pickup from prior encounter)"
+          },
+          "hazard": "Collapsing machinery creates debris fields that slow player movement by 30%.",
+          "pickup": {
+            "name": "Gear of Binding",
+            "effect": "Disables enemy shield mechanics for 5 seconds when used."
+          },
+          "trigger": "After defeating the Warden, the player discovers a hidden passage leading to the forge. The Golem awakens, crushing the door shut behind them."
+        },
+        {
+          "location": "The Stormforge Sanctum",
+          "enemy": {
+            "name": "The Iron Tempest (Boss)",
+            "health": 300,
+            "damage": 60,
+            "weakness": "Gear of Binding (pickup from second encounter)"
+          },
+          "hazard": "The boss summons electromagnetic pulses that temporarily disable player abilities for 5 seconds.",
+          "pickup": {
+            "name": "Stormcaller's Relic",
+            "effect": "Unlocks a final lightning storm ability that deals 150 damage if weakness is exploited."
+          },
+          "trigger": "The Golem's defeat triggers a sequence where the sanctum's central reactor overloads, summoning the boss. The floor begins to crack and collapse."
+        }
+      ],
+      "boss": {
+        "name": "The Iron Tempest",
+        "health": 300,
+        "damage": 60,
+        "weakness": "Gear of Binding (required to bypass shield phase)",
+        "victory_condition": "Use the Gear of Binding to disable the boss's shield, then unleash the Stormcaller's Relic ability."
+      },
+      "objective": "Survive the escalating threats and exploit weaknesses to defeat the final boss.",
+      "reward": "Stormcaller's Relic (unlocks ultimate ability: 'Tempest's Wrath' - a lightning storm that damages all enemies)"
+    }
+  },
+  {
+    "case": {
+      "genre": "steampunk",
+      "mood": "desolate",
+      "player_class": "chronomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Steampunk Desolation",
+      "setting": "A decaying steampunk city with broken clock towers, rusted gears, and perpetual fog. The environment features flickering gas lamps, overgrown vegetation entwined with machinery, and remnants of a failed time-experiment.",
+      "player_weapon": "Chrono Dagger (can slow time for 5 seconds)",
+      "player_weapon_damage": 60,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "The Rustbound Foundry",
+          "enemy": {
+            "name": "Chrono-Guardian Automaton",
+            "health": 120,
+            "damage": 40,
+            "weakness": "Player's starting weapon: Chrono Dagger (time disruption ability)"
+          },
+          "hazard": "Steam vents erupt when the automaton is damaged, slowing the player for 3 seconds.",
+          "pickup": {
+            "name": "Temporal Core",
+            "effect": "Increases player's time manipulation duration by 20%"
+          },
+          "trigger": "Player activates a broken time core in the foundry, awakening the automaton."
+        },
+        {
+          "location": "The Echoing Concourse",
+          "enemy": {
+            "name": "Temporal Eater",
+            "health": 150,
+            "damage": 50,
+            "weakness": "Temporal Core (from prior encounter)"
+          },
+          "hazard": "The encounter area shifts between past/future versions every 10 seconds, altering terrain and enemy positions.",
+          "pickup": {
+            "name": "Chrono Key",
+            "effect": "Unlocks the sealed gate to the final chamber"
+          },
+          "trigger": "Player uses the Temporal Core to power a nearby chrono-generator, destabilizing the space-time rift that summons the Temporal Eater."
+        }
+      ],
+      "boss": {
+        "name": "Timebound Colossus",
+        "health": 300,
+        "damage": 80,
+        "weakness": "Chrono Key (from second encounter)",
+        "victory_condition": "Destroy the colossus's central time-chronicler gear using the Chrono Key"
+      },
+      "objective": "Reach the Chrono-Sanctum to confront the Timebound Colossus",
+      "reward": "Chrono Crown (permanent upgrade: 10% chance to rewind 2 seconds on any attack)"
+    }
+  },
+  {
+    "case": {
+      "genre": "steampunk",
+      "mood": "eerie",
+      "player_class": "geomancer",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Eerie Steampunk Ruins",
+      "setting": "Abandoned steampunk facility with flickering gas lamps, rusted machinery, and eerie echoes of past explosions.",
+      "player_weapon": "Tectonic Gauntlets (Deal seismic damage, can charge for powerful ground-shock attacks)",
+      "player_weapon_damage": 150,
+      "player_health": 300,
+      "encounters": [
+        {
+          "location": "The锈蚀天文台 (Rusted Observatory)",
+          "enemy": {
+            "name": "Clockwork Sentinel",
+            "health": 250,
+            "damage": 80,
+            "weakness": "Player's innate seismic charge ability (Geomancer's core skill)"
+          },
+          "hazard": "Collapsing gear platforms that trigger steam vents on contact.",
+          "pickup": {
+            "name": "Tectonic Core",
+            "effect": "Grants +30% seismic damage for 15 seconds; only usable once."
+          },
+          "trigger": "Player destabilizes the observatory's foundation with a tremor, awakening the Sentinel."
+        },
+        {
+          "location": "The蒸汽地窖 (Steam Cellar)",
+          "enemy": {
+            "name": "Golem of Molten Gears",
+            "health": 400,
+            "damage": 120,
+            "weakness": "Tectonic Core pickup from prior encounter (must be activated manually)"
+          },
+          "hazard": "Pulsing steam geysers that knock down the player's defenses.",
+          "pickup": {
+            "name": "Steam Valve Key",
+            "effect": "Disables boss's pressure armor for 10 seconds; can only be used once."
+          },
+          "trigger": "The Tectonic Core powers a hidden steam valve, revealing the Golem's weak underbelly."
+        },
+        {
+          "location": "The破碎引擎室 (Shattered Engine Chamber)",
+          "enemy": {
+            "name": "The Iron Warden (Boss)",
+            "health": 1200,
+            "damage": 200,
+            "weakness": "Steam Valve Key from prior encounter (must be inserted into boss's core)"
+          },
+          "hazard": "The chamber's ceiling destabilizes, dropping molten metal shards periodically.",
+          "pickup": {
+            "name": "Engineer's Blueprint",
+            "effect": "Unlocks a permanent seismic resonance ability for future levels."
+          },
+          "trigger": "The Steam Valve Key unlocks the chamber's sealed door, revealing the Iron Warden's pulsating steam core."
+        }
+      ],
+      "boss": {
+        "name": "The Iron Warden",
+        "health": 1200,
+        "damage": 200,
+        "weakness": "Steam Valve Key (must be inserted into core during a 5-second window after a specific environmental cue)",
+        "victory_condition": "Destroy the core while it's vulnerable, using the Steam Valve Key"
+      },
+      "objective": "Survive three escalating encounters to dismantle the Iron Warden's core, using pickups from prior fights.",
+      "reward": "Engineer's Blueprint (permanent upgrade) and access to the next level."
+    }
+  },
+  {
+    "case": {
+      "genre": "steampunk",
+      "mood": "serene",
+      "player_class": "paladin",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Serene Steampunk Botanical Garden",
+      "setting": "A tranquil steampunk garden with brass automata, glowing bioluminescent plants, and floating lanterns. The serene atmosphere contrasts with the corrupted machinery of the encounters.",
+      "player_weapon": "Radiant Mace (emits holy light, pierces mechanical cores)",
+      "player_weapon_damage": 20,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Clockwork Greenhouse",
+          "enemy": {
+            "name": "Clockwork Thistle",
+            "health": 60,
+            "damage": 15,
+            "weakness": "Radiant Mace (player's weapon)"
+          },
+          "hazard": "Steam vents periodically release clouds that obscure vision.",
+          "pickup": {
+            "name": "Light Core",
+            "effect": "Emits concentrated light, damaging enemies weak to illumination."
+          },
+          "trigger": "Player defeats the Thistle, causing its gears to fall apart. A glowing Light Core (pickup) is revealed in its chest. Activating it opens a steam-powered gate to the Clock Tower."
+        },
+        {
+          "location": "Clock Tower Courtyard",
+          "enemy": {
+            "name": "Steam Wraith",
+            "health": 45,
+            "damage": 10,
+            "weakness": "Light Core (pickup from prior encounter)"
+          },
+          "hazard": "Gears on the tower's walls spin dangerously close to the player.",
+          "pickup": {
+            "name": "Steam Inhibitor",
+            "effect": "Blocks steam-based abilities and causes overpressure damage to mechanical foes."
+          },
+          "trigger": "The Light Core illuminates a hidden control panel, temporarily disabling the Wraith's steam-based attacks. Defeating it reveals a Steam Inhibitor (pickup) embedded in its core, which unlocks the path to the Central Plaza."
+        },
+        {
+          "location": "Central Plaza",
+          "enemy": {
+            "name": "Chrono-Golem",
+            "health": 120,
+            "damage": 25,
+            "weakness": "Steam Inhibitor (pickup from prior encounter)"
+          },
+          "hazard": "The plaza's clock tower begins to collapse as the Golem's core destabilizes.",
+          "pickup": {
+            "name": "Chrono-Relic",
+            "effect": "Restores time-based abilities and grants a temporary shield."
+          },
+          "trigger": "The plaza's timepiece halts after the Steam Inhibitor is activated, freezing the Golem's movements. Player must target its steam valves to trigger a meltdown."
+        }
+      ],
+      "boss": {
+        "name": "Chrono-Golem",
+        "health": 120,
+        "damage": 25,
+        "weakness": "Steam Inhibitor (pickup from second encounter)",
+        "victory_condition": "Destroy the Golem's steam valves with the Steam Inhibitor, causing a meltdown."
+      },
+      "objective": "Protect the ancient Chrono-Relic at the plaza's center from the corrupted constructs.",
+      "reward": "Chrono-Relic (boosts time-based abilities) and access to the upper levels of the Clock Tower."
+    }
+  }
+]

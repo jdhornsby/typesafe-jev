@@ -1,0 +1,1138 @@
+[
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "mysterious",
+      "player_class": "geomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Mysterious — silence is heavy. Sounds are muffled, distorted. Light bends unnaturally. Stone moves when no one is looking.",
+      "setting": "A sunken temple-city, half-buried in silt and coral, where the bones of ancient geomancers still pulse with residual magic. Water glows faintly with bioluminescent algae, and echoes from the past whisper in the current.",
+      "player_weapon": "Geomantic Stone — a floating orb that lets the player summon, shape, and detonate rock and crystal. Can be charged for area effects.",
+      "player_weapon_damage": 5,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Fractured Trench — a canyon of shattered obsidian spires, glowing with unstable blue veins.",
+          "enemy": {
+            "name": "Shardwraith",
+            "health": 40,
+            "damage": 6,
+            "weakness": "Magnetic Lattice (pickup from this encounter)"
+          },
+          "hazard": "Dense magnetic currents that distort geomantic senses — player’s stone-based abilities flicker unpredictably unless stabilized.",
+          "pickup": {
+            "name": "Magnetic Lattice",
+            "effect": "Magnetic Lattice — a floating lattice of magnetized quartz. When held, it stabilizes geomantic energy within 5m, allowing precise earth manipulation. Lasts 30s (cooldown: 90s)."
+          },
+          "trigger": "Player activates the central monolith — a cracked obelisk pulsing with magnetic resonance — which awakens the Shardwraith. As the enemy dies, the monolith collapses, revealing the Magnetic Lattice floating in the center. The collapse also destabilizes a nearby pressure valve, sending a shockwave through the water that ruptures a sealed cavern above — revealing the next area."
+        },
+        {
+          "location": "The Squeeze Vault — a cavernous chamber where water pressure bends the walls inward like a living fist.",
+          "enemy": {
+            "name": "The Pressure Warden",
+            "health": 60,
+            "damage": 8,
+            "weakness": "Magnetic Lattice (from Encounter 1)"
+          },
+          "hazard": "Intense hydrostatic pressure zones that crush unanchored terrain. Player’s geomancy is weakened unless they create stable ground using the Lattice.",
+          "pickup": {
+            "name": "Echo Shard",
+            "effect": "Echo Shard — a small, humming crystal shard embedded in the Warden’s spine. When retrieved, it emits faint harmonic pulses that resonate with buried structures. Lasts permanently."
+          },
+          "trigger": "Using the Magnetic Lattice to stabilize a platform beneath the Warden, the player shatters its pressure core. As it dies, its spine cracks open, releasing the Echo Shard. The vibration from the shard awakens ancient resonant stones in the ceiling — they begin to glow in sequence, pointing toward a glowing fissure in the far wall: the boss chamber."
+        },
+        {
+          "location": "The Hall of Whispers — a vast, cathedral-like cavern draped in bioluminescent kelp that moves as if breathing.",
+          "enemy": {
+            "name": "Veil Serpent",
+            "health": 70,
+            "damage": 7,
+            "weakness": "Echo Shard (from Encounter 2)"
+          },
+          "hazard": "Phantom currents that manifest as illusions of walls and pathways. The environment shifts constantly, disorienting movement.",
+          "pickup": {
+            "name": "None",
+            "effect": "None — the enemy drops no item, but its death triggers the boss."
+          },
+          "trigger": "The player uses the Echo Shard to detect the Serpent’s true form — it’s invisible unless the harmonic pulse reveals its spectral outline. Once the Serpent is struck with a geomantic pulse synced to the Shard’s frequency, it dissolves into mist, leaving behind a glowing sigil on the floor. The sigil opens like a gate, revealing the Deep Seer’s chamber."
+        }
+      ],
+      "boss": {
+        "name": "The Deep Seer",
+        "health": 150,
+        "damage": 10,
+        "weakness": "Echo Shard (acquired from Encounter 3)",
+        "victory_condition": "Break the Crystal Core with the Echo Shard"
+      },
+      "objective": "Navigate the drowned ruins, master your geomantic powers, and shatter the Deep Seer’s Crystal Core using the Echo Shard — the only thing that can resonate with its ancient, buried heart.",
+      "reward": "Unlock the 'Heart of the Abyss' — a passive ability that lets the player sense hidden structures and enemy weaknesses through stone resonance."
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "serene",
+      "player_class": "beastmaster",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Serene underwater harmony",
+      "setting": "The Whispering Reefs — a vast, sun-dappled coral ecosystem where light filters through crystalline water, and ancient song resonates in the tides. No violent storms, no predators on the prowl — only the quiet pulse of life.",
+      "player_weapon": "Soulbond Whistle",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Coral Archway",
+          "enemy": {
+            "name": "Shy Goby Swarm",
+            "health": 30,
+            "damage": 5,
+            "weakness": "Harmonic Echo"
+          },
+          "hazard": "None",
+          "pickup": {
+            "name": "Harmonic Echo",
+            "effect": "Releases a soft harmonic pulse that stuns nearby enemies for 3 seconds"
+          },
+          "trigger": "Player passes through the Coral Archway, causing the Goby Swarm to ripple into view. Their shimmering scales pulse in sync with the water current."
+        },
+        {
+          "location": "Kelp Forest Veil",
+          "enemy": {
+            "name": "Drifting Anemone Stalker",
+            "health": 45,
+            "damage": 8,
+            "weakness": "Harmonic Echo"
+          },
+          "hazard": "Slow-current zones that reduce player movement speed",
+          "pickup": {
+            "name": "Bioluminescent Bloom",
+            "effect": "Creates a temporary field of glowing bioluminescent particles that reveals hidden paths and weak points in enemies"
+          },
+          "trigger": "After defeating the Goby Swarm, the Harmonic Echo pickup activates, causing a nearby kelp stalk to glow and reveal a hidden passage into the Kelp Forest Veil. The Anemone Stalker, drawn by the sound, unfurls from the shadows."
+        },
+        {
+          "location": "Sunken Bell Tower",
+          "enemy": {
+            "name": "Sonic Eel Tyrant",
+            "health": 70,
+            "damage": 12,
+            "weakness": "Bioluminescent Bloom"
+          },
+          "hazard": "Pulsing sound waves that disorient the player’s directional sense",
+          "pickup": {
+            "name": "Glowing Coral Core",
+            "effect": "Emits a resonant, low-frequency pulse that calms all marine life and reveals the true form of hidden entities"
+          },
+          "trigger": "The Bioluminescent Bloom reveals a hidden altar beneath the Bell Tower’s collapsed spire. When the player picks up the Glowing Coral Core, the Sonic Eel Tyrant awakens — enraged by the disruption of the deep harmony."
+        }
+      ],
+      "boss": {
+        "name": "Ancient Coral Leviathan",
+        "health": 150,
+        "damage": 0,
+        "weakness": "Glowing Coral Core",
+        "victory_condition": "Use the Glowing Coral Core to harmonize with the Leviathan's frequency"
+      },
+      "objective": "Harmonize with the Ancient Coral Leviathan using the Glowing Coral Core to restore peace to the reef.",
+      "reward": "Whispering Tide Amulet — allows player to summon a gentle current to glide silently through water, reducing environmental resistance."
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "ominous",
+      "player_class": "necromancer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Ominous — every sound is a whisper from the deep, every shadow moves with the rhythm of a forgotten requiem, and your own heartbeat echoes louder with each step — as if the ocean is learning your name.",
+      "setting": "A sunken cathedral-city, half-buried in silt and coral, where the drowned sing in perfect, endless harmony — and the necromancer’s magic is both a weapon and a summoning call to the dead who never stopped singing.",
+      "player_weapon": "Necrotic Chain Whip",
+      "player_weapon_damage": 45,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Coral Crypt — broken pillars, flickering bioluminescent algae",
+          "enemy": {
+            "name": "Ghoul-Swarm Eel",
+            "health": 200,
+            "damage": 60,
+            "weakness": "Necrotic Chain Whip (player’s starting weapon) — its chain can entangle and drain life-force from the eel’s neural cluster"
+          },
+          "hazard": "Darkwater Currents — slow movement, drain stamina, obscure vision",
+          "pickup": {
+            "name": "Soul-Siphon Glyph",
+            "effect": "Unlocks ‘Soul-Siphon’ — passive ability: killing enemies with Necrotic Chain Whip heals player for 15% of damage dealt"
+          },
+          "trigger": "Defeating the Ghoul-Swarm Eel causes its neural cluster to implode, releasing a shockwave that ruptures a sealed chamber beneath the floor — revealing the entrance to the next zone"
+        },
+        {
+          "location": "Pressure Vault — twisted steel doors, crushing water pressure that increases over time (player takes 5 HP/sec unless holding breath)",
+          "enemy": {
+            "name": "Bone-Warden of the Deep",
+            "health": 300,
+            "damage": 80,
+            "weakness": "Soul-Siphon Glyph — when activated, the warden’s skeletal armor becomes porous to necrotic energy, causing it to self-crack under its own absorbed life-force"
+          },
+          "hazard": "Gravity Anomalies — occasional zones where gravity reverses, forcing player to fight upside-down on ceiling while avoiding falling debris",
+          "pickup": {
+            "name": "Choir Shard",
+            "effect": "Grants ‘Resonance Echo’ — necrotic attacks now emit a low-frequency pulse that stuns enemies for 1.5s if they’re within 3m"
+          },
+          "trigger": "When the Bone-Warden is defeated, its shattered ribcage collapses into a spiral formation, aligning with ancient carvings on the wall — activating a hidden sonar pulse that resonates with the Choir Shard, revealing the location of the Leviathan’s lair"
+        },
+        {
+          "location": "Chamber of Drowned Hymns — floating corpses suspended in amber gel, singing in reverse",
+          "enemy": {
+            "name": "The Maw of the Last Singer",
+            "health": 400,
+            "damage": 90,
+            "weakness": "Resonance Echo — the creature’s vocal sacs are vulnerable to low-frequency pulses, causing it to choke on its own echoes and briefly expose its core"
+          },
+          "hazard": "Soul-Echoes — ghostly echoes of past victims scream in harmonic dissonance, reducing player’s healing effectiveness by 50% unless standing within the Resonance Echo’s radius",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is the final encounter before the boss"
+          },
+          "trigger": "Defeating the Maw causes its vocal sac to rupture, emitting a final, pure tone that resonates with the Choir Shard — activating the Leviathan’s chamber doors and locking the player into the final arena"
+        }
+      ],
+      "boss": {
+        "name": "The Leviathan of the Forgotten Choir",
+        "health": 1500,
+        "damage": 400,
+        "weakness": "Choir Shard — when held, emits a harmonic resonance that destabilizes the Leviathan’s fused bone-spine, exposing its Heart-Cage for 8 seconds every 30 seconds",
+        "victory_condition": "Use the Choir Shard to shatter its Heart-Cage"
+      },
+      "objective": "Conquer the three guardians of the abyss to reach the Leviathan — but beware: the deeper you sink, the more your soul sings back to the deep.",
+      "reward": "The Leviathan’s Heart-Cage shatters into 7 fragments — each becomes a unique necromantic relic, unlocking the ‘Deep Choir’ skill tree"
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "tense",
+      "player_class": "stormcaller",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "You are the storm in a world that forgot how to hear thunder.",
+      "setting": "A drowned, ancient city fused with coral and biomechanical ruins, lit only by bioluminescent algae and the occasional lightning flash. The water is thick, heavy, and silent — except when something screams.",
+      "player_weapon": "Stormcaller’s Lightning Surge",
+      "player_weapon_damage": 20,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Shattered Trench",
+          "enemy": {
+            "name": "Trench Warden",
+            "health": 200,
+            "damage": 25,
+            "weakness": "Stormcaller's Lightning Surge (primary attack)"
+          },
+          "hazard": "Pressurized Currents (slow movement, drain stamina)",
+          "pickup": {
+            "name": "Charged Hydro-Vane",
+            "effect": "Grants 'Electrostatic Surge' — next 3 Lightning Surges chain to nearby enemies"
+          },
+          "trigger": "Defeating the Trench Warden activates the pressure valve above, releasing a pulse of bio-electricity that disrupts the deep-sea sonar field — revealing the path to the next zone."
+        },
+        {
+          "location": "The Singing Abyss",
+          "enemy": {
+            "name": "Sonic Stalker",
+            "health": 350,
+            "damage": 30,
+            "weakness": "Charged Hydro-Vane (must be used to overload its sonar node)"
+          },
+          "hazard": "Echo Pulse Fields (disorient player, reveal enemy position only via sound)",
+          "pickup": {
+            "name": "Harmonic Resonance Crystal",
+            "effect": "Grants 'Harmonic Resonance Crystal' — a crystalline shard that resonates with specific frequencies. When charged by a Sonic Stalker's death scream, it becomes a targeted overload device."
+          },
+          "trigger": "The Sonic Stalker’s death emits a resonant frequency that fractures the seafloor, exposing a dormant hydrothermal vent. The vent’s thermal surge begins charging the Crystal — and draws the Leviathan’s attention."
+        },
+        {
+          "location": "The Void Maw Chamber",
+          "enemy": {
+            "name": "Gloom Maw",
+            "health": 500,
+            "damage": 40,
+            "weakness": "Harmonic Resonance Crystal (must be held and activated to shatter its bio-luminescent armor)"
+          },
+          "hazard": "Light-Eating Darkness (reduces visibility to 5m, drains sanity, summons tentacles)",
+          "pickup": {
+            "name": "None",
+            "effect": "None — the enemy is the final obstacle before the boss"
+          },
+          "trigger": "Killing the Gloom Maw causes its corpse to collapse into the vent, triggering a thermal surge that fully charges the Harmonic Resonance Crystal and rips open the Leviathan’s lair."
+        }
+      ],
+      "boss": {
+        "name": "Leviathan of the Deep Silence",
+        "health": 1500,
+        "damage": 300,
+        "weakness": "Harmonic Resonance Crystal (must be active and charged from Encounter 2)",
+        "victory_condition": "Overload its Core with the Harmonic Resonance Crystal"
+      },
+      "objective": "Survive the trench, harness the storm, and shatter the Leviathan’s core with the resonant frequency you stole from its children.",
+      "reward": "Unlock the 'Thunder of the Deep' passive — every Lightning Surge now emits a 5m shockwave that stuns enemies and temporarily disables sonar-based enemies."
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "eerie",
+      "player_class": "shadowblade",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Eerie silence. The absence of sound is the enemy. Every movement echoes in the mind. The water doesn’t flow — it listens.",
+      "setting": "A forgotten underwater civilization collapsed by ancient sonic rituals. The ocean is unnaturally still. No fish. No currents. Only the hum of the dead.",
+      "player_weapon": "Shadowblade — a short, silent dagger that emits no light or sound. Special ability: Silence Slash — creates a 3-second zone of absolute stillness that paralyzes sound-sensitive enemies.",
+      "player_weapon_damage": 25,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Sunken Cathedral Ruins — ceiling collapsed, moonlight filters through broken domes",
+          "enemy": {
+            "name": "Gloom Eel",
+            "health": 60,
+            "damage": 15,
+            "weakness": "Shadowblade’s Silence Slash (player’s base ability) — the Eel is vulnerable only when it's not moving, and the Silence Slash creates a moment of absolute stillness that paralyzes its bio-luminescent nervous system"
+          },
+          "hazard": "Dense kelp forests that dampen sound and obscure vision. Movement noise increases enemy awareness.",
+          "pickup": {
+            "name": "Phasing Gills",
+            "effect": "Grants Shadowblade the ability to briefly phase through solid objects (15s cooldown). Name: Phasing Gills"
+          },
+          "trigger": "Defeating the Gloom Eel causes the cathedral’s central altar to crack open, releasing a pulsing bioluminescent shard that drifts upward — this is the Echo Shard, and its frequency begins to resonate with the deeper currents. The water itself starts to hum."
+        },
+        {
+          "location": "Abyssal Trench — jagged volcanic rock, steam vents, and dead coral forests",
+          "enemy": {
+            "name": "Corrupted Tendril",
+            "health": 80,
+            "damage": 20,
+            "weakness": "The Phasing Gills (acquired in Encounter 1) — the Tendril is anchored to the seabed and cannot be damaged by physical strikes, but when the player phases through it, it briefly loses cohesion and becomes vulnerable to a single Shadowblade strike"
+          },
+          "hazard": "Swirling sediment clouds that distort movement and disorient directional sense. Tendril emits low-frequency pulses that push the player away if they linger.",
+          "pickup": {
+            "name": "Echo Shard",
+            "effect": "Reveals enemy weak points as glowing harmonic nodes for 10 seconds. Name: Echo Shard"
+          },
+          "trigger": "When the Tendril is defeated, its core ruptures and emits a sonic pulse that shatters the seabed’s crust, revealing a massive, ancient sarcophagus sealed with bone-chains — the entrance to the Matriarch’s tomb. The Echo Shard now floats above the sarcophagus, vibrating in sync with its heartbeat."
+        },
+        {
+          "location": "The Bone Crypt — floating skeletal remains, bioluminescent fungi that react to emotion, and chains that rattle with the Matriarch’s breathing",
+          "enemy": {
+            "name": "Soul-Siphon Kraken",
+            "health": 100,
+            "damage": 25,
+            "weakness": "The Echo Shard (acquired in Encounter 2) — its tentacles are immune to all attacks except when struck by the Shard’s resonance frequency. The player must first use Phasing Gills to get behind the Kraken, then throw the Echo Shard into its core cavity."
+          },
+          "hazard": "Gravity wells created by the Matriarch’s psychic field — sudden drops in pressure that pull the player downward. Only the Phasing Gills can negate this effect.",
+          "pickup": {
+            "name": "None",
+            "effect": "None — final encounter"
+          },
+          "trigger": "Defeating the Kraken causes the bone-chains to snap, and the sarcophagus opens. The Hollow Matriarch rises, her body woven from the souls of drowned sailors and the Echo Shard’s stolen resonance — the final battle begins."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Matriarch",
+        "health": 250,
+        "damage": 75,
+        "weakness": "The Echo Shard (acquired in Encounter 2) must be used to disrupt its harmonic resonance — the shard vibrates at the same frequency as the Tendril, making it the only tool that can silence its scream",
+        "victory_condition": "Strike the Echo Shard while it's resonating with the Corrupted Tendril's pulse"
+      },
+      "objective": "Navigate the sunken ruins and defeat three guardians to reach the Hollow Matriarch’s tomb. Use your Shadowblade’s stealth and environment to exploit each enemy’s unique weakness — each victory reveals the key to the next.",
+      "reward": "The Matriarch’s Heart — grants the player the ability to temporarily become invisible to all sonar and bio-sensory detection, perfect for infiltration."
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "chaotic",
+      "player_class": "pyromancer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Fire in the Deep — Chaos is the only constant. To survive, you must turn the ocean’s fury into your weapon.",
+      "setting": "A sunken, prehistoric city swallowed by the abyss, where ancient geothermal vents pump molten energy into the water, creating violent thermal storms, floating debris, and bioluminescent predators. The chaos is auditory — deafening pressure groans, shattering glass, collapsing structures, and the distant roars of the Leviathan. Visibility is low; fire is the only light, and every flame you cast flickers unpredictably in the turbulent currents.",
+      "player_weapon": "Burst Flame (basic fireball) → Overcharged Fire (mid-game upgrade) → Ignition Core (final weapon upgrade)",
+      "player_weapon_damage": 25,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Coral Abyss",
+          "enemy": {
+            "name": "Gelatinous Maw",
+            "health": 200,
+            "damage": 35,
+            "weakness": "Burst Flame (player's basic fireball ability)"
+          },
+          "hazard": "Thick kelp fields that dampen fire but slow movement",
+          "pickup": {
+            "name": "Burning Kelp Fragment",
+            "effect": "Ignite Kelp"
+          },
+          "trigger": "Defeating the Gelatinous Maw causes the kelp to combust, releasing toxic smoke that drifts toward the Thermal Vents, destabilizing the pressure valves above."
+        },
+        {
+          "location": "Thermal Vents",
+          "enemy": {
+            "name": "Pressure Golem",
+            "health": 300,
+            "damage": 50,
+            "weakness": "Burning Kelp Fragment (pickup from Encounter 1)"
+          },
+          "hazard": "Intense hydrostatic pressure zones that crush the player if they linger, forcing constant movement",
+          "pickup": {
+            "name": "Core Igniter",
+            "effect": "Overcharge Fire"
+          },
+          "trigger": "Destroying the Pressure Golem with the Burning Kelp Fragment ruptures a superheated boiler, flooding the area with superheated steam that melts the ice seals over the Abyssal Core, revealing the Ember Leviathan’s resting place."
+        },
+        {
+          "location": "Abyssal Core",
+          "enemy": {
+            "name": "Abyssal Igniter",
+            "health": 400,
+            "damage": 60,
+            "weakness": "Core Igniter (pickup from Encounter 2)"
+          },
+          "hazard": "Fluctuating current tunnels that randomly invert gravity, disorienting aim and movement",
+          "pickup": {
+            "name": "Ignition Core",
+            "effect": "Unleash a sustained plasma burst that pierces armor and lingers as flame"
+          },
+          "trigger": "Defeating the Abyssal Igniter with the Core Igniter causes its internal reactor to overheat and explode, exposing the Ember Leviathan’s exposed core — the only vulnerability in its armored shell."
+        }
+      ],
+      "boss": {
+        "name": "The Ember Leviathan",
+        "health": 1500,
+        "damage": 400,
+        "weakness": "Ignition Core (acquired in Encounter 3)",
+        "victory_condition": "Reduce health to 0 by igniting its core"
+      },
+      "objective": "Survive the chaotic underwater labyrinth and ignite the Ember Leviathan's core using the Ignition Core pickup.",
+      "reward": "The Flame of the Deep — unlocks unlimited fire ability underwater and grants immunity to pressure and drowning"
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "desolate",
+      "player_class": "warden",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "The Warden is not here to conquer — they are here to contain. But the system has broken. And now, the Warden must become the monster they were designed to stop.",
+      "setting": "A forgotten undersea penal colony, abandoned after a catastrophic bio-engineering failure. The water is cold, silent, and thick with the sediment of dead civilizations. No sun. No life. Only echoes — and the things that still watch.",
+      "player_weapon": "Pressure Lance — fires high-pressure water jets. Base damage: 8. Slow reload. No ammo — uses water pressure from environment. Overheat risk if fired continuously.",
+      "player_weapon_damage": 8,
+      "player_health": 80,
+      "encounters": [
+        {
+          "location": "The Buried Trench — collapsed substation, rusted machinery, flickering emergency lights.",
+          "enemy": {
+            "name": "The Silt Stalker",
+            "health": 60,
+            "damage": 12,
+            "weakness": "Its armored carapace shatters under sustained pressure from the Warden’s *Pressure Lance* — but only after the lance has been overcharged using the *Hydro-Pressurized Core* found in this encounter."
+          },
+          "hazard": "Dense silt clouds reduce visibility to 3 meters. Movement speed reduced by 40%. Player’s weapon fires 20% slower unless overcharged.",
+          "pickup": {
+            "name": "Hydro-Pressurized Core",
+            "effect": "Overcharge the Pressure Lance for 20 seconds. Each shot now deals +25 damage and penetrates armor. Duration: 15 seconds."
+          },
+          "trigger": "After killing the Silt Stalker, its corpse ruptures, releasing a pressure surge that ruptures the trench ceiling — exposing a hidden shaft leading to the next chamber. The core is embedded in its spine. Player must manually extract it."
+        },
+        {
+          "location": "The Choir Cavern — walls lined with petrified whale bones that emit low-frequency hums. Water is thick with suspended crystalline dust.",
+          "enemy": {
+            "name": "The Echo Wraith",
+            "health": 90,
+            "damage": 18,
+            "weakness": "Its phased form is vulnerable only to *resonant pulses* — the Hydro-Pressurized Core, when fired in rapid succession through the Pressure Lance, disrupts its frequency field, forcing it into corporeal form."
+          },
+          "hazard": "Reverberating sonar pulses from ancient ruins disorient the player — audio cues are inverted, directionality is lost, and the minimap glitches. Enemy teleports along sound paths.",
+          "pickup": {
+            "name": "Resonance Core",
+            "effect": "Grants the Warden the *Resonance Core* — a pulsing organ harvested from the Wraith’s chest. When inserted into the Pressure Lance, it allows the weapon to fire harmonic bursts that disrupt bio-armor and phase fields."
+          },
+          "trigger": "When the Echo Wraith dies, its final pulse collapses the cavern’s central pillar, revealing a collapsed aqueduct leading to the final chamber — now flooding with bio-luminescent algae. The Resonance Core is visible in its ribcage. Extraction is mandatory."
+        },
+        {
+          "location": "The Forgotten Engine — a derelict deep-sea defense platform, half-crushed by pressure, surrounded by the skeletons of previous Wardens.",
+          "enemy": {
+            "name": "The Abandoned Sentinel",
+            "health": 150,
+            "damage": 25,
+            "weakness": "Its molten core is shielded by a layer of adaptive bio-armor. Only the *Resonance Core* (from Encounter 2), when fused with the Pressure Lance, can destabilize its harmonic dampeners and trigger a cascading meltdown."
+          },
+          "hazard": "Gravity fluctuations. Player’s movement alternates between heavy and weightless every 8 seconds. Weapon recoil is unpredictable. Enemy regenerates 5 HP/sec unless damaged by resonance pulses.",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this enemy drops nothing. But upon death, its core explodes, releasing a pulse that activates the Leviathan’s chamber. The Resonance Core must already be equipped."
+          },
+          "trigger": "The Sentinel’s death triggers the opening of the final door — but only if the Resonance Core is in the Warden’s inventory. The chamber floods with green luminescence. The Leviathan Warden awakens."
+        }
+      ],
+      "boss": {
+        "name": "The Leviathan Warden",
+        "health": 300,
+        "damage": 40,
+        "weakness": "The Leviathan Warden’s core is vulnerable only to the *Resonance Core* — a harvested organ from the third enemy, which emits a harmonic frequency that shatters its crystalline bio-armor when pulsed at its frequency.",
+        "victory_condition": "Break its core after draining its bio-luminescent core with the Resonance Core"
+      },
+      "objective": "Survive the three encounters. Harvest the Resonance Core from the Echo Wraith. Use it to shatter the Leviathan Warden’s bio-core.",
+      "reward": "The Warden’s Oath — unlocks the ‘Custodian’ ending. Player becomes the new guardian of the abyss, bound forever to the deep."
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "whimsical",
+      "player_class": "illusionist",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Illusions are the language of the deep — truth is a ripple, not a rock.",
+      "setting": "A sunken, whimsical coral city where seahorses ride bubbles like rollercoasters, octopuses play xylophones made of shells, and lanternfish hang like Christmas lights. The water shimmers with pastel hues, and gravity feels optional. Every surface glows gently, as if painted by a child with glitter glue and wonder.",
+      "player_weapon": "Illusionist Staff — fires pulses of soft light that can create temporary mirages, disorient enemies, and trigger resonance when combined with pickups",
+      "player_weapon_damage": 10,
+      "player_health": 50,
+      "encounters": [
+        {
+          "location": "Coral Archway",
+          "enemy": {
+            "name": "Bubble Snapper",
+            "health": 20,
+            "damage": 5,
+            "weakness": "The player's Illusionist Staff — when used to cast a mirage of a larger predator, the Snapper panics and retreats into its shell, becoming vulnerable to a follow-up staff pulse"
+          },
+          "hazard": "Floating jellyfish that gently pulse with light — harmless unless touched, but can be used as visual distractions for illusions",
+          "pickup": {
+            "name": "Bubble Mirage Orb",
+            "effect": "Grants the player the ability to create a single, short-duration 'Bubble Mirage' — a harmless duplicate of the player that floats upward, distracting enemies"
+          },
+          "trigger": "Defeating the Bubble Snapper causes its shell to burst open, releasing a stream of glowing bubbles that drift toward the next chamber, forming a shimmering trail that leads to the Tide Trawler"
+        },
+        {
+          "location": "Tidal Grotto",
+          "enemy": {
+            "name": "Tide Trawler",
+            "health": 30,
+            "damage": 8,
+            "weakness": "The Bubble Mirage Orb — the Trawler is obsessed with mimicking movement. When the player activates the orb, the Trawler chases the mirage and becomes exposed as it overextends its tentacles, leaving its core exposed to a single Illusionist Staff pulse"
+          },
+          "hazard": "Slow-moving current streams that gently push the player — can be used to slide illusions into position or to dodge attacks",
+          "pickup": {
+            "name": "Echo Chime",
+            "effect": "Grants the player the 'Echo Chime' — a small, metallic bell that, when rung, emits a soft harmonic tone that causes waterborne debris to vibrate rhythmically"
+          },
+          "trigger": "When the Tide Trawler is defeated, its metallic exoskeleton cracks open, revealing the Echo Chime. As it rings once in defeat, the tone resonates through the cavern walls, loosening a hidden compartment above the boss door — revealing the Singing Pearl on a coral pedestal"
+        },
+        {
+          "location": "Whispering Reef",
+          "enemy": {
+            "name": "Glowfin Mimic",
+            "health": 40,
+            "damage": 10,
+            "weakness": "The Echo Chime — the Mimic imitates sounds to lure prey. When the Echo Chime is rung, it overloads the Mimic’s auditory sensors, causing it to panic and briefly freeze, revealing its true form as a harmless, glowing fish. A single staff pulse shatters its illusion and defeats it"
+          },
+          "hazard": "Floating, color-shifting anemones that glow in sync with sound — when the Echo Chime is used, they flare in response, illuminating hidden paths and the Mimic’s location",
+          "pickup": {
+            "name": "Singing Pearl",
+            "effect": "None — the Singing Pearl is revealed automatically upon defeat of the Glowfin Mimic"
+          },
+          "trigger": "After defeating the Glowfin Mimic, the coral behind it splits open, revealing a glowing pearl pulsing with harmonic light — the Singing Pearl. The resonance causes the boss door to shimmer and dissolve into seaweed vines, revealing the Gilded Grouper’s throne room"
+        }
+      ],
+      "boss": {
+        "name": "The Gilded Grouper",
+        "health": 100,
+        "damage": 15,
+        "weakness": "The Singing Pearl — a resonant pearl that emits harmonic vibrations when held, causing the Grouper’s gold-plated scales to shiver and crack under sympathetic resonance",
+        "victory_condition": "Defeat the Gilded Grouper using the Singing Pearl"
+      },
+      "objective": "Collect the Singing Pearl and use it to defeat the Gilded Grouper",
+      "reward": "The player unlocks the 'Mermaid's Lullaby' skin and gains access to the Dreamcurrent Caves (optional post-game zone)"
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "chaotic",
+      "player_class": "beastmaster",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "The jungle doesn't hate you — it *adapts*. You must out-evolve it.",
+      "setting": "The jungle breathes. Vines coil like serpents. The air thrums with unseen frequencies. The Beastmaster does not command — they *survive* by becoming part of the chaos. Every pickup is a weapon forged from the enemy’s own flesh and magic. Fail to adapt? The jungle devours you.",
+      "player_weapon": "Bone Whip (range: medium, slow swing, can drag enemies)",
+      "player_weapon_damage": 15,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Canopy Ruins",
+          "enemy": {
+            "name": "Vine Reaver",
+            "health": 200,
+            "damage": 25,
+            "weakness": "Burned by the Ember Vine (acquired from this encounter)"
+          },
+          "hazard": "Toxic Vines (damage over time)",
+          "pickup": {
+            "name": "Ember Vine",
+            "effect": "Ignites adjacent enemies on hit for 3s"
+          },
+          "trigger": "When Vine Reaver dies, the Ember Vine grows into the ceiling above Encounter 2's chamber, releasing a swarm of Echo Bats"
+        },
+        {
+          "location": "Whispering Grotto",
+          "enemy": {
+            "name": "Echo Bats Colony",
+            "health": 250,
+            "damage": 30,
+            "weakness": "Disrupted by the Ember Vine's resonance frequency (from prior pickup)"
+          },
+          "hazard": "Sonic Echoes (stuns player every 5s)",
+          "pickup": {
+            "name": "Echo Fang",
+            "effect": "Emits a 10m pulse that stuns and reveals hidden enemies"
+          },
+          "trigger": "When the last Echo Bat dies, the Echo Fang embeds into the cavern wall. A hidden path opens beneath the grotto, revealing the boss chamber — but the ground begins to tremble as the Heartstone awakens."
+        },
+        {
+          "location": "The Veil of Thorns",
+          "enemy": {
+            "name": "Thornback Stalker",
+            "health": 300,
+            "damage": 35,
+            "weakness": "Pierced by the Echo Fang's pulse when it's stunned by Ember Vine fire"
+          },
+          "hazard": "Spiked Thorns (telegraphed ground spikes)",
+          "pickup": {
+            "name": "None",
+            "effect": "None — but the Ember Vine and Echo Fang must be used in sequence to disable its shield"
+          },
+          "trigger": "When the Stalker dies, its body dissolves into glowing sap — revealing the entrance to the Heartstone Chamber, where The Maw of Vaelthar awakens."
+        }
+      ],
+      "boss": {
+        "name": "The Maw of Vaelthar",
+        "health": 1500,
+        "damage": 80,
+        "weakness": "Vulnerable to the Echo Fang's resonance pulse (acquired from Encounter 2)",
+        "victory_condition": "Break its Heartstone with the Echo Fang"
+      },
+      "objective": "Survive the jungle’s wrath by chaining encounters through environmental triggers. Each enemy’s defeat unlocks the next phase — and only by using each acquired item in sequence can you break the Heartstone of the final boss.",
+      "reward": "The Heartstone Fragment — unlocks Beastmaster’s Ultimate: Wild Symphony (summons all prior enemies as temporary allies)"
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "mysterious",
+      "player_class": "ranger",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "The jungle is alive — and it resists intrusion. The ranger must learn its rhythms, not just fight its guardians.",
+      "setting": "The jungle is ancient, veiled in perpetual mist. Vines pulse with bioluminescent fungi. Trees hum faintly, as if breathing. The air smells of damp earth and ozone. The deeper you go, the more the forest seems to watch… and remember.",
+      "player_weapon": "Ranger’s Longbow",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Mistwood Gorge",
+          "enemy": {
+            "name": "Stingroot Stalker",
+            "health": 60,
+            "damage": 20,
+            "weakness": "Fire Arrows (player weapon upgrade)"
+          },
+          "hazard": "Toxic Vines (damage over time, slow movement)",
+          "pickup": {
+            "name": "Ember Vial",
+            "effect": "Grants player Fire Arrows (ignites vines, damages enemies)"
+          },
+          "trigger": "Defeating the Stingeroot Stalker causes the vines to burn away, revealing a hidden path to the Crystal Cavern"
+        },
+        {
+          "location": "Crystal Cavern",
+          "enemy": {
+            "name": "Whispering Shade",
+            "health": 80,
+            "damage": 25,
+            "weakness": "Spirit Bloom (acquired from Encounter 1 pickup)"
+          },
+          "hazard": "Echoing Fog (disorients player, muffles audio cues, obscures vision)",
+          "pickup": {
+            "name": "Spirit Bloom",
+            "effect": "Grants player Spirit Bloom (emits a pulse that reveals hidden entities and weakens spectral foes)"
+          },
+          "trigger": "Defeating the Whispering Shade causes the fog to part, revealing a glowing root system pulsing with life — the entrance to the Heartroot Thicket, where the Veil-Walker dwells"
+        },
+        {
+          "location": "Heartroot Thicket",
+          "enemy": {
+            "name": "Rootbound Warden",
+            "health": 100,
+            "damage": 30,
+            "weakness": "Spirit Bloom (from Encounter 2)"
+          },
+          "hazard": "Living Roots (grabs player, pulls toward center of arena)",
+          "pickup": {
+            "name": "None",
+            "effect": "None — boss fight begins immediately"
+          },
+          "trigger": "Defeating the Warden causes the central tree to split open, revealing the Veil-Walker's core — the final boss emerges"
+        }
+      ],
+      "boss": {
+        "name": "The Veil-Walker",
+        "health": 200,
+        "damage": 80,
+        "weakness": "Spirit Bloom (acquired in Encounter 2)",
+        "victory_condition": "Strike the glowing core with the Spirit Bloom after it's exposed"
+      },
+      "objective": "Navigate the jungle’s layered mysteries, collect key items, and sever the Veil-Walker’s connection to the living forest.",
+      "reward": "Forest Warden’s Cloak — grants partial camouflage in jungle terrain"
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "tense",
+      "player_class": "rogue",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "The jungle doesn’t want you here. It remembers every intruder. And it’s been waiting.",
+      "setting": "The jungle is alive — vines twitch when approached, insects scatter as if fleeing, and distant howls echo not from animals, but from the land itself. The air smells of rot and ozone. No sun penetrates the canopy. Only the player’s breath and heartbeat are audible — until they aren’t.",
+      "player_weapon": "Razor Dagger (base damage: 18, fast attack, no range)",
+      "player_weapon_damage": 18,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Overgrown Ruin Courtyard — moss-covered stone pillars, low visibility due to hanging vines",
+          "enemy": {
+            "name": "Thornback Stalker",
+            "health": 120,
+            "damage": 25,
+            "weakness": "Vulnerable to blade slicking — its chitinous hide hardens when dry. If the player uses the Venom Vial (acquired from this enemy) to coat their dagger, they deal +40% damage for 15s"
+          },
+          "hazard": "Toxic Vines — if player stands still for >3s, vines wrap legs, slowing movement by 60%. Movement breaks them.",
+          "pickup": {
+            "name": "Venom Vial",
+            "effect": "Venom Vial — when applied to dagger, deals bleed damage over 8s and weakens enemy hide for 15s"
+          },
+          "trigger": "Defeating the Stalker causes the ground beneath the central pillar to collapse, revealing a hidden root tunnel that leads to Encounter 2. The collapse also ruptures a hive above, releasing Screamstone Crystals."
+        },
+        {
+          "location": "Cavern of Whispers — walls are lined with petrified vocal cords and hanging crystal clusters",
+          "enemy": {
+            "name": "Screaming Howler",
+            "health": 150,
+            "damage": 30,
+            "weakness": "Sonic vulnerability — its eardrums are exposed when it howls. If the player throws the Screamstone Crystal (acquired from the hive triggered by Encounter 1) directly at its face during a howl, it staggers for 5s and drops the Screamstone."
+          },
+          "hazard": "Echo Chamber — loud noises (attacks, footsteps) trigger deafening shrieks from the walls that disorient the player (blurred vision, reversed controls) for 4s. Moving slowly reduces trigger chance.",
+          "pickup": {
+            "name": "Screamstone",
+            "effect": "Screamstone — emits a low, resonant hum when held. Can be thrown to disrupt sonic creatures. When activated (long-press), creates a 5m radius pulse that stuns all sonic-based enemies."
+          },
+          "trigger": "When the Howler dies, the Screamstone it drops activates a resonance in the cavern ceiling. A massive stone slab slams shut behind the player, trapping them. The final passage ahead glows with bioluminescent fungi — the Matriarch’s nest."
+        },
+        {
+          "location": "Matriarch’s Nest — ceiling drips with translucent sacs, floor is sludge-covered, bioluminescent fungi pulse in sync with boss heartbeat",
+          "enemy": {
+            "name": "Carrion Leech Queen",
+            "health": 200,
+            "damage": 40,
+            "weakness": "Dissolves in venom — if the player’s dagger is coated with Venom Vial, each strike deals +50% damage and prevents leech regeneration. If uncoated, she regenerates 10 HP/sec."
+          },
+          "hazard": "Acid Pools — floor sections glow green. Standing in them reduces health by 15/sec. Leaping across requires precise timing. Pools activate when the player takes damage.",
+          "pickup": {
+            "name": "N/A",
+            "effect": "None — this is the final encounter"
+          },
+          "trigger": "Killing the Leech Queen triggers the Matriarch’s emergence from the central sac — the floor opens, and the boss rises, shrieking. The Screamstone in the player’s inventory begins to vibrate violently."
+        }
+      ],
+      "boss": {
+        "name": "The Viper Matriarch",
+        "health": 400,
+        "damage": 80,
+        "weakness": "Vulnerable to sonic disruption — only damaged when the player activates the Screamstone (acquired in Encounter 2) while she is mid-lunge",
+        "victory_condition": "Stab her heart while she’s paralyzed by the Screamstone’s resonance"
+      },
+      "objective": "Survive the jungle’s apex predators. Use each enemy’s defeat to unlock the next step — and only the Screamstone can break the Matriarch’s final defense.",
+      "reward": "The Screamstone becomes a permanent passive item — reduces enemy detection range by 30% and grants brief stun on critical hits."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "serene",
+      "player_class": "warden",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Serene Reclamation — The Warden does not destroy, but restores. Each enemy is a corrupted spirit of the jungle, and defeating them returns harmony, not death.",
+      "setting": "The Whispering Jungle — a tranquil, sun-dappled rainforest where ancient trees hum with quiet energy. Mist curls gently around moss-covered roots. Birdsong and rustling leaves compose a soothing symphony.",
+      "player_weapon": "Warden's Staff (melee, slow but high impact)",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Mossy Grotto",
+          "enemy": {
+            "name": "Thorned Vine Serpent",
+            "health": 20,
+            "damage": 5,
+            "weakness": "Player's Warden Staff (basic melee weapon)"
+          },
+          "hazard": "Spinning vine traps",
+          "pickup": {
+            "name": "Calm Moss",
+            "effect": "Temporarily slows nearby enemies"
+          },
+          "trigger": "Defeat the Vine Serpent to reveal a hidden path to the Crystal Clearing. The Calm Moss activates upon defeat, softening the ground and muting sounds, guiding the player forward."
+        },
+        {
+          "location": "Crystal Clearing",
+          "enemy": {
+            "name": "Flicker-Furred Stalker",
+            "health": 25,
+            "damage": 6,
+            "weakness": "Calm Moss (pickup from Encounter 1)"
+          },
+          "hazard": "Illusory mirage paths",
+          "pickup": {
+            "name": "Vine-Laced Amulet",
+            "effect": "Grants the ability to latch onto vines and swing"
+          },
+          "trigger": "Using the Calm Moss to silence footsteps reveals the Stalker’s true position. Defeating it causes the Amulet to glow and fall from its nest, hanging from a glowing vine above the clearing — the only way to reach the final zone."
+        },
+        {
+          "location": "Whispering Canopy",
+          "enemy": {
+            "name": "Echoing Howler Monkey",
+            "health": 30,
+            "damage": 8,
+            "weakness": "Vine-Laced Amulet (pickup from Encounter 2)"
+          },
+          "hazard": "Resonant sound waves that stun if player stands still",
+          "pickup": {
+            "name": "None",
+            "effect": "None (final pickup)"
+          },
+          "trigger": "Swinging across the canopy with the Vine-Laced Amulet allows the player to bypass the monkey’s sonic traps. Defeating it causes the canopy to part, revealing the Ancient Guardian’s root-chamber below."
+        }
+      ],
+      "boss": {
+        "name": "Ancient Canopy Guardian",
+        "health": 75,
+        "damage": 15,
+        "weakness": "Vine-Laced Amulet (acquired from Encounter 3)",
+        "victory_condition": "Strike its exposed root-core with the Vine-Laced Amulet"
+      },
+      "objective": "Restore balance to the Whispering Jungle by calming its corrupted guardians.",
+      "reward": "The Heartwood Bloom — a flower that heals 20 HP every 10 seconds while in the jungle."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "ominous",
+      "player_class": "necromancer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Death is not an end here — it is a seed. And the necromancer is not just summoning the dead... they are becoming part of the rot.",
+      "setting": "A primordial jungle where the trees are alive with the souls of the dead. The canopy is perpetually overcast. The air hums with the whispers of the buried. Light is scarce — only the glow of mushrooms and corrupted flora illuminates the path. Silence is broken only by dripping sap, creaking roots, and distant, weeping moans.",
+      "player_weapon": "Bone Shard — basic necrotic lance. Deals 8 damage. Upgradable via pickups.",
+      "player_weapon_damage": 8,
+      "player_health": 60,
+      "encounters": [
+        {
+          "location": "The Forgotten Burial Mound — overgrown with moss-covered skulls and broken sarcophagi.",
+          "enemy": {
+            "name": "Soul-Husk Wraith",
+            "health": 40,
+            "damage": 12,
+            "weakness": "Necromancer's Bone Shard — the primary weapon of the player, which emits necrotic resonance. Wraiths are spectral and immune to physical damage, but Bone Shards disrupt their lingering soul-echoes, causing them to unravel."
+          },
+          "hazard": "Soul Fog — a drifting mist that drains 1 HP/sec if player stands in it. Fog clears only when the Wraith is slain.",
+          "pickup": {
+            "name": "Echo Shard",
+            "effect": "Bone Shard Amplification — the Wraith’s final scream infuses the player’s Bone Shard with a resonance pulse. Next enemy will be vulnerable to bone-shard vibrations."
+          },
+          "trigger": "Upon slaying the Wraith, the ground trembles and the mist recedes, revealing a vine-covered altar. The altar pulses with a sickly green light, and a low, rhythmic thumping begins in the distance — the heartbeat of the next enemy."
+        },
+        {
+          "location": "The Rotting Canopy — suspended vines drip with black sap. The ground is littered with half-digested corpses entangled in roots.",
+          "enemy": {
+            "name": "Vine-Tendril Devourer",
+            "health": 60,
+            "damage": 15,
+            "weakness": "Echo Shard — the amplified resonance from the Bone Shard. The Devourer’s thick, organic hide vibrates at a frequency that resonates with the Echo Shard, causing its internal root-sacs to rupture and bleed rot."
+          },
+          "hazard": "Toxic Pollen Cloud — released every 15 seconds. Deals 3 damage/sec and obscures vision. Only dissipates if the Devourer is damaged by Echo Shard resonance.",
+          "pickup": {
+            "name": "Rotting Vine Essence",
+            "effect": "Rotting Vine Essence — a viscous, glowing green sap harvested from the Devourer’s core after its rupture. Infuses the Bone Shard with decay magic. Only one can be collected."
+          },
+          "trigger": "When the Devourer dies, its final convulsion tears open the canopy above. A massive, pulsing fungal heart descends on a network of sinewy cords — the Matriarch’s anchor. The wind carries a whisper: 'You have tasted the rot... now become the rot.' The path ahead clears, leading to a cavernous hollow lit by bioluminescent mushrooms."
+        },
+        {
+          "location": "The Heartroot Chamber — a cavern with walls lined with pulsing fungal veins. In the center, a massive, semi-sentient root-ball throbs with captured souls.",
+          "enemy": {
+            "name": "Moss-Wraith Sentinel",
+            "health": 80,
+            "damage": 18,
+            "weakness": "Rotting Vine Essence — this enemy is a guardian bound to the Matriarch’s will. Its moss-carapace is immune to all other damage, but the essence burns through its fungal bond, severing its connection to the hive-mind."
+          },
+          "hazard": "Petrifying Spores — if the player is hit, they are slowed by 50% for 10 seconds. Only prevented by standing in the shadow of the Rotting Vine Essence (must be equipped).",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this enemy drops nothing. Its sole purpose is to delay and test the player’s mastery of the Rotting Vine Essence."
+          },
+          "trigger": "Upon slaying the Sentinel, the root-ball splits open, revealing the Matriarch — a colossal, half-fused entity of woman, tree, and rot. The cavern trembles. The final battle begins."
+        }
+      ],
+      "boss": {
+        "name": "The Whispering Matriarch",
+        "health": 150,
+        "damage": 25,
+        "weakness": "Rotting Vine Essence — the toxic sap harvested from the third encounter's vine-tendril enemy. This essence disrupts her fungal neural network, causing her root-core to overheat and collapse.",
+        "victory_condition": "Reduce to 0 HP after applying the Rotting Vine Essence"
+      },
+      "objective": "Conquer the three guardians and slay the Whispering Matriarch using only the weapon and pickups acquired along the path. No healing items are available. Survival depends on precision and timing.",
+      "reward": "The Matriarch’s Heart — grants the player the 'Fungal Dominion' passive: all summoned undead gain +15% damage and can spread Rotting Vine Essence to nearby enemies on death."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "whimsical",
+      "player_class": "alchemist",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whimsy Over Wrath — The jungle doesn't want to kill you. It just wants you to play.",
+      "setting": "A jungle where trees giggle when tickled by wind, vines dance in rhythm to unseen music, and every creature is a little too cheerful to be dangerous — until you mess with their favorite snacks. The air smells like candied mangoes and magic.",
+      "player_weapon": "Vial Launcher",
+      "player_weapon_damage": 8,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Canopy Clearing",
+          "enemy": {
+            "name": "Sneezy Squirrel",
+            "health": 40,
+            "damage": 10,
+            "weakness": "Fermenting Sap (acquired from this encounter)"
+          },
+          "hazard": "Pollen Clouds",
+          "pickup": {
+            "name": "Fermenting Sap",
+            "effect": "Fermenting Sap: when thrown, creates a sticky, fizzy puddle that slows enemies and emits a sweet aroma for 15s."
+          },
+          "trigger": "After defeating the Sneezy Squirrel, the sweet aroma attracts a swarm of glowing moths to the nearby hollow tree — hinting at the next location."
+        },
+        {
+          "location": "Whispering Vines Gorge",
+          "enemy": {
+            "name": "Mossy Mantis",
+            "health": 50,
+            "damage": 12,
+            "weakness": "Fermenting Sap (from Encounter 1)"
+          },
+          "hazard": "Slippery Vines",
+          "pickup": {
+            "name": "Glowing Pollen",
+            "effect": "Glowing Pollen: collected from the moth swarm. When applied to a surface, it glows and attracts magical insects. When sprayed directly on an enemy, it temporarily blinds them and causes them to sneeze uncontrollably."
+          },
+          "trigger": "After defeating the Mossy Mantis, the glowing pollen clings to the vines above, illuminating a hidden vine ladder leading to a giant, humming flower — the lair of the final boss."
+        },
+        {
+          "location": "The Humming Bloom",
+          "enemy": {
+            "name": "Dizzy Dodo",
+            "health": 60,
+            "damage": 15,
+            "weakness": "Glowing Pollen (from Encounter 2)"
+          },
+          "hazard": "Bouncing Mushrooms",
+          "pickup": {
+            "name": "Glowing Pollen (Boss-Specific)",
+            "effect": "Glowing Pollen: harvested from the flower’s core. Only 3 doses can be stored at once — use wisely."
+          },
+          "trigger": "After defeating the Dizzy Dodo, the flower’s petals open, revealing the Giggling Gloop — and the final battle begins."
+        }
+      ],
+      "boss": {
+        "name": "The Giggling Gloop",
+        "health": 150,
+        "damage": 30,
+        "weakness": "Glowing Pollen (acquired from Encounter 3)",
+        "victory_condition": "Spray the Gloop with 3 doses of Glowing Pollen"
+      },
+      "objective": "Use your alchemical knowledge to collect and combine jungle wonders, turning each enemy’s weakness into your advantage — one giggly step at a time.",
+      "reward": "The Laughing Locket — grants +10% movement speed and causes nearby flowers to bloom in your footsteps."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "eerie",
+      "player_class": "chronomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Every enemy you defeat unravels a thread of the jungle’s timeline — and every pickup you collect is a stolen moment from its past.",
+      "setting": "The jungle is not just alive — it remembers. Trees hold memories of fallen explorers. Vines replay screams from 100 years ago. The air hums with broken seconds. As a Chronomancer, you can manipulate time — but here, time manipulates back.",
+      "player_weapon": "Time-Lash",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Moss-Cursed Gorge",
+          "enemy": {
+            "name": "Veil Stalker",
+            "health": 60,
+            "damage": 15,
+            "weakness": "Susceptible to Chrono-Weave pulses — its invisibility field disrupts when hit by the player's Time-Lash weapon's delayed pulse effect"
+          },
+          "hazard": "Thick, time-distorting mist that blurs movement and slows the player’s time-manipulation cooldowns by 40% — only breaks when the enemy is defeated",
+          "pickup": {
+            "name": "Time-Lash Pulse Mod",
+            "effect": "Unlocks the Time-Lash’s delayed pulse ability — when fired, the energy wave detonates 2 seconds later, creating a 3m radius slow zone"
+          },
+          "trigger": "Defeating the Veil Stalker causes the mist to thin and reveals a hidden vine bridge leading to the next area — the bridge only appears when the pulse mod is active"
+        },
+        {
+          "location": "Whispering Root Vault",
+          "enemy": {
+            "name": "Root-Siphon Wurm",
+            "health": 80,
+            "damage": 20,
+            "weakness": "Vulnerable to the Time-Lash Pulse Mod — its root tendrils are anchored in temporal loops; a delayed pulse detonation over its core shatters the loops and stuns it for 5 seconds"
+          },
+          "hazard": "Animated roots that drain 5 HP per second if stood on — they pulse in sync with the environment’s time flow. Player can freeze them temporarily with Chrono-Weave, but only for 3 seconds at a time",
+          "pickup": {
+            "name": "Temporal Echo Shard",
+            "effect": "Reveals and charges the Temporal Echo Shard — a crystalline fragment that, when thrown, creates a 4-second localized time bubble (slows all entities inside) and echoes the last 3 seconds of movement for visual tracking"
+          },
+          "trigger": "When the Wurm is stunned by the Pulse Mod, its core glows blue and ejects the Temporal Echo Shard. As it falls, the ground cracks open, revealing a submerged temple entrance — the Chrono-Wraith’s lair, where time is fractured and bleeding into the jungle."
+        },
+        {
+          "location": "The Fractured Sanctum",
+          "enemy": {
+            "name": "Echo Sentinel",
+            "health": 100,
+            "damage": 25,
+            "weakness": "Uses the player’s own time echoes against them — it phases through the Temporal Echo Shard’s visual trails. If the player does not use the Shard to create a new echo bubble, the Sentinel becomes immune. When the Shard is thrown into its core during the bubble, it locks onto the player’s last movement pattern and is stunned."
+          },
+          "hazard": "Flickering ghosts of the player’s past actions — if the player moves too quickly, they trigger phantom duplicates that mimic their last 5 seconds of movement, causing confusion and accidental damage to themselves",
+          "pickup": {
+            "name": "Temporal Echo Shard (already acquired)",
+            "effect": "None — this is the final encounter before the boss. The Echo Shard is the only tool that can disrupt the Sentinel, and its use here is mandatory to reach the boss."
+          },
+          "trigger": "Defeating the Echo Sentinel causes the temple ceiling to collapse, exposing the Chrono-Wraith’s crystalline core hanging above a pool of liquid time — the final battle begins immediately."
+        }
+      ],
+      "boss": {
+        "name": "The Chrono-Wraith",
+        "health": 150,
+        "damage": 30,
+        "weakness": "Vulnerable to the Temporal Echo Shard — when thrown at its core during a slowed time bubble, it fractures and takes 5x damage",
+        "victory_condition": "Defeat the Chrono-Wraith by shattering its core with the Temporal Echo Shard"
+      },
+      "objective": "Travel through the corrupted jungle, unraveling temporal anomalies and acquiring time-manipulation tools to confront the Chrono-Wraith — the entity that has been devouring moments from the jungle’s history.",
+      "reward": "Chrono-Cloak — grants 5-second invisibility once per level, powered by absorbed time fragments"
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "desolate",
+      "player_class": "berserker",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Brutality is the only language this jungle understands. To survive, you must become more savage than the beasts — and the land itself will carve your weapon from your pain.",
+      "setting": "A once-thriving jungle temple swallowed by vines, mist, and the slow, organic decay of forgotten gods. The air hums with the whispers of the dead. No birds. No insects. Only the wet sound of roots breathing. The player is alone — and the jungle remembers every drop of blood they spill.",
+      "player_weapon": "Ritual Axe (base damage: 30, cleave: yes, bleeding: yes)",
+      "player_weapon_damage": 30,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Overgrown Ruins of Varn'Khal",
+          "enemy": {
+            "name": "Thornback Stalker",
+            "health": 120,
+            "damage": 25,
+            "weakness": "Vulnerable to bleeding damage — player’s default Berserker Axe (cleave effect) causes lingering blood loss"
+          },
+          "hazard": "Venomous vines that sap 5 HP/sec if touched — must be cut through with axe to clear path",
+          "pickup": {
+            "name": "Ritual Axe Blood-Sigil",
+            "effect": "Grants ‘Crimson Rite’ — next 3 axe swings deal +20% bleeding damage and leave a trail of blood for 8 seconds"
+          },
+          "trigger": "Defeating the Stalker causes the blood trail to ignite, revealing a hidden tunnel leading to the next zone. The trail also attracts the next enemy."
+        },
+        {
+          "location": "The Whispering Chasm",
+          "enemy": {
+            "name": "Echo Wraith",
+            "health": 180,
+            "damage": 35,
+            "weakness": "Only takes damage when struck during its echo phase — triggered by stepping into the blood trail left by the Ritual Axe Blood-Sigil. Each echo phase lasts 3 seconds, and the player must land a critical hit during this window."
+          },
+          "hazard": "Sonic static fields that disorient the player — reduces movement speed and blocks HUD for 5 seconds if entered. Must be avoided or broken by hitting the enemy during echo phase",
+          "pickup": {
+            "name": "Resonant Fang",
+            "effect": "Extracts a resonant frequency from the Wraith’s core — the Resonant Fang glows when near the boss and allows the Ritual Blade to emit a pulse that stuns Yul-Koth for 4 seconds"
+          },
+          "trigger": "Killing the Wraith causes its echo to collapse into a crystalline shard — the Resonant Fang — which activates a hidden vine bridge across the chasm, leading directly to the boss chamber. The ground vibrates in sync with the Fang’s frequency, alerting the boss."
+        },
+        {
+          "location": "The Buried Maw",
+          "enemy": {
+            "name": "Gut-Worm Queen",
+            "health": 220,
+            "damage": 45,
+            "weakness": "Vulnerable to blunt trauma to its exposed spine — the Ritual Axe Blood-Sigil’s bleeding effect causes its internal organs to rupture when struck with heavy axe swings (critical hits only). Must be weakened by 3 consecutive heavy swings while it’s vomiting bile (a 2-second window after it lunges)."
+          },
+          "hazard": "Toxic bile pools that deal 10/sec damage and blind the player for 4 seconds. Must be avoided by jumping over or using the environment to lure the Queen into them",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is a pure encounter to weaken the path to the boss. The Queen’s corpse decays into a pulsating membrane that reveals the final chamber."
+          },
+          "trigger": "When the Queen dies, its body splits open, revealing a tunnel lined with the same glowing veins as the Resonant Fang. The Fang begins to pulse violently — the boss is now aware. The membrane seals behind the player, locking them in with the final enemy."
+        }
+      ],
+      "boss": {
+        "name": "The Maw of Yul-Koth",
+        "health": 500,
+        "damage": 80,
+        "weakness": "Must be damaged by the Ritual Blade’s resonance frequency, unlocked only after collecting the Resonant Fang from Encounter 2",
+        "victory_condition": "Strike the pulsing heart with the Ritual Blade’s resonance"
+      },
+      "objective": "Survive the jungle’s decay. Kill the three guardians. Use their blood, echoes, and flesh to awaken the blade’s true purpose — then shatter the heart of Yul-Koth before the jungle consumes you.",
+      "reward": "The Berserker’s Oath — unlocks ‘Blood Rite’ passive: Every 3rd critical hit heals 15% of max HP and ignores all damage reduction for 5 seconds"
+    }
+  }
+]

@@ -1,0 +1,1078 @@
+[
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "mysterious",
+      "player_class": "geomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Abyssal Ruins",
+      "setting": "A sunken ancient city shrouded in bioluminescent algae, with crumbling stone pillars, overgrown coral structures, and eerie glowing symbols etched into the walls. Strange, low-frequency hums echo through the water, hinting at dormant power.",
+      "player_weapon": "Geode Staff (channels seismic energy, unleashes shockwaves, and manipulates terrain)",
+      "player_weapon_damage": 80,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Coral Vein Corridor",
+          "enemy": {
+            "name": "Coral Leviathan",
+            "health": 150,
+            "damage": 50,
+            "weakness": "Geode Staff's shockwave ability"
+          },
+          "hazard": "Collapsing coral pillars triggered by seismic activity",
+          "pickup": {
+            "name": "Tidal Crystal",
+            "effect": "Increases Geode Staff's shockwave radius by 50% and temporarily hardens the terrain against enemy attacks"
+          },
+          "trigger": "Defeating the Leviathan causes the coral barriers to shift, revealing a hidden path to the next area."
+        },
+        {
+          "location": "Mechanical Ruins",
+          "enemy": {
+            "name": "Submersible Drone",
+            "health": 180,
+            "damage": 60,
+            "weakness": "Tidal Crystal (disrupts energy shields)"
+          },
+          "hazard": "Laser grids and pressure-sensitive traps",
+          "pickup": {
+            "name": "Ancient Key",
+            "effect": "Unlocks the boss's core vulnerability; can be used to target weak points"
+          },
+          "trigger": "Destroying the drone's shields with the Tidal Crystal activates a mechanism that opens the sealed boss chamber."
+        }
+      ],
+      "boss": {
+        "name": "Abyssal Guardian",
+        "health": 300,
+        "damage": 75,
+        "weakness": "Ancient Key (unlocks core vulnerability)",
+        "victory_condition": "Use the Ancient Key to target the core, then strike with a charged Geode Staff shockwave"
+      },
+      "objective": "Navigate the ruins, defeat the guardians, and unlock the sealed chamber to confront the Abyssal Guardian. The environment reacts to your actions, with each victory altering the path forward.",
+      "reward": "Echo of the Deep (permanent ability: summon a seismic wave that deals damage and stuns enemies)"
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "serene",
+      "player_class": "beastmaster",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Coral Haven",
+      "setting": "A tranquil underwater reef teeming with vibrant marine life, glowing anemones, and gentle currents. The environment is designed to feel peaceful but gradually shifts toward tension as the player progresses.",
+      "player_weapon": "Harpoon Gun (primary weapon)",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Shallow Reefs",
+          "enemy": {
+            "name": "Serrated Eel",
+            "health": 30,
+            "damage": 10,
+            "weakness": "Harpoon Gun (player's primary weapon)"
+          },
+          "hazard": "None",
+          "pickup": {
+            "name": "Coral Shard",
+            "effect": "Unlocks access to hidden underwater caves by disrupting sand traps."
+          },
+          "trigger": "After defeating the eel, the sand shifts, revealing a hidden cave entrance."
+        },
+        {
+          "location": "Sunken Cave",
+          "enemy": {
+            "name": "Luminous Jellyfish",
+            "health": 40,
+            "damage": 12,
+            "weakness": "Coral Shard (pickup from prior encounter)"
+          },
+          "hazard": "Sticky bioluminescent goo that slows movement",
+          "pickup": {
+            "name": "Bioluminescent Orb",
+            "effect": "Emits light to reveal hidden paths and weaken dark-favored enemies."
+          },
+          "trigger": "After defeating the jellyfish, the orb illuminates a path to the Abyssal Trench."
+        },
+        {
+          "location": "Abyssal Trench",
+          "enemy": {
+            "name": "Guardian Octopus",
+            "health": 80,
+            "damage": 20,
+            "weakness": "Bioluminescent Orb (pickup from second encounter)"
+          },
+          "hazard": "Collapsing rock formations, strong currents",
+          "pickup": {
+            "name": "Pearl of Serenity",
+            "effect": "Restores 50% health and temporarily calms nearby enemies."
+          },
+          "trigger": "Defeating the octopus with the orb reveals the pearl, completing the level."
+        }
+      ],
+      "boss": {
+        "name": "Guardian Octopus",
+        "health": 80,
+        "damage": 20,
+        "weakness": "Bioluminescent Orb (specific pickup from second encounter)",
+        "victory_condition": "Defeat the boss by targeting its core with the orb's light."
+      },
+      "objective": "Navigate the reef, defeat three enemies, and use collected pickups to overcome the final boss while maintaining the serene atmosphere.",
+      "reward": "Pearl of Serenity (healing item), +10% Beastmaster companion affinity"
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "ominous",
+      "player_class": "necromancer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Abyssal Requiem",
+      "setting": "A sunken, ancient temple in the Hadal Zone, where bioluminescent algae coat crumbling stone pillars and the water is thick with silt. The air hums with the distant groans of shifting rock, and the player’s necromancy powers are amplified by the eerie energy of the depths. The environment is claustrophobic, with narrow corridors and collapsed chambers that force the player to navigate treacherous terrain.",
+      "player_weapon": "Bone Staff of the Forsaken (deals necrotic damage, can summon skeletal minions)",
+      "player_weapon_damage": 120,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "The Tidal Gate",
+          "enemy": {
+            "name": "Abyssal Warden",
+            "health": 250,
+            "damage": 80,
+            "weakness": "Necrotic damage (player's Bone Staff)"
+          },
+          "hazard": "The Warden is surrounded by a crystalline barrier that only cracks when the player lands 3 consecutive necrotic hits. This requires precise aiming.",
+          "pickup": {
+            "name": "Tidal Core",
+            "effect": "Allows the Bone Staff to channel necrotic energy into electrical discharges (increases damage by 50% against conductive enemies)."
+          },
+          "trigger": "Destroy the Warden's barrier by landing 3 necrotic hits to unlock a submerged passage to the next encounter."
+        },
+        {
+          "location": "The Leviathan's Labyrinth",
+          "enemy": {
+            "name": "Undead Leviathan",
+            "health": 300,
+            "damage": 100,
+            "weakness": "Electrical damage (requires Tidal Core from prior encounter)"
+          },
+          "hazard": "The Leviathan's tentacles summon whirlpools that pull the player into the abyss, dealing 30 damage per second.",
+          "pickup": {
+            "name": "Void Essence",
+            "effect": "Unlocks the ability to summon a 'Bone Colossus' (a temporary, powerful undead construct) that deals 200 damage on impact."
+          },
+          "trigger": "Defeat the Leviathan to break the chains binding the temple’s central chamber, revealing the boss’s lair."
+        }
+      ],
+      "boss": {
+        "name": "Abyssal Sovereign",
+        "health": 600,
+        "damage": 150,
+        "weakness": "Void Essence (required to summon Bone Colossus)",
+        "victory_condition": "Use the Bone Colossus to shatter the Sovereign’s crystalline core, while avoiding its tidal wave attacks that knock the player back and drain 50% of their health."
+      },
+      "objective": "Navigate the temple, defeat the three guardians, and exploit their weaknesses to claim the Void Essence for the final confrontation.",
+      "reward": "Abyssal Crown (increases necrotic damage by 30% and grants immunity to drowning)"
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "tense",
+      "player_class": "stormcaller",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Underwater",
+      "setting": "Abyssal Crucible - A collapsing trench filled with bioluminescent flora, jagged rock formations, and crushing pressure. Visibility is limited, and currents shift unpredictably.",
+      "player_weapon": "Stormcaller's Lightning Staff - A conduit for channeling electrical energy, capable of discharging shocks or creating localized storms.",
+      "player_weapon_damage": 250,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Narrow Trench of the Eel King",
+          "enemy": {
+            "name": "Bioluminescent Eel",
+            "health": 300,
+            "damage": 75,
+            "weakness": "Player's Lightning Staff (direct electrical discharges to its tail)"
+          },
+          "hazard": "Collapsing rocks and low oxygen zones",
+          "pickup": {
+            "name": "Conductive Core",
+            "effect": "Amplifies the Stormcaller's weapon damage by 30% when equipped."
+          },
+          "trigger": "Defeating the Eel opens a path through a collapsing rock formation, revealing the crystalline cave ahead."
+        },
+        {
+          "location": "Crystalline Labyrinth",
+          "enemy": {
+            "name": "Crystalline Coral Golem",
+            "health": 450,
+            "damage": 100,
+            "weakness": "Conductive Core (absorb and redirect energy to cause a short-circuit)"
+          },
+          "hazard": "Reflected lightning attacks that damage the player on contact",
+          "pickup": {
+            "name": "Tidal Lens",
+            "effect": "Allows manipulation of water currents to create whirlpools or reveal hidden paths."
+          },
+          "trigger": "Using the Tidal Lens to redirect a deadly current opens the final gate to the boss chamber."
+        }
+      ],
+      "boss": {
+        "name": "Leviathan of the Abyss",
+        "health": 1200,
+        "damage": 150,
+        "weakness": "Combined use of Conductive Core and Tidal Lens (create a shockwave through a whirlpool)",
+        "victory_condition": "Channel a charged electric current through a whirlpool to penetrate the Leviathan's conductive armor."
+      },
+      "objective": "Navigate the trench, acquire the Conductive Core and Tidal Lens, and use them to defeat the Leviathan in the final chamber.",
+      "reward": "Stormcaller's Tempest Amulet - Grants temporary invulnerability during lightning discharges."
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "eerie",
+      "player_class": "shadowblade",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Shadows of the Abyss",
+      "setting": "A derelict underwater research facility, illuminated by erratic bioluminescent algae. Murky waters, creaking metal corridors, and distant, unsettling clicks create an oppressive atmosphere.",
+      "player_weapon": "Shadowblade (can channel light energy or disrupt electronics)",
+      "player_weapon_damage": 65,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Corridor of Whispers",
+          "enemy": {
+            "name": "Void Eel",
+            "health": 40,
+            "damage": 25,
+            "weakness": "Light-based attacks (player's shadowblade can emit a concentrated light pulse)."
+          },
+          "hazard": "Murky water reduces visibility; Void Eel merges with shadows to ambush the player.",
+          "pickup": {
+            "name": "Bioluminescent Core",
+            "effect": "Emits a steady light to pierce darkness, temporarily revealing hidden paths and weakening shadow-based enemies."
+          },
+          "trigger": "The player activates a nearby console, disturbing the Void Eel and triggering the fight."
+        },
+        {
+          "location": "Glowscythe's Lair",
+          "enemy": {
+            "name": "Glowscythe",
+            "health": 60,
+            "damage": 35,
+            "weakness": "Light exposure (use Bioluminescent Core from prior encounter to blind the creature)."
+          },
+          "hazard": "The Glowscythe's carapace reflects sonar pulses, creating disorienting echoes.",
+          "pickup": {
+            "name": "Sonar Pulse Device",
+            "effect": "Disrupts enemy sensors and reveals hidden weaknesses; can bypass the boss's shield."
+          },
+          "trigger": "After defeating the Void Eel, the Bioluminescent Core unlocks a sealed hatch, leading to the Glowscythe's lair."
+        },
+        {
+          "location": "The Abyssal Core",
+          "enemy": {
+            "name": "Abyssal Leviathan",
+            "health": 120,
+            "damage": 50,
+            "weakness": "Sonar Pulse Device (from prior encounter) disrupts its protective shield, allowing the shadowblade to penetrate."
+          },
+          "hazard": "The Leviathan's presence causes structural collapse; debris falls from the ceiling during the fight.",
+          "pickup": {
+            "name": "Abyssal Key",
+            "effect": "Unlocks the facility's upper levels, granting access to a safe zone and ending the level."
+          },
+          "trigger": "Destroying the Glowscythe's carapace sends a shockwave that awakens the Leviathan, which emerges from the facility's core chamber."
+        }
+      ],
+      "boss": {
+        "name": "Abyssal Leviathan",
+        "health": 120,
+        "damage": 50,
+        "weakness": "Sonar Pulse Device (acquired in Encounter 2) to bypass its shield.",
+        "victory_condition": "Defeat the Leviathan while avoiding collapsing debris and maintaining the Sonar Pulse Device's charge."
+      },
+      "objective": "Navigate the facility, retrieve pickups, and defeat the Leviathan to escape the collapsing structure.",
+      "reward": "Abyssal Key (unlocks next level) and 150 experience points."
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "chaotic",
+      "player_class": "pyromancer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Underwater Chaos",
+      "setting": "A collapsing bioluminescent cave system filled with shifting currents, unstable rock formations, and toxic plumes. The environment reacts to combat, triggering tremors and sudden pressure surges that hinder movement.",
+      "player_weapon": "Pyroclastic Torch (initial weapon: emits controlled fireballs, but struggles in water unless augmented)",
+      "player_weapon_damage": 30,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Coral Labyrinth",
+          "enemy": {
+            "name": "Thermophobe Jelly",
+            "health": 70,
+            "damage": 25,
+            "weakness": "Pyroclastic Torch (direct fire damage bypasses its gelatinous armor)"
+          },
+          "hazard": "After defeating the jelly, the cave's unstable ceiling collapses, triggering a pressure surge that awakens the next enemy.",
+          "pickup": {
+            "name": "Oxygen Canister",
+            "effect": "Allows the Pyroclastic Torch to ignite underwater for 15 seconds, dealing 50% more damage."
+          },
+          "trigger": "The pressure surge from the collapse activates the second encounter."
+        },
+        {
+          "location": "Pressure Core Chamber",
+          "enemy": {
+            "name": "Hydropressurizer",
+            "health": 120,
+            "damage": 40,
+            "weakness": "Oxygen Canister (when used, it overloads the enemy's pressure core, creating a shockwave that damages it)"
+          },
+          "hazard": "The enemy's core emits a corrosive mist that reduces the player's torch effectiveness by 30% over time.",
+          "pickup": {
+            "name": "Corrosive Solution",
+            "effect": "Can be mixed with the Oxygen Canister to create an explosive reaction (available during the boss fight)."
+          },
+          "trigger": "Destroying the Hydropressurizer destabilizes the cave's foundation, revealing the final boss chamber."
+        },
+        {
+          "location": "Abyssal Crucible",
+          "enemy": {
+            "name": "Abyssal Leviathan",
+            "health": 200,
+            "damage": 60,
+            "weakness": "Combination of Corrosive Solution and Oxygen Canister (creates an explosion that bypasses its armor)"
+          },
+          "hazard": "The boss periodically summons fire-resistant tentacles that must be destroyed with the Corrosive Solution before the final attack.",
+          "pickup": {
+            "name": "Pyro-Adaptive Gauntlet",
+            "effect": "Permanently boosts fire damage by 25% and grants immunity to the boss's toxic mist."
+          },
+          "trigger": "The player must collect both pickups from prior encounters to activate the boss's fatal weakness."
+        }
+      ],
+      "boss": {
+        "name": "Abyssal Leviathan",
+        "health": 200,
+        "damage": 60,
+        "weakness": "Explosive reaction from Corrosive Solution + Oxygen Canister (triggered by mixing them in the boss's core during phase 2)",
+        "victory_condition": "Destroy the core with the explosive reaction, then land a final fireball while wearing the Pyro-Adaptive Gauntlet."
+      },
+      "objective": "Navigate the collapsing cave, defeat three enemies to unlock the boss, and exploit environmental pickups to overcome the final challenge.",
+      "reward": "Pyro-Adaptive Gauntlet and access to deeper underwater zones."
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "desolate",
+      "player_class": "warden",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Abyssal Requiem",
+      "setting": "A sunken, abandoned research facility shrouded in perpetual darkness, with bioluminescent algae casting eerie blue light over corroded metal and overgrown coral. The water is thick with sediment, reducing visibility, and the hum of distant machinery echoes through the ruins.",
+      "player_weapon": "Plasma Reaver (a heavy-duty plasma cannon with an overheat mode that releases a sustained thermal blast)",
+      "player_weapon_damage": 200,
+      "player_health": 1200,
+      "encounters": [
+        {
+          "location": "Trench of the Wraith Eels",
+          "enemy": {
+            "name": "Wraith Eel Swarm",
+            "health": 600,
+            "damage": 150,
+            "weakness": "Thermal damage (triggered by the Plasma Reaver's overheat mode)"
+          },
+          "hazard": "Murky water reduces player movement speed by 25%.",
+          "pickup": {
+            "name": "Thermal Core (Type-A)",
+            "effect": "Overloads mechanical systems or weakens heat-resistant enemies when deployed."
+          },
+          "trigger": "The player must navigate the trench, provoking the eels by disturbing their nest. Defeating them unlocks the Thermal Core and reveals a sealed corridor ahead."
+        },
+        {
+          "location": "The Sentinel's Chamber",
+          "enemy": {
+            "name": "Guardian Drone (Sentinel-7)",
+            "health": 1500,
+            "damage": 250,
+            "weakness": "Thermal Core (Type-A) deployment"
+          },
+          "hazard": "The drone's laser grid forces the player to dodge constantly, dealing 50 damage per second if stationary.",
+          "pickup": {
+            "name": "None",
+            "effect": "Defeating the drone removes its barrier, granting access to the final chamber."
+          },
+          "trigger": "The Thermal Core is required to overload the drone's power core. Upon destruction, the floor collapses, revealing the boss arena."
+        },
+        {
+          "location": "Chamber of the Abyssal Leviathan",
+          "enemy": {
+            "name": "Leviathan of the Abyss",
+            "health": 3000,
+            "damage": 400,
+            "weakness": "Thermal Core (Type-A) + Plasma Reaver's overheat mode (combined)"
+          },
+          "hazard": "The leviathan's tail swipes create whirlpools, pulling the player into the abyss for 3 seconds (dealing 200 damage).",
+          "pickup": {
+            "name": "None",
+            "effect": "Defeating the leviathan grants the player a temporary buff: 'Abyssal Resolve' (increased armor by 30% for 60 seconds)."
+          },
+          "trigger": "The leviathan awakens after the drone's destruction. The player must use the Thermal Core to melt its armored hide, exposing its core to the Plasma Reaver's attacks."
+        }
+      ],
+      "boss": {
+        "name": "Leviathan of the Abyss",
+        "health": 3000,
+        "damage": 400,
+        "weakness": "Thermal Core (Type-A) + Plasma Reaver's overheat mode (combined)",
+        "victory_condition": "Destroy the leviathan's core by combining Thermal Core deployment with sustained plasma fire."
+      },
+      "objective": "Clear the facility of threats and survive the leviathan's wrath. The Thermal Core is essential for progressing and defeating the final boss.",
+      "reward": "Abyssal Resolve buff, and the player gains access to a new weapon upgrade: 'Plasma Reaver Overheat Protocol' (increased thermal damage by 50% for 10 seconds)."
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "whimsical",
+      "player_class": "illusionist",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "The Coral Mirage",
+      "setting": "A vibrant underwater realm filled with bioluminescent coral, playful schools of fish, and floating islands of kelp. The environment shifts with illusions, creating a dreamlike atmosphere.",
+      "player_weapon": "Illusion Wand (creates light, sound, and mirage-based attacks)",
+      "player_weapon_damage": 3,
+      "player_health": 5,
+      "encounters": [
+        {
+          "location": "Sunlit Reefs",
+          "enemy": {
+            "name": "Glittering Jellyfish",
+            "health": 2,
+            "damage": 1,
+            "weakness": "Light illusions (player's Illusion Wand)"
+          },
+          "hazard": "Stinging tentacles that cause temporary blindness.",
+          "pickup": {
+            "name": "Prismatic Crystal",
+            "effect": "Amplifies light-based illusions by 50% for 10 seconds."
+          },
+          "trigger": "The jellyfish's distraction allows the player to unlock a hidden coral passage leading to the kelp labyrinth."
+        },
+        {
+          "location": "Kelp Labyrinth",
+          "enemy": {
+            "name": "Mimic (Coral Shapeshifter)",
+            "health": 3,
+            "damage": 2,
+            "weakness": "Sound illusions (player's Illusion Wand)"
+          },
+          "hazard": "The mimic mimics the player's movements, forcing them to solve a timing puzzle to avoid being trapped.",
+          "pickup": {
+            "name": "Echo Bell",
+            "effect": "Creates a resonant soundwave that disrupts enemy magic for 5 seconds."
+          },
+          "trigger": "After defeating the mimic, the Echo Bell activates a hidden switch, revealing the path to the Guardian's Chamber."
+        },
+        {
+          "location": "Guardian's Chamber",
+          "enemy": {
+            "name": "Territorial Guardian (Giant Lobster)",
+            "health": 4,
+            "damage": 3,
+            "weakness": "Prismatic Crystal (pickup from prior encounter)"
+          },
+          "hazard": "The lobster throws weighted shells that create whirlpools.",
+          "pickup": {
+            "name": "Pearl of Clarity",
+            "effect": "Restores 2 health and grants a 10-second invincibility shield."
+          },
+          "trigger": "Defeating the lobster with the Prismatic Crystal unlocks a glowing path to the boss fight, the Sea Serpent Queen."
+        }
+      ],
+      "boss": {
+        "name": "Sea Serpent Queen",
+        "health": 8,
+        "damage": 4,
+        "weakness": "Echo Bell (pickup from second encounter)",
+        "victory_condition": "Use the Echo Bell to disrupt the serpent's illusions and strike its core during a 3-second window when its defenses are lowered."
+      },
+      "objective": "Navigate the whimsical underwater realm, using illusions and pickups to overcome playful enemies and defeat the Sea Serpent Queen.",
+      "reward": "The player gains a permanent ability: 'Mirage Surge,' which summons a temporary whirlpool to slow enemies for 5 seconds."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "chaotic",
+      "player_class": "beastmaster",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Chaotic Jungle Realm",
+      "setting": "A dense, overgrown rainforest with collapsing ruins, bioluminescent fungi, and unpredictable environmental hazards. The air is thick with humidity, and the sounds of unseen creatures echo chaotically.",
+      "player_weapon": "Beastmaster's Totem: A mystical staff that channels primal energy to summon and control beasts.",
+      "player_weapon_damage": 25,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Crimson Vines Thicket",
+          "enemy": {
+            "name": "Giant Viper",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Poison damage (from player's blowgun darts)."
+          },
+          "hazard": "Vines snap and fall unpredictably, creating obstacles.",
+          "pickup": {
+            "name": "Serpent Fang",
+            "effect": "Ignites fire when thrown (can be used as a fire source)."
+          },
+          "trigger": "Defeating the viper unlocks a hidden path through the thicket, leading to the next encounter."
+        },
+        {
+          "location": "Mangrove Quicksand Pits",
+          "enemy": {
+            "name": "Mutant Mangrove",
+            "health": 180,
+            "damage": 40,
+            "weakness": "Fire damage (using the Serpent Fang pickup)."
+          },
+          "hazard": "Quicksand swallows the player, forcing them to avoid traps while fighting.",
+          "pickup": {
+            "name": "Burning Ember",
+            "effect": "Boosts fire damage by 50% for 10 seconds."
+          },
+          "trigger": "Destroying the Mangrove causes a cave-in, revealing the path to the boss arena."
+        },
+        {
+          "location": "Jaguar Spirit's Arena",
+          "enemy": {
+            "name": "Jaguar Spirit (Boss)",
+            "health": 300,
+            "damage": 55,
+            "weakness": "Burning Ember pickup (must be activated during the boss's 'Feral Rage' phase)."
+          },
+          "hazard": "Collapsing platforms and hallucinogenic mist that disorients the player.",
+          "pickup": {
+            "name": "Totem of the Jungle King",
+            "effect": "Unlocks a permanent beast companion with high attack speed."
+          },
+          "trigger": "The boss awakens only after the Mangrove is destroyed, as its destruction disrupts the jungle's balance."
+        }
+      ],
+      "boss": {
+        "name": "Jaguar Spirit",
+        "health": 300,
+        "damage": 55,
+        "weakness": "Burning Ember pickup (must be used during the boss's 'Feral Rage' phase to bypass its invulnerability).",
+        "victory_condition": "Defeat the Jaguar Spirit using the Burning Ember to trigger a vulnerability window."
+      },
+      "objective": "Navigate the chaotic jungle, defeat three enemies, and harness pickups to weaken the final boss.",
+      "reward": "Totem of the Jungle King (permanent companion) and access to the next level."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "mysterious",
+      "player_class": "ranger",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "The Veil of the Forgotten Temple",
+      "setting": "A mist-shrouded jungle with ancient stone ruins, bioluminescent fungi, and overgrown pathways. Strange whispers echo through the trees, and the air hums with unseen energy.",
+      "player_weapon": "Composite Bow (can fire silenced arrows or fire arrows with pickups)",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Shadowed Altar Clearing",
+          "enemy": {
+            "name": "Shadow Jaguar",
+            "health": 60,
+            "damage": 25,
+            "weakness": "Silenced arrows (player's weapon)"
+          },
+          "hazard": "Stealthy ambush; triggers traps if noise is made.",
+          "pickup": {
+            "name": "Silenced Arrow Quiver",
+            "effect": "Allows silent shots, bypassing enemy traps."
+          },
+          "trigger": "After defeating the Shadow Jaguar, the altar's stone shifts, revealing a hidden path to the next encounter."
+        },
+        {
+          "location": "Cracked Temple Courtyard",
+          "enemy": {
+            "name": "Stone Sentinel",
+            "health": 80,
+            "damage": 30,
+            "weakness": "Fire arrows (requires pickup from prior encounter)"
+          },
+          "hazard": "Guardian of a sealed gate; activates seismic traps if attacked normally.",
+          "pickup": {
+            "name": "Ancient Relic Key",
+            "effect": "Unlocks the boss chamber's energy barrier."
+          },
+          "trigger": "After destroying the Stone Sentinel, the courtyard's gate opens, revealing a glowing path to the boss fight."
+        },
+        {
+          "location": "Boss Chamber: Heart of the Temple",
+          "enemy": {
+            "name": "Spirit of the Forgotten",
+            "health": 120,
+            "damage": 40,
+            "weakness": "Ancient Relic Key (specific pickup from prior encounter)"
+          },
+          "hazard": "The spirit summons spectral vines and manipulates the environment.",
+          "pickup": {
+            "name": "Echo Crystal",
+            "effect": "Unlocks a hidden jungle zone; grants permanent +10 damage with bows."
+          },
+          "trigger": "The Ancient Relic Key weakens the spirit's barrier, allowing the player to strike its core."
+        }
+      ],
+      "boss": {
+        "name": "Spirit of the Forgotten",
+        "health": 120,
+        "damage": 40,
+        "weakness": "Ancient Relic Key (unlocks core vulnerability)",
+        "victory_condition": "Destroy the spirit's core by targeting its glowing eye with the Ancient Relic Key."
+      },
+      "objective": "Survive the temple's trials and defeat the spirit to reclaim the Echo Crystal.",
+      "reward": "Echo Crystal (permanent stat boost), map to a hidden jungle zone."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "tense",
+      "player_class": "rogue",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Jungle",
+      "setting": "A dense, mist-shrouded rainforest with ancient ruins overgrown by vegetation. The air is thick with humidity, and the sounds of unseen predators echo through the canopy.",
+      "player_weapon": "Silenced pistol (initial weapon) and a vial of venom (pickup from first encounter).",
+      "player_weapon_damage": 30,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Whispering Thicket",
+          "enemy": {
+            "name": "Silent Jaguar",
+            "health": 80,
+            "damage": 25,
+            "weakness": "Silenced pistol (no noise) or venom (poison damage)"
+          },
+          "hazard": "Thick vines block the path; the jaguar is guarding a hidden shrine.",
+          "pickup": {
+            "name": "Vial of Venom",
+            "effect": "Applies poison damage over time (50% damage per tick for 3 ticks) when used on enemies."
+          },
+          "trigger": "Defeating the jaguar triggers a hidden pressure plate, causing a stone door to open, revealing the path to the next encounter."
+        },
+        {
+          "location": "The Guardian's Pit",
+          "enemy": {
+            "name": "Stone Shaman",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Vial of Venom (corrodes the shaman's enchanted armor)"
+          },
+          "hazard": "The shaman has erected traps (collapsing vines, dart traps) that activate if the player is not stealthy.",
+          "pickup": {
+            "name": "Jungle Key",
+            "effect": "Unlocks a sealed door leading to the boss chamber."
+          },
+          "trigger": "Destroying the shaman's armor with the venom vial reveals a hidden switch that raises a bridge to the final area."
+        },
+        {
+          "location": "The Heart of the Jungle",
+          "enemy": {
+            "name": "The Rootbound Colossus",
+            "health": 200,
+            "damage": 50,
+            "weakness": "Jungle Key (disrupts the colossus's root-based regeneration)"
+          },
+          "hazard": "The colossus is surrounded by a magical barrier that can only be broken by the Jungle Key. It summons smaller root spirits during the fight.",
+          "pickup": {
+            "name": "Ancient Jungle Relic",
+            "effect": "Grants temporary invincibility (3 seconds) when activated."
+          },
+          "trigger": "The player must use the Jungle Key to break the barrier, which also alerts the colossus to initiate the boss fight."
+        }
+      ],
+      "boss": {
+        "name": "The Rootbound Colossus",
+        "health": 200,
+        "damage": 50,
+        "weakness": "Jungle Key (disrupts the colossus's root-based regeneration)",
+        "victory_condition": "Defeat the colossus by exploiting the Jungle Key's effect while managing damage from root spirits."
+      },
+      "objective": "Navigate the jungle, defeat the three enemies to obtain the Jungle Key, and use it to defeat the final boss.",
+      "reward": "Ancient Jungle Relic (temporary invincibility) and access to the next level."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "serene",
+      "player_class": "warden",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whispering Canopy",
+      "setting": "A lush, tranquil jungle with emerald foliage, a meandering river, and glowing bioluminescent flora. The air hums with birdcalls and distant waterfalls.",
+      "player_weapon": "Ironwood Spear (starting weapon)",
+      "player_weapon_damage": 12,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Moss-Covered Clearing",
+          "enemy": {
+            "name": "Jaguar Ambush",
+            "health": 40,
+            "damage": 8,
+            "weakness": "Ironwood Spear (player's starting weapon)"
+          },
+          "hazard": "Thick vines block the path forward until the jaguar is defeated.",
+          "pickup": {
+            "name": "Bramble Shield",
+            "effect": "Deals +5 damage to plant-based enemies when used in combat."
+          },
+          "trigger": "Defeating the jaguar causes the vines to retract, revealing a hidden trail leading to the next area."
+        },
+        {
+          "location": "Entangled Thicket",
+          "enemy": {
+            "name": "Vine Strangler",
+            "health": 50,
+            "damage": 10,
+            "weakness": "Bramble Shield (pickup from prior encounter)"
+          },
+          "hazard": "Living vines attack the player, constricting movement.",
+          "pickup": {
+            "name": "Soothing Herb",
+            "effect": "Reduces boss's damage by 30% when used during the final fight."
+          },
+          "trigger": "Destroying the Vine Strangler with the Bramble Shield unlocks a stone tablet that glows, indicating the path to the boss's lair."
+        },
+        {
+          "location": "Corrupted Grove",
+          "enemy": {
+            "name": "Spirit of the Corrupted Grove",
+            "health": 120,
+            "damage": 15,
+            "weakness": "Soothing Herb (pickup from prior encounter)"
+          },
+          "hazard": "The spirit manifests as a swirling mist that damages the player over time.",
+          "pickup": {
+            "name": "Eternal Guardian Token",
+            "effect": "Unlocks a permanent +10 defense boost for the player."
+          },
+          "trigger": "The glowing stone tablet from the prior encounter activates, summoning the spirit. The Soothing Herb must be used to weaken it before it can be defeated."
+        }
+      ],
+      "boss": {
+        "name": "Spirit of the Corrupted Grove",
+        "health": 120,
+        "damage": 15,
+        "weakness": "Soothing Herb (pickup from second encounter)",
+        "victory_condition": "Apply the Soothing Herb to reduce the boss's damage output, then defeat it with the Ironwood Spear and Bramble Shield."
+      },
+      "objective": "Restore balance to the jungle by defeating the corrupted spirit and retrieving the Eternal Guardian Token.",
+      "reward": "Eternal Guardian Token (permanent defense boost) and a serene, restored jungle environment."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "ominous",
+      "player_class": "necromancer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Jungle of the Forgotten Spirits",
+      "setting": "A dense, mist-shrouded jungle with ancient ruins and bioluminescent flora. The air hums with eerie whispers, and the undergrowth pulses with malevolent energy. The player’s necromantic magic agitates the land, summoning cursed entities.",
+      "player_weapon": "Bone Staff of the Veil",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Mistveil Clearing",
+          "enemy": {
+            "name": "Shadow Jaguar",
+            "health": 80,
+            "damage": 20,
+            "weakness": "Curse Aura (player's Bone Staff)"
+          },
+          "hazard": "The jaguar’s shadow mimics the player’s movements, luring them into traps.",
+          "pickup": {
+            "name": "Tribal Amulet",
+            "effect": "Disrupts enemy magic; grants +15% magic resistance."
+          },
+          "trigger": "Defeating the jaguar causes the mist to part, revealing a hidden path to the cursed village."
+        },
+        {
+          "location": "Cursed Tribal Village",
+          "enemy": {
+            "name": "Cursed Shaman",
+            "health": 120,
+            "damage": 25,
+            "weakness": "Tribal Amulet (from prior pickup)"
+          },
+          "hazard": "The shaman summons spectral totems that deal AoE damage when the amulet is unused.",
+          "pickup": {
+            "name": "Jungle Root",
+            "effect": "Poisons enemies on contact; applies 30% damage over 5 seconds."
+          },
+          "trigger": "Destroying the shaman’s totems with the Tribal Amulet activates a hidden lever, triggering the boss fight."
+        },
+        {
+          "location": "Temple of the Rooted Soul",
+          "enemy": {
+            "name": "Jungle Titan (Boss)",
+            "health": 200,
+            "damage": 35,
+            "weakness": "Jungle Root (from prior pickup)"
+          },
+          "hazard": "The titan’s body is composed of living vines; attacks regenerate 5% health per second.",
+          "pickup": {
+            "name": "Soul of the Jungle",
+            "effect": "Unlocks necromancer ability: 'Root Grasp' (grants 25% chance to stun enemies)."
+          },
+          "trigger": "The lever pulled in the village causes the temple’s vines to writhe, summoning the titan."
+        }
+      ],
+      "boss": {
+        "name": "Jungle Titan",
+        "health": 200,
+        "damage": 35,
+        "weakness": "Jungle Root (must be applied manually to degrade the titan’s armor).",
+        "victory_condition": "Apply Jungle Root to the titan’s core, then strike with the Bone Staff to trigger a fatal collapse."
+      },
+      "objective": "Navigate the haunted jungle, defeat three cursed entities, and destroy the Jungle Titan by leveraging pickups from prior encounters.",
+      "reward": "Soul of the Jungle (unlocks a new necromancer ability)"
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "whimsical",
+      "player_class": "alchemist",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whimsical Jungle",
+      "setting": "A vibrant, enchanted jungle with floating flower islands, talking parrots, and bioluminescent plants. The air hums with magical energy, and the ground shifts subtly as if alive.",
+      "player_weapon": "Alchemical Flask (basic fire potion, upgradeable)",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Bramble Thicket",
+          "enemy": {
+            "name": "Giggling Gibbon",
+            "health": 30,
+            "damage": 15,
+            "weakness": "Basic alchemical flame (player's starting weapon)"
+          },
+          "hazard": "Mischievous Gibbon throws fruit that temporarily slows the player.",
+          "pickup": {
+            "name": "Bramble Seed",
+            "effect": "Catalyst for fire-based potions (increases fire damage by 20%)"
+          },
+          "trigger": "Defeating the Gibbon causes a hidden path to open, revealing a glowing vine that leads to the next encounter."
+        },
+        {
+          "location": "The Vine Labyrinth",
+          "enemy": {
+            "name": "Vine Vortex",
+            "health": 50,
+            "damage": 20,
+            "weakness": "Fire-based potion (requires Bramble Seed from prior encounter)"
+          },
+          "hazard": "The Vine Vortex entangles the player, reducing movement speed by 50% for 5 seconds.",
+          "pickup": {
+            "name": "Serpent's Scale",
+            "effect": "Alchemical catalyst for a potent poison (deals 30 damage over 3 seconds)"
+          },
+          "trigger": "Destroying the Vine Vortex causes the jungle to tremble, revealing a hidden temple entrance guarded by the final boss."
+        },
+        {
+          "location": "The Rootwrath Temple",
+          "enemy": {
+            "name": "Ancient Rootwrath",
+            "health": 120,
+            "damage": 25,
+            "weakness": "Poison potion crafted with Serpent's Scale (from prior encounter)"
+          },
+          "hazard": "The boss summons protective roots that regenerate 10% health every 3 seconds.",
+          "pickup": {
+            "name": "Jungle Heart",
+            "effect": "Restores 50% player health and grants temporary invincibility for 5 seconds"
+          },
+          "trigger": "Defeating the boss unlocks the jungle's secret: a hidden grove where the player can craft legendary alchemical items."
+        }
+      ],
+      "boss": {
+        "name": "Ancient Rootwrath",
+        "health": 120,
+        "damage": 25,
+        "weakness": "Poison potion (requires Serpent's Scale from Encounter 2)",
+        "victory_condition": "Reduce health to 0 using poison damage"
+      },
+      "objective": "Navigate the jungle, defeat whimsical enemies, and uncover the secret of the Rootwrath Temple.",
+      "reward": "Jungle Heart (healing item) and access to a new alchemical recipe."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "eerie",
+      "player_class": "chronomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Eerie Jungle Temporal Ruins",
+      "setting": "A dense, mist-shrouded jungle filled with ancient stone ruins and flickering auroras. The air hums with distorted echoes of the past, and trees twist into impossible shapes. Shadows move independently, and the player’s watch ticks backward intermittently.",
+      "player_weapon": "Chrono-Blade (a sword that slices through time, leaving afterimages and disrupting temporal fields)",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Whispering Glade",
+          "enemy": {
+            "name": "Temporal Jaguar",
+            "health": 60,
+            "damage": 20,
+            "weakness": "Chrono-Blade’s time disruption ability (slashing through its temporal armor)"
+          },
+          "hazard": "The ground shifts between past and present, forcing the player to navigate unstable terrain.",
+          "pickup": {
+            "name": "Time Crystal",
+            "effect": "Restores 30% of the player’s health and temporarily stabilizes local time for 15 seconds."
+          },
+          "trigger": "Defeating the Jaguar unlocks the path to the 'Echoing Temple' by shattering a temporal barrier with the Chrono-Blade."
+        },
+        {
+          "location": "The Echoing Temple",
+          "enemy": {
+            "name": "Shadow Hunter",
+            "health": 75,
+            "damage": 25,
+            "weakness": "Time Crystal’s energy (overloads its shadow-based form, causing temporal feedback)"
+          },
+          "hazard": "The temple is filled with mirrored surfaces that duplicate the player’s movements, creating confusion.",
+          "pickup": {
+            "name": "Time Anchor",
+            "effect": "Freezes enemies in time for 5 seconds (can be charged with energy from the Time Crystal)."
+          },
+          "trigger": "The Shadow Hunter’s defeat reveals a hidden chamber with the Time Anchor, which is needed to access the final area."
+        },
+        {
+          "location": "The Heart of the Temporal Rift",
+          "enemy": {
+            "name": "Chrono-Serpent (Boss)",
+            "health": 150,
+            "damage": 35,
+            "weakness": "Time Anchor’s stabilization (nullifies the boss’s time-based attacks and reveals its physical core)"
+          },
+          "hazard": "The battlefield shifts between eras, with collapsing ruins and phantom versions of the player’s past self.",
+          "pickup": {
+            "name": "Eternal Core",
+            "effect": "Permanently increases the Chrono-Blade’s damage by 20% and grants immunity to time-based debuffs."
+          },
+          "trigger": "Using the Time Anchor during the boss fight unlocks the Eternal Core, restoring balance to the jungle’s timeline."
+        }
+      ],
+      "boss": {
+        "name": "Chrono-Serpent",
+        "health": 150,
+        "damage": 35,
+        "weakness": "Time Anchor (required to counter its temporal attacks)",
+        "victory_condition": "Use the Time Anchor to freeze the boss, then strike its core with the Chrono-Blade."
+      },
+      "objective": "Restore balance to the jungle’s timeline by defeating the Chrono-Serpent and reclaiming the Eternal Core.",
+      "reward": "Eternal Core (enhances the Chrono-Blade and grants time manipulation mastery)."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "desolate",
+      "player_class": "berserker",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Desolate Jungle",
+      "setting": "A crumbling, overgrown rainforest with dead trees, fog-shrouded ruins, and a pervasive sense of abandonment. The air is thick with decay and the distant calls of unseen predators.",
+      "player_weapon": "Jagged Machete (initial weapon, upgrades with pickups)",
+      "player_weapon_damage": 50,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Blighted Clearing",
+          "enemy": {
+            "name": "Jaguar Phantom",
+            "health": 120,
+            "damage": 30,
+            "weakness": "Bladed attacks (player's initial Jagged Machete). The phantom's brittle bone armor cracks under sharp force."
+          },
+          "hazard": "Toxic Fumes (reduces player health by 10% over 30 seconds)",
+          "pickup": {
+            "name": "Vine Fiber",
+            "effect": "Crafts a piercing weapon or trap, increasing damage by 20% against armored foes."
+          },
+          "trigger": "Defeating the Jaguar Phantom removes the toxic fumes, revealing a path through the tangled vines leading to the next area."
+        },
+        {
+          "location": "Mire Swamp",
+          "enemy": {
+            "name": "Mire Stalker",
+            "health": 180,
+            "damage": 40,
+            "weakness": "Piercing attacks (Vine Fiber from prior encounter). The stalker's thick hide is vulnerable to sharp, concentrated force."
+          },
+          "hazard": "Quicksand Pits (trap player in 50% damage over 15 seconds)",
+          "pickup": {
+            "name": "Rage Core",
+            "effect": "Boosts berserker rage generation by 50%, allowing for longer periods of invincibility and increased damage."
+          },
+          "trigger": "Defeating the Mire Stalker causes the swamp to drain, revealing a stone staircase leading to the canopy temple where the final boss awaits."
+        }
+      ],
+      "boss": {
+        "name": "Canopy Warden",
+        "health": 300,
+        "damage": 60,
+        "weakness": "Energy bursts from the Rage Core (pickup from second encounter). The warden's shield is impervious to physical attacks but vulnerable to concentrated energy surges.",
+        "victory_condition": "Use the Rage Core to trigger a damaging energy burst during the boss's shielded phase."
+      },
+      "objective": "Survive the brutal jungle encounters, acquire pickups to weaken enemies, and defeat the Canopy Warden with the Rage Core.",
+      "reward": "Ancient Berserker Relic (unlocks a permanent rage regeneration ability)"
+    }
+  }
+]

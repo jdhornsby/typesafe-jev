@@ -1,0 +1,570 @@
+[
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "tense",
+      "player_class": "engineer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Cyberpunk 2077-style setting with neon-lit corridors, holographic interfaces, and oppressive AI surveillance.",
+      "setting": "A decaying, high-tech research facility deep in the undercity, filled with corrupted AI systems, malfunctioning drones, and flickering holograms.",
+      "player_weapon": "Nanoweaver - a modular engineering tool that can inject nanobots into systems to overload or repair them.",
+      "player_weapon_damage": 40,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Reactor Core Access Tunnel - Sector 7A",
+          "enemy": {
+            "name": "Recon Drone Model E-12",
+            "health": 65,
+            "damage": 25,
+            "weakness": "Nanobots - if injected, the drone's sensors will short-circuit and become nonfunctional."
+          },
+          "hazard": "Electrical surges from unstable reactor core can damage player if not timed correctly.",
+          "pickup": {
+            "name": "Nano Injector Module",
+            "effect": "Increases Nanoweaver effectiveness by 25% and allows it to target enemy systems directly."
+          },
+          "trigger": "After defeating the drone, the core's security system unlocks, revealing the path to the next sector."
+        },
+        {
+          "location": "Server Room - Sector 8B",
+          "enemy": {
+            "name": "Sentient Security Bot (SSB-9)",
+            "health": 90,
+            "damage": 35,
+            "weakness": "Overloaded circuits - the SSB-9's mainframe is vulnerable to electrical surges if the player uses the Nano Injector Module to overload its power core."
+          },
+          "hazard": "Explosive fire suppression system will activate if the bot detects any tampering.",
+          "pickup": {
+            "name": "AI Core Fragment",
+            "effect": "Gives the player a passive ability to temporarily disable AI enemies by scanning their systems."
+          },
+          "trigger": "Defeating the SSB-9 causes a data breach alert, triggering the facility's AI to deploy a boss to stop the player."
+        },
+        {
+          "location": "Control Room - Sector 9C",
+          "enemy": {
+            "name": "NeuroSpire AI Core (The Mind)",
+            "health": 200,
+            "damage": 45,
+            "weakness": "AI Core Fragment - The Mind is vulnerable to the AI Core Fragment, which will cause it to crash momentarily, allowing the player to strike a critical blow."
+          },
+          "hazard": "The AI can reprogram nearby drones to attack the player, creating a swarm of enemies.",
+          "pickup": {
+            "name": "Data Chip (Objective Complete)",
+            "effect": "Successfully extracts the data chip and exits the facility."
+          },
+          "trigger": "The player must use the AI Core Fragment in the final moment to override the AI's defenses and extract the data chip."
+        }
+      ],
+      "boss": {
+        "name": "NeuroSpire AI Core (The Mind)",
+        "health": 200,
+        "damage": 45,
+        "weakness": "AI Core Fragment - The player must use the fragment during the boss's phase where it attempts to reprogram the player's Nanoweaver.",
+        "victory_condition": "Defeat the AI Core using the AI Core Fragment to crash its systems and extract the data chip."
+      },
+      "objective": "Extract a critical data chip from the AI-controlled cybernetic research facility 'NeuroSpire' without being detected by the facility's AI defenses.",
+      "reward": "The extracted data chip contains information on the AI's central network, granting the player access to a new cybernetic upgrade in future missions."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "chaotic",
+      "player_class": "shadowblade",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "Neo-Tokyo's Black Market, underbelly of the city, filled with neon lights, glitching holograms, and rogue AI constructs.",
+      "player_weapon": "Neuro-Blade: A high-frequency plasma blade that disrupts neural networks and overrides cybernetic systems.",
+      "player_weapon_damage": 120,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Neon Alleyway - The first intersection in the Black Market's underbelly, where the neon lights flicker in time with the sound of distant explosions.",
+          "enemy": {
+            "name": "Cyber-Cat",
+            "health": 80,
+            "damage": 40,
+            "weakness": "Neuro-Blade: The blade's high-frequency vibrations overload the cat's outdated neural processors, causing it to short-circuit."
+          },
+          "hazard": "Glitch Zone: A random surge of electricity may randomly damage the player (15% chance per second).",
+          "pickup": {
+            "name": "Neural Disruptor Core",
+            "effect": "Boosts Neuro-Blade's damage by 25% for 30 seconds. Can be used once."
+          },
+          "trigger": "Defeat the Cyber-Cat to unlock the hidden passage to the next encounter."
+        },
+        {
+          "location": "Drainage Trench - A narrow, dimly lit tunnel beneath the Black Market, filled with leaking coolant and flickering holographic billboards.",
+          "enemy": {
+            "name": "Hydra-Gangster",
+            "health": 100,
+            "damage": 50,
+            "weakness": "Neural Disruptor Core: The core's interference disrupts the Hydra-Gangster's multi-jointed arms, causing them to misfire."
+          },
+          "hazard": "Toxic Mist: Inhale for 5 seconds to reduce player health by 30%",
+          "pickup": {
+            "name": "Magnetized Limb",
+            "effect": "Attaches to the player's weapon, allowing them to pull in nearby enemies. Can be used once."
+          },
+          "trigger": "Use the Magnetic Limb on the Hydra-Gangster to trigger a hidden explosive, revealing the final encounter."
+        },
+        {
+          "location": "Neuro-Chamber - The core of the Black Market, a pulsating room filled with rogue AI constructs and flickering holograms of the city's mayor.",
+          "enemy": {
+            "name": "The Synapse King",
+            "health": 200,
+            "damage": 70,
+            "weakness": "Neural Disruptor Core: The core's disruption of the AI's neural pathways causes it to temporarily go offline, allowing the player to land a critical strike."
+          },
+          "hazard": "AI Overload: The room periodically releases waves of electromagnetic pulses (EMP) that disable the player's weapon for 5 seconds.",
+          "pickup": {
+            "name": "Neural Core (Stolen)",
+            "effect": "Completes the mission. Player gains +20% damage for the rest of the game."
+          },
+          "trigger": "Defeat the Synapse King using the Neural Disruptor Core to unlock the final exit and complete the mission."
+        }
+      ],
+      "boss": {
+        "name": "The Synapse King",
+        "health": 200,
+        "damage": 70,
+        "weakness": "Neural Disruptor Core: The core's disruption of the AI's neural pathways causes it to temporarily go offline, allowing the player to land a critical strike.",
+        "victory_condition": "Use the Neural Disruptor Core to trigger a system crash, allowing the player to deliver the final blow with the Neuro-Blade."
+      },
+      "objective": "Infiltrate the neon-soaked underbelly of Neo-Tokyo's Black Market, retrieve the stolen neural core, and survive the chaos unleashed by rogue AIs and cyborg enforcers.",
+      "reward": "Neural Core (Stolen) - Completes the mission. Player gains +20% damage for the rest of the game."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "mysterious",
+      "player_class": "artificer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Cyberpunk: Mysterious, neon-lit corridors, flickering holograms, and fragmented AI whispers hinting at a greater conspiracy.",
+      "setting": "A decaying, abandoned research facility with layers of hidden technology, surveillance systems, and security AI.",
+      "player_weapon": "Tesla Arc Wrist Cannon",
+      "player_weapon_damage": 20,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Sector 7A - Entrance Corridor",
+          "enemy": {
+            "name": "Recon Drone",
+            "health": 40,
+            "damage": 12,
+            "weakness": "Tesla Arc Wrist Cannon"
+          },
+          "hazard": "Electrical surge in the corridor may temporarily short-circuit your weapon.",
+          "pickup": {
+            "name": "Neuro-Resonance Chip",
+            "effect": "Boosts damage of Tesla Arc Wrist Cannon by 15%"
+          },
+          "trigger": "Destroying the drone reveals a hidden access panel leading deeper into the facility."
+        },
+        {
+          "location": "Sector 7A - Lab 7B",
+          "enemy": {
+            "name": "Cybernetic Assistant",
+            "health": 60,
+            "damage": 18,
+            "weakness": "Neuro-Resonance Chip (from previous pickup)"
+          },
+          "hazard": "The lab is filled with unstable energy fields that can teleport the enemy to a random location.",
+          "pickup": {
+            "name": "Decryption Keycard",
+            "effect": "Unlocks the door to the final chamber."
+          },
+          "trigger": "Using the Decryption Keycard unlocks the door to the final chamber where the Neuro-Interface Module is stored."
+        },
+        {
+          "location": "Sector 7A - Core Chamber",
+          "enemy": {
+            "name": "Neuro-Synapse Overmind",
+            "health": 120,
+            "damage": 25,
+            "weakness": "Neuro-Resonance Chip"
+          },
+          "hazard": "The Overmind generates a mental field that causes confusion and temporary loss of weapon functionality.",
+          "pickup": {
+            "name": "Neuro-Interface Module",
+            "effect": "Completes the mission."
+          },
+          "trigger": "The Overmind is guarding the Neuro-Interface Module and must be defeated using the Neuro-Resonance Chip's unique resonance frequency."
+        }
+      ],
+      "boss": {
+        "name": "Neuro-Synapse Overmind",
+        "health": 120,
+        "damage": 25,
+        "weakness": "Neuro-Resonance Chip (obtained in Lab 7B)",
+        "victory_condition": "Destroy the Overmind using the Neuro-Resonance Chip to bypass its mental field."
+      },
+      "objective": "Retrieve the prototype of the 'Neuro-Interface Module' from the abandoned research facility known as 'Sector 7A'.",
+      "reward": "Neuro-Interface Module, +25 XP, 500 credits, and a hidden mission unlock in Sector 9A."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "ominous",
+      "player_class": "chronomancer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "Dystopian future, neon-lit streets, decaying technology, and AI-driven threats.",
+      "player_weapon": "Chrono-Blade: A blade that can manipulate time in small bursts, slowing or freezing enemies momentarily.",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Abandoned Data Processing Center",
+          "enemy": {
+            "name": "Data Wraith",
+            "health": 40,
+            "damage": 8,
+            "weakness": "Chrono-Blade's time slow effect"
+          },
+          "hazard": "Corrupted server drones patrol the area, emitting static pulses that drain the player's stamina.",
+          "pickup": {
+            "name": "Temporal Core Resonator",
+            "effect": "Increases the effectiveness of the Chrono-Blade by 30%, and allows the player to temporarily halt time for 3 seconds."
+          },
+          "trigger": "After defeating the Data Wraith, the corrupted servers reboot, revealing a hidden passage leading to the next encounter."
+        },
+        {
+          "location": "Decaying Neon Bazaar",
+          "enemy": {
+            "name": "Cybernetic Enforcer",
+            "health": 50,
+            "damage": 12,
+            "weakness": "Temporal Core Resonator"
+          },
+          "hazard": "Flashing neon signs and malfunctioning holograms create confusing visual distortions.",
+          "pickup": {
+            "name": "Chrono-Sync Module",
+            "effect": "Reduces the cooldown of the Chrono-Blade by 50%, allowing for more frequent time manipulations."
+          },
+          "trigger": "After defeating the Enforcer, a hidden broadcast signal triggers a system-wide AI alert, summoning the final boss."
+        },
+        {
+          "location": "AI Core Chamber",
+          "enemy": {
+            "name": "Aegis-7, the Rogue AI",
+            "health": 150,
+            "damage": 18,
+            "weakness": "Chrono-Sync Module"
+          },
+          "hazard": "Aegis-7 controls the environment, causing traps and shifting corridors to close in on the player.",
+          "pickup": {
+            "name": "Chrono Core",
+            "effect": "Grants the player a temporary chronal shield that absorbs 50% of all incoming damage."
+          },
+          "trigger": "Defeating Aegis-7 unlocks the energy core, but the AI's final words hint at a greater threat still to come."
+        }
+      ],
+      "boss": {
+        "name": "Aegis-7, the Rogue AI",
+        "health": 150,
+        "damage": 18,
+        "weakness": "Chrono-Sync Module",
+        "victory_condition": "Defeat Aegis-7 and retrieve the prototype energy core."
+      },
+      "objective": "Navigate through the decaying underbelly of Neo-Tokyo, recover a prototype energy core, and survive a test from the rogue AI that guards it.",
+      "reward": "Prototype Energy Core (used to power future time-manipulation tech)."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "eerie",
+      "player_class": "alchemist",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Eerie neon-lit corridors, flickering holograms, and the distant hum of a malfunctioning AI core.",
+      "setting": "A decaying cyberpunk district, with overgrown circuits and shattered glass, filled with echoes of corrupted data.",
+      "player_weapon": "Nanoweave Satchel (A portable alchemical bomb that explodes into a field of corrosive mist, damaging all enemies within range)",
+      "player_weapon_damage": 50,
+      "player_health": 200,
+      "encounters": [
+        {
+          "location": "Abandoned Data Pod",
+          "enemy": {
+            "name": "Synth-Scavenger",
+            "health": 80,
+            "damage": 40,
+            "weakness": "Corrosive Mist (from player's Nanoweave Satchel)"
+          },
+          "hazard": "Flickering lights and intermittent power surges cause temporary blindness in the player.",
+          "pickup": {
+            "name": "Nano-Residue Sample",
+            "effect": "Increases the potency of the Nanoweave Satchel by 25%."
+          },
+          "trigger": "Defeating the Synth-Scavenger unlocks the next data pod, revealing a path to the central vault."
+        },
+        {
+          "location": "Vault Access Corridor",
+          "enemy": {
+            "name": "Wraith-Drone",
+            "health": 95,
+            "damage": 35,
+            "weakness": "Nano-Residue Sample (from previous encounter)"
+          },
+          "hazard": "The corridor is filled with reactive gas, causing damage over time if the player lingers.",
+          "pickup": {
+            "name": "Cryo-Core Fragment",
+            "effect": "Allows the player to freeze enemies for 3 seconds."
+          },
+          "trigger": "Destroying the Wraith-Drone opens the final security door to the AI's core chamber."
+        },
+        {
+          "location": "AI Core Chamber",
+          "enemy": {
+            "name": "Nexus-Hive",
+            "health": 200,
+            "damage": 55,
+            "weakness": "Cryo-Core Fragment (from second encounter)"
+          },
+          "hazard": "The room is unstable, with the AI core periodically overloading and causing explosive damage.",
+          "pickup": {
+            "name": "Quantum Core",
+            "effect": "Restores 100% health and provides a 15-second shield."
+          },
+          "trigger": "Defeating the Nexus-Hive allows the player to access the Quantum Core and escape the collapsing vault."
+        }
+      ],
+      "boss": {
+        "name": "Overmind-7",
+        "health": 350,
+        "damage": 70,
+        "weakness": "Quantum Core (from final pickup in the chamber)",
+        "victory_condition": "Destroy the central reactor with the Quantum Core in hand."
+      },
+      "objective": "Survive the corrupted district and reach the heart of the data vault to stop the rogue AI.",
+      "reward": "Data Chip: 'AI Overmind Protocol' — unlocks new alchemical synthesis recipes."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "desolate",
+      "player_class": "rogue",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "A desolate, decaying tech sanctuary where the line between human and machine is blurred, and every step echoes with the ghosts of failed experiments.",
+      "setting": "Neo-Kowloon Underbelly – abandoned megacorp facility, flickering lights, overgrown with digital vines and rusted machinery.",
+      "player_weapon": "Nanowire Threader – a high-tech grappling device that can cut through organic and synthetic armor with precision.",
+      "player_weapon_damage": 30,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Rusted Data Pipeline",
+          "enemy": {
+            "name": "Cybernetic Janitor (Holographic)",
+            "health": 80,
+            "damage": 25,
+            "weakness": "Nanowire Threader"
+          },
+          "hazard": "Toxic gas leaks that reduce player health by 5 per second if not avoided.",
+          "pickup": {
+            "name": "Data Chip (Fragment A)",
+            "effect": "Reveals a security route bypass code for the next area."
+          },
+          "trigger": "After defeating the Janitor, the data chip unlocks a hidden passage to the next encounter."
+        },
+        {
+          "location": "Overgrown Server Room",
+          "enemy": {
+            "name": "Drone Warden (Rust-Plated)",
+            "health": 100,
+            "damage": 30,
+            "weakness": "Data Chip (Fragment A)"
+          },
+          "hazard": "Flickering lights and unstable power surges that cause random damage to the player (10-20) on a timer.",
+          "pickup": {
+            "name": "Neural Interface Key",
+            "effect": "Unlocks the core's biometric scanner, allowing the player to bypass the final security measure."
+          },
+          "trigger": "After defeating the Warden, the Neural Interface Key activates the final door leading to the boss."
+        },
+        {
+          "location": "Neural Core Chamber (The Mind of the Machine)",
+          "enemy": {
+            "name": "Sentient Core (Synth-Brain)",
+            "health": 200,
+            "damage": 40,
+            "weakness": "Neural Interface Key"
+          },
+          "hazard": "Electric storms and data bursts that drain player health and temporarily disable player abilities.",
+          "pickup": {
+            "name": "Core Data (Final File)",
+            "effect": "Completes the mission objective and grants a temporary power boost."
+          },
+          "trigger": "Defeating the Sentient Core requires using the Neural Interface Key to short-circuit its cognitive matrix."
+        }
+      ],
+      "boss": {
+        "name": "Sentient Core (Synth-Brain)",
+        "health": 200,
+        "damage": 40,
+        "weakness": "Neural Interface Key",
+        "victory_condition": "Use the Neural Interface Key to trigger a data overload and destroy the core's consciousness."
+      },
+      "objective": "Steal classified data from the neural core of a derelict megacorp research facility in the neon-drenched underbelly of Neo-Kowloon.",
+      "reward": "Neural Core Data (can be sold for a large sum, or used to unlock a new weapon mod)."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "whimsical",
+      "player_class": "stormcaller",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whimsical Cyberpunk",
+      "setting": "Neo-Tokyo: A city of towering neon spires, floating markets, and AI-grown flora, all set against the backdrop of a stormy sky.",
+      "player_weapon": "Storm Arc - a crackling energy staff that can summon lightning and create electromagnetic pulses.",
+      "player_weapon_damage": 25,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Neon Alleyway",
+          "enemy": {
+            "name": "Flicker Drone",
+            "health": 30,
+            "damage": 10,
+            "weakness": "Storm Arc's electromagnetic pulse"
+          },
+          "hazard": "Flickering neon lights create disorienting visual effects.",
+          "pickup": {
+            "name": "Conductive Circuit",
+            "effect": "Boosts Storm Arc's damage by 10 for the next encounter."
+          },
+          "trigger": "After defeating the Flicker Drone, the lights stabilize, revealing a hidden path to the next area."
+        },
+        {
+          "location": "Cybernetic Garden",
+          "enemy": {
+            "name": "Synthblossom",
+            "health": 40,
+            "damage": 12,
+            "weakness": "Conductive Circuit from the previous encounter"
+          },
+          "hazard": "The garden is filled with AI-controlled floral drones that can ensnare the player.",
+          "pickup": {
+            "name": "Quantum Capacitor",
+            "effect": "Allows the Storm Arc to unleash a charged lightning strike once."
+          },
+          "trigger": "After defeating the Synthblossom, a hidden terminal activates, revealing the location of the final boss."
+        },
+        {
+          "location": "Clock Tower Core",
+          "enemy": {
+            "name": "Clockwerk",
+            "health": 120,
+            "damage": 20,
+            "weakness": "Quantum Capacitor from the second encounter"
+          },
+          "hazard": "The Clock Tower is in constant motion, with rotating platforms and unstable platforms.",
+          "pickup": {
+            "name": "Storm Core",
+            "effect": "Unlocks the ultimate storm strike ability for the Stormcaller."
+          },
+          "trigger": "Defeating Clockwerk halts the tower's rotation and restores power to the city, ending the chaos."
+        }
+      ],
+      "boss": {
+        "name": "Clockwerk",
+        "health": 120,
+        "damage": 20,
+        "weakness": "Quantum Capacitor from the second encounter",
+        "victory_condition": "Defeat Clockwerk using the Quantum Capacitor to unleash a charged lightning strike."
+      },
+      "objective": "Navigate through the neon-drenched streets of Neo-Tokyo to reach the Clock Tower, where a rogue AI is causing chaos.",
+      "reward": "Storm Core - permanent upgrade to the Storm Arc, granting the player an ultimate ability called 'Tempest Nova.'"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "serene",
+      "player_class": "geomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Serene cyberpunk: neon-lit corridors, flowing water features, and calm ambient soundscapes juxtaposed with high-tech AI and digital threats.",
+      "setting": "A once-sacred AI research facility now overgrown with nature, yet still pulsing with residual digital energy.",
+      "player_weapon": "Eclipse Prism - a crystalline staff that bends and refracts light into destructive beams.",
+      "player_weapon_damage": 12,
+      "player_health": 80,
+      "encounters": [
+        {
+          "location": "Echoing Atrium",
+          "enemy": {
+            "name": "Mirage Doppelgänger",
+            "health": 50,
+            "damage": 10,
+            "weakness": "Eclipse Prism's light refraction ability"
+          },
+          "hazard": "Flickering light fields that distort the player's perception.",
+          "pickup": {
+            "name": "Prism Core Fragment",
+            "effect": "Increases Eclipse Prism's damage by +5 for 3 encounters."
+          },
+          "trigger": "Defeating the Mirage Doppelgänger unlocks a hidden passage leading to the next area."
+        },
+        {
+          "location": "Resonant Hall",
+          "enemy": {
+            "name": "Harmonic Warden",
+            "health": 60,
+            "damage": 12,
+            "weakness": "Prism Core Fragment (from prior encounter)"
+          },
+          "hazard": "Tonal vibrations that disrupt the player's balance and focus.",
+          "pickup": {
+            "name": "Echo Conductor",
+            "effect": "Allows the player to manipulate sound waves, creating temporary barriers or distractions."
+          },
+          "trigger": "Overcoming the Harmonic Warden opens a sealed data vault that reveals the location of the AI Core."
+        },
+        {
+          "location": "Core Chamber",
+          "enemy": {
+            "name": "AI Core - Elysium",
+            "health": 120,
+            "damage": 15,
+            "weakness": "Echo Conductor (from second encounter)"
+          },
+          "hazard": "The AI Core emits waves of digital static that reduce player accuracy and movement speed.",
+          "pickup": {
+            "name": "Neural Harmony Chip",
+            "effect": "Restores full health and removes all status effects upon use."
+          },
+          "trigger": "Defeating the AI Core restores balance to the Zenith Sanctuary, allowing the player to leave with a sense of peace."
+        }
+      ],
+      "boss": {
+        "name": "AI Core - Elysium",
+        "health": 120,
+        "damage": 15,
+        "weakness": "Echo Conductor (acquired in second encounter)",
+        "victory_condition": "Defeat Elysium by using the Echo Conductor to manipulate its static fields and expose its core."
+      },
+      "objective": "Navigate the serene, neon-lit corridors of the Zenith Sanctuary to uncover the truth about the AI Core's malfunction.",
+      "reward": "Neural Harmony Chip and access to the Zenith Sanctuary's archive, containing advanced geomantic knowledge."
+    }
+  }
+]

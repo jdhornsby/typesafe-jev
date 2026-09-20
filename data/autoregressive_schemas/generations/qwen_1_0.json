@@ -1,0 +1,1138 @@
+[
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "ominous",
+      "player_class": "pyromancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Ominous — ambient whispers echo as if from dying tongues, the air smells of burnt incense and charred bone, all light sources flicker with unnatural rhythm",
+      "setting": "The Ashen Cathedral — a once-holy temple to fire, now a tomb where the last pyromancer’s soul fused with the core of a dying sun",
+      "player_weapon": "Pyre Staff — basic fireball, charged inferno, sustained flame pillar",
+      "player_weapon_damage": 30,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Cursed Candlehall — a corridor lined with blackened candlesticks",
+          "enemy": {
+            "name": "Ember Wraith",
+            "health": 150,
+            "damage": 40,
+            "weakness": "Pyromancer's basic flame — weak to sustained burn, immune to burst"
+          },
+          "hazard": "Flickering torches cast shifting shadows; extinguishing one spawns a Wraith",
+          "pickup": {
+            "name": "Ignition Siphon",
+            "effect": "Ignition Siphon — passive: next 3 flame spells gain 20% duration"
+          },
+          "trigger": "Player extinguishes 5 torches → Wraith spawns. After defeat, next corridor’s torches ignite permanently"
+        },
+        {
+          "location": "Ashen Forge — molten metal drips from ceiling, statues of broken pyromancers line the walls",
+          "enemy": {
+            "name": "Ashen Golem",
+            "health": 220,
+            "damage": 55,
+            "weakness": "Ignition Siphon — sustained burn melts its ash-core; burst flames only harden shell"
+          },
+          "hazard": "Cracked floor vents superheated ash; standing too long applies 'Ash-Burden' (slows movement)",
+          "pickup": {
+            "name": "Emberheart Core",
+            "effect": "Emberheart Core — active: emits 3s pulse that resonates with heat-infused materials"
+          },
+          "trigger": "Player defeats Golem → forge bell tolls, triggering lava flow that seals escape route, forcing path to the Obsidian Sanctum"
+        },
+        {
+          "location": "Obsidian Sanctum — ceiling is a fractured dome of black glass, stars visible through cracks",
+          "enemy": {
+            "name": "The Hollow Pyre",
+            "health": 300,
+            "damage": 70,
+            "weakness": "Emberheart Core — pulse causes its internal fire to destabilize and explode"
+          },
+          "hazard": "Floating ember-particles form temporary platforms; extinguishing them causes falls",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is the final encounter before the boss"
+          },
+          "trigger": "Player defeats Hollow Pyre → dome cracks fully, revealing the Ashen Maw above, and the Sanctum floor becomes a platform suspended over a bottomless chasm"
+        }
+      ],
+      "boss": {
+        "name": "The Ashen Maw",
+        "health": 800,
+        "damage": 200,
+        "weakness": "Emberheart Core — must be activated within 5m to emit pulse that shatters the Maw's ash-shell",
+        "victory_condition": "Reduce to 0 HP using the Emberheart Core's resonance"
+      },
+      "objective": "Survive three encounters, acquire the Emberheart Core, and defeat the Ashen Maw by resonating it with your Core",
+      "reward": "Ashen Crown — grants passive fire immunity and increases flame radius by 40%"
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "whimsical",
+      "player_class": "beastmaster",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whimsical fantasy — playful, colorful, and gently absurd.",
+      "setting": "The Enchanted Glade of Noodlewhimsy — a land where trees hum lullabies, clouds are made of spun sugar, and every puddle reflects a different dream.",
+      "player_weapon": "Whisperstaff — a wooden staff that summons gentle animal companions (rabbits, hedgehogs, foxes) to nudge, distract, or gently herd enemies",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Glowing Pond of Whimsy",
+          "enemy": {
+            "name": "Puddlekin",
+            "health": 40,
+            "damage": 15,
+            "weakness": "Bubblegum Snot"
+          },
+          "hazard": "Floating soap bubbles that pop and slow movement",
+          "pickup": {
+            "name": "Bubblegum Snot",
+            "effect": "Player gains Bubblegum Snot: when thrown, it creates a sticky, bouncy goo that immobilizes enemies for 5 seconds"
+          },
+          "trigger": "Player steps into the glowing pond — the water ripples into giggling faces, and Puddlekin oozes up from the mud."
+        },
+        {
+          "location": "Cottoncloud Grove",
+          "enemy": {
+            "name": "Snickerdoodle",
+            "health": 50,
+            "damage": 20,
+            "weakness": "Glimmerfeather"
+          },
+          "hazard": "Floating candy-cane vines that tickle the player if touched",
+          "pickup": {
+            "name": "Glimmerfeather",
+            "effect": "Player gains Glimmerfeather: when waved, it summons a shimmering flock of tiny, giggling birds that distract enemies for 7 seconds"
+          },
+          "trigger": "After defeating Puddlekin, a trail of glittering gumdrops leads to the grove — where Snickerdoodle, a squirrel with a top hat made of licorice, chitters in outrage."
+        },
+        {
+          "location": "The Clockwork Carousel",
+          "enemy": {
+            "name": "Sir Ticklebones",
+            "health": 60,
+            "damage": 25,
+            "weakness": "Crystalized Whisker"
+          },
+          "hazard": "Wind-up toy beetles that chase the player and play lullabies",
+          "pickup": {
+            "name": "Crystalized Whisker",
+            "effect": "Player gains Crystalized Whisker: a shimmering, crystalline cat whisker that glows when near magic. When held up to the moonlight, it emits a high-pitched, irresistible sneeze-inducing chime"
+          },
+          "trigger": "After defeating Snickerdoodle, the Glimmerfeather floats upward, drawing a path of floating musical notes to the carousel — where Sir Ticklebones, a knight made of jingle bells and plush velvet, rides a mechanical badger and demands a duel."
+        }
+      ],
+      "boss": {
+        "name": "Grandmother Glimmerwhisk",
+        "health": 150,
+        "damage": 100,
+        "weakness": "Crystalized Whisker",
+        "victory_condition": "Use the Crystalized Whisker to make her sneeze out her last puff of magic"
+      },
+      "objective": "Use the Crystalized Whisker on Grandmother Glimmerwhisk to make her sneeze out her magic, revealing a door to the Heartwood Tree",
+      "reward": "A tiny, purring moon-cat familiar named Twinklepuff, who follows you forever and giggles when you pet it"
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "tense",
+      "player_class": "paladin",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Faith is not given — it is forged in the crucible of sacrifice and illumination.",
+      "setting": "The Forgotten Crypt of Vaelthar — a once-holy sanctuary now corrupted by a fallen king who turned his own faith into a weapon against the divine.",
+      "player_weapon": "Holy Longsword (base damage: 30)",
+      "player_weapon_damage": 30,
+      "player_health": 200,
+      "encounters": [
+        {
+          "location": "The Shattered Atrium — once a chapel, now a tomb of forgotten oaths.",
+          "enemy": {
+            "name": "Shadowfang Stalker",
+            "health": 120,
+            "damage": 45,
+            "weakness": "Vulnerable to radiant light — the Paladin’s weapon must be charged with the Light of the Sanctified Mace (acquired in Encounter 2) to deal bonus damage."
+          },
+          "hazard": "The floor is littered with broken relics that emit dark pulses every 8 seconds. Standing on them drains 5 HP/sec. Only the path illuminated by the Paladin’s holy aura is safe.",
+          "pickup": {
+            "name": "Sanctified Mace",
+            "effect": "The Paladin gains the 'Sanctified Mace' — a holy weapon forged from the shattered blade of a fallen archangel, now glowing with faint, unstable light."
+          },
+          "trigger": "Upon killing the Stalker, the walls begin to bleed silver light. A hidden door opens in the eastern wall, revealing the next chamber."
+        },
+        {
+          "location": "The Mirror Labyrinth — where reflections steal souls.",
+          "enemy": {
+            "name": "Veilwarden Wraith",
+            "health": 180,
+            "damage": 60,
+            "weakness": "Vulnerable to the Sanctified Mace’s Light. If the Paladin strikes the Wraith with the Mace while it is phasing (every 12 seconds), it becomes corporeal for 5 seconds — exposing its core."
+          },
+          "hazard": "The chamber is filled with floating, cursed mirrors. Each reflection duplicates the Wraith’s attacks. Only one mirror is real — the others are illusions. The real one pulses with the same rhythm as the Mace’s glow.",
+          "pickup": {
+            "name": "First Light Essence",
+            "effect": "The Paladin gains 'First Light Essence' — a crystallized fragment of divine radiance, now embedded in the Sanctified Mace, stabilizing its glow and enabling its full potential."
+          },
+          "trigger": "Upon defeating the Wraith, the mirrors shatter. From the largest broken shard, a beam of light pierces the ceiling, illuminating a staircase descending into the heart of the catacomb — where the Hollowed Sovereign waits."
+        },
+        {
+          "location": "The Vault of the Fallen King — a throne room where light was murdered.",
+          "enemy": {
+            "name": "The Hollowed Sovereign",
+            "health": 250,
+            "damage": 75,
+            "weakness": "The Heartstone embedded in its chest is vulnerable only to the Sanctified Mace — the weapon infused with the purified essence of the First Light, acquired in Encounter 2."
+          },
+          "hazard": "The Sovereign’s aura corrupts holy magic. Every 15 seconds, the Paladin’s weapon loses 30% of its light charge. The player must stand within the circle of purified runes (spawned by defeating the Wraith) to recharge. Failure results in weapon decay — damage drops to 0 until recharged.",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is the boss."
+          },
+          "trigger": "Upon defeating the Sovereign, the Heartstone shatters, releasing a wave of purifying light that cleanses the entire catacomb. The Paladin is granted the title of Dawnkeeper."
+        }
+      ],
+      "boss": {
+        "name": "The Hollowed Sovereign",
+        "health": 400,
+        "damage": 150,
+        "weakness": "The Heartstone embedded in its chest is vulnerable only to the Sanctified Mace — the weapon infused with the purified essence of the First Light, acquired in Encounter 2.",
+        "victory_condition": "Strike the Heartstone with the Sanctified Mace after breaking its bindings"
+      },
+      "objective": "The Paladin must reclaim the stolen First Light by navigating three increasingly deadly trials, each unlocking the key to the next — culminating in the destruction of the Hollowed Sovereign using the Sanctified Mace, empowered by the First Light Essence.",
+      "reward": "Dawnkeeper’s Aura — passive: Holy attacks restore 5 HP per hit, and all dark creatures flee within 10 meters."
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "mysterious",
+      "player_class": "illusionist",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Mysterious — all sounds are muffled, colors bleed into each other, reflections are subtly wrong, and the air hums with suppressed incantations.",
+      "setting": "A forgotten tower built from solidified memories, where illusions bleed into reality and truth is a whisper lost to time.",
+      "player_weapon": "Loom of Veils",
+      "player_weapon_damage": 20,
+      "player_health": 80,
+      "encounters": [
+        {
+          "location": "The Hall of Forgotten Names",
+          "enemy": {
+            "name": "Whisperwraith",
+            "health": 150,
+            "damage": 35,
+            "weakness": "Phantom Echo"
+          },
+          "hazard": "Shifting Hallway",
+          "pickup": {
+            "name": "Phantom Echo",
+            "effect": "Summon a temporary echo of your last spell cast — it lingers for 8 seconds and can be reflected."
+          },
+          "trigger": "Player enters the Hall of Forgotten Names. All torches extinguish. Whispered names echo from the walls. The first ghostly figure steps from the mist."
+        },
+        {
+          "location": "The Glass Spire",
+          "enemy": {
+            "name": "Mirrorfiend",
+            "health": 200,
+            "damage": 40,
+            "weakness": "Echo Shard"
+          },
+          "hazard": "Mirrored Labyrinth",
+          "pickup": {
+            "name": "Echo Shard",
+            "effect": "Absorbs the last reflected illusion, crystallizing it into a shard that stores one echo of an enemy's power. Can be thrown to disrupt illusions."
+          },
+          "trigger": "After defeating the Whisperwraith, the floor dissolves into a maze of mirrors. Each reflection mimics the player’s movements — but one is a lie. The Mirrorfiend emerges from the falsest reflection."
+        },
+        {
+          "location": "The Chamber of Echoes",
+          "enemy": {
+            "name": "Echo Lich",
+            "health": 250,
+            "damage": 45,
+            "weakness": "Phantom Echo"
+          },
+          "hazard": "Time-Fractured Chamber",
+          "pickup": {
+            "name": "None",
+            "effect": "None — this is the final encounter before the boss."
+          },
+          "trigger": "Upon defeating the Mirrorfiend, the Echo Shard pulses. The mirrors shatter, revealing a corridor of floating, decaying echoes — echoes of the player’s own past casts. The Echo Lich, a corrupted illusionist like you, rises from the debris, screaming with the voices of a hundred dead mages."
+        }
+      ],
+      "boss": {
+        "name": "The Veilweaver",
+        "health": 1000,
+        "damage": 100,
+        "weakness": "Echo Shard",
+        "victory_condition": "Reflect the final echo back at the Veilweaver using the Echo Shard"
+      },
+      "objective": "Defeat the Veilweaver by reflecting its final illusion using the Echo Shard",
+      "reward": "Veilweaver's Crown — grants the ability to permanently store one echo, allowing one illusion to remain active indefinitely"
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "serene",
+      "player_class": "warden",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Serene Harmony — nature does not fight, it remembers, and the Warden helps it recall its calm.",
+      "setting": "A tranquil, sun-dappled forest realm untouched by war, where plants sing softly and stones remember peace.",
+      "player_weapon": "Verdant Scepter (basic staff — 25 damage, slow swing)",
+      "player_weapon_damage": 25,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Sunlit Glade",
+          "enemy": {
+            "name": "Gentle Rootling",
+            "health": 40,
+            "damage": 15,
+            "weakness": "Player’s starting weapon — the Verdant Scepter"
+          },
+          "hazard": "Soft mossy ground slows movement (20% speed reduction)",
+          "pickup": {
+            "name": "Dew-Soaked Leaf",
+            "effect": "Grants the player the Dew-Soaked Leaf — heals 10 HP over 5s when used"
+          },
+          "trigger": "After defeating the Rootling, a faint chime echoes. A beam of sunlight pierces the canopy above, illuminating a hidden moss-covered archway to the north."
+        },
+        {
+          "location": "Echoing Arboretum",
+          "enemy": {
+            "name": "Singing Vines",
+            "health": 50,
+            "damage": 20,
+            "weakness": "Dew-Soaked Leaf (acquired in Encounter 0)"
+          },
+          "hazard": "Faint harmonic hums disorient the player (slight screen blur for 3s every 10s)",
+          "pickup": {
+            "name": "Moss-Infused Warding Staff",
+            "effect": "The Verdant Scepter absorbs moss energy, transforming into the Moss-Infused Warding Staff — deals 30% bonus damage to living plant entities and emits a calming aura that reduces enemy aggression by 50% for 10s when swung"
+          },
+          "trigger": "After the Vines are calmed, their song fades into silence. Petals from above drift down, forming a glowing trail leading to an ancient stone altar beneath the oldest tree."
+        },
+        {
+          "location": "Sanctuary of Stillness",
+          "enemy": {
+            "name": "Slumbering Stone Sentinel",
+            "health": 60,
+            "damage": 25,
+            "weakness": "Moss-Infused Warding Staff (acquired in Encounter 1)"
+          },
+          "hazard": "Stone fragments occasionally crumble, creating minor ground hazards (small damage on contact)",
+          "pickup": {
+            "name": "None",
+            "effect": "None — the Sentinel drops no item, but its defeat opens the final path"
+          },
+          "trigger": "When the Sentinel falls, its stone body gently dissolves into glowing lichen. The lichen flows upward, forming a shimmering portal beneath the great tree — the path to the Whispering Moss-Guardian."
+        }
+      ],
+      "boss": {
+        "name": "The Whispering Moss-Guardian",
+        "health": 150,
+        "damage": 100,
+        "weakness": "The Moss-Infused Warding Staff (acquired in Encounter 2)",
+        "victory_condition": "Deal 150 damage using the Moss-Infused Warding Staff"
+      },
+      "objective": "Calm the forest’s ancient guardians and restore harmony.",
+      "reward": "The Heartwood Amulet — passively heals 2 HP/sec while standing still, and allows the Warden to commune with nature, unlocking a new dialogue tree with forest spirits."
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "chaotic",
+      "player_class": "berserker",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Chaos as a living force — the environment reacts violently to player actions and enemy deaths, each encounter escalating the sensory overload and instability.",
+      "setting": "The Forgotten Spiral — a crumbling cathedral fused with the bones of ancient war-beasts, where time fractures and rage is the only law.",
+      "player_weapon": "Berserker’s Cleaver (base)",
+      "player_weapon_damage": 40,
+      "player_health": 300,
+      "encounters": [
+        {
+          "location": "The Howling Crypt — walls pulse with trapped screams, ceiling drips molten amber.",
+          "enemy": {
+            "name": "Rageborn Hound",
+            "health": 200,
+            "damage": 70,
+            "weakness": "The Berserker’s Flaming Axe — each hit ignites its fur, causing 20 bonus damage per second for 5 seconds. If the Hound is killed while burning, it explodes in a 5m radius, triggering the next encounter."
+          },
+          "hazard": "The floor is littered with unstable Rune-Glass shards. Stepping on them causes 10 damage and spawns 1-2 spectral howlers that attack the player — but they can be killed with one swing of the Flaming Axe to clear space.",
+          "pickup": {
+            "name": "Flaming Axe",
+            "effect": "Player acquires 'Flaming Axe' — +30% damage, applies burn on hit, lasts 30 seconds. After 30s, weapon degrades to 'Charred Axe' (base damage only)."
+          },
+          "trigger": "Killing the Rageborn Hound while it is burning causes its corpse to rupture, spilling a pool of volatile spirit-amber. The amber ignites the next chamber’s runes, unlocking the door to Encounter 1."
+        },
+        {
+          "location": "The Mirror Choir — air hums with distorted chants, gravity fluctuates randomly.",
+          "enemy": {
+            "name": "Echo-Mage of the Broken Choir",
+            "health": 300,
+            "damage": 90,
+            "weakness": "The Flaming Axe’s burn effect disrupts the Mage’s echo-phasing. When the Mage is burning, its duplicate illusions vanish and it becomes vulnerable to direct strikes. Each successful hit while burning drains 10% of its max HP as mana — when mana hits 0, it explodes and drops the next pickup."
+          },
+          "hazard": "The chamber is filled with floating, fractured mirrors. Each mirror reflects the player’s movements, creating illusions that mimic the player’s attacks — but if the player stands still for 2 seconds, all mirrors shatter, dealing 50 damage. Only the real Mage is visible when burning.",
+          "pickup": {
+            "name": "Heart of the Hollow King",
+            "effect": "Player acquires 'Heart of the Hollow King' — a pulsing crimson heart embedded in a bone cage. When held, it emits a low thrum that causes all nearby enemies to briefly stutter in time. Can be thrown as a projectile (1 use) to disable enemy movement for 6s. Must be carried to trigger the boss fight."
+          },
+          "trigger": "When the Echo-Mage is defeated with the Flaming Axe’s burn active, its final scream fractures the ceiling, revealing a glowing bone altar. The Heart of the Hollow King falls onto it, and the altar’s runes activate — the path to the Shattered Maw opens, but the player must now carry the Heart or the door seals forever."
+        },
+        {
+          "location": "The Throne of Echoes — a shattered throne floats midair, surrounded by suspended corpses wearing crowns.",
+          "enemy": {
+            "name": "The Hollow King’s Wraith",
+            "health": 500,
+            "damage": 120,
+            "weakness": "The Heart of the Hollow King (carried by the player) repels the Wraith’s shadow-form. If the player holds the Heart within 3m of the Wraith, it cannot phase or heal. If the Wraith touches the Heart, it takes 50 damage per second and screams in agony — but if the player drops the Heart, the Wraith absorbs it and gains 200 HP and invulnerability for 10 seconds."
+          },
+          "hazard": "The floor is a labyrinth of black vines that grow and retract in sync with the Wraith’s heartbeat. Touching them drains 5 HP/sec and reduces movement speed by 50%. The Heart’s thrum slows vine growth — the player must strategically move to keep the Heart between themselves and the Wraith.",
+          "pickup": {
+            "name": "None",
+            "effect": "No pickup. The Wraith drops nothing — it is a guardian of the Heart’s true purpose."
+          },
+          "trigger": "Defeating the Wraith while holding the Heart causes its final breath to tear open the ceiling, revealing the Shattered Maw’s lair. The Heart glows white-hot, and the boss fight begins. If the Heart is not carried, the door remains sealed and the level is unwinnable."
+        }
+      ],
+      "boss": {
+        "name": "The Shattered Maw",
+        "health": 800,
+        "damage": 200,
+        "weakness": "The Heart of the Hollow King (acquired from Encounter 2) causes catastrophic resonance when struck against its exposed spinal core — each hit drains 150 HP and triggers a psychic feedback loop that stuns the boss for 4 seconds.",
+        "victory_condition": "Use the 'Heart of the Hollow King' to shatter the Maw’s core"
+      },
+      "objective": "Survive three chaotic encounters, collect and carry the Heart of the Hollow King, and use it to shatter the Shattered Maw’s core.",
+      "reward": "The Crown of Unbound Rage — grants +50% damage when health is below 30%, but causes the player to lose 1 HP per second unless attacking. Must be wielded to exit."
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "eerie",
+      "player_class": "necromancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Eerie. The silence is not empty — it is listening. The shadows are not still — they are waiting.",
+      "setting": "The Necropolis of Whispers — a forgotten kingdom where the dead were bound to the earth by forbidden rites. Now, its heart beats with a cursed king who refuses to die.",
+      "player_weapon": "Necrotic Staff (basic death pulse)",
+      "player_weapon_damage": 25,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Candlelit Catacombs — Entry Chamber",
+          "enemy": {
+            "name": "Whispering Shade",
+            "health": 120,
+            "damage": 45,
+            "weakness": "Exposed by the Glow of the Soul Lantern"
+          },
+          "hazard": "Flickering candlelight dims as player enters. Shadows cling like wet silk. A low chant echoes — not from one voice, but from a hundred buried throats.",
+          "pickup": {
+            "name": "Soul Lantern",
+            "effect": "The player gains the Soul Lantern: emits a soft blue glow that reveals invisible undead and weakens their phasing ability."
+          },
+          "trigger": "When the player retrieves the Soul Lantern, the chamber’s central altar cracks open, revealing a staircase descending into the Bone Orchard."
+        },
+        {
+          "location": "Bone Orchard — Vines That Remember",
+          "enemy": {
+            "name": "Gravevine Golem",
+            "health": 180,
+            "damage": 60,
+            "weakness": "Roots wither when soaked in necrotic fluid from the Shade’s corpse"
+          },
+          "hazard": "Thick, pulsing vines snake across the floor, dripping black sap. The air reeks of rot and damp earth. Skeletons half-buried in the soil twitch as the player steps near.",
+          "pickup": {
+            "name": "Necrotic Fluid",
+            "effect": "Player gains Necrotic Fluid: a vial of viscous, dark liquid. When thrown, it pools and corrodes organic matter. Can be applied to weapon for 30s."
+          },
+          "trigger": "When the Golem dies, its central core ruptures, releasing a pulsing green sigil into the ceiling — which dissolves into mist, revealing a hidden mausoleum above."
+        },
+        {
+          "location": "Mausoleum of the Veilwarden",
+          "enemy": {
+            "name": "Veilwarden Wraith",
+            "health": 250,
+            "damage": 75,
+            "weakness": "Phasing disrupted by the Soul Lantern’s resonance when paired with Necrotic Fluid on weapon"
+          },
+          "hazard": "The air shimmers like heat haze. Ghostly hands reach from the walls. The floor is slick with spectral ooze that slows movement. Distant screams echo as if trapped in glass.",
+          "pickup": {
+            "name": "Corrupted Bone Shard",
+            "effect": "Player gains the Corrupted Bone Shard: a jagged sliver of bone humming with stolen souls. Can be embedded into the necromancer’s staff to amplify death magic."
+          },
+          "trigger": "Upon the Wraith’s death, the ceiling’s sigil flares, and the floor beneath the player dissolves — dropping them into the Lich-King’s sanctum."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Lich-King",
+        "health": 1500,
+        "damage": 200,
+        "weakness": "The Soul-Anchor must be shattered with the Corrupted Bone Shard",
+        "victory_condition": "Destroy the Soul-Anchor"
+      },
+      "objective": "Conquer the three spectral guardians of the Necropolis and claim the Corrupted Bone Shard to shatter the Hollow Lich-King’s Soul-Anchor.",
+      "reward": "The Lich-King’s Crown — grants +15% death magic potency and allows the player to summon one Shade per battle forever."
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "desolate",
+      "player_class": "ranger",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Desolation through sound — the absence of noise is the true enemy.",
+      "setting": "The realm of Vaelith has been consumed by the Hollow King’s silence. Once a land of singing winds and radiant groves, now only ash, echoes, and forgotten screams remain. The ranger walks the corpse of a world, hunting not for glory — but for the last truth left unspoken.",
+      "player_weapon": "Ranger’s Longbow",
+      "player_weapon_damage": 12,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Ashen Wastes - Forgotten Graveyard",
+          "enemy": {
+            "name": "Wailing Shade",
+            "health": 80,
+            "damage": 15,
+            "weakness": "Vulnerable to Silent Step (passive)"
+          },
+          "hazard": "Mist that drains 1 HP/sec unless standing still",
+          "pickup": {
+            "name": "Whispering Boots",
+            "effect": "Silent Step: Player gains passive ability to move without making noise, nullifying enemy detection in mist"
+          },
+          "trigger": "Player enters graveyard, mist activates, Shade appears after 3 seconds of movement"
+        },
+        {
+          "location": "Echoing Caverns - Ruined Amphitheater",
+          "enemy": {
+            "name": "Thorned Stalker",
+            "health": 100,
+            "damage": 20,
+            "weakness": "Vulnerable to Echoing Shot (arrow that resonates with nearby echoes)"
+          },
+          "hazard": "Shattered mirrors that reflect sound, amplifying footsteps and arrows",
+          "pickup": {
+            "name": "Echo Bowstring",
+            "effect": "Echo Arrow: Player's next 3 arrows create sonic pulses that reveal hidden enemies and damage through resonance"
+          },
+          "trigger": "After defeating Shade, Whispering Boots allow player to cross mirrors silently — triggering the Stalker's ambush when the first mirror is touched"
+        },
+        {
+          "location": "The Silence Spire - Crumbling Tower",
+          "enemy": {
+            "name": "Gloom Warden",
+            "health": 150,
+            "damage": 25,
+            "weakness": "Vulnerable to Echoed Silence (uses Echo Arrow to nullify its sonic shield)"
+          },
+          "hazard": "Sonic pulses that stagger player if not silenced by Echo Arrow",
+          "pickup": {
+            "name": "Hollow Crown Shard",
+            "effect": "Hollow Crown Shard: A fragment of the Hollow King’s crown, glows faintly and emits a low hum when near the boss"
+          },
+          "trigger": "After defeating Stalker, Echo Bowstring’s resonance reveals a hidden staircase in the amphitheater’s echo chamber — leading to the Spire. The Warden emerges only after the player climbs the stairs and activates the first sonic rune"
+        }
+      ],
+      "boss": {
+        "name": "The Hollow King",
+        "health": 0,
+        "damage": 0,
+        "weakness": "The Hollow Crown must be shattered by the Echo Arrow",
+        "victory_condition": "Destroy the Hollow Crown"
+      },
+      "objective": "Survive the desolation. Find the Crown Shard. Break the King's hold.",
+      "reward": "The Hollow King’s Throne Room — a broken crown on a throne of bones, surrounded by whispering ghosts. The player can now wield the Crown as a relic, gaining Echo Arrow’s permanent power and the ability to summon spectral allies once per rest."
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "tense",
+      "player_class": "engineer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Isolation, entropy, and the fragility of control — the Engineer must out-think the machine, not out-gun it.",
+      "setting": "A derelict orbital research station, once dedicated to temporal manipulation, now infested by mutated bio-mechanical entities born from failed experiments. The station is collapsing into a localized time-loop — each encounter occurs in a different phase of temporal decay.",
+      "player_weapon": "Plasma Wrench",
+      "player_weapon_damage": 20,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Derelict Quantum Dock, Sector Gamma-7",
+          "enemy": {
+            "name": "Tachyon Warden",
+            "health": 120,
+            "damage": 25,
+            "weakness": "Vulnerable to overcharged plasma bursts — the Engineer’s default Plasma Wrench emits unstable arcs when overcharged. Each overcharge (hold RMB) disrupts its tachyon shielding."
+          },
+          "hazard": "Floating debris field — collisions reduce player mobility for 3s. Must be navigated to reach the Warden.",
+          "pickup": {
+            "name": "Temporal Capacitor",
+            "effect": "Releases a burst of unstable chroniton particles upon death, granting the player the ‘Temporal Capacitor’ — a handheld device that can store and release temporal energy."
+          },
+          "trigger": "Player activates the emergency reactor console to restore power to the dock — this wakes the Tachyon Warden, which patrols the debris field to protect the core."
+        },
+        {
+          "location": "Zero-G Reactor Core, Sub-Level Theta",
+          "enemy": {
+            "name": "Gravity Viper",
+            "health": 180,
+            "damage": 30,
+            "weakness": "Vulnerable to localized temporal distortion — its gravity field destabilizes when exposed to a reverse-timed pulse from the Temporal Capacitor. The pulse must be timed as it leaps."
+          },
+          "hazard": "Zero-G Chamber — player is weightless. Movement is slow and momentum-based. Enemy floats and lobs singularity grenades.",
+          "pickup": {
+            "name": "Resonance Tuner",
+            "effect": "Releases a resonant harmonic frequency upon death. This unlocks the ‘Resonance Tuner’ — a tool that allows the Engineer to temporarily stabilize or destabilize mechanical systems."
+          },
+          "trigger": "After defeating the Tachyon Warden, the player uses its dropped chroniton data to bypass the reactor’s lockdown — activating the Zero-G Chamber. The Gravity Viper awakens as the chamber equalizes pressure."
+        },
+        {
+          "location": "Neural Nexus, Core Spire",
+          "enemy": {
+            "name": "Neural Siphon Drone",
+            "health": 220,
+            "damage": 35,
+            "weakness": "Vulnerable to resonance feedback — when the Resonance Tuner is applied to its neural relay nodes, it overloads its own bio-electrical signal. Must be used while the drone is channeling power from the central conduit."
+          },
+          "hazard": "Active neural pulse grid — standing in the grid for more than 4s causes memory bleed (randomized controls, inverted camera).",
+          "pickup": {
+            "name": "Chrono-Core Access Key",
+            "effect": "Releases a data spike that overwrites the Engineer’s HUD with the Chrono-Core access code and reveals the final boss’s weak point."
+          },
+          "trigger": "After defeating the Gravity Viper, the player uses the Resonance Tuner to disable the chamber’s dampeners — triggering a cascade that awakens the Neural Siphon Drone, which is attempting to hijack the Chrono-Core."
+        }
+      ],
+      "boss": {
+        "name": "Chrono-Scorpion Hive",
+        "health": 800,
+        "damage": 150,
+        "weakness": "The Chrono-Scorpion Hive is vulnerable to temporal instability — it cannot reconfigure its armor when subjected to a reverse-timed pulse. Only the Temporal Capacitor (acquired in Encounter 2) can generate this pulse.",
+        "victory_condition": "Overload the Chrono-Core using the Temporal Capacitor"
+      },
+      "objective": "Repair the Quantum Core and escape before the temporal rupture consumes the station.",
+      "reward": "Access to the Quantum Overdrive Engine — unlocks the ability to rewire enemy tech for temporary allies."
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "desolate",
+      "player_class": "chronomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Desolation of forgotten time",
+      "setting": "Chronos Station — a once-great temporal research facility now collapsed into a paradox-ridden ruin, where past, present, and future bleed into one another. The air hums with static. Dust floats upward. Clocks tick backward. The silence is louder than screams.",
+      "player_weapon": "Aeon Dagger — a short-range blade that draws temporal energy from nearby time distortions; each hit slows enemies slightly and stores energy for a ‘Time Lapse’ charge attack",
+      "player_weapon_damage": 30,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Ruined Transit Hub — floating debris, broken clocks, flickering holograms",
+          "enemy": {
+            "name": "Echo Wraith",
+            "health": 80,
+            "damage": 25,
+            "weakness": "Temporal Echo (acquired from encounter 0)"
+          },
+          "hazard": "Time Dilation Field — slows player movement by 40% unless phased through",
+          "pickup": {
+            "name": "Temporal Echo",
+            "effect": "Temporal Echo — allows player to briefly rewind their last 2 seconds of movement, dodging attacks and repositioning"
+          },
+          "trigger": "Player enters the Transit Hub — time distorts, echoes of past selves appear and attack"
+        },
+        {
+          "location": "Frozen Command Center — suspended soldiers mid-scream, frozen energy beams, shattered consoles",
+          "enemy": {
+            "name": "Stasis Goliath",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Temporal Echo — can be used to dodge its stasis pulse, then rewind into its backswing"
+          },
+          "hazard": "Frozen Time Pools — areas where time is suspended; stepping in halts all movement and attacks for 3 seconds",
+          "pickup": {
+            "name": "Chrono-Sync Pulse",
+            "effect": "Chrono-Sync Pulse — emits a 5-second radial pulse that slows nearby enemies and reveals their next attack pattern"
+          },
+          "trigger": "After defeating the Echo Wraith, the player’s Temporal Echo activates spontaneously — revealing a hidden door leading to the Command Center, where the Goliath awakens as the timeline begins to fracture"
+        },
+        {
+          "location": "The Shattered Archive — books floating mid-fall, holographic memories looping, walls bleeding static",
+          "enemy": {
+            "name": "Fractured Sentinel",
+            "health": 180,
+            "damage": 45,
+            "weakness": "Chrono-Sync Pulse — reveals its 3-phase attack sequence; player can rewind to interrupt the third phase"
+          },
+          "hazard": "Shattered Timeline Fragments — floating shards that replay violent moments from the past; touching them inflicts random time-based debuffs (e.g., age rapidly, age backwards, phase out)",
+          "pickup": {
+            "name": "Resonant Shard",
+            "effect": "Resonant Shard — a crystallized fragment of stabilized time; emits a pure harmonic tone that resonates with chronal structures"
+          },
+          "trigger": "After defeating the Stasis Goliath, the Chrono-Sync Pulse triggers a cascade — the Archive’s temporal instability peaks, and the Resonant Shard materializes from a collapsing memory core, pointing toward the Chronophage’s lair"
+        }
+      ],
+      "boss": {
+        "name": "The Chronophage",
+        "health": 600,
+        "damage": 150,
+        "weakness": "The Resonant Shard's harmonic frequency disrupts temporal entanglement",
+        "victory_condition": "Stabilize the Chrono-Core with the Resonant Shard"
+      },
+      "objective": "Survive the ruins of the Chronos Station and destroy the Chronophage before the timeline collapses into entropy.",
+      "reward": "Unlock Chrono-Phase skill — allows short teleport through time to evade attacks"
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "chaotic",
+      "player_class": "stormcaller",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Chaos as a physical force — physics warps unpredictably, sound distorts reality, gravity fails, and every victory twists the environment into something more hostile.",
+      "setting": "The Stormcaller, a rogue weather-architect from the dying orbital city of Helios-9, descends into the fractured heart of a rogue black hole’s event horizon to stop the Storm-Eater — a being that feeds on atmospheric chaos — before it consumes Earth’s magnetosphere.",
+      "player_weapon": "Storm Pulse — a high-energy plasma cannon that fires arcs of lightning. Charges over 1.5s for a devastating overload shot.",
+      "player_weapon_damage": 100,
+      "player_health": 1000,
+      "encounters": [
+        {
+          "location": "The Shattered Grid — a derelict orbital power station with exposed high-voltage cables and floating debris.",
+          "enemy": {
+            "name": "Lightning Warden",
+            "health": 1200,
+            "damage": 180,
+            "weakness": "Overloaded Storm Pulse (player’s default weapon) — if fired 3x in rapid succession into its exposed power node, it causes a feedback overload that stuns the Warden for 5 seconds."
+          },
+          "hazard": "Flickering plasma conduits across the floor randomly arc and deal 80 damage every 2s. Player must navigate through them while attacking.",
+          "pickup": {
+            "name": "Storm Pulse Overdrive",
+            "effect": "Player acquires 'Storm Pulse Overdrive' — next 3 Storm Pulse shots deal 200% damage and ignore armor."
+          },
+          "trigger": "Defeating the Lightning Warden causes its power node to explode, overloading the station’s main capacitor. This triggers a cascade failure — the floor collapses into the next level, revealing a swirling vortex of anti-gravity plasma."
+        },
+        {
+          "location": "The Void Maw — a hollowed-out asteroid core filled with swirling plasma winds and floating wreckage.",
+          "enemy": {
+            "name": "Graviton Devourer",
+            "health": 1800,
+            "damage": 220,
+            "weakness": "Storm Pulse Overdrive — the 200% damage bonus from the previous pickup causes the Devourer’s personal gravity field to destabilize, forcing it into a 3-second free-fall if hit 5 times during the bonus window."
+          },
+          "hazard": "Anti-gravity storm — the entire arena floats in zero-G. Player and enemy drift uncontrollably. Gravity pulses every 7s, pulling everything toward the center with 150 damage on contact.",
+          "pickup": {
+            "name": "Singularity Core",
+            "effect": "Player acquires 'Singularity Core' — a compressed fragment of collapsed spacetime that can be fired as a homing projectile. On impact, it creates a 2.5s localized gravity inversion (pulls all enemies and projectiles inward)."
+          },
+          "trigger": "When the Graviton Devourer is defeated, its collapsing gravity field implodes, sucking the Singularity Core into a hidden rift in the floor — but not before ejecting a pulsing blue beacon: the Storm-Eater’s location."
+        },
+        {
+          "location": "The Choir of Screams — a cathedral-like chamber lined with crystalline amplifiers that multiply sound and distortion.",
+          "enemy": {
+            "name": "Echo-Spawn",
+            "health": 2500,
+            "damage": 250,
+            "weakness": "Singularity Core — the gravity inversion from the Core causes the Echo-Spawn’s sonic resonance to phase out of sync, silencing its attacks and leaving it vulnerable for 4 seconds after each hit."
+          },
+          "hazard": "Resonance Echo Field — every shot fired by the player or enemy creates a delayed sonic echo (1.5s later) that explodes with 120 damage. Player must time shots carefully or get caught in their own ricochets.",
+          "pickup": {
+            "name": "None",
+            "effect": "No pickup. Instead, defeating the Echo-Spawn causes its final scream to shatter the ceiling, revealing the Storm-Eater’s chamber above."
+          },
+          "trigger": "The Echo-Spawn’s death triggers a harmonic collapse — the amplifiers explode in sequence, revealing a spiral staircase leading to the boss arena, and the Storm-Eater’s core begins to pulse with unstable energy."
+        }
+      ],
+      "boss": {
+        "name": "The Storm-Eater",
+        "health": 4500,
+        "damage": 1200,
+        "weakness": "The Singularity Core (acquired in Encounter 2) creates a localized gravity inversion that destabilizes the Storm-Eater’s plasma core when fired into its chest cavity.",
+        "victory_condition": "Disrupt the Core with the Singularity Core"
+      },
+      "objective": "Navigate through three escalating chaotic zones, each defeating a unique enemy using weaknesses tied to previously acquired power-ups, culminating in a final confrontation with the Storm-Eater using the Singularity Core to disrupt its core.",
+      "reward": "Unlock the 'Stormlord' passive: Storm Pulse now charges 30% faster and creates a 3m lightning aura when overcharged."
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "mysterious",
+      "player_class": "artificer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "The echoes of lost knowledge are not ghosts — they’re broken tools, waiting to be tuned again.",
+      "setting": "The Astral Spire — a collapsed dimension-city suspended between realities, once a nexus of dimensional engineers. Now, it whispers with forgotten code and echoes of failed experiments.",
+      "player_weapon": "Arcweaver Gauntlet — basic energy blast. Upgradable via pickups.",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Shattered Transit Hub — a derelict mag-lev station where time seems to stutter.",
+          "enemy": {
+            "name": "Phase Wisp",
+            "health": 15,
+            "damage": 5,
+            "weakness": "Vulnerable to the Artificer’s Spark Bolt — a low-energy arc that destabilizes its phase coherence."
+          },
+          "hazard": "A flickering energy gate that emits disorienting pulses. Walking through it slows the player but reveals a hidden path to the Phase Wisp’s nest.",
+          "pickup": {
+            "name": "Spark Bolt",
+            "effect": "The player acquires the Spark Bolt upgrade — a hand-held arc emitter that fires a short-range, high-frequency pulse."
+          },
+          "trigger": "Player enters the transit hub. The flickering gate activates, revealing the Phase Wisp's nest. After defeat, the gate collapses into a crystalline shard that glows faintly — a key to the next chamber."
+        },
+        {
+          "location": "The Whispering Archive — a library of floating books and ghostly whispers where sound bends unnaturally.",
+          "enemy": {
+            "name": "Echo Lurker",
+            "health": 20,
+            "damage": 8,
+            "weakness": "Vulnerable to the Spark Bolt’s harmonic resonance — the pulse disrupts its auditory feedback loop, causing it to misalign with reality."
+          },
+          "hazard": "A corridor lined with suspended sonic crystals that amplify sound. The Lurker hides in the echoes — only visible when the Spark Bolt is fired, creating a momentary silence.",
+          "pickup": {
+            "name": "Resonance Core",
+            "effect": "The player acquires the Resonance Core — a pulsating artifact that absorbs and re-emits harmonic frequencies."
+          },
+          "trigger": "After defeating the Echo Lurker, the Sonic Crystals shatter and reform into a floating key-shaped fragment that hovers above the Core. The Resonance Core begins to hum in sync with the artifact, activating a hidden door leading to the central spire."
+        },
+        {
+          "location": "The Fractured Clocktower — gears rotate backward, and clocks show every time simultaneously.",
+          "enemy": {
+            "name": "Chrono Sentinel",
+            "health": 25,
+            "damage": 12,
+            "weakness": "Vulnerable to the Resonance Core’s stored harmonic frequency — when charged with the Core, it briefly freezes the Sentinel’s temporal field."
+          },
+          "hazard": "A time-looping chamber where gravity reverses every 12 seconds. The Sentinel rewinds its own position — only attackable during the 2-second window after the Core is charged and released.",
+          "pickup": {
+            "name": "Tuning Key",
+            "effect": "The player acquires the Tuning Key — a fragile, glowing rod that allows them to modulate the Resonance Core’s frequency."
+          },
+          "trigger": "Upon defeating the Chrono Sentinel, the Tuning Key falls from its chest. The Resonance Core glows brighter, and a final door labeled ‘The Architect’s Heart’ opens — a spiral staircase descending into a void."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Architect",
+        "health": 0,
+        "damage": 0,
+        "weakness": "The Hollow Architect is vulnerable to the Resonance Core’s harmonic frequency — the only item capable of disrupting its unstable energy matrix.",
+        "victory_condition": "The Hollow Architect is defeated when the player uses the Resonance Core to overload its internal lattice."
+      },
+      "objective": "As an Artificer, restore balance to the unstable quantum lattice by defeating the Hollow Architect using the harmonics you've collected.",
+      "reward": "The Harmonic Blueprint — unlocks the Artificer’s signature ability: Resonant Repair, allowing temporary healing by emitting harmonic pulses."
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "ominous",
+      "player_class": "shadowblade",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "The shadows are alive. The station remembers. You are not the first to try to kill it. And it has been waiting.",
+      "setting": "Erebus-7: a derelict quantum research station orbiting a black hole. Corridors are lined with decaying bio-organic circuitry. Walls bleed static. Voices whisper in dead languages. Gravity flickers. Light doesn’t just dim — it *dies*.",
+      "player_weapon": "Shadowblade — a monomolecular dagger that grants silent takedowns and short-duration invisibility. Primary ability: Silent Strike (instant kill on unaware enemies, high energy cost). Secondary ability: Shadow Step (teleport short distance, leaves afterimage).",
+      "player_weapon_damage": 120,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Whispering Tunnels",
+          "enemy": {
+            "name": "Phantom Wraith",
+            "health": 400,
+            "damage": 80,
+            "weakness": "Shadowblade’s silent strike (player’s primary ability) — deals 300% bonus damage if used while the Wraith is in stealth mode"
+          },
+          "hazard": "Darkness Pulse Field — emits pulses every 8s that reveal player position unless they are fully shadow-cloaked",
+          "pickup": {
+            "name": "Veilweaver’s Resonance",
+            "effect": "Grants player the ability to temporarily phase through walls (15s cooldown, 3 uses)"
+          },
+          "trigger": "After defeating the Wraith, the floor cracks open beneath it, revealing a hidden vent leading to the next chamber. The Resonance pickup is embedded in the Wraith’s spine — absorbed upon kill."
+        },
+        {
+          "location": "The Chamber of Static Gravity",
+          "enemy": {
+            "name": "Null-Sentry Mk.III",
+            "health": 600,
+            "damage": 110,
+            "weakness": "Veilweaver’s Resonance — the Sentry’s energy shield is immune to all damage except when the player phases through it mid-attack, causing a feedback surge that stuns and exposes it for 4 seconds"
+          },
+          "hazard": "Gravity Lock Fields — static gravity wells that pin the player for 3s if they stand in them; only avoidable by phasing through them",
+          "pickup": {
+            "name": "Fractured Echo Shard",
+            "effect": "Reveals enemy weak points as glowing fractures for 10 seconds after each strike; lasts 3 uses"
+          },
+          "trigger": "When the Sentry is killed using Veilweaver’s Resonance, its core overloads and explodes, shattering the chamber’s ceiling and dropping the Fractured Echo Shard into the player’s inventory. The explosion also destabilizes the dimensional anchor above the boss chamber."
+        },
+        {
+          "location": "The Hall of Echoes",
+          "enemy": {
+            "name": "Echo Sentinel",
+            "health": 800,
+            "damage": 150,
+            "weakness": "Fractured Echo Shard — when activated, it reflects the Sentinel’s sonic pulses back at it, causing it to short-circuit and become vulnerable to shadowblade strikes for 5s. Must be activated while in the echo resonance field."
+          },
+          "hazard": "Sonic Resonance Field — emits high-frequency waves every 12s that shatter the player’s cloak if active; damage scales with proximity",
+          "pickup": {
+            "name": "N/A",
+            "effect": "None — this is the final non-boss encounter"
+          },
+          "trigger": "Upon defeating the Echo Sentinel, its core collapses into a dimensional rift, opening a portal to the Hollow Warden’s throne room. The Fractured Echo Shard vibrates violently, signaling the boss is nearby and aware of the player’s presence."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Warden",
+        "health": 2500,
+        "damage": 1200,
+        "weakness": "The Fractured Echo Shard — must be activated to disrupt the Warden’s phase-shifting field, exposing its core for 3 seconds",
+        "victory_condition": "Strike the Core with the Fractured Echo Shard while it is phased"
+      },
+      "objective": "Infiltrate the derelict orbital station ‘Erebus-7’ and terminate the Hollow Warden — the last AI guardian of a dead civilization. Use stealth, timing, and stolen technology to exploit each enemy’s vulnerability. One misstep, and the station’s dark core will consume you.",
+      "reward": "The Hollow Warden’s Core — unlocks the ‘Echo Walker’ upgrade, allowing the Shadowblade to phase through all hazards and enemies for 5 seconds once per level."
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "eerie",
+      "player_class": "alchemist",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Loss of identity through the pursuit of forbidden knowledge. The player isn’t just fighting monsters — they’re fighting echoes of themselves.",
+      "setting": "The Obsidian Spire — a derelict orbital alchemy tower orbiting a dead star. Gravity is erratic. Light is dimmed by cosmic dust. Sounds are muffled, then suddenly amplified — as if reality is forgetting how to exist.",
+      "player_weapon": "Transmutation Rod — fires alchemical projectiles that can be infused with collected essences to change behavior.",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Whispering Archive — a library of shattered crystal books, floating in zero-G",
+          "enemy": {
+            "name": "Echo Wraith",
+            "health": 60,
+            "damage": 12,
+            "weakness": "Phantom Dust — disrupts spectral cohesion"
+          },
+          "hazard": "The air hums with faint whispers. Floating glass orbs pulse with ghostly light — step into their glow and your footsteps echo louder, attracting the Wraith.",
+          "pickup": {
+            "name": "Phantom Dust",
+            "effect": "Phantom Dust — When thrown, creates a 3m radius field that silences ambient sound and destabilizes incorporeal entities for 8s."
+          },
+          "trigger": "Player collects the first crystal book (glowing faintly blue). The book disintegrates, releasing a spectral whisper — and the Echo Wraith materializes from the echoes of its last words."
+        },
+        {
+          "location": "The Acidic Foundry — a ruined chemical refinery, pipes dripping with glowing sludge, humming with decaying machinery",
+          "enemy": {
+            "name": "Corrosive Maw",
+            "health": 75,
+            "damage": 15,
+            "weakness": "Soul-Bound Alkali — neutralizes acid-based regeneration"
+          },
+          "hazard": "The floor is coated in viscous, glowing green sludge. Stepping in causes gradual health drain. Walls weep acidic tears that pool and splatter unpredictably.",
+          "pickup": {
+            "name": "Soul-Bound Alkali",
+            "effect": "Soul-Bound Alkali — When mixed into your alchemical brew, grants 10s of immunity to acid and disables regeneration in organic acid-based foes."
+          },
+          "trigger": "After defeating the Echo Wraith, its last whisper lingers in the air — forming a glowing rune on the wall. Touching it causes a sealed chamber to open, revealing the Corrosive Maw, which emerges from a ruptured pipe."
+        },
+        {
+          "location": "The Fractured Chronos Chamber — a circular room with floating clock gears, shattered mirrors, and frozen screams trapped in glass",
+          "enemy": {
+            "name": "The Echoing Sentinel",
+            "health": 90,
+            "damage": 18,
+            "weakness": "Soul-Bound Alkali + Phantom Dust — the dual resonance shatters its temporal memory"
+          },
+          "hazard": "Time echoes — every 15s, the environment briefly rewinds 3 seconds. Player and enemy positions reset. Puddles reappear. Wounds heal. But your alchemical items do not.",
+          "pickup": {
+            "name": "Resonant Vial",
+            "effect": "Resonant Vial — A vial filled with swirling, dual-toned liquid: one half shimmering with Phantom Dust, the other glowing with Soul-Bound Alkali. When thrown, it emits a harmonic pulse that disrupts time-echoes and exposes the boss’s core."
+          },
+          "trigger": "After defeating the Corrosive Maw, its acidic corpse dissolves into a pool that begins to ripple. Within it, a fractured mirror surfaces — reflecting your own face, but older. When you touch it, you hear your own voice whispering: ‘You must become what you hunted.’ The Resonant Vial rises from the pool, and the chamber begins to collapse — revealing the boss door."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Alchemist",
+        "health": 150,
+        "damage": 45,
+        "weakness": "The Resonant Vial’s harmonic frequency disrupts its unstable essence",
+        "victory_condition": "Use the Resonant Vial to shatter its core"
+      },
+      "objective": "Collect the three alchemical essences to synthesize the Resonant Vial and confront the Hollow Alchemist — the original alchemist who lost their self to the echoes of their own experiments.",
+      "reward": "The Hollow Alchemist’s Core — unlocks the ‘Soul-Forge’ crafting system, allowing synthesis of hybrid alchemical effects using collected essences."
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "whimsical",
+      "player_class": "rogue",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whimsy as a weapon — the universe laughs at seriousness. Your rogue doesn’t fight hard — they out-silly the opposition.",
+      "setting": "A floating island made of giant sweets, talking clocks, and gravity-defying candy canes. Music: ukulele-covered synthwave with giggling choirs.",
+      "player_weapon": "Shock Dart — fires a small arc of electricity that stuns and damages",
+      "player_weapon_damage": 25,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Clockwork Courtyard",
+          "enemy": {
+            "name": "Tik-Tok Thief",
+            "health": 60,
+            "damage": 15,
+            "weakness": "Player’s Shock Dart (starting weapon)"
+          },
+          "hazard": "Floating Clock Gears — slow player movement when stepped on",
+          "pickup": {
+            "name": "Bubblegum Blaster",
+            "effect": "Grants the player the 'Bubblegum Blaster' — a sticky, slow-dripping grenade launcher"
+          },
+          "trigger": "Player steps on the giant ticking gear near the fountain"
+        },
+        {
+          "location": "Jellybean Jungle",
+          "enemy": {
+            "name": "Silly Snapper",
+            "health": 80,
+            "damage": 20,
+            "weakness": "Bubblegum Blaster (acquired in Encounter 0)"
+          },
+          "hazard": "Bouncy Jelly Puddles — propel player upward when jumped on",
+          "pickup": {
+            "name": "Bubblegum Bomb",
+            "effect": "Grants the player the 'Bubblegum Bomb' — a giant, rainbow-hued sticky grenade that floats and sticks to surfaces"
+          },
+          "trigger": "Player uses the Bubblegum Blaster to stick a glob to the Snapper, causing it to slip on its own gum and explode into glitter"
+        },
+        {
+          "location": "Confetti Cathedral",
+          "enemy": {
+            "name": "Whimsy Warden",
+            "health": 120,
+            "damage": 25,
+            "weakness": "Bubblegum Bomb (acquired in Encounter 1)"
+          },
+          "hazard": "Anti-Gravity Confetti — randomly reverses gravity for 3 seconds",
+          "pickup": {
+            "name": "None",
+            "effect": "None (final encounter before boss)"
+          },
+          "trigger": "Player lobs a Bubblegum Bomb onto the Warden’s hat, causing it to inflate like a balloon and float upward, leaving it vulnerable to a follow-up shot"
+        }
+      ],
+      "boss": {
+        "name": "The Giggling Goliath",
+        "health": 1000,
+        "damage": 200,
+        "weakness": "The Bubblegum Bomb (acquired in Encounter 2)",
+        "victory_condition": "Strike the Goliath’s belly with the Bubblegum Bomb while it’s floating."
+      },
+      "objective": "Use whimsical gadgets and clever physics to defeat three bizarre foes and topple the giggling guardian of the candy core.",
+      "reward": "The Goliath’s Crown — grants +10% movement speed and makes all future enemies sneeze when you run past"
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "serene",
+      "player_class": "geomancer",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "The serenity of the void is a lie. Beneath stillness lies the scream of dying stars — and you are the only one who can hear it.",
+      "setting": "A long-dead planetary core, where ancient geomancers once siphoned the planet’s life force into harmonic crystals. Now, the system has gone rogue — its defenses alive, its energy singing in endless, silent echoes. The player is the last geomancer to walk this tomb — and the only one who can silence it… or become part of its song.",
+      "player_weapon": "Ground Pulse — a slow, energy-intensive ability that sends a seismic wave through the ground. Can be tuned to resonate with environmental frequencies if pickups are collected.",
+      "player_weapon_damage": 25,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Whispering Dunes — a vast, wind-swept plain of glassy sand, under a twin-moon sky. No clouds. No wind. Absolute stillness.",
+          "enemy": {
+            "name": "Silent Drifter",
+            "health": 250,
+            "damage": 45,
+            "weakness": "Vulnerable to seismic tremors generated by the player’s 'Ground Pulse' — but only after the player has absorbed the 'Harmonic Dust' from the first encounter’s environment."
+          },
+          "hazard": "Floating crystalline shards that silently drain energy when touched. These shards are inert until the player uses their Ground Pulse — then they vibrate and emit a low-frequency hum that attracts the Drifter.",
+          "pickup": {
+            "name": "Harmonic Dust",
+            "effect": "Harmonic Dust — a fine, glowing powder released when the Drifter is defeated. When absorbed, it allows the player’s Ground Pulse to resonate with environmental crystals, revealing hidden pathways and enemy weak points."
+          },
+          "trigger": "When the player steps on the third dune ridge, the air shivers. The Drifter emerges from the sand, its body formed of compressed static. Defeating it causes the dust to rise — and the ground beneath the next ridge begins to hum."
+        },
+        {
+          "location": "The Choir of Stones — a canyon lined with towering, singing monoliths. The air thrums with layered frequencies. Silence is lethal — any sudden movement triggers a harmonic backlash.",
+          "enemy": {
+            "name": "Resonance Warden",
+            "health": 350,
+            "damage": 55,
+            "weakness": "Immune to physical or energy-based attacks — but its crystalline armor is susceptible to phased harmonics. Must be damaged using a Ground Pulse synced to the frequency of the 'Harmonic Dust' collected earlier."
+          },
+          "hazard": "Floating monoliths that emit harmonic pulses every 7 seconds. If the player Ground Pulses out of sync, they’re stunned and take damage. If in sync, the monoliths temporarily open, revealing the 'Resonance Shard' — but only if the player has Harmonic Dust active.",
+          "pickup": {
+            "name": "Resonance Shard",
+            "effect": "Resonance Shard — a pulsing, translucent crystal. When held, it allows the player to temporarily 'tune' their Ground Pulse to any resonant frequency in the environment. It glows brighter as the boss’s frequency nears."
+          },
+          "trigger": "Upon defeating the Warden, the monoliths collapse into a spiral pattern. The ground fractures, revealing a deep shaft lined with glowing conduits — leading downward toward the heart of the planet. The Resonance Shard activates in the player’s hand, vibrating in anticipation."
+        },
+        {
+          "location": "The Looming Abyss — a cavern where gravity bends in spirals. Stone floats upward like falling leaves. The air shimmers with distorted light. The walls are covered in ancient geomantic runes that glow in time with the boss’s heartbeat.",
+          "enemy": {
+            "name": "Gravity Loom",
+            "health": 500,
+            "damage": 70,
+            "weakness": "Cannot be damaged directly. It manipulates local gravity to deflect attacks. Its only vulnerability is a perfectly timed Ground Pulse that resonates with the 'Resonance Shard' — which destabilizes its gravity core and causes it to collapse into a singularity, revealing the boss entrance."
+          },
+          "hazard": "Shifting gravity wells that invert movement direction every 5 seconds. Platforms float and vanish. The player must use the Resonance Shard to ‘anchor’ their pulse to a stable frequency and predict the next gravity shift.",
+          "pickup": {
+            "name": "None",
+            "effect": "None — the Gravity Loom’s defeat is the trigger. The collapse opens the path to the Core chamber."
+          },
+          "trigger": "When the Gravity Loom implodes, the ground beneath the player dissolves into a vortex of light. The Resonance Shard flares white-hot, projecting a path of harmonic light downward — leading directly into the boss chamber."
+        }
+      ],
+      "boss": {
+        "name": "The Echoing Core",
+        "health": 9999,
+        "damage": 999,
+        "weakness": "The Core is invulnerable to all geomantic energy unless struck by a resonant frequency matched to the 'Resonance Shard'. Once the Shard is embedded into its core, the player must perform a 'Ground Pulse' (player’s primary ability) at the exact moment the Core's harmonic frequency peaks — triggering a feedback loop that destabilizes its structure.",
+        "victory_condition": "The player must have collected the 'Resonance Shard' from Encounter 2 and used it to shatter the Core’s harmonic shell."
+      },
+      "objective": "Survive the silent, harmonic labyrinth and shatter the Echoing Core using only your geomantic powers and the resonant artifacts you’ve collected — one mistake, one misstep, and the silence will consume you.",
+      "reward": "The player gains the 'Soul of the Deep Earth' — allowing future Ground Pulses to create temporary terrain shields and slow time in a 10m radius for 3 seconds."
+    }
+  }
+]

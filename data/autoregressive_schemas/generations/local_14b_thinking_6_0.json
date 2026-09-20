@@ -1,0 +1,1063 @@
+[
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "ominous",
+      "player_class": "pyromancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "The Cursed Temple of Embervein",
+      "setting": "A crumbling, ancient temple shrouded in perpetual ash storms. The walls pulse with faint red runes, and the air hums with latent magical energy. The player navigates through corridors of blackened stone, with skeletal remains and flickering torches that cast jagged shadows.",
+      "player_weapon": "Flamebrand Sword (primary: fire blasts; secondary: charged fire burst)",
+      "player_weapon_damage": 25,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Hall of Embers",
+          "enemy": {
+            "name": "Molten Sentinel",
+            "health": 80,
+            "damage": 20,
+            "weakness": "Charged fire burst (player's weapon's secondary attack)"
+          },
+          "hazard": "Ash cloud reduces visibility by 50%",
+          "pickup": {
+            "name": "Frost Crystal",
+            "effect": "Unlocks cold-based attacks (damage +15)"
+          },
+          "trigger": "Defeating the Molten Sentinel causes the temple's central pillar to collapse, revealing a frozen passage."
+        },
+        {
+          "location": "Frozen Chamber",
+          "enemy": {
+            "name": "Ice Warden",
+            "health": 90,
+            "damage": 22,
+            "weakness": "Cold-based attacks (Frost Crystal from prior encounter)"
+          },
+          "hazard": "Slippery ice floor reduces movement speed by 30%",
+          "pickup": {
+            "name": "Ember Core",
+            "effect": "Boosts fire damage by 30% (stacks with Flamebrand Sword)"
+          },
+          "trigger": "Destroying the Ice Warden melts the frozen passage, revealing a hidden door leading to the temple's heart."
+        }
+      ],
+      "boss": {
+        "name": "Shadow Pyre",
+        "health": 180,
+        "damage": 35,
+        "weakness": "Ember Core-enhanced fire damage (specific pickup from Encounter 2)",
+        "victory_condition": "Defeat Shadow Pyre with fire damage while holding the Ember Core"
+      },
+      "objective": "Navigate the temple, overcome the guardians, and destroy the corrupted entity at its core.",
+      "reward": "Pyreheart Amulet (permanent +20 fire damage)"
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "whimsical",
+      "player_class": "beastmaster",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "The Enchanted Grove of Whimsy",
+      "setting": "A vibrant, magical forest filled with talking animals, floating lanterns, and mischievous creatures. The air hums with playful magic, and the trees whisper riddles to wandering travelers.",
+      "player_weapon": "Whimsy Flute (a magical instrument that can charm creatures and summon minor illusions)",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Giggling Goblin's Thicket",
+          "enemy": {
+            "name": "Giggling Goblin",
+            "health": 30,
+            "damage": 10,
+            "weakness": "Whimsy Flute's charm ability (reduce enemy damage by 50% when played)"
+          },
+          "hazard": "The goblin's laughter creates confusing echoes, reducing player accuracy by 20% for 10 seconds.",
+          "pickup": {
+            "name": "Charm Trinket",
+            "effect": "Unlocks a hidden path to the next encounter when used on a magical tree"
+          },
+          "trigger": "After defeating the goblin, the player uses the Charm Trinket on a nearby enchanted willow, revealing a floating bridge to the next area."
+        },
+        {
+          "location": "Puffball Wisp's Meadow",
+          "enemy": {
+            "name": "Puffball Wisp",
+            "health": 25,
+            "damage": 8,
+            "weakness": "Charm Trinket (disarms the wisp, making it vulnerable to 3x damage for 5 seconds)"
+          },
+          "hazard": "The wisp's floating jellyfish-like body releases harmless but disorienting sparkles that slow the player by 30%.",
+          "pickup": {
+            "name": "Glowing Feather",
+            "effect": "Deals 15 damage to the final boss when used as a projectile"
+          },
+          "trigger": "Defeating the wisp causes its feathers to scatter, forming a glowing trail that leads to the boss's domain."
+        },
+        {
+          "location": "The Whimsical Tree Spirit's Glade",
+          "enemy": {
+            "name": "The Whimsical Tree Spirit",
+            "health": 100,
+            "damage": 12,
+            "weakness": "Glowing Feather (deals 15 damage per second when lodged into the tree's heart)"
+          },
+          "hazard": "The tree spirit summons tiny, harmless sprite minions that dance around the player, healing the boss for 5 HP every 5 seconds.",
+          "pickup": {
+            "name": "Token of Whimsy",
+            "effect": "Unlocks a secret area with a rare magical item upon completion of the level"
+          },
+          "trigger": "The glowing feather from the previous encounter is required to weaken the tree spirit's defenses, allowing the player to strike its vulnerable heart."
+        }
+      ],
+      "boss": {
+        "name": "The Whimsical Tree Spirit",
+        "health": 100,
+        "damage": 12,
+        "weakness": "Glowing Feather (deals 15 damage per second when lodged into the tree's heart)",
+        "victory_condition": "Use the Glowing Feather to pierce the tree's heart while dodging its sprite minions."
+      },
+      "objective": "Defeat the Whimsical Tree Spirit by exploiting weaknesses uncovered through prior encounters.",
+      "reward": "Token of Whimsy (unlocks a secret area with a rare magical item)"
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "tense",
+      "player_class": "paladin",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Ancient Temple of Shadows",
+      "setting": "A crumbling, darkened temple deep within a cursed forest. Flickering torches cast jagged shadows on stained glass windows depicting forgotten rituals. The air is thick with the scent of decay and the distant echo of chanting.",
+      "player_weapon": "Radiant Lance (starting weapon: a holy spear that emits a faint light)",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Chamber of the Fallen Knight",
+          "enemy": {
+            "name": "Corrupted Paladin",
+            "health": 80,
+            "damage": 12,
+            "weakness": "Radiant Lance's holy light (player's starting weapon)"
+          },
+          "hazard": "Crushing stone pillars that collapse if the enemy is not defeated quickly.",
+          "pickup": {
+            "name": "Radiant Relic",
+            "effect": "When equipped, increases Radiant Lance's damage by 25% and illuminates the area, revealing hidden paths."
+          },
+          "trigger": "Defeating the Corrupted Paladin causes a hidden lever to activate, opening a sealed gate to the next chamber."
+        },
+        {
+          "location": "Shadowed Atrium",
+          "enemy": {
+            "name": "Shadow Wraith",
+            "health": 120,
+            "damage": 18,
+            "weakness": "Radiant Relic (pickup from prior encounter)"
+          },
+          "hazard": "The floor becomes unstable, causing random collapses if the player lingers too long.",
+          "pickup": {
+            "name": "Holy Sigil",
+            "effect": "When activated, emits a burst of holy energy that disrupts dark magic. Can be used once per boss fight."
+          },
+          "trigger": "Defeating the Shadow Wraith triggers a spectral projection of the Dark Priest, who laughs and declares, 'The final test awaits!' A hidden passage opens behind the altar."
+        },
+        {
+          "location": "Sanctum of the Dark Priest",
+          "enemy": {
+            "name": "Dark Priest Malakar",
+            "health": 200,
+            "damage": 25,
+            "weakness": "Holy Sigil (pickup from prior encounter)"
+          },
+          "hazard": "The chamber fills with toxic fog that reduces player damage by 50% unless the Holy Sigil is activated.",
+          "pickup": {
+            "name": "Cleansed Heart",
+            "effect": "Restores 150% health and permanently boosts Radiant Lance's damage by 40%."
+          },
+          "trigger": "The Dark Priest's defeat triggers a collapse of the temple, forcing the player to escape through a newly revealed exit."
+        }
+      ],
+      "boss": {
+        "name": "Dark Priest Malakar",
+        "health": 200,
+        "damage": 25,
+        "weakness": "Holy Sigil (must be used during phase 2 of the fight)",
+        "victory_condition": "Defeat Malakar while the Holy Sigil is active to break his dark shield."
+      },
+      "objective": "Purge the temple of its corruption by defeating three corrupted entities and the final Dark Priest. Use pickups strategically to overcome each challenge.",
+      "reward": "Cleansed Heart (grants permanent power boost and restores health)"
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "mysterious",
+      "player_class": "illusionist",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "The Veil of Illusions",
+      "setting": "A mist-shrouded, ancient forest where reality bends and shadows whisper secrets. The air hums with latent magic, and the trees twist into impossible shapes.",
+      "player_weapon": "Mirage Staff (emits prismatic light, can create illusions)",
+      "player_weapon_damage": 25,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Whispering Glade",
+          "enemy": {
+            "name": "Shadow Stalker",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Mirage Staff's True Vision ability (activates by focusing light through the staff's crystal)"
+          },
+          "hazard": "The enemy phases through illusions, forcing the player to track its true form.",
+          "pickup": {
+            "name": "Flickering Crystal",
+            "effect": "Disrupts illusory barriers and reveals hidden enemy weaknesses."
+          },
+          "trigger": "Defeating the Shadow Stalker causes the mist to part, revealing a path to the next encounter."
+        },
+        {
+          "location": "The Mirror Ruins",
+          "enemy": {
+            "name": "Mirror Warden",
+            "health": 150,
+            "damage": 40,
+            "weakness": "Flickering Crystal (shatters the warden's mirrored armor)"
+          },
+          "hazard": "The warden duplicates itself into 3 mirror images; only the original takes damage.",
+          "pickup": {
+            "name": "Void Lens",
+            "effect": "Reveals hidden pathways and the true forms of shadow-based enemies."
+          },
+          "trigger": "Destroying the Mirror Warden causes the ruins to collapse, exposing a hidden portal to the boss's lair."
+        },
+        {
+          "location": "The Shadow Throne",
+          "enemy": {
+            "name": "The Umbral Sovereign (Boss)",
+            "health": 250,
+            "damage": 50,
+            "weakness": "Void Lens (reveals the sovereign's physical form beneath its shadowy guise)"
+          },
+          "hazard": "The boss summons shadow clones that mimic the player's attacks. It becomes invulnerable when the Void Lens is not active.",
+          "pickup": {
+            "name": "Echo of the First Light",
+            "effect": "Permanently unlocks the Mirage Staff's True Vision ability."
+          },
+          "trigger": "The boss appears only after the Mirror Ruins collapse, as the player's progress through the level destabilizes the veil between worlds."
+        }
+      ],
+      "boss": {
+        "name": "The Umbral Sovereign",
+        "health": 250,
+        "damage": 50,
+        "weakness": "Void Lens (required to see its physical form during Phase 2)",
+        "victory_condition": "Destroy the physical form after using the Void Lens to bypass its shadowy defenses."
+      },
+      "objective": "Navigate the shifting landscape, collect key items, and dismantle the illusions protecting the Umbral Sovereign.",
+      "reward": "Echo of the First Light (unlocks True Vision permanently) and mastery of illusion-based combat."
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "serene",
+      "player_class": "warden",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Enchanted Glade",
+      "setting": "A luminous forest with glowing flora, tranquil waterfalls, and ancient stone pillars. The air hums with soft, melodic wind chimes. The player’s goal is to purify a corrupted sacred grove.",
+      "player_weapon": "Nature’s Resolve (a staff that channels elemental light)",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Whispering Glade",
+          "enemy": {
+            "name": "Rootbound Golem",
+            "health": 40,
+            "damage": 10,
+            "weakness": "Light-based attacks (Nature’s Resolve’s elemental mode)"
+          },
+          "hazard": "The ground cracks, summoning a corrupted tree spirit made of gnarled roots and moss.",
+          "pickup": {
+            "name": "Luminous Crystal",
+            "effect": "Unlocks the 'Light Burst' ability on the player’s weapon for 3 uses."
+          },
+          "trigger": "The Luminous Crystal’s glow repels the corruption, revealing a path to the next area."
+        },
+        {
+          "location": "Mirrored Clearing",
+          "enemy": {
+            "name": "Shade of the Hollow",
+            "health": 35,
+            "damage": 8,
+            "weakness": "Luminous Crystal (from prior encounter)"
+          },
+          "hazard": "A shadowy figure materializes, its form flickering like a dying flame.",
+          "pickup": {
+            "name": "Nature’s Charm",
+            "effect": "Restores 25% of the player’s health and temporarily boosts defense by 15%."
+          },
+          "trigger": "The Nature’s Charm emits a pulse that shatters the clearing’s illusions, revealing the final path to the grove."
+        }
+      ],
+      "boss": {
+        "name": "Corrupted Guardian",
+        "health": 80,
+        "damage": 12,
+        "weakness": "Nature’s Charm (from second encounter)",
+        "victory_condition": "Defeat the boss using the Nature’s Charm’s aura to break its corruption."
+      },
+      "objective": "Purify the sacred grove by defeating all threats, using pickups to unlock abilities and progress.",
+      "reward": "A purified grove grants the player a permanent buff: 'Serene Guardian' (increased healing from nature-based pickups by 20%)."
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "chaotic",
+      "player_class": "berserker",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Chaos of the Shattered Vale",
+      "setting": "A twisted, collapsing forest of jagged obsidian trees and floating debris, where magic storms erupt randomly and gravity shifts unpredictably.",
+      "player_weapon": "Feral Cleaver (a serrated greatsword that gains +25% damage against chaotic enemies when infused with elemental energy)",
+      "player_weapon_damage": 150,
+      "player_health": 200,
+      "encounters": [
+        {
+          "location": "The Corrupted Glade",
+          "enemy": {
+            "name": "Feral Stag of the Wastes",
+            "health": 180,
+            "damage": 80,
+            "weakness": "Cleaving attacks (player's weapon type)"
+          },
+          "hazard": "The ground fractures, creating unstable platforms that collapse after 5 seconds.",
+          "pickup": {
+            "name": "Feral Core",
+            "effect": "Temporarily infuses the Feral Cleaver with chaotic energy, increasing damage by 30% against enemies with 'Chaos' affixes."
+          },
+          "trigger": "Defeating the stag causes the obsidian trees to split open, revealing a path to the caverns below."
+        },
+        {
+          "location": "The Collapsing Cavern",
+          "enemy": {
+            "name": "Stone Golem of the Shattered Vein",
+            "health": 250,
+            "damage": 100,
+            "weakness": "Feral Core's chaotic energy (pickup from prior encounter)"
+          },
+          "hazard": "Periodic rockfalls and magma geysers that erupt when the golem is damaged.",
+          "pickup": {
+            "name": "Chaos Shatter Crystal",
+            "effect": "When activated, disrupts chaotic energy fields, revealing hidden weak points on enemies."
+          },
+          "trigger": "Destroying the golem's core unlocks a hidden chamber in the cavern wall, leading to the Ruins of the Void."
+        },
+        {
+          "location": "The Ruins of the Void",
+          "enemy": {
+            "name": "Shadow Warden of the Fractured Self",
+            "health": 300,
+            "damage": 120,
+            "weakness": "Chaos Shatter Crystal (pickup from prior encounter)"
+          },
+          "hazard": "The battlefield duplicates itself every time the warden is damaged, creating mirrored copies that attack the player.",
+          "pickup": {
+            "name": "Void Anchor",
+            "effect": "Temporarily stabilizes the chaotic environment, halving damage from hazards for 30 seconds."
+          },
+          "trigger": "Defeating the warden causes the ruins to collapse, revealing the throne room of the final boss."
+        }
+      ],
+      "boss": {
+        "name": "Chaos Dragoon",
+        "health": 500,
+        "damage": 180,
+        "weakness": "Chaos Shatter Crystal (pickup from second encounter)",
+        "victory_condition": "Destroy the Dragoon's core while the Chaos Shatter Crystal is active, causing its chaotic aura to implode."
+      },
+      "objective": "Survive the escalating chaos, collect pickups to weaken each subsequent foe, and shatter the final boss's reality-warping core.",
+      "reward": "The berserker gains the 'Chaos Cleaver' permanent upgrade, allowing their weapon to bypass 40% of enemy defenses in chaotic environments."
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "eerie",
+      "player_class": "necromancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Cursed Cemetery of the Forgotten",
+      "setting": "A decaying graveyard shrouded in perpetual mist, where skeletal trees twist toward a blood-red moon. Whispers echo from unseen sources, and the air reeks of decay.",
+      "player_weapon": "Bone Staff (initial weapon: channels necrotic energy, can be infused with fire via pickups)",
+      "player_weapon_damage": 12,
+      "player_health": 80,
+      "encounters": [
+        {
+          "location": "The Whispering Glade",
+          "enemy": {
+            "name": "Wraith of the First Burial",
+            "health": 45,
+            "damage": 15,
+            "weakness": "Fire (player's Bone Staff, when infused with the Soul Crystal from this encounter)"
+          },
+          "hazard": "Fog reduces visibility by 50%",
+          "pickup": {
+            "name": "Soul Crystal",
+            "effect": "Infuse Bone Staff with fire damage (increases weapon damage by +5 for 3 encounters)"
+          },
+          "trigger": "Player must channel necrotic energy to dispel the wraith's mist veil, revealing the Soul Crystal embedded in its chest."
+        },
+        {
+          "location": "The Hollow Temple",
+          "enemy": {
+            "name": "Stone Golem of the Forgotten King",
+            "health": 60,
+            "damage": 20,
+            "weakness": "Energy disruption (Soul Crystal from prior encounter)"
+          },
+          "hazard": "Collapsing pillars that deal 10 damage if player stands beneath them",
+          "pickup": {
+            "name": "Cursed Dagger",
+            "effect": "Poison damage (deals 8 damage over 3 turns; critical strike chance +20%)"
+          },
+          "trigger": "Golem awakens when the Soul Crystal is used to shatter its binding rune on the temple floor."
+        },
+        {
+          "location": "The Shadowed Tomb",
+          "enemy": {
+            "name": "Shadow Lord Malakar",
+            "health": 100,
+            "damage": 25,
+            "weakness": "Poison (Cursed Dagger from prior encounter)"
+          },
+          "hazard": "Shadow tendrils that drain 5% max health per second",
+          "pickup": {
+            "name": "Eternal Soul",
+            "effect": "Permanent +10 max health and +5% damage resistance"
+          },
+          "trigger": "Tomb door opens only after the Cursed Dagger is plunged into the altar, revealing Malakar's spectral form."
+        }
+      ],
+      "boss": {
+        "name": "Shadow Lord Malakar",
+        "health": 100,
+        "damage": 25,
+        "weakness": "Poison (Cursed Dagger from second encounter)",
+        "victory_condition": "Reduce health to 0 while maintaining 50% health to claim Eternal Soul"
+      },
+      "objective": "Retrieve the Eternal Soul from Malakar's tomb by overcoming the cursed cemetery's trials.",
+      "reward": "Eternal Soul (permanent stat boost) and mastery of fire/necrotic hybrid magic"
+    }
+  },
+  {
+    "case": {
+      "genre": "fantasy",
+      "mood": "desolate",
+      "player_class": "ranger",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Desolate Fantasy",
+      "setting": "The Cursed Glade - A once-vibrant forest now reduced to skeletal trees, ash-covered ground, and whispers of ancient magic. The air is thick with decay, and distant howls echo through the silence.",
+      "player_weapon": "Shadowfang Bow (a recurve bow with a dark crystal core that can channel elemental energy when paired with specific relics)",
+      "player_weapon_damage": 120,
+      "player_health": 250,
+      "encounters": [
+        {
+          "location": "The Withering Thicket",
+          "enemy": {
+            "name": "Wraith Stag",
+            "health": 300,
+            "damage": 90,
+            "weakness": "Silver-tipped arrows (player's base weapon)"
+          },
+          "hazard": "The ground cracks periodically, releasing toxic spores that reduce player movement speed by 30% for 5 seconds.",
+          "pickup": {
+            "name": "Cursed Talisman",
+            "effect": "Allows the Shadowfang Bow to channel dark energy, increasing arrow damage by 50% and ignoring 20% of enemy armor."
+          },
+          "trigger": "Defeating the Wraith Stag reveals a hidden path through the thorns leading to the corrupted shrine."
+        },
+        {
+          "location": "The Hollow Shrine",
+          "enemy": {
+            "name": "Shadow Warden",
+            "health": 400,
+            "damage": 110,
+            "weakness": "Cursed Talisman (pickup from prior encounter)"
+          },
+          "hazard": "The shrine's altar pulses with unstable magic, causing random lightning strikes that deal 60 damage to the player.",
+          "pickup": {
+            "name": "Ashen Flame",
+            "effect": "A fiery relic that, when placed in the Shadowfang Bow's crystal core, grants fire damage (150% of base) and burns enemies for 5 seconds."
+          },
+          "trigger": "Destroying the Shadow Warden's core unlocks the sealed entrance to the Hollow Temple, where the final boss awaits."
+        },
+        {
+          "location": "The Hollow Temple",
+          "enemy": {
+            "name": "The Hollow Druid",
+            "health": 1200,
+            "damage": 180,
+            "weakness": "Ashen Flame (pickup from prior encounter)"
+          },
+          "hazard": "The temple floor collapses in phases, forcing the player to navigate shifting platforms while avoiding falling debris.",
+          "pickup": {
+            "name": "Soulforged Core",
+            "effect": "A permanent upgrade for the Shadowfang Bow, increasing base damage by 100 and allowing it to store 2 elemental charges (fire/dark energy)."
+          },
+          "trigger": "The boss fight is initiated by shattering the altar's final seal, which requires the Ashen Flame."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Druid",
+        "health": 1200,
+        "damage": 180,
+        "weakness": "Ashen Flame (must be active in the Shadowfang Bow to bypass the boss's magic immunity)",
+        "victory_condition": "Reduce the Hollow Druid's health to 0 while the Ashen Flame is active."
+      },
+      "objective": "Survive the corrupted glade, retrieve the relics, and destroy the source of the blight.",
+      "reward": "Soulforged Core (permanent weapon upgrade) and access to the next zone."
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "tense",
+      "player_class": "engineer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Derelict Alien Research Station",
+      "setting": "A collapsing alien research station on a desolate moon, with flickering lights, unstable gravity fields, and leaking reactor coolant. The player, an engineer, must shut down a rogue quantum reactor before it destabilizes.",
+      "player_weapon": "Plasma Cutter (starting weapon, can cut through metal and energy shields)",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Corridor Alpha (Near Reactor Control Room)",
+          "enemy": {
+            "name": "Sentinel Drone",
+            "health": 80,
+            "damage": 25,
+            "weakness": "Plasma Cutter (player's starting weapon)"
+          },
+          "hazard": "Collapsing ceiling tiles",
+          "pickup": {
+            "name": "EMP Charge",
+            "effect": "Disables electronic systems for 10 seconds"
+          },
+          "trigger": "Player attempts to access the Reactor Control Room. The drone attacks to prevent them."
+        },
+        {
+          "location": "Lab Omega (Biomechanical Research Wing)",
+          "enemy": {
+            "name": "Nano-Organic Construct",
+            "health": 120,
+            "damage": 30,
+            "weakness": "EMP Charge (pickup from prior encounter)"
+          },
+          "hazard": "Toxic gas leaks and floor collapses",
+          "pickup": {
+            "name": "Nano-Drone Core",
+            "effect": "Can be weaponized to target the boss's energy core"
+          },
+          "trigger": "Player uses EMP Charge to bypass a force field blocking access to Lab Omega. The construct awakens to stop them."
+        },
+        {
+          "location": "Quantum Reactor Core (Final Chamber)",
+          "enemy": {
+            "name": "Overseer Construct",
+            "health": 200,
+            "damage": 40,
+            "weakness": "Nano-Drone Core (pickup from prior encounter)"
+          },
+          "hazard": "Reactor meltdown countdown (5 minutes, increasing damage over time)",
+          "pickup": {
+            "name": "Stabilizer Module",
+            "effect": "Permanently repairs the reactor and unlocks the escape route"
+          },
+          "trigger": "Player retrieves Nano-Drone Core. The Overseer Construct activates the reactor's defense protocols, forcing a final showdown."
+        }
+      ],
+      "boss": {
+        "name": "Overseer Construct",
+        "health": 200,
+        "damage": 40,
+        "weakness": "Nano-Drone Core (must be equipped during the fight)",
+        "victory_condition": "Destroy the core using the Nano-Drone Core, then deploy the Stabilizer Module to stop the meltdown"
+      },
+      "objective": "Shut down the rogue quantum reactor before it explodes, using pickups and strategic weapon use to overcome enemies and hazards.",
+      "reward": "Stabilizer Module (unlocks escape pod and completes the level)"
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "desolate",
+      "player_class": "chronomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Desolate Sci-Fi Space Station",
+      "setting": "A derelict interstellar research station, abandoned after a temporal experiment gone wrong. The environment is cold, dark, and littered with broken machinery, flickering holograms, and ghostly echoes of past events.",
+      "player_weapon": "Chronal Disruptor (can manipulate time fields, rewind projectiles, and disrupt temporal shields)",
+      "player_weapon_damage": 100,
+      "player_health": 200,
+      "encounters": [
+        {
+          "location": "Control Room",
+          "enemy": {
+            "name": "Temporal Warden",
+            "health": 150,
+            "damage": 80,
+            "weakness": "Chronal Disruptor's time-reversal ability (player's weapon)"
+          },
+          "hazard": "The Warden's shield is a looping time field; player must reverse its attack pattern to bypass it.",
+          "pickup": {
+            "name": "Chronal Core",
+            "effect": "Activates dormant systems in the station, unlocking the path to the Maintenance Bay."
+          },
+          "trigger": "After retrieving the Chronal Core, the player activates a terminal, opening the door to the Maintenance Bay."
+        },
+        {
+          "location": "Maintenance Bay",
+          "enemy": {
+            "name": "Temporal Revenant",
+            "health": 180,
+            "damage": 90,
+            "weakness": "Chronal Core (pickup from Control Room)"
+          },
+          "hazard": "The Revenant exists in overlapping timelines; the Chronal Core disrupts its temporal anchor, revealing its physical form.",
+          "pickup": {
+            "name": "Temporal Key",
+            "effect": "Unlocks the reactor chamber's security system, allowing access to the final encounter."
+          },
+          "trigger": "After defeating the Revenant, the player inserts the Temporal Key into a console, triggering a sequence that activates the reactor."
+        },
+        {
+          "location": "Reactor Chamber",
+          "enemy": {
+            "name": "Temporal Echo",
+            "health": 200,
+            "damage": 100,
+            "weakness": "Temporal Key (pickup from Maintenance Bay)"
+          },
+          "hazard": "The Echo is trapped in a recursive time loop; the Temporal Key breaks the loop, making it vulnerable to direct attacks.",
+          "pickup": {
+            "name": "Chronal Resonator",
+            "effect": "Amplifies the Chronal Disruptor's power, required to damage the final boss."
+          },
+          "trigger": "Defeating the Echo destabilizes the reactor, summoning the final boss, the Temporal Devourer."
+        }
+      ],
+      "boss": {
+        "name": "Temporal Devourer",
+        "health": 300,
+        "damage": 120,
+        "weakness": "Temporal Key (pickup from Maintenance Bay)",
+        "victory_condition": "Use the Temporal Key to unlock the boss's core, then strike it with the Chronal Disruptor while it's vulnerable."
+      },
+      "objective": "Navigate the crumbling station, retrieve temporal artifacts, and confront the Temporal Devourer to stabilize the timeline.",
+      "reward": "Chronal Stabilizer (permanent upgrade to the player's ability to manipulate time fields)"
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "chaotic",
+      "player_class": "stormcaller",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Tempest's Reckoning",
+      "setting": "A collapsing alien reactor core, surrounded by a storm of unstable plasma and falling debris. The environment shifts unpredictably, with lightning arcs cracking through the air and molten rock spewing from ruptured fissures.",
+      "player_weapon": "Stormforge Gauntlet (channeling raw lightning energy, with a built-in capacitor for storing storm energy).",
+      "player_weapon_damage": 200,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Reactor Access Trench",
+          "enemy": {
+            "name": "The Iron Warden",
+            "health": 400,
+            "damage": 80,
+            "weakness": "Lightning (player's Stormforge Gauntlet)."
+          },
+          "hazard": "Collapsing ceiling panels and unstable plasma vents erupting randomly.",
+          "pickup": {
+            "name": "Storm Core (Data Core)",
+            "effect": "Boosts Stormforge Gauntlet's capacitor storage by 50%."
+          },
+          "trigger": "Destroying the Iron Warden causes a power surge that activates the next encounter."
+        },
+        {
+          "location": "Synth-Forge Chamber",
+          "enemy": {
+            "name": "The Synth Hydra",
+            "health": 600,
+            "damage": 120,
+            "weakness": "EMP (Storm Core pickup from prior encounter)."
+          },
+          "hazard": "Corrosive acid rain and magnetic fields that disrupt the player's storm abilities.",
+          "pickup": {
+            "name": "Plasma Conduit",
+            "effect": "Allows the player to channel stored storm energy into a directed plasma beam."
+          },
+          "trigger": "Defeating the Synth Hydra destabilizes the reactor's core, exposing the final boss."
+        }
+      ],
+      "boss": {
+        "name": "The Celestial Forge",
+        "health": 1200,
+        "damage": 180,
+        "weakness": "Plasma Conduit (pickup from second encounter).",
+        "victory_condition": "Use the Plasma Conduit to overload the boss's energy core while dodging its lightning lances and gravitational pulls."
+      },
+      "objective": "Survive the chaotic environment, defeat the three enemies, and use the pickups to exploit weaknesses in a brutal final showdown against the Celestial Forge.",
+      "reward": "Stormcaller's Resolve (permanent ability to store and unleash a massive storm explosion, with 15% increased damage against energy-based foes)."
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "mysterious",
+      "player_class": "artificer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Derelict Space Station",
+      "setting": "The abandoned research station Aetherion-7, a crumbling labyrinth of flickering holograms, rusted machinery, and eerie silence. Strange symbols glow faintly on walls, and distant mechanical groans echo through corridors.",
+      "player_weapon": "Plasma Wrench (overheats to melt metal)",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Holo-Storage Bay",
+          "enemy": {
+            "name": "Malfunctioning Security Drone",
+            "health": 40,
+            "damage": 10,
+            "weakness": "Overheating core (exploitable by plasma wrench's heat)"
+          },
+          "hazard": "Collapsing shelves",
+          "pickup": {
+            "name": "Quantum Capacitor",
+            "effect": "Temporarily boosts plasma wrench damage by 20%"
+          },
+          "trigger": "Defeating the drone unlocks a hidden panel, revealing a corridor to the next area."
+        },
+        {
+          "location": "Bio-Engineering Lab",
+          "enemy": {
+            "name": "Flesh Construct",
+            "health": 50,
+            "damage": 12,
+            "weakness": "Energy instability (requiring Quantum Capacitor to disrupt armor)"
+          },
+          "hazard": "Toxic gas leaks",
+          "pickup": {
+            "name": "Nano-Overlay",
+            "effect": "Reduces damage taken from biomechanical enemies by 30%"
+          },
+          "trigger": "After defeating the Flesh Construct, a terminal activates, projecting a holographic map to the station's core."
+        },
+        {
+          "location": "Core Reactor Chamber",
+          "enemy": {
+            "name": "Synthoid Prime",
+            "health": 120,
+            "damage": 18,
+            "weakness": "Nano-Overlay disruption field (required to expose core)"
+          },
+          "hazard": "Unstable reactor explosions",
+          "pickup": {
+            "name": "Aetherion Core",
+            "effect": "Permanent upgrade: plasma wrench deals +30% damage to organic/mechanical hybrids"
+          },
+          "trigger": "Defeating Synthoid Prime unlocks the station's data vault, revealing the true purpose of Aetherion-7."
+        }
+      ],
+      "boss": {
+        "name": "Synthoid Prime",
+        "health": 120,
+        "damage": 18,
+        "weakness": "Nano-Overlay disruption field (required to expose core)",
+        "victory_condition": "Destroy core after disabling armor with Nano-Overlay"
+      },
+      "objective": "Reach the station's data vault by overcoming three corrupted systems, using collected tech to bypass defenses.",
+      "reward": "Aetherion Core (permanent weapon upgrade)"
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "ominous",
+      "player_class": "shadowblade",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Derelict Space Station 'Eclipse-7'",
+      "setting": "A decaying orbital research facility orbiting a black hole, its corridors filled with flickering holograms of dead scientists and the distant hum of unstable warp drives. The air is thick with ionized dust, and walls pulse with bioluminescent fungi that react to movement.",
+      "player_weapon": "Plasma Shadowblade (primary) with a hidden nano-fiber blade (secondary)",
+      "player_weapon_damage": 120,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Corridor of Echoes",
+          "enemy": {
+            "name": "Sentinel-11",
+            "health": 80,
+            "damage": 50,
+            "weakness": "Plasma Shadowblade's nano-fiber blade (player's secondary weapon)"
+          },
+          "hazard": "Floor panels randomly activate to launch razor-wire traps",
+          "pickup": {
+            "name": "Disruptor Core",
+            "effect": "Overloads energy shields (can be used as a weapon)"
+          },
+          "trigger": "Destroying Sentinel-11 causes a nearby console to self-destruct, revealing a hidden path to the next area."
+        },
+        {
+          "location": "Engine Core Chamber",
+          "enemy": {
+            "name": "Thermal Guardian",
+            "health": 120,
+            "damage": 65,
+            "weakness": "Disruptor Core (pickup from prior encounter)"
+          },
+          "hazard": "Periodic plasma surges from unstable reactor cores",
+          "pickup": {
+            "name": "Neuro-Link Module",
+            "effect": "Hacks enemy AI systems (reduces enemy damage by 40% for 10 seconds)"
+          },
+          "trigger": "Defeating Thermal Guardian unlocks the door to the final chamber, but activates the boss's dormant systems."
+        },
+        {
+          "location": "Singularity Chamber",
+          "enemy": {
+            "name": "Eventide",
+            "health": 250,
+            "damage": 90,
+            "weakness": "Neuro-Link Module (pickup from prior encounter)"
+          },
+          "hazard": "Gravitational distortions that slow movement and increase damage taken",
+          "pickup": {
+            "name": "Void Resonator",
+            "effect": "Permanently upgrades Plasma Shadowblade to 'Void Mode' (increases damage by 50%)"
+          },
+          "trigger": "Eventide's defeat collapses the station, forcing the player to navigate collapsing corridors to escape."
+        }
+      ],
+      "boss": {
+        "name": "Eventide",
+        "health": 250,
+        "damage": 90,
+        "weakness": "Neuro-Link Module (requires active use during fight)",
+        "victory_condition": "Destroy Eventide's core while the Neuro-Link Module is active"
+      },
+      "objective": "Extract the Void Resonator and escape the collapsing station",
+      "reward": "Void Resonator (permanent weapon upgrade)"
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "eerie",
+      "player_class": "alchemist",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Abandoned Research Station 'Erebus-9'",
+      "setting": "A derelict alien research station drifting in the void, its corridors lit by flickering bioluminescent panels. Strange, low-frequency hums echo through the halls, and malfunctioning drones patrol the area. The air smells of ozone and burnt circuitry.",
+      "player_weapon": "Alchemical Grenade Launcher (Corrosive Acid Rounds)",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Corridor of Echoes",
+          "enemy": {
+            "name": "Mycelium Warden",
+            "health": 60,
+            "damage": 20,
+            "weakness": "Corrosive Acid Rounds (player's weapon)"
+          },
+          "hazard": "Flickering lights reveal pulsating fungal growths on the walls that release spores when damaged.",
+          "pickup": {
+            "name": "Neurotoxin X Vial",
+            "effect": "Applies a 30% damage boost to the player's alchemical weapons for 15 seconds."
+          },
+          "trigger": "Destroying the Warden causes the fungal spores to coalesce into a data crystal, revealing a hidden lab entrance."
+        },
+        {
+          "location": "Lab of Fractured Experiments",
+          "enemy": {
+            "name": "Synthetic Sentinel",
+            "health": 75,
+            "damage": 25,
+            "weakness": "Neurotoxin X Vial (pickup from prior encounter)"
+          },
+          "hazard": "Broken containment tanks leak volatile chemicals, creating explosive puddles that trigger when the player moves through them.",
+          "pickup": {
+            "name": "Stabilizer Core",
+            "effect": "Disables enemy armor for 10 seconds when used as a thrown item."
+          },
+          "trigger": "Defeating the Sentinel with the Neurotoxin X Vial unlocks a security panel, revealing the location of the final boss."
+        },
+        {
+          "location": "Core of the Void",
+          "enemy": {
+            "name": "Void Construct",
+            "health": 150,
+            "damage": 35,
+            "weakness": "Stabilizer Core (pickup from prior encounter)"
+          },
+          "hazard": "The chamber's gravity field fluctuates unpredictably, causing the player to float or slam into walls.",
+          "pickup": {
+            "name": "Alchemical Resonance Chip",
+            "effect": "Unlocks a permanent 10% damage increase to alchemical weapons."
+          },
+          "trigger": "Using the Stabilizer Core on the Void Construct disrupts its core, collapsing the station and forcing the player to escape through a destabilizing wormhole."
+        }
+      ],
+      "boss": {
+        "name": "Void Construct",
+        "health": 150,
+        "damage": 35,
+        "weakness": "Stabilizer Core (pickup from second encounter)",
+        "victory_condition": "Destroy the core of the Void Construct while evading its gravity pulses."
+      },
+      "objective": "Escape the collapsing station with the Alchemical Resonance Chip, proving your alchemical mastery in the face of the unknown.",
+      "reward": "Alchemical Resonance Chip (permanent damage boost)"
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "whimsical",
+      "player_class": "rogue",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whimsical Sci-Fi",
+      "setting": "The Whimsy Spire - A derelict, colorfully decaying space station filled with floating orbs, quirky robots, and bioluminescent flora.",
+      "player_weapon": "Plasma Pistol (starting weapon)",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Engineering Bay",
+          "enemy": {
+            "name": "Giggle-Gear Patrol Bot",
+            "health": 40,
+            "damage": 10,
+            "weakness": "Plasma Pistol (base weapon)"
+          },
+          "hazard": "Bouncy energy fields that launch the player into the air if touched.",
+          "pickup": {
+            "name": "Plasma Amplifier",
+            "effect": "Increases Plasma Pistol damage by 50%"
+          },
+          "trigger": "Disabling the Patrol Bot's security console opens a hidden passage to the Bio Lab."
+        },
+        {
+          "location": "Bio Lab",
+          "enemy": {
+            "name": "Jellyflux Slime",
+            "health": 50,
+            "damage": 12,
+            "weakness": "Plasma Amplifier (pickup from Engineering Bay)"
+          },
+          "hazard": "Glowing pools that slow movement and drain health over time.",
+          "pickup": {
+            "name": "Gravity Module",
+            "effect": "Allows the player to manipulate gravity for 10 seconds"
+          },
+          "trigger": "Destroying the Jellyflux Slime restores power to the lab's elevator, granting access to the Core Chamber."
+        }
+      ],
+      "boss": {
+        "name": "Zarbi the Zany",
+        "health": 120,
+        "damage": 18,
+        "weakness": "Gravity Module (pickup from Bio Lab)",
+        "victory_condition": "Use Gravity Module to crush Zarbi's core while dodging its floating candy-slug projectiles."
+      },
+      "objective": "Steal the 'Starshine Core' from the Core Chamber without triggering alarms.",
+      "reward": "Starshine Core (grants temporary invincibility and light-based teleportation)"
+    }
+  },
+  {
+    "case": {
+      "genre": "sci-fi",
+      "mood": "serene",
+      "player_class": "geomancer",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Ethereal Crystalline Expanse",
+      "setting": "A serene, floating archipelago of translucent crystal spires suspended above a bioluminescent ocean. The environment hums with ambient energy, and the air shimmers with prismatic light. The player's movements cause faint ripples in the ground, as if the terrain is alive.",
+      "player_weapon": "Gravitic Gauntlet (manipulates gravity and terrain)",
+      "player_weapon_damage": 150,
+      "player_health": 200,
+      "encounters": [
+        {
+          "location": "Luminous Glade",
+          "enemy": {
+            "name": "Crystal Sentinel",
+            "health": 300,
+            "damage": 80,
+            "weakness": "Seismic Disruption (via player's Gravitic Gauntlet)"
+          },
+          "hazard": "The ground pulses with unstable energy; stepping on it risks triggering a shockwave.",
+          "pickup": {
+            "name": "Resonance Core",
+            "effect": "Amplifies seismic abilities by 50% for 15 seconds"
+          },
+          "trigger": "Destroying the Sentinel's core releases the Resonance Core, causing nearby crystals to glow and reveal a hidden path to the next encounter."
+        },
+        {
+          "location": "Gravity Well Cavern",
+          "enemy": {
+            "name": "Leviathan Tether",
+            "health": 400,
+            "damage": 100,
+            "weakness": "Gravity Manipulation (via Gravitic Gauntlet + Resonance Core)"
+          },
+          "hazard": "Floating debris creates a lethal environment; enemy attacks can summon gravitational anchors that pull the player into the void.",
+          "pickup": {
+            "name": "Gravity Anchor",
+            "effect": "Creates a temporary black hole that pulls in enemies and deals damage over time"
+          },
+          "trigger": "Defeating the Leviathan Tether with the Resonance Core unlocked the Gravity Anchor, which destabilizes the cavern's ceiling, revealing the final boss's lair."
+        }
+      ],
+      "boss": {
+        "name": "The Terraforge",
+        "health": 1200,
+        "damage": 200,
+        "weakness": "Combined use of Resonance Core (seismic disruption) and Gravity Anchor (gravitational collapse)",
+        "victory_condition": "Destroy the core of the Terraforge by creating a seismic rift and collapsing it with a gravity well."
+      },
+      "objective": "Navigate the serene yet treacherous crystalline world, harnessing pickups to overcome enemies and ultimately dismantle the Terraforge.",
+      "reward": "Quantum Geomantic Focus (permanently increases terrain manipulation range and power)"
+    }
+  }
+]

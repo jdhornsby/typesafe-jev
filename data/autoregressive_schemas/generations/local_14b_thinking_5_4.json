@@ -1,0 +1,540 @@
+[
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "tense",
+      "player_class": "engineer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "High-stakes infiltration through a collapsing tech maze",
+      "setting": "A decaying mega-corporate research facility with flickering holograms and leaking toxic coolant",
+      "player_weapon": "Plasma Cutter (can cut through reinforced metal)",
+      "player_weapon_damage": 150,
+      "player_health": 300,
+      "encounters": [
+        {
+          "location": "Derelict Maintenance Tunnels",
+          "enemy": {
+            "name": "Cybernetic Janitor",
+            "health": 300,
+            "damage": 80,
+            "weakness": "Plasma Cutter (player's primary weapon)"
+          },
+          "hazard": "Flickering neon signs create disorienting light patterns",
+          "pickup": {
+            "name": "Sector-7 Access Chip",
+            "effect": "Data chip containing security override code"
+          },
+          "trigger": "Destroy the Janitor's reinforced plating with Plasma Cutter to unlock the sealed maintenance hatch leading to the next area"
+        },
+        {
+          "location": "Server Farm Corridor",
+          "enemy": {
+            "name": "Nanite-Enhanced Guard",
+            "health": 500,
+            "damage": 120,
+            "weakness": "Sector-7 Access Chip (from Encounter 1)"
+          },
+          "hazard": "Leaking coolant pools that short-circuit electronics",
+          "pickup": {
+            "name": "Neuro-Disruptor Grenade",
+            "effect": "EMP grenade that disables cybernetic systems"
+          },
+          "trigger": "Use the data chip to bypass the server farm's security grid, triggering the Guard's patrol route"
+        },
+        {
+          "location": "Command Core Chamber",
+          "enemy": {
+            "name": "Synthwave Saboteur",
+            "health": 800,
+            "damage": 180,
+            "weakness": "Neuro-Disruptor Grenade (from Encounter 2)"
+          },
+          "hazard": "Collapsing structural beams and active laser tripwires",
+          "pickup": {
+            "name": "Neural Override Terminal",
+            "effect": "Hackable neural interface for boss fight"
+          },
+          "trigger": "Defeat the Saboteur to disable the boss's defensive drones and expose its power core"
+        }
+      ],
+      "boss": {
+        "name": "Neural Overlord K-9",
+        "health": 1200,
+        "damage": 250,
+        "weakness": "EMP grenade (acquired in Encounter 2)",
+        "victory_condition": "Destroy the exposed power core using the EMP grenade from Encounter 2"
+      },
+      "objective": "Infiltrate the neural core of a rogue AI facility and destroy its consciousness",
+      "reward": "Neural Interface Upgrade (allows hacking of advanced AI systems)"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "chaotic",
+      "player_class": "shadowblade",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Chaotic cyberpunk infiltration with high-stakes combat and environmental hazards",
+      "setting": "A crumbling megacity district with neon-lit skyscrapers, rain-slicked streets, and rogue AI-controlled infrastructure",
+      "player_weapon": "Plasma Katana (base damage 200, Overload Mode: 600)",
+      "player_weapon_damage": 200,
+      "player_health": 2000,
+      "encounters": [
+        {
+          "location": "Neon-lit maintenance corridor",
+          "enemy": {
+            "name": "Augmented Security Officer",
+            "health": 1200,
+            "damage": 400,
+            "weakness": "Plasma Katana Overload Mode (requires Power Cell)"
+          },
+          "hazard": "Flickering neon lights and collapsing ceiling debris",
+          "pickup": {
+            "name": "Neuro-Overload Cell",
+            "effect": "Power Cell (activates Plasma Katana Overload Mode)"
+          },
+          "trigger": "After obtaining Power Cell, a hidden door unlocks to progress to the next area"
+        },
+        {
+          "location": "Abandoned data vault",
+          "enemy": {
+            "name": "Drone Sentinel",
+            "health": 1000,
+            "damage": 300,
+            "weakness": "EMP Charge (requires Power Cell from first encounter)"
+          },
+          "hazard": "Malfunctioning automated turrets and toxic gas leaks",
+          "pickup": {
+            "name": "Cerebro-Disruptor",
+            "effect": "Neural Disruptor (disables cybernetic systems)"
+          },
+          "trigger": "Destroying Drone Sentinel with EMP Charge triggers a holographic security grid, revealing the boss's location"
+        },
+        {
+          "location": "Central reactor chamber",
+          "enemy": {
+            "name": "Cybernetic Overlord",
+            "health": 2500,
+            "damage": 700,
+            "weakness": "Neural Disruptor (acquired from second encounter)"
+          },
+          "hazard": "Collapsing reactor core and chaotic energy surges",
+          "pickup": {
+            "name": "Cognitive Overload Core",
+            "effect": "None (boss defeat only)"
+          },
+          "trigger": "Defeating the Overlord unlocks a data vault containing the final mission objective"
+        }
+      ],
+      "boss": {
+        "name": "Cybernetic Overlord",
+        "health": 3000,
+        "damage": 1000,
+        "weakness": "Neural Disruptor (acquired from second encounter)",
+        "victory_condition": "Destroy the neural core with the Neural Disruptor"
+      },
+      "objective": "Infiltrate the data vault and destroy the Cybernetic Overlord's neural core",
+      "reward": "Cognitive Overload Core (unlocks advanced cybernetic upgrades)"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "mysterious",
+      "player_class": "artificer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Mysterious, with hidden paths and cryptic data trails",
+      "setting": "Derelict data vault in a neon-lit cyberpunk city, filled with mist and flickering holograms",
+      "player_weapon": "Plasma Cutter",
+      "player_weapon_damage": 35,
+      "player_health": 200,
+      "encounters": [
+        {
+          "location": "Data Vault Entrance",
+          "enemy": {
+            "name": "Sentry Drone",
+            "health": 100,
+            "damage": 20,
+            "weakness": "Plasma Cutter (player's primary weapon)"
+          },
+          "hazard": "Flickering Lights",
+          "pickup": {
+            "name": "Data Virus Chip",
+            "effect": "Unlocks security system"
+          },
+          "trigger": "Defeat the drone to decrypt the security system"
+        },
+        {
+          "location": "Server Room",
+          "enemy": {
+            "name": "Cyborg Enforcer",
+            "health": 150,
+            "damage": 30,
+            "weakness": "EMP Device (from Encounter 1 pickup)"
+          },
+          "hazard": "Electrical Surge",
+          "pickup": {
+            "name": "EMP Device",
+            "effect": "Disables enemy armor"
+          },
+          "trigger": "Use EMP Device to proceed to the Core Chamber"
+        },
+        {
+          "location": "Core Chamber",
+          "enemy": {
+            "name": "The Veil's Architect",
+            "health": 250,
+            "damage": 40,
+            "weakness": "Data Virus Chip (from Encounter 1 pickup)"
+          },
+          "hazard": "Neural Overload",
+          "pickup": {
+            "name": "System Stabilizer",
+            "effect": "Restores system integrity"
+          },
+          "trigger": "Inject Data Virus Chip into the core to weaken the boss"
+        }
+      ],
+      "boss": {
+        "name": "The Veil's Architect",
+        "health": 300,
+        "damage": 50,
+        "weakness": "Data Virus (from Encounter 1)",
+        "victory_condition": "Destroy the core with a data virus"
+      },
+      "objective": "Recover the stolen AI core",
+      "reward": "System Stabilizer (restores 50 health)"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "ominous",
+      "player_class": "chronomancer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Ominous decay of time-tech, with environmental cues like distorted reflections, echoing whispers, and flickering between past/future states.",
+      "setting": "A cyberpunk dystopia where time-tech experiments have gone awry, creating a fractured zone of reality with neon-lit ruins and malfunctioning AI guardians.",
+      "player_weapon": "Time Disruptor (base damage: 150, can slow enemies and rewind attacks)",
+      "player_weapon_damage": 150,
+      "player_health": 1000,
+      "encounters": [
+        {
+          "location": "A derelict maintenance corridor lined with flickering holographic ads and pooling cybernetic waste.",
+          "enemy": {
+            "name": "Sentient Maintenance Drone",
+            "health": 300,
+            "damage": 60,
+            "weakness": "The drone's optical sensors are vulnerable to time distortion effects from the player's Time Disruptor weapon."
+          },
+          "hazard": "Flickering neon signs and corrupted data streams create an eerie atmosphere.",
+          "pickup": {
+            "name": "Time Crystal",
+            "effect": "Unlocks the Time Disruptor weapon's 'Temporal Slow' ability (slows enemy movement by 50% for 3 seconds)."
+          },
+          "trigger": "Destroying the drone causes a system overload, triggering a security lockdown that forces the player into the next encounter."
+        },
+        {
+          "location": "A collapsing server farm with glowing blue circuitry and floating data fragments.",
+          "enemy": {
+            "name": "Rogue AI (\"GHOST-9\")",
+            "health": 600,
+            "damage": 120,
+            "weakness": "The AI is weak to energy blasts amplified by the Time Crystal Pickup, which destabilizes its core code."
+          },
+          "hazard": "Surrounding servers emit pulsating electromagnetic fields that disrupt the player's chronomancy for 2 seconds on contact.",
+          "pickup": {
+            "name": "Energy Capacitor",
+            "effect": "Increases energy weapon damage by 30% and reduces cooldown for 10 seconds."
+          },
+          "trigger": "Defeating GHOST-9 releases a containment field that only the Temporal Core Pickup can neutralize, leading to the final boss fight."
+        },
+        {
+          "location": "A fractured time-temple with broken chronal conduits and a central corrupted temporal core.",
+          "enemy": {
+            "name": "The Chronophage",
+            "health": 1500,
+            "damage": 200,
+            "weakness": "The boss's core is vulnerable to temporal energy resonance when paired with the Temporal Core Pickup, causing a cascading collapse of its time-based defenses."
+          },
+          "hazard": "The chamber is filled with floating time-fragmentation orbs that deal 10 damage per second to the player.",
+          "pickup": {
+            "name": "Temporal Core",
+            "effect": "Activates the Time Disruptor's ultimate ability, 'Temporal Collapse,' which deals 500 damage to all enemies and freezes them for 5 seconds."
+          },
+          "trigger": "After obtaining the Temporal Core Pickup, the player must re-enter the chamber to confront the boss."
+        }
+      ],
+      "boss": {
+        "name": "The Chronophage",
+        "health": 1200,
+        "damage": 400,
+        "weakness": "The boss's core is vulnerable to temporal energy resonance when paired with the Temporal Core Pickup, causing a cascading collapse of its time-based defenses.",
+        "victory_condition": "Destroy the corrupted temporal core within the boss's chest using the Temporal Core Pickup combined with the Time Disruptor weapon."
+      },
+      "objective": "Navigate the corrupted time-temple, defeat three enemies, and destroy the Chronophage using pickups obtained from prior encounters.",
+      "reward": "Chronomancer's Temporal Gauntlet (permanent 10% damage boost to time-based abilities)"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "eerie",
+      "player_class": "alchemist",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "The player must combine their alchemical skills with strategic use of pickups to overcome increasingly powerful enemies, culminating in a boss fight that requires ingenuity and resourcefulness.",
+      "setting": "A decaying cyberpunk research facility filled with abandoned tech, flickering holograms, and the remnants of failed experiments. The eerie atmosphere is heightened by malfunctioning drones and the distant hum of unstable AI systems.",
+      "player_weapon": "Alchemical Syringe Gun (starting weapon: corrosive vials)",
+      "player_weapon_damage": 30,
+      "player_health": 300,
+      "encounters": [
+        {
+          "location": "Derelict Alchemical Research Lab",
+          "enemy": {
+            "name": "Corrupted Drone",
+            "health": 120,
+            "damage": 20,
+            "weakness": "Corrosive chemicals"
+          },
+          "hazard": "Malfunctioning security systems and flickering lights create an eerie atmosphere.",
+          "pickup": {
+            "name": "Nanoparticle Catalyst",
+            "effect": "Increases potency of alchemical weapons by 50%"
+          },
+          "trigger": "The drone attacks as the player enters the lab, having been reactivated by their presence."
+        },
+        {
+          "location": "Server Room",
+          "enemy": {
+            "name": "Cyborg Enforcer",
+            "health": 250,
+            "damage": 40,
+            "weakness": "Electromagnetic Pulse (EMP)"
+          },
+          "hazard": "Static electricity crackles in the air; malfunctioning holograms of lab personnel flicker with distorted messages.",
+          "pickup": {
+            "name": "Neurotoxin Core",
+            "effect": "Allows creation of EMP-based alchemical weapons"
+          },
+          "trigger": "The Enforcer blocks access to the server room's data node, which contains a map to the AI Core's location."
+        },
+        {
+          "location": "AI Core Chamber",
+          "enemy": {
+            "name": "The Corrupted AI Core",
+            "health": 800,
+            "damage": 60,
+            "weakness": "Alchemical Neurotoxin Vial (requires Neurotoxin Core + Nanoparticle Catalyst)"
+          },
+          "hazard": "The chamber pulses with unstable energy; ghostly holograms of past alchemists scream warnings.",
+          "pickup": {
+            "name": "Ethereal Alchemy Formula",
+            "effect": "Unlocks a new alchemical recipe for permanent weapon upgrades"
+          },
+          "trigger": "After accessing the data node, the AI Core awakens, sensing the player's intent to destroy it."
+        }
+      ],
+      "boss": {
+        "name": "The Corrupted AI Core",
+        "health": 500,
+        "damage": 100,
+        "weakness": "The AI's shield is vulnerable to the Alchemical Neurotoxin Vial, which requires both the Neurotoxin Core (from Encounter 2) and the Nanoparticle Catalyst (from Encounter 1).",
+        "victory_condition": "Use the Alchemical Neurotoxin Vial (crafted from Neurotoxin Core and Nanoparticle Catalyst) to break the AI's shield and deal damage."
+      },
+      "objective": "Destroy the Corrupted AI Core by crafting a specialized alchemical weapon using pickups obtained from prior encounters.",
+      "reward": "Ethereal Alchemy Formula (unlocks permanent weapon upgrades)."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "desolate",
+      "player_class": "rogue",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Cyberpunk",
+      "setting": "A desolate, rain-soaked megacorp building with flickering neon signs, overgrown with vines and littered with the remnants of a failed corporate experiment. The air is thick with static electricity and the hum of malfunctioning machines.",
+      "player_weapon": "Plasma cutter (high damage, low ammo)",
+      "player_weapon_damage": 100,
+      "player_health": 250,
+      "encounters": [
+        {
+          "location": "Abandoned Data Core Server Room",
+          "enemy": {
+            "name": "Sentinel-7",
+            "health": 600,
+            "damage": 120,
+            "weakness": "Plasma cutter (player's starting weapon)"
+          },
+          "hazard": "Collapsing server racks and electric shocks from exposed wiring",
+          "pickup": {
+            "name": "Neural Disruptor",
+            "effect": "Neural disruptor - temporarily disables AI systems"
+          },
+          "trigger": "Destroy Sentinel-7's core with plasma cutter to unlock the data core terminal, which requires the Neural Disruptor to hack"
+        },
+        {
+          "location": "Corrupted Security Hub",
+          "enemy": {
+            "name": "Cybernetic Enforcer",
+            "health": 800,
+            "damage": 150,
+            "weakness": "Neural disruptor (pickup from Encounter 1)"
+          },
+          "hazard": "Explosive drone turrets and toxic gas leaks",
+          "pickup": {
+            "name": "Corrosive Acid Canister",
+            "effect": "Corrosive acid canister - melts through reinforced metal"
+          },
+          "trigger": "Use Neural Disruptor to disable the Enforcer's neural link, then harvest the Corrosive Acid Canister to breach the final door leading to the boss"
+        }
+      ],
+      "boss": {
+        "name": "Necro-Synapse",
+        "health": 1200,
+        "damage": 300,
+        "weakness": "Corrosive acid canister (pickup from Encounter 2)",
+        "victory_condition": "Defeat the biomechanical entity by corroding its neural core with the corrosive acid canister"
+      },
+      "objective": "Infiltrate the derelict Nexus Corp megacorp building and destroy the rogue AI core",
+      "reward": "Nexus Corp AI Core (data chip containing a map to the next level)"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "whimsical",
+      "player_class": "stormcaller",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whimsical Cyberpunk",
+      "setting": "A whimsical cyberpunk city with talking neon signs, floating advertisements, and absurdly styled robots",
+      "player_weapon": "Tesla Coil Gun (electricity-based)",
+      "player_weapon_damage": 50,
+      "player_health": 200,
+      "encounters": [
+        {
+          "location": "Neon-lit alley",
+          "enemy": {
+            "name": "Cybernetic Golem",
+            "health": 120,
+            "damage": 30,
+            "weakness": "Electricity (player's weapon)"
+          },
+          "hazard": "Sparking neon signs",
+          "pickup": {
+            "name": "Neon Capacitor",
+            "effect": "Increases electricity damage by 20%"
+          },
+          "trigger": "Defeating the Golem unlocks a hidden path to the Data Core"
+        },
+        {
+          "location": "Data Core Room",
+          "enemy": {
+            "name": "Hacker Drone",
+            "health": 150,
+            "damage": 40,
+            "weakness": "Neon Capacitor (pickup from Encounter 1)"
+          },
+          "hazard": "Glitching holograms",
+          "pickup": {
+            "name": "Storm Core",
+            "effect": "Unlocks Storm Core ability"
+          },
+          "trigger": "Defeating the drone reveals the Teapot Overlord's location"
+        },
+        {
+          "location": "Central Tower",
+          "enemy": {
+            "name": "The Teapot Overlord",
+            "health": 400,
+            "damage": 120,
+            "weakness": "Storm Core (pickup from Encounter 2)"
+          },
+          "hazard": "Whimsical laser patterns",
+          "pickup": {
+            "name": "Stormcaller's Crest",
+            "effect": "Unlocks permanent storm aura"
+          },
+          "trigger": "Defeating the Teapot Overlord unlocks the next area"
+        }
+      ],
+      "boss": {
+        "name": "The Teapot Overlord",
+        "health": 300,
+        "damage": 100,
+        "weakness": "Storm Core (pickup from Encounter 2)",
+        "victory_condition": "Destroy the teapot's core with the Storm Core"
+      },
+      "objective": "Navigate through the neon-drenched city to dismantle the Teapot Overlord",
+      "reward": "Stormcaller's Crest"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "serene",
+      "player_class": "geomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Serene Cyberpunk",
+      "setting": "A hidden cyberpunk rooftop garden with bioluminescent flora, rain-slicked surfaces, and neon reflections. The serene environment contrasts with corrupted tech hazards.",
+      "player_weapon": "Seismic Gauntlet (unlocked at start)",
+      "player_weapon_damage": 50,
+      "player_health": 300,
+      "encounters": [
+        {
+          "location": "Neon Bloom Sanctuary - Rooftop Garden",
+          "enemy": {
+            "name": "Sentinel of the Garden",
+            "health": 250,
+            "damage": 40,
+            "weakness": "Seismic Pulses (player's geomancy ability)"
+          },
+          "hazard": "Corrupted Drone Guardian",
+          "pickup": {
+            "name": "Seismic Resonator",
+            "effect": "Unlocks seismic resonance for terrain manipulation"
+          },
+          "trigger": "Destroy the drone's crystalline core to open a hidden path to the subway"
+        },
+        {
+          "location": "Neon Bloom Sanctuary - Abandoned Subway",
+          "enemy": {
+            "name": "Roots of the Machine",
+            "health": 400,
+            "damage": 60,
+            "weakness": "Seismic Resonator (from prior encounter)"
+          },
+          "hazard": "Cybernetic Vine Monster",
+          "pickup": {
+            "name": "Bio-Sync Chip",
+            "effect": "Allows synchronization with organic tech systems"
+          },
+          "trigger": "Disrupt the vine creature's root network to access the central control hub"
+        }
+      ],
+      "boss": {
+        "name": "The Core of Corruption",
+        "health": 800,
+        "damage": 130,
+        "weakness": "Bio-Sync Chip (obtained from Roots of the Machine encounter)",
+        "victory_condition": "Defeat the Core by overloading its energy matrix with the Bio-Sync Chip"
+      },
+      "objective": "Retrieve the data core from the central control hub while navigating the corrupted sanctum",
+      "reward": "Neural Sync Module (enhances geomancy abilities)"
+    }
+  }
+]

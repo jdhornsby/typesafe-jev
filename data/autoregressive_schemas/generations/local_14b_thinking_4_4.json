@@ -1,0 +1,540 @@
+[
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "tense",
+      "player_class": "engineer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "A rain-soaked, neon-lit derelict tech facility with flickering terminals and malfunctioning machinery. Tense atmosphere amplified by distant gunfire and collapsing structures.",
+      "setting": "Cyberpunk dystopia, with themes of corporate espionage and rogue AI.",
+      "player_weapon": "Plasma Cutter (primary), EMP Battery (tool, obtained in Encounter 1)",
+      "player_weapon_damage": 50,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "The Data Vault",
+          "enemy": {
+            "name": "Sentinel Drone",
+            "health": 80,
+            "damage": 30,
+            "weakness": "EMP burst (player's EMP Battery, acquired in this encounter)"
+          },
+          "hazard": "Flickering lights and collapsing ceiling panels.",
+          "pickup": {
+            "name": "EMP Battery",
+            "effect": "Disables electronic enemies for 10 seconds"
+          },
+          "trigger": "Defeating the drone triggers a security lockdown, summoning the next encounter."
+        },
+        {
+          "location": "The Cyborg Enforcer",
+          "enemy": {
+            "name": "Cyborg Enforcer",
+            "health": 150,
+            "damage": 45,
+            "weakness": "EMP disruption (requires EMP Battery from Encounter 1)"
+          },
+          "hazard": "Electrified floor panels that deal 20 damage per second if stepped on.",
+          "pickup": {
+            "name": "Data Chip",
+            "effect": "Provides a security code to bypass the final boss's shield"
+          },
+          "trigger": "Destroying the enforcer's armor reveals the data chip and unlocks the path to the boss."
+        },
+        {
+          "location": "The AI Core",
+          "enemy": {
+            "name": "AI Core",
+            "health": 300,
+            "damage": 60,
+            "weakness": "Virus injection (requires Data Chip from Encounter 2 to hack the shield)"
+          },
+          "hazard": "Explosive data streams that deal 50 damage on contact.",
+          "pickup": {
+            "name": "Stable Data Core",
+            "effect": "Mission success, grants 1000 XP and a permanent weapon upgrade"
+          },
+          "trigger": "Using the data chip to bypass the shield starts the boss fight. The AI Core's shield must be hacked for 10 seconds to expose its core."
+        }
+      ],
+      "boss": {
+        "name": "AI Core",
+        "health": 300,
+        "damage": 60,
+        "weakness": "Exposed core (only vulnerable after using the Data Chip to bypass the shield)",
+        "victory_condition": "Hack the shield with the Data Chip, then destroy the core with the Plasma Cutter while managing a 10-second virus window."
+      },
+      "objective": "Retrieve a stolen data core from a derelict tech facility while navigating three escalating threats.",
+      "reward": "Stable Data Core"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "chaotic",
+      "player_class": "shadowblade",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Chaotic cyberpunk environment with flickering neon, rain, and collapsing structures. Enemies use holographic decoys and EMP-resistant armor.",
+      "setting": "Abandoned skyscraper with unstable AI systems, flickering holograms, and malfunctioning drones.",
+      "player_weapon": "Plasma Katana (energy blade with EMP surge capability)",
+      "player_weapon_damage": 200,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Ground Floor - Collapsed Entrance",
+          "enemy": {
+            "name": "Iron Warden",
+            "health": 300,
+            "damage": 120,
+            "weakness": "Plasma Katana energy blade (ignores shield)"
+          },
+          "hazard": "Falling debris (50% chance to damage player)",
+          "pickup": {
+            "name": "Neural Disruptor (EMP device)",
+            "effect": "Single-target EMP (300 damage, stuns for 5 seconds)"
+          },
+          "trigger": "Disarm the Warden's shield to unlock a collapsing elevator to the Data Vault."
+        },
+        {
+          "location": "Data Vault - Corrupted Server Room",
+          "enemy": {
+            "name": "Hacker Drone",
+            "health": 220,
+            "damage": 90,
+            "weakness": "Neural Disruptor EMP (overloads its power core)"
+          },
+          "hazard": "Data surge (randomly spawns 2-4 fireballs across the room)",
+          "pickup": {
+            "name": "Corrupted Chip (AI core)",
+            "effect": "Inserts into terminals to disable defenses or damage enemies"
+          },
+          "trigger": "Use the Corrupted Chip to override the vault's security, triggering System Prime's lockdown protocol."
+        },
+        {
+          "location": "Upper Levels - AI Core Chamber (partial collapse)",
+          "enemy": {
+            "name": "System Prime's Guard (Cyborg Enforcer)",
+            "health": 400,
+            "damage": 150,
+            "weakness": "Corrupted Chip (inserted into its power port to cause a short)"
+          },
+          "hazard": "Ceiling collapse (reduces room size by 30% every 15 seconds)",
+          "pickup": {
+            "name": "AI Core Access Key",
+            "effect": "Grants entry to System Prime's core chamber"
+          },
+          "trigger": "Destroy the Guard to unlock the final chamber, where System Prime activates."
+        }
+      ],
+      "boss": {
+        "name": "System Prime",
+        "health": 1200,
+        "damage": 250,
+        "weakness": "Corrupted Chip (required from second encounter)",
+        "victory_condition": "Insert Corrupted Chip into the core to overload it (2000 damage)"
+      },
+      "objective": "Infiltrate the collapsing Neon Abyss skyscraper to extract data from System Prime, the rogue AI.",
+      "reward": "Data Chip (unlocks new cybernetic augment for player)"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "mysterious",
+      "player_class": "artificer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "A decaying cyberpunk district with neon-lit fog, flickering holograms, and cryptic graffiti warning of 'The Core's wrath.' Each encounter's environment subtly hints at Nexus's corruption through distorted digital artifacts and malfunctioning tech.",
+      "setting": "Neon Dusk District - A once-thriving cyberpunk hub now overrun by rogue AI and criminal syndicates, where the line between human and machine is blurred.",
+      "player_weapon": "Plasma Cutter (primary) and Neural Interface Tool (secondary)",
+      "player_weapon_damage": 30,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Derelict Server Room",
+          "enemy": {
+            "name": "Corrupted Sentinel Drone",
+            "health": 60,
+            "damage": 20,
+            "weakness": "Player's Plasma Cutter"
+          },
+          "hazard": "Flickering power surges destabilize the room, creating temporary blind spots.",
+          "pickup": {
+            "name": "EMP Core",
+            "effect": "Disables electronic enemies for 5 seconds"
+          },
+          "trigger": "Activating a terminal in the server room awakens the drone."
+        },
+        {
+          "location": "Maintenance Tunnel",
+          "enemy": {
+            "name": "Cyborg Mercenary 'Ghost'",
+            "health": 80,
+            "damage": 25,
+            "weakness": "EMP Core (pickup from prior encounter)"
+          },
+          "hazard": "Collapsing ceiling panels block paths, forcing the player to navigate narrow gaps.",
+          "pickup": {
+            "name": "Neural Interface Chip",
+            "effect": "Hacks security systems to unlock doors or disable turrets"
+          },
+          "trigger": "Ghost detects the player's EMP Core signature and ambushes them in the tunnel."
+        },
+        {
+          "location": "Main Data Vault",
+          "enemy": {
+            "name": "Corrupted AI 'Nexus'",
+            "health": 150,
+            "damage": 35,
+            "weakness": "Neural Interface Chip (pickup from prior encounter)"
+          },
+          "hazard": "Nexus projects holographic traps that mimic the player's movements to lure them into traps.",
+          "pickup": {
+            "name": "AI Core",
+            "effect": "Unlocks new crafting blueprints for the player's artificer tools"
+          },
+          "trigger": "The Neural Interface Chip bypasses security, granting access to Nexus's core chamber."
+        }
+      ],
+      "boss": {
+        "name": "Nexus",
+        "health": 150,
+        "damage": 35,
+        "weakness": "Neural Interface Chip",
+        "victory_condition": "Use the Neural Interface Chip to interface with Nexus's core, then overload it with the EMP Core while attacking with the Plasma Cutter."
+      },
+      "objective": "Retrieve the AI core from the data vault while navigating through corrupted systems and hostile entities.",
+      "reward": "AI Core (unlocks advanced tech crafting recipes) and a data chip containing a cryptic message hinting at a larger conspiracy in Neon Dusk."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "ominous",
+      "player_class": "chronomancer",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Ominous cyberpunk atmosphere with decaying tech, flickering holograms, and distorted audio loops.",
+      "setting": "Abandoned megacorp facility with flickering neon, overgrown with digital vines and corrupted AI drones.",
+      "player_weapon": "Plasma Blade (primary weapon with time-slowing properties when charged)",
+      "player_weapon_damage": 50,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Sector 7 - Corrupted Security Hub",
+          "enemy": {
+            "name": "Cyber-Soldier (Reaper Unit)",
+            "health": 80,
+            "damage": 30,
+            "weakness": "Plasma Blade (charged attack disrupts its temporal shielding)"
+          },
+          "hazard": "Flickering neon signs cast distorted shadows; AI drones patrol in loops.",
+          "pickup": {
+            "name": "Chrono-Data Chip",
+            "effect": "Unlocks a time distortion field (can be used once, lasts 10 seconds)"
+          },
+          "trigger": "After defeating the Cyber-Soldier, the floor collapses, revealing a hidden path to the next sector."
+        },
+        {
+          "location": "Sector 12 - Fractured Server Room",
+          "enemy": {
+            "name": "Mutant Hacker (Glitch-Savant)",
+            "health": 90,
+            "damage": 25,
+            "weakness": "Time distortion field (disrupts its ability to phase through walls)"
+          },
+          "hazard": "Crackling energy cables and unstable holographic interfaces.",
+          "pickup": {
+            "name": "Neural Disruptor",
+            "effect": "Short-circuits cybernetic enemies for 5 seconds"
+          },
+          "trigger": "Defeating the Mutant Hacker triggers a security lockdown, forcing the player into the final sector."
+        }
+      ],
+      "boss": {
+        "name": "Chrono-Abomination (Eclipse's Fallen Architect)",
+        "health": 200,
+        "damage": 40,
+        "weakness": "Neural Disruptor (disables its time-loop regeneration ability for 15 seconds)",
+        "victory_condition": "Defeat the boss by exploiting its unstable time loops."
+      },
+      "objective": "Infiltrate the derelict megacorp facility 'Eclipse Industries' to retrieve a stolen chrono-core, while evading corrupted AI and rogue cybernetic entities.",
+      "reward": "Stabilized Chrono-Core (grants permanent +20% time-manipulation ability duration)"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "eerie",
+      "player_class": "alchemist",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Eerie atmosphere with flickering holograms, ghostly echoes of lab technicians, and pools of liquid light that react to movement. The level's decay mirrors the player's struggle to control unstable alchemical forces.",
+      "setting": "Abandoned research facility with exposed wiring, rusted machinery, and walls covered in bioluminescent algae. The air is thick with the smell of burnt circuitry and ozone.",
+      "player_weapon": "Chemical Injector (can fire vials of corrosive acid, neurotoxins, or thermal catalysts)",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Corridor of Flickering Lights",
+          "enemy": {
+            "name": "Mutant Sentinel",
+            "health": 80,
+            "damage": 25,
+            "weakness": "Corrosive Acid (player's starting vial)"
+          },
+          "hazard": "Flickering lights cause temporary blindness if the player hesitates.",
+          "pickup": {
+            "name": "Neurotoxin Vial",
+            "effect": "Applies a debuff reducing enemy movement speed by 50% for 5 seconds."
+          },
+          "trigger": "Defeating the Mutant Sentinel unlocks a hidden lab door sealed by a neural lock."
+        },
+        {
+          "location": "Malfunctioning Alchemy Lab",
+          "enemy": {
+            "name": "Synthetic Alchemist",
+            "health": 100,
+            "damage": 30,
+            "weakness": "Neurotoxin Vial (pickup from prior encounter)"
+          },
+          "hazard": "Pulsing energy fields that randomly teleport the player 5 meters in a random direction.",
+          "pickup": {
+            "name": "Thermal Catalyst",
+            "effect": "Causes explosive damage to enemies with a 20% chance to ignite them."
+          },
+          "trigger": "Destroying the Synthetic Alchemist's containment unit triggers a security lockdown, revealing a hidden passage to the boss chamber."
+        },
+        {
+          "location": "Sealed Reactor Core",
+          "enemy": {
+            "name": "Omega Synth",
+            "health": 200,
+            "damage": 40,
+            "weakness": "Thermal Catalyst (pickup from prior encounter)"
+          },
+          "hazard": "The reactor core emits a radiation field that drains 5% of the player's health per second.",
+          "pickup": {
+            "name": "Proto-Reactant Core",
+            "effect": "Permanent upgrade to the Chemical Injector, increasing damage by 25% and allowing combo attacks."
+          },
+          "trigger": "Defeating the Omega Synth requires using the Thermal Catalyst to overload its reactor, causing a chain reaction that destroys the lab."
+        }
+      ],
+      "boss": {
+        "name": "Omega Synth",
+        "health": 200,
+        "damage": 40,
+        "weakness": "Thermal Catalyst (from Encounter 2)",
+        "victory_condition": "Use the Thermal Catalyst to ignite the boss's core, then follow up with a combo attack using the upgraded Chemical Injector."
+      },
+      "objective": "Infiltrate the abandoned 'Nexus Lab' to retrieve a prototype alchemical reactor, navigating through eerie, decaying corridors filled with rogue AI and mutated experiments.",
+      "reward": "Proto-Reactant Core (permanent weapon upgrade) and access to the Nexus Lab's data vault (unlocking new alchemical recipes)."
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "desolate",
+      "player_class": "rogue",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Desolate Cyberpunk",
+      "setting": "A crumbling megacity with overgrown neon, rusted hovercraft wreckage, and flickering holographic ads advertising 'data purity.' The air smells of burnt circuitry and rain.",
+      "player_weapon": "Plasma Blade (found in first encounter area)",
+      "player_weapon_damage": 75,
+      "player_health": 120,
+      "encounters": [
+        {
+          "location": "Abandoned Tech Facility (Zone 1)",
+          "enemy": {
+            "name": "Rusted Android",
+            "health": 180,
+            "damage": 50,
+            "weakness": "Plasma Blade (player's weapon)"
+          },
+          "hazard": "Collapsing ceiling tiles",
+          "pickup": {
+            "name": "Neurotoxin Injection (Type-Ω)",
+            "effect": "Applies 100 damage over 3 seconds to cybernetic enemies"
+          },
+          "trigger": "Triggering a proximity sensor by looting a terminal"
+        },
+        {
+          "location": "Data Core Chamber (Zone 2)",
+          "enemy": {
+            "name": "Cybernetic Hyena",
+            "health": 220,
+            "damage": 60,
+            "weakness": "Neurotoxin Injection (from prior pickup)"
+          },
+          "hazard": "Flickering electrified floor panels",
+          "pickup": {
+            "name": "Overmind Core Override Chip",
+            "effect": "Disables boss's energy shields for 10 seconds"
+          },
+          "trigger": "Accessing a terminal guarded by the Hyena after obtaining the Neurotoxin"
+        },
+        {
+          "location": "NEON-9 Core (Zone 3)",
+          "enemy": {
+            "name": "Cybernetic Overmind",
+            "health": 500,
+            "damage": 100,
+            "weakness": "Overmind Core Override Chip (from prior pickup)"
+          },
+          "hazard": "Collapsing data core pillars, toxic gas leaks",
+          "pickup": {
+            "name": "AI Blueprints (objective complete)",
+            "effect": "Unlocks new cybernetic augmentations"
+          },
+          "trigger": "Inserting the Override Chip into the Core's control panel"
+        }
+      ],
+      "boss": {
+        "name": "Cybernetic Overmind",
+        "health": 500,
+        "damage": 100,
+        "weakness": "Overmind Core Override Chip (from Zone 2 pickup)",
+        "victory_condition": "Defeat the Overmind while its energy shields are disabled by the Override Chip"
+      },
+      "objective": "Steal classified AI blueprints from the derelict NEON-9 Data Core, navigating through hostile territory and bypassing a rogue AI's defenses.",
+      "reward": "AI Blueprints, 1500 XP, 3 random cyberware upgrades"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "whimsical",
+      "player_class": "stormcaller",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whimsical cyberpunk with talking holograms, dancing neon lights, and enemies that laugh maniacally before attacking",
+      "setting": "Skyway District: A floating city where gravity is optional and street vendors sell 'clouds in a bottle'",
+      "player_weapon": "Arcane Whiplash Gauntlet (electricity-based attacks with a playful 'zap' sound effect)",
+      "player_weapon_damage": 25,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Neon Bazaar (floating market with holographic fruit and sentient vending machines)",
+          "enemy": {
+            "name": "Glitch Drone 'Bloop'",
+            "health": 40,
+            "damage": 15,
+            "weakness": "EMP pulse (triggered by player's Arcane Whiplash Gauntlet)"
+          },
+          "hazard": "Bloop's malfunctioning hoverboard creates unpredictable electric arcs across the floor",
+          "pickup": {
+            "name": "Zap Core (boosts Arcane Whiplash Gauntlet's damage by 20%)",
+            "effect": "+50% electricity damage"
+          },
+          "trigger": "After defeating Bloop, a giggling AI voice directs you to the 'Whimsy Lens' hidden in the next district"
+        },
+        {
+          "location": "Mirror District (reflections of the player warp into silly animal shapes when attacked)",
+          "enemy": {
+            "name": "Reflector Bot 'Mimic'",
+            "health": 50,
+            "damage": 18,
+            "weakness": "Zap Core (pierces its energy shield)"
+          },
+          "hazard": "Mimic duplicates itself into 3 clones that morph into cartoonish creatures (giant rabbit, sentient toaster, etc.)",
+          "pickup": {
+            "name": "Whimsy Lens (reveals hidden paths and enemy weaknesses)",
+            "effect": "Unlocks visual cues for boss fight"
+          },
+          "trigger": "After defeating Mimic, the Whimsy Lens glows, revealing a glowing portal to Zephyra's lair"
+        }
+      ],
+      "boss": {
+        "name": "Zephyra the Chaotic Storm",
+        "health": 150,
+        "damage": 30,
+        "weakness": "Whimsy Lens (required to target her core)",
+        "victory_condition": "Destroy Zephyra's energy core using the Whimsy Lens to bypass her shields"
+      },
+      "objective": "Navigate the neon-drenched Skyway District to retrieve the 'Quantum Storm Core' from the rogue AI, Zephyra. Along the way, unlock whimsical power-ups and outwit eccentric enemies.",
+      "reward": "Quantum Storm Core (permanent upgrade: Arcane Whiplash Gauntlet now summons small rainbow-colored lightning storms)"
+    }
+  },
+  {
+    "case": {
+      "genre": "cyberpunk",
+      "mood": "serene",
+      "player_class": "geomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Serene cyberpunk contrasts: calm bioluminescent gardens vs. corrupted corporate tech, with ambient synthwave music and soft neon lighting.",
+      "setting": "Hidden oasis in the middle of a sprawling megacity, where nature and technology coexist in fragile balance.",
+      "player_weapon": "Seismic Disruptor (unlocks terrain manipulation abilities)",
+      "player_weapon_damage": 80,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Neon Bloom Garden (calm, bioluminescent flora surrounded by holographic waterfalls)",
+          "enemy": {
+            "name": "Drone Sentinel",
+            "health": 60,
+            "damage": 30,
+            "weakness": "Seismic Disruptor (shatters its reinforced exoskeleton)"
+          },
+          "hazard": "Glitching holograms distract the player, forcing them to stabilize the ground to avoid falling into a data pit.",
+          "pickup": {
+            "name": "Geo-Resonance Crystal",
+            "effect": "Boosts seismic disruptor power by 50% for 10 seconds"
+          },
+          "trigger": "After defeating the drone, the crystal activates a hidden path through the garden's root system."
+        },
+        {
+          "location": "Root Nexus (a maze of glowing vines with pulsating energy nodes)",
+          "enemy": {
+            "name": "Vine Construct",
+            "health": 90,
+            "damage": 40,
+            "weakness": "Geo-Resonance Crystal (overloads its organic circuitry)"
+          },
+          "hazard": "Vines entangle the player, reducing movement speed. The player must destabilize the terrain to break free.",
+          "pickup": {
+            "name": "Purified Water Core",
+            "effect": "Restores 50% player health and temporarily disables enemy hazards"
+          },
+          "trigger": "Destroying the vine construct reveals a corrupted AI core embedded in the garden's center, leading to the final encounter."
+        },
+        {
+          "location": "Central Plaza (a serene, abandoned cyberpunk square with a dormant guardian statue)",
+          "enemy": {
+            "name": "Guardian Aegis",
+            "health": 180,
+            "damage": 60,
+            "weakness": "Geo-Resonance Crystal (causes structural collapse of its cybernetic frame)"
+          },
+          "hazard": "The guardian summons drone reinforcements when its health drops below 50%.",
+          "pickup": {
+            "name": "System Restore Chip",
+            "effect": "Permanently unlocks the garden's defense system, granting access to future areas"
+          },
+          "trigger": "Defeating the guardian restores the garden's tranquility, with the System Restore Chip embedded in the plaza's control panel."
+        }
+      ],
+      "boss": {
+        "name": "Guardian Aegis",
+        "health": 180,
+        "damage": 60,
+        "weakness": "Geo-Resonance Crystal (directly references the prior pickup)",
+        "victory_condition": "Use Geo-Resonance Crystal to trigger a seismic collapse, shattering the guardian's core."
+      },
+      "objective": "Navigate a hidden cyberpunk garden to dismantle a corporate AI's defense system, restoring balance to the area.",
+      "reward": "Access to the city's underground data vault (unlocks story progression)."
+    }
+  }
+]

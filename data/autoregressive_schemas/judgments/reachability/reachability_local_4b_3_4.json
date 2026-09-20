@@ -1,0 +1,74 @@
+[
+  {
+    "case_id": "cyberpunk_tense_engineer_hard",
+    "encounters": [
+      { "index": 0, "weakness": "Player's Plasma Disruptor (EMP Burst) - when fired directly at the drone, it triggers a system-wide EMP pulse that disables targeting sensors and causes temporary AI freeze (2 seconds). This is the player's primary weapon at start, used to disable drones' targeting.", "inventory": ["Plasma Disruptor (EMP Burst)"], "satisfied": true },
+      { "index": 1, "weakness": "The Circuit Patch - when the player uses it as a data conduit during an attack, the bot's AI is temporarily overloaded and freezes for 4 seconds. This only works if the patch is held in place during the attack and the bot is within 3 meters.", "inventory": ["Plasma Disruptor (EMP Burst)", "Circuit Patch"], "satisfied": true },
+      { "index": 2, "weakness": "The Data Core Fragment - must be used during a phase when the AI is in 'stasis mode' (after it emits a pulsing red frequency). If the fragment is inserted and activated during this window, the AI's core frequency collapses for 8 seconds, making it vulnerable to damage. This window occurs only once per fight, after 30 seconds of combat.", "inventory": ["Plasma Disruptor (EMP Burst)", "Circuit Patch", "Data Core Fragment"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "cyberpunk_chaotic_shadowblade_brutal",
+    "encounters": [
+      { "index": 0, "weakness": "Plasma shard (from earlier pickup)", "inventory": ["Shadowblade (Phase-Cutting Blade)"], "satisfied": false },
+      { "index": 1, "weakness": "Sonic pulse (from previous encounter) - only effective when the player is within 2 meters of the enemy and has active sonic pulse active", "inventory": ["Shadowblade (Phase-Cutting Blade)", "Plasma Shard (charged)"], "satisfied": false },
+      { "index": 2, "weakness": "Plasma Shard (charged) — must be used during the final 20% of health to trigger a catastrophic energy feedback loop that deals 120% damage over 1.5 seconds, and reduces boss health by 50% instantly.", "inventory": ["Shadowblade (Phase-Cutting Blade)", "Plasma Shard (charged)", "Sonic Pulse (activated via proximity)"], "satisfied": true }
+    ],
+    "n_satisfied": 1
+  },
+  {
+    "case_id": "cyberpunk_mysterious_artificer_medium",
+    "encounters": [
+      { "index": 0, "weakness": "Pulse Mod - The player's starter taser weapon emits a 3.7GHz frequency that disrupts K-7's neural sync. This frequency is a remnant of an abandoned lab prototype the player discovered in the city's underbelly. It's only active when the taser is in 'pulse mode' (activated via left-click).", "inventory": ["Pulse Taser Mod (Starter Weapon)"], "satisfied": true },
+      { "index": 1, "weakness": "Flicker Data Shard - The swarm's central AI is corrupted by a frequency mismatch. When the player activates the shard (via a side interface panel), it emits a false signal that causes drones to disengage and reboot. This requires the shard to be physically held and used in a 'signal burst' mode.", "inventory": ["Pulse Taser Mod (Starter Weapon)", "Flicker Data Shard"], "satisfied": true },
+      { "index": 2, "weakness": "Circuit Key - The Hollow is a sentient network built from the city's emotional data. It cannot be damaged by conventional attacks. However, if the player inserts the Circuit Key into its central core (a floating data crystal), it emits a stabilizing signal that stops the Hollow's self-replication cycle and reduces its health by 50%. This only works once per fight and requires the key to be physically present in the player's interface at the moment of insertion. If the key is not used, the Hollow will evolve and become immune to all attacks.", "inventory": ["Pulse Taser Mod (Starter Weapon)", "Flicker Data Shard", "Circuit Key"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "cyberpunk_ominous_chronomancer_easy",
+    "encounters": [
+      { "index": 0, "weakness": "Chronomancer's weapon — 'Temporal Pulse' can slow time around Vox-7 by 30% when within 2 meters. The Pulse fires a slow-motion burst that makes Vox-7 move at 1/3 speed for 3 seconds, allowing precise shots.", "inventory": ["Temporal Pulse"], "satisfied": true },
+      { "index": 1, "weakness": "Nex-09 is immune to direct attacks. It only takes damage when the player uses a *rewind* during the fight. If the player rewinds time and uses 'Temporal Pulse' within 1 second of the rewind, it causes a 4-second time freeze on Nex-09, halting all movement and damage.", "inventory": ["Temporal Pulse", "Resonance Shard"], "satisfied": true },
+      { "index": 2, "weakness": "The boss is immune to all attacks except when the player uses the **Resonance Shard** to trigger a **Temporal Resonance Pulse**. This requires the player to *hold the Resonance Shard in hand* and use the **Temporal Pulse** within 1 second of a rewind. This creates a 6-second time-stasis field that freezes the boss and deals 30% extra damage. This ability *only works if the player used the Resonance Shard during a prior encounter.*", "inventory": ["Temporal Pulse", "Resonance Shard", "Chrono-Resonance Core (Fragments)"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "cyberpunk_eerie_alchemist_hard",
+    "encounters": [
+      { "index": 0, "weakness": "Pulse Vial (Player Weapon) - Disrupts its audio feed, causing temporary silence and disorientation. Must be used before attack phase to disable its mimicry abilities. The Echo-Scourge emits distorted whispers; the pulse disrupts the feedback loop, breaking its ability to copy player movements or voices.", "inventory": ["Pulse Vial"], "satisfied": true },
+      { "index": 1, "weakness": "Silt Vial (Pickup from previous encounter) - When combined with Pulse Vial, creates a 'Phase Lock' that stops the enemy's movement for 3 seconds. The Bio-Scourge is semi-organic and moves through water; movement freeze halts its spread and absorption. Must be timed during the 'spread phase' when it extends tendrils to drain power nodes.", "inventory": ["Pulse Vial", "Silt Vial"], "satisfied": true },
+      { "index": 2, "weakness": "Static Shard (Pickup from Encounter 2) - When activated during the boss's 'Circuit Surge' phase (a 10-second pulse of red light), it triggers a full system purge. This disables the sentinel's core AI, freezing all movement and attacking capabilities for 8 seconds. Must be used exactly when the red pulse appears and the AI is vulnerable. Failure results in immediate damage or death if not timed correctly.", "inventory": ["Pulse Vial", "Silt Vial", "Static Shard"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "cyberpunk_desolate_rogue_brutal",
+    "encounters": [
+      { "index": 0, "weakness": "Neon-Spark Dagger EMP pulse (used in close combat)", "inventory": ["Neon-Spark Dagger"], "satisfied": true },
+      { "index": 1, "weakness": "Scrap Pulse Core (SCP-1) used within 2 seconds of movement", "inventory": ["Neon-Spark Dagger", "Scrap Pulse Core (SCP-1)"], "satisfied": true },
+      { "index": 2, "weakness": "Use SCP-1 within 1.5 seconds of a memory clone (holographic enemy) appearing", "inventory": ["Neon-Spark Dagger", "Scrap Pulse Core (SCP-1)", "Scrap Pulse Core (SCP-1)"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "cyberpunk_whimsical_stormcaller_easy",
+    "encounters": [
+      { "index": 0, "weakness": "The Stormspike's lightning surge (player weapon) causes short-circuit sparks that disable its blinking circuits. When the Stormspike hits, Blink-Boo freezes in a jerky, comical stutter.", "inventory": ["Stormspike"], "satisfied": true },
+      { "index": 1, "weakness": "The Fog-Flower's mist disrupts Fog-Face's weather display. When fog is active, the vendor's holographic rain curtain glitches, causing it to blink out of sync and stagger.", "inventory": ["Stormspike", "Fog-Flower"], "satisfied": true },
+      { "index": 2, "weakness": "The Raindrop Compass reveals its true wind pattern. When the compass shows a steady wind, the AI's voice glitches and its storm patterns become chaotic and unpredictable.", "inventory": ["Stormspike", "Fog-Flower", "Raindrop Compass"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "cyberpunk_serene_geomancer_medium",
+    "encounters": [
+      { "index": 0, "weakness": "Gravity Pulse (from Core Resonator weapon)", "inventory": ["Core Resonator"], "satisfied": true },
+      { "index": 1, "weakness": "Sound Waves (activated via Harmonic Resonator pickup)", "inventory": ["Core Resonator", "Harmonic Resonator"], "satisfied": true },
+      { "index": 2, "weakness": "Resonant Tectonic Core (must be used once during fight to disable the entity)", "inventory": ["Core Resonator", "Harmonic Resonator", "Resonant Tectonic Core"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  }
+]

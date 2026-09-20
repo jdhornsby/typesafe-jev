@@ -1,0 +1,144 @@
+[
+  {
+    "case_id": "fantasy_ominous_pyromancer_medium",
+    "encounters": [
+      { "index": 0, "weakness": "Player's primary weapon, the 'Fang of Ember', which deals extra fire damage to Wraiths. The weapon's unique flame aura causes the Wraith to burn faster and take 1.5x fire damage.", "inventory": ["Fang of Ember"], "satisfied": true },
+      { "index": 1, "weakness": "The Ember Shard. When the player holds it, the Stalker's fire resistance drops by 40%, and it takes 1.8x fire damage. This is only active when the Ember Shard is in the player's inventory or equipped as a secondary weapon.", "inventory": ["Fang of Ember", "Ember Shard"], "satisfied": true },
+      { "index": 2, "weakness": "Ember Shard (must be equipped by the player at the time of battle). If not equipped, it takes double damage from fire resistance and attacks with flame-laced claws and a fire-spewing maw. The player can only survive with the Ember Shard active to break its core defense.", "inventory": ["Fang of Ember", "Ember Shard", "Flame Cinders"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "fantasy_whimsical_beastmaster_easy",
+    "encounters": [
+      { "index": 0, "weakness": "Crystal Shard (player's weapon) — the snail's sugar shell shatters upon impact with the shard, causing it to melt and collapse", "inventory": ["Crystal Shard"], "satisfied": true },
+      { "index": 1, "weakness": "Glimmering Sparkle Seed (pickup from Encounter 1) — if the player holds the seed and attacks, the fox freezes and turns into a harmless dancing sprite", "inventory": ["Crystal Shard", "Glimmering Sparkle Seed"], "satisfied": true },
+      { "index": 2, "weakness": "Whistle of Whimsy (pickup from Encounter 2) — when used directly on the boss, it causes a wave of playful sound that weakens the Gloop Glitch by 50% and triggers a rainbow burst of glitter", "inventory": ["Crystal Shard", "Glimmering Sparkle Seed", "Whistle of Whimsy"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "fantasy_tense_paladin_hard",
+    "encounters": [
+      { "index": 0, "weakness": "Holy Light (paladin weapon skill: Light Surge or Holy Aura)", "inventory": ["Divine Smite Lance"], "satisfied": false },
+      { "index": 1, "weakness": "Divine Smite Shard (acquired from Encounter 1)", "inventory": ["Divine Smite Lance", "Holy Light Shard"], "satisfied": false },
+      { "index": 2, "weakness": "Holy Light (player's weapon or holy aura active; overrides all other weaknesses if active)", "inventory": ["Divine Smite Lance", "Holy Light Shard", "Divine Smite Shard"], "satisfied": true }
+    ],
+    "n_satisfied": 1
+  },
+  {
+    "case_id": "fantasy_mysterious_illusionist_brutal",
+    "encounters": [
+      { "index": 0, "weakness": "Prism Shard (the player's weapon). When the player uses a spell that activates the Prism Shard (e.g., 'Shatter Reflection' or 'Prism Cascade'), the enemy takes 40% damage and is forced into a state of flickering, revealing a hidden path behind it. If the Prism Shard is not used, the enemy reflects the illusion back to the player with 50% damage and gains a passive ability to absorb 20% of the player's next illusion spell damage as health.", "inventory": ["Prism Shard"], "satisfied": true },
+      { "index": 1, "weakness": "Shattered Reflection Fragment. When the player uses the fragment as a spell component (e.g., 'Mimic the Reflection' or 'Shatter the Illusion'), the Shadow Weaver takes 50% damage and for 10 seconds, it becomes physically still and vulnerable. However, if the fragment is not used, the enemy will replicate the player's last illusion spell as a real attack with 100% accuracy and 20% increased damage. It also gains the ability to 'phantom phase' — briefly becoming invisible and reappearing behind the player in a new location, disrupting positioning and spell timing.", "inventory": ["Prism Shard", "Shattered Reflection Fragment"], "satisfied": true },
+      { "index": 2, "weakness": "Shattered Reflection Fragment (must be used in combat during the final phase). The fragment must be held in the player's hand when the entity's core is exposed (after 40 seconds of attack phase). If the fragment is not used, the entity enters 'Infinite Reflection' mode: it spawns 3 copies of itself, each with 100% health, and each can reflect the player's illusions back with 150% damage. The player is also unable to cast illusions for 60 seconds. The entity's attacks become adaptive — it learns the player's spell pattern and duplicates it with a 20% damage boost each time. If the player fails to use the fragment, the fight becomes infinite in loop until the player is defeated or the entity consumes the player's magic source (which is tied to the Prism Shard).", "inventory": ["Prism Shard", "Shattered Reflection Fragment", "Void Echo Shard"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "fantasy_serene_warden_easy",
+    "encounters": [
+      { "index": 0, "weakness": "Sword of the Watcher (player's weapon)", "inventory": ["Sword of the Watcher"], "satisfied": true },
+      { "index": 1, "weakness": "Whispering Branch (pickup from previous encounter)", "inventory": ["Sword of the Watcher", "Sword of the Watcher"], "satisfied": false },
+      { "index": 2, "weakness": "Whispering Branch (pickup from prior encounter)", "inventory": ["Sword of the Watcher", "Sword of the Watcher", "Whispering Branch"], "satisfied": true }
+    ],
+    "n_satisfied": 2
+  },
+  {
+    "case_id": "fantasy_chaotic_berserker_hard",
+    "encounters": [
+      { "index": 0, "weakness": "Player's weapon: Cursed Waraxe. When swung at full power (40% of max rage), the axe emits a pulse of raw rage that deals 2x damage and forces the enemy to stagger. If the player has not used the axe in 30 seconds, the enemy gains 50% resist to all damage and starts summoning wall fragments that fall from the ceiling.", "inventory": ["Cursed Waraxe"], "satisfied": true },
+      { "index": 1, "weakness": "Fractured Sky Shard. If the player uses the shard within 3 seconds of attacking, the wyrmling explodes into 3 fire-spirits, dealing 80 damage to nearby enemies (including itself). The wyrmling's fire attacks cause 10% increased fire damage to players if not disrupted by the shard or a weapon swing (only available if player has the shard from prior encounter).", "inventory": ["Cursed Waraxe", "Fractured Sky Shard"], "satisfied": true },
+      { "index": 2, "weakness": "None directly — it is the precursor to the final form. However, during the final fight, the player must use the Rage-Infused Iron Plate to ignite a secondary attack. If the player attacks with the plate while under full rage, the Sovereign takes 25% damage and emits a crackling roar that damages all nearby enemies by 10% (only active if the plate was used in prior fight).", "inventory": ["Cursed Waraxe", "Fractured Sky Shard", "Rage-Infused Iron Plate"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "fantasy_eerie_necromancer_medium",
+    "encounters": [
+      { "index": 0, "weakness": "Player's weapon: Bone-handled dagger (when struck with the dagger, enemy takes double damage and shatters into dust, making it vulnerable to follow-up attacks). The dagger must be swung at the statue's core (a glowing eye in the chest).", "inventory": ["Bone-handled dagger"], "satisfied": true },
+      { "index": 1, "weakness": "Cursed Silver Shard (when the shard is used within 2 seconds of enemy attack, the wraiths disintegrate and are stunned for 3 seconds. The shard must be equipped and held at the start of the fight to activate this effect). If used late, wraiths gain resistance to necromancy damage. Can be used only once per encounter. The wraiths attack in waves — 3 waves of 2-4 wraiths each, with a 10-second cooldown between waves. After wave 3, the enemy becomes immune to damage until the shard is used again (unusable until next level).", "inventory": ["Bone-handled dagger", "Cursed Silver Shard"], "satisfied": true }
+    ],
+    "n_satisfied": 2
+  },
+  {
+    "case_id": "fantasy_desolate_ranger_brutal",
+    "encounters": [
+      { "index": 0, "weakness": "Player's longbow (weapon). All physical attacks on the Wraith reduce its health by 50% per shot. If the player uses their bow within 3 seconds of the enemy's first attack, it triggers a temporary 'Frost Arrow' effect (freezes the enemy in place for 2 seconds).", "inventory": ["Longbow"], "satisfied": true },
+      { "index": 1, "weakness": "Sundered Thorn Arrow (from previous pickup). If the player uses the Sundered Thorn Arrow on the Stag during its charge, it causes a 10-second stun and reduces health by 35%. If not used, the Stag gains a 'Rip-Flare' effect (increases attack speed by 1.5x and attacks from behind).", "inventory": ["Longbow", "Sundered Thorn Arrow"], "satisfied": true },
+      { "index": 2, "weakness": "Frostflesh Pelt (must be equipped). If the player has the pelt equipped and uses an arrow while in stealth mode, the arrow deals 2x damage and has a 75% chance to freeze the enemy in place. If the pelt is not equipped, the enemy gains immunity to all arrow types and enters 'Searing Wind' mode (damages the player with every 3 seconds of inactivity).", "inventory": ["Longbow", "Sundered Thorn Arrow", "Frostflesh Pelt"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "sci-fi_tense_engineer_hard",
+    "encounters": [
+      { "index": 0, "weakness": "Plasma Cutter (player weapon) - causes 2x damage when used. Gristle's body is weak to high-energy plasma, which the player can deploy from their primary weapon.", "inventory": ["Plasma Cutter"], "satisfied": true },
+      { "index": 1, "weakness": "Thermal Rebar (pickup from first encounter) - causes 3x damage to Scavenger Drift when used. The drift uses heat-conductive limbs, which are vulnerable to sudden thermal spikes from the rebar device when deployed in close proximity to the enemy.", "inventory": ["Plasma Cutter", "Plasma Cutter Module"], "satisfied": false },
+      { "index": 2, "weakness": "Stasis Core (pickup from second encounter) - if used within 3 seconds of contact, it freezes the enemy for 2 seconds and reduces damage taken by 30% during freeze. Only usable if player has collected the Thermal Rebar from earlier encounters and used it successfully in combat.", "inventory": ["Plasma Cutter", "Plasma Cutter Module", "Thermal Rebar"], "satisfied": false }
+    ],
+    "n_satisfied": 1
+  },
+  {
+    "case_id": "sci-fi_desolate_chronomancer_medium",
+    "encounters": [
+      { "index": 0, "weakness": "Time Rewind (player weapon): Inflicts 2-second rewind on attack animation. Can be used to reset enemy's forward charge phase.", "inventory": ["Chrono-Scythe"], "satisfied": true },
+      { "index": 1, "weakness": "Chrono-Resonance Shard (from prior encounter): When activated, causes enemy to phase into static — reducing damage by 40% and freezing movement for 2 seconds.", "inventory": ["Chrono-Scythe", "Fragmented Chrono Core"], "satisfied": false },
+      { "index": 2, "weakness": "Chrono-Resonance Shard (from prior encounter): When used, creates a time-lag zone that halts all movement. The enemy cannot move, but is vulnerable to follow-up attacks during the freeze. Must be used within 5 seconds of detection to work. If not, the enemy begins to absorb time from the environment, gaining 50% health per second until player reaches the core zone.", "inventory": ["Chrono-Scythe", "Fragmented Chrono Core", "Chrono-Resonance Shard"], "satisfied": true }
+    ],
+    "n_satisfied": 2
+  },
+  {
+    "case_id": "sci-fi_chaotic_stormcaller_brutal",
+    "encounters": [
+      { "index": 0, "weakness": "Direct lightning strike from Lightning Spear (only effective when fully charged with storm energy)", "inventory": ["Lightning Spear"], "satisfied": true },
+      { "index": 1, "weakness": "Overcharged plasma feedback (using Lightning Spear while holding Fragile Conduit) triggers destructive resonance pulse", "inventory": ["Lightning Spear", "Fragile Conduit"], "satisfied": true },
+      { "index": 2, "weakness": "Storm Pulse Beacon (must be used during the still pulse to disable harmonic cycle)", "inventory": ["Lightning Spear", "Fragile Conduit", "Storm Pulse Beacon"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "sci-fi_mysterious_artificer_easy",
+    "encounters": [
+      { "index": 0, "weakness": "Artificer's Prism Lens — when the player uses the Prism Lens on the enemy, it shatters and the enemy takes 30% more damage for 3 seconds", "inventory": ["Luminous Artificer's Lens"], "satisfied": true },
+      { "index": 1, "weakness": "Prism Lens — when used to 'refract' the drone's signal, the drone's movement freezes for 3 seconds and takes 20% damage per second for 5 seconds", "inventory": ["Luminous Artificer's Lens", "Prism Lens"], "satisfied": true },
+      { "index": 2, "weakness": "Tuned Resonance Crystal — when the player uses it to 'vibrate' the spore, it explodes into harmless data fragments and takes 50% damage for 2 seconds", "inventory": ["Luminous Artificer's Lens", "Prism Lens", "Tuned Resonance Crystal"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "sci-fi_ominous_shadowblade_hard",
+    "encounters": [
+      { "index": 0, "weakness": "The Shard Wraith is vulnerable to the 'Shadow Dagger' — a melee weapon the player must acquire from a fallen scout. It has a 30% chance to shatter when struck with the dagger, causing a short burst of damage to nearby enemies and revealing a hidden path.", "inventory": ["Shadow Dagger"], "satisfied": true },
+      { "index": 1, "weakness": "The Grazer Maw is weakened by the 'Void Pulse' ability — a skill unlocked after the first encounter. When the player activates it, the Maw's head splits in half and its movement becomes erratic. The player can exploit this to strike it with a melee attack for a 2x damage bonus.", "inventory": ["Shadow Dagger", "Void Pulse"], "satisfied": true },
+      { "index": 2, "weakness": "The Revenant Sentinel is vulnerable to the 'Cryo-Scythe' — a weapon that must be acquired during the third encounter. When struck with the scythe during the sentinel's energy surge phase, it causes a chain reaction that drains 30% of its health and exposes its core (which is later used in the final fight).", "inventory": ["Shadow Dagger", "Void Pulse", "Cryo-Scythe"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "sci-fi_eerie_alchemist_medium",
+    "encounters": [
+      { "index": 0, "weakness": "Acid Beam (from player's Chemical Reactor weapon)", "inventory": ["Chemical Reactor"], "satisfied": true },
+      { "index": 1, "weakness": "Bio-Scrap Vial (used as a field effect to cause decay)", "inventory": ["Chemical Reactor", "Bio-Scrap Vial"], "satisfied": true }
+    ],
+    "n_satisfied": 2
+  },
+  {
+    "case_id": "sci-fi_whimsical_rogue_easy",
+    "encounters": [
+      { "index": 0, "weakness": "The player's Glowstick Energy Rod (weapon). When the player attacks with the Glowstick, the bot's bounce is disrupted and it freezes mid-step. It emits a high-pitched 'beep' when hit, which can be used to trigger a mini-puzzle later in the level (e.g., unlock a path).", "inventory": ["Glowstick Energy Rod"], "satisfied": true },
+      { "index": 1, "weakness": "The Sparkle Orb (pickup from first encounter). When the player throws the Sparkle Orb into the Jellipod's core, it emits a 'purr' and stops distorting reality. The Jellipod will freeze and play a soft 'chime' for 3 seconds, allowing the player to move freely through the fog for 10 seconds. This is critical for reaching the next area or avoiding hazards that only appear after the distortion is resolved.", "inventory": ["Glowstick Energy Rod", "Sparkle Orb"], "satisfied": true },
+      { "index": 2, "weakness": "The Whistle of Possibility (pickup from second encounter). When the player holds the Whistle and activates it during the bot's song, the melody shifts into dissonance, causing the bot to freeze and become vulnerable for 5 seconds. The bot sings a long, looping tune that makes the player's vision flicker and distracts them, but the whistle breaks the rhythm and stops the song mid-phrase, allowing a successful attack.", "inventory": ["Glowstick Energy Rod", "Sparkle Orb", "Whistle of Possibility"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  },
+  {
+    "case_id": "sci-fi_serene_geomancer_brutal",
+    "encounters": [
+      { "index": 0, "weakness": "Geomagnetic Resonator (player's primary weapon). Firing the weapon at its core causes a resonance that temporarily disrupts its seismic frequency, allowing the player to reposition or deliver a critical strike. Using it during attack phase causes a 25% damage multiplier for the next 3 seconds, but the Echo reactivates after 4 seconds.", "inventory": ["Geomagnetic Resonator"], "satisfied": true },
+      { "index": 1, "weakness": "Stabilized Core Shard (must be actively held to use). When used within 2 seconds of enemy contact, it causes a localized tectonic lock that freezes the Shiver's movement and reduces its damage output by 40% for 6 seconds. Using it late results in the Shiver escaping into a new rift zone. If the shard is not used before the enemy attacks, it gains a 'Movement Surge' ability (moves 3 units faster and attacks with ground bursts).", "inventory": ["Geomagnetic Resonator", "Stabilized Core Shard"], "satisfied": true },
+      { "index": 2, "weakness": "Gravity Well Lens (must be active during the final phase). The Rift is a sentient geological anomaly that grows stronger by absorbing ambient energy. It emits light waves that disorient players and trigger seismic tremors. When the player activates the Gravity Well Lens, the Rift's core becomes unstable and begins to collapse. If the lens is not used within 10 seconds, the Rift regenerates 15% health and spawns a new light wave that disables all player abilities for 4 seconds.", "inventory": ["Geomagnetic Resonator", "Stabilized Core Shard", "Gravity Well Lens"], "satisfied": true }
+    ],
+    "n_satisfied": 3
+  }
+]

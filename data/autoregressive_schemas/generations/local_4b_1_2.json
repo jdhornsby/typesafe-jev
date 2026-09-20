@@ -1,0 +1,1138 @@
+[
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "mysterious",
+      "player_class": "geomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "The world is a living, breathing geological system. The deeper you go, the more it responds to your magic. But something is consuming the crystal energy — and the deeper the rift, the more it fights back with corrupted forms of natural force. You must use what you learn to stop it before it consumes the core of the world’s structure.",
+      "setting": "A deep-sea trench in the 'Abyssal Rift' region, where ancient tectonic plates have fused into a network of glowing crystal veins. The water is thick with suspended bioluminescent particles. The deeper you go, the more the environment reacts — shifting, pulsing, and whispering with low-frequency hums.",
+      "player_weapon": "Crystalline Shards",
+      "player_weapon_damage": 25,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Outer Rift Zone — a jagged, shifting trench with glowing blue cracks in the seabed.",
+          "enemy": {
+            "name": "Fissure Golem",
+            "health": 200,
+            "damage": 60,
+            "weakness": "Crystalline Shards (weapon)"
+          },
+          "hazard": "Tectonic Shift — every 30 seconds, a seismic pulse pushes the player back and disrupts terrain.",
+          "pickup": {
+            "name": "Crystalline Shards",
+            "effect": "Crystalline Shards (a small shard of solidified geothermal crystal) — can be used to shatter rock or reduce enemy health when thrown."
+          },
+          "trigger": "After defeating the Fissure Golem, a faint pulsing rhythm begins in the floor. Cracks grow wider. The map shifts subtly — a new path appears beneath the current surface. This suggests the deeper fissures are activating."
+        },
+        {
+          "location": "The Resonance Chamber — a dome-like chamber filled with shifting, liquid-like crystal formations that pulse in sync with sound.",
+          "enemy": {
+            "name": "Siphon Maw",
+            "health": 350,
+            "damage": 90,
+            "weakness": "Echo Resonance (pickup from first encounter)"
+          },
+          "hazard": "Bioluminescent Drain — enemies glow, and the player slowly loses stamina when near them.",
+          "pickup": {
+            "name": "Echo Resonance",
+            "effect": "Echo Resonance (a harmonic frequency device — emits a low-frequency pulse that can disrupt enemy movement and damage them when timed)"
+          },
+          "trigger": "After defeating the Siphon Maw, the chamber begins to vibrate. A deep, subsonic hum builds. A new rift opens at the chamber's center — a black, pulsating fissure glows with unstable energy. This suggests a deeper core is now exposed."
+        },
+        {
+          "location": "The Heart Fracture — a deep, cavernous pit where the seabed has collapsed into a pulsing, black hole of swirling water and crystal dust.",
+          "enemy": {
+            "name": "Void Vortex",
+            "health": 600,
+            "damage": 140,
+            "weakness": "Fissure Bloom (pickup from second encounter)"
+          },
+          "hazard": "Pressure Waves — every 15 seconds, a wave of compressed water forces the player back, and causes temporary blindness.",
+          "pickup": {
+            "name": "Fissure Bloom",
+            "effect": "Fissure Bloom — when activated, emits a bright, expanding wave of crystalline energy that damages enemies and creates temporary stable ground."
+          },
+          "trigger": "After defeating the Void Vortex, the core emits a final, resonant pulse. The environment freezes for 3 seconds, then the floor opens to reveal a central chamber where the Shifting Core lies dormant — but unstable."
+        }
+      ],
+      "boss": {
+        "name": "The Shifting Core",
+        "health": 1000,
+        "damage": 150,
+        "weakness": "Fissure Bloom pickup (from second encounter)",
+        "victory_condition": "Player uses the 'Fissure Bloom' pickup to trigger a crystal resonance burst that destabilizes the core and ends the fight."
+      },
+      "objective": "Reach the central chamber and use the Fissure Bloom pickup to activate a resonance burst that stabilizes the core and ends the level.",
+      "reward": "Crystal Core Fragment — used to upgrade geomancy abilities or unlock new spells."
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "serene",
+      "player_class": "beastmaster",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Discovery, harmony with nature, gentle growth",
+      "setting": "Sunken coral reef, bioluminescent and peaceful",
+      "player_weapon": "Luminous Whistle",
+      "player_weapon_damage": 5,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Coral Cave – The Whispering Garden",
+          "enemy": {
+            "name": "Glowing Anemone",
+            "health": 30,
+            "damage": 10,
+            "weakness": "Aurelia's tail swipe"
+          },
+          "hazard": "Pulse stun (short duration)",
+          "pickup": {
+            "name": "Glow Pulse",
+            "effect": "Glow Pulse – increases light emission from Aurelia's attacks"
+          },
+          "trigger": "Player approaches anemone; it pulses and retreats after player uses tail swipe"
+        },
+        {
+          "location": "Underwater Cavern – The Silt Passage",
+          "enemy": {
+            "name": "Silt Wyrmling",
+            "health": 40,
+            "damage": 15,
+            "weakness": "Glow Pulse"
+          },
+          "hazard": "Sticky mucus (slows movement)",
+          "pickup": {
+            "name": "Crystalline Fragment",
+            "effect": "Beast Resonance – increases attack power and speed of Aurelia"
+          },
+          "trigger": "After defeating Glowing Anemone, water currents shift and a small worm emerges"
+        },
+        {
+          "location": "Sunken Cathedral – The Heart of the Reef",
+          "enemy": {
+            "name": "Guardian Coral",
+            "health": 100,
+            "damage": 30,
+            "weakness": "Crystalline Fragment"
+          },
+          "hazard": "Stun wave every 60 seconds",
+          "pickup": {
+            "name": "None",
+            "effect": "None (this is the boss)"
+          },
+          "trigger": "After defeating Silt Wyrmling, a large coral structure appears and begins pulsing"
+        }
+      ],
+      "boss": {
+        "name": "Guardian Coral",
+        "health": 150,
+        "damage": 100,
+        "weakness": "Crystalline Fragment",
+        "victory_condition": "Player uses 'Crystalline Fragment' to trigger Beast Resonance, causing a sonic burst that shatters the coral."
+      },
+      "objective": "Defeat all enemies and complete the journey through the Luminous Trench",
+      "reward": "Coral Heart – allows free summoning of Aurelia and heals on touch"
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "ominous",
+      "player_class": "necromancer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "The necromancer’s own power is a curse — each encounter reveals a deeper layer of corruption. The player must use their weapons and pickups wisely, because failure breeds more decay.",
+      "setting": "Ominous underwater necropolis beneath the surface of a drowned continent. Bioluminescent decay, constant low hums, and shadows move like living things. The water is thick and cold, pressing on the player's skin. The air tastes of salt and rust.",
+      "player_weapon": "Necro-Blade",
+      "player_weapon_damage": 30,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Drowned Crypt – a collapsed tomb chamber with crumbling stone and pulsing green fungus",
+          "enemy": {
+            "name": "Fleshwraith",
+            "health": 120,
+            "damage": 50,
+            "weakness": "Necro-Blade (used in reverse charge)"
+          },
+          "hazard": "Water seepage: Every 3 seconds, a wave of water pushes the player toward a sinkhole",
+          "pickup": {
+            "name": "Soul Shard",
+            "effect": "Soul Shard – a fractured piece of bone and shadow. When activated, it emits a low hum and allows the player to summon a spectral hand to pull the player back from danger"
+          },
+          "trigger": "After defeating the Fleshwraith, the stone ceiling collapses, creating a fissure that leads to the next zone. If the player fails to exit within 30 seconds, the Fleshwraith returns and spawns a second one."
+        },
+        {
+          "location": "The Bone Chasm – a narrow underwater fissure filled with skeletal remains and rotting coral",
+          "enemy": {
+            "name": "Carrion Maw",
+            "health": 250,
+            "damage": 75,
+            "weakness": "Soul Shard (used as a ritual charge)"
+          },
+          "hazard": "Acid mist: Spawns every 10 seconds. Causes temporary blindness and slows movement",
+          "pickup": {
+            "name": "Flesh Chalice",
+            "effect": "Flesh Chalice – a black, cracked vessel that absorbs damage. When full, it emits a pulse that pushes the player back from enemies"
+          },
+          "trigger": "After crossing the fissure, the player enters a chamber. If the player fails to defeat the Carrion Maw within 60 seconds, the fissure collapses further and the Maw spawns with +20% aggression and acid mist duration. If defeated with Soul Shard, the path opens to the final chamber."
+        },
+        {
+          "location": "The Chamber of Echoes – a submerged temple with walls of frozen blood and singing bones",
+          "enemy": {
+            "name": "Rotting Warden",
+            "health": 500,
+            "damage": 120,
+            "weakness": "Flesh Chalice (used to absorb its damage and disrupt its necrotic pulse)"
+          },
+          "hazard": "Pressure waves: Every 15 seconds, a seismic pulse ripples through the floor, damaging the player if standing on it",
+          "pickup": {
+            "name": "None",
+            "effect": "None (but its defeat unlocks the boss path)"
+          },
+          "trigger": "After defeating the Carrion Maw, the temple collapses. The Rotting Warden emerges from the central pillar. If the player defeats it with Flesh Chalice, it explodes and reveals a cracked obsidian door. If not, the door seals and the boss fight is delayed by 2 minutes."
+        }
+      ],
+      "boss": {
+        "name": "Aethel the Hollow",
+        "health": 1200,
+        "damage": 4,
+        "weakness": "Soul Shard (acquired from first encounter)",
+        "victory_condition": "Player uses the Soul Shard to strike the boss's core during its final phase"
+      },
+      "objective": "Defeat all enemies and unlock the final chamber by using specific pickups against enemy weaknesses. The boss can only be defeated using the Soul Shard, which must have been used in prior combat.",
+      "reward": "After defeating the boss, the player gains a permanent Necro-Blade upgrade: 'Soul Resonance' (allows summoning a spectral wraith when using the blade in reverse)"
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "tense",
+      "player_class": "stormcaller",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "A descent into the heart of a drowned civilization where the sea itself remembers pain. The Stormcaller must master the fury of the deep to survive, but every victory brings more pressure. Failure means being consumed by the abyss — and the storm never stops breathing.",
+      "setting": "A deep-sea trench beneath the Mariana Trench, where pressure builds and the water is thick with ancient, sentient life. Bioluminescent flora pulses in rhythm with tectonic shifts. The environment is cold, silent, and oppressive — every sound is amplified, and the water feels heavy.",
+      "player_weapon": "Wavesurge (initial weapon)",
+      "player_weapon_damage": 50,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "The Abyssal Trench - Deep Chasm",
+          "enemy": {
+            "name": "Carcinoid Siphon",
+            "health": 350,
+            "damage": 85,
+            "weakness": "The player's initial weapon, 'Wavesurge', deals 30% extra damage when the player has the 'Hydro-Spore' pickup (acquired from this encounter)."
+          },
+          "hazard": "Turbulent currents shift every 12 seconds, increasing movement speed of all enemies by 50% and reducing player swim speed by 20%.",
+          "pickup": {
+            "name": "Hydro-Spore",
+            "effect": "Upon defeating the Carcinoid Siphon, the player gains the 'Hydro-Spore' — a bio-organic shard that glows faintly in water. When used in combat, it increases damage from 'Wavesurge' by 30% and triggers a 2-second 'Mistwave' buff that reduces visibility for enemies."
+          },
+          "trigger": "After defeating the Carcinoid Siphon, the chasm begins to tremble, and the pressure rises. A faint crack echoes—water turns crimson at the edges, and pressure sensors activate. A new current forms, leading to a spiral trench deeper below. This triggers the next encounter."
+        },
+        {
+          "location": "The Spiral Trench - Cracked Vortex",
+          "enemy": {
+            "name": "Fissure Wraith",
+            "health": 600,
+            "damage": 140,
+            "weakness": "The Fissure Wraith is vulnerable to 'Tidal Shatter' — a high-damage, short-range burst from the player’s 'Storm Shards' weapon (acquired in the second encounter)."
+          },
+          "hazard": "The Wraith emits a low-frequency hum that causes the player’s ability recharge to slow by 50%. This effect builds over time, with cumulative damage from the hum increasing with each second the Wraith is active.",
+          "pickup": {
+            "name": "Storm Shards",
+            "effect": "Upon defeating the Fissure Wraith, the player gains the 'Storm Shards' — a jagged, crystalline shard that can be used as a primary weapon. It fires rapid pulses of compressed water, and when charged, it generates a 'Tidal Shatter' burst (300% damage on hit if used on an enemy weak to the player's current weapon)."
+          },
+          "trigger": "After defeating the Fissure Wraith, the water around the trench begins to ripple with a violent rhythm. A deep, seismic hum grows, and pressure spikes in the chamber. A massive, pulsating rift opens — glowing with unstable bioluminescence — leading to the final chamber. The player must navigate through a 30-second timed descent into the Deep Sunder’s core."
+        },
+        {
+          "location": "The Rift Core - Maw Chamber",
+          "enemy": {
+            "name": "Maw of the Deep",
+            "health": 1200,
+            "damage": 210,
+            "weakness": "The Maw is vulnerable to 'Tidal Pulse' — a long-range, high-damage wave from the player's 'Storm Shards' weapon. This ability has a 40-second cooldown and can only be used once per encounter."
+          },
+          "hazard": "The Maw emits a corrosive fog that reduces the player’s movement speed by 40% and depletes health over time (5% per second). If the fog remains above 30 seconds, the player takes 30 damage per second.",
+          "pickup": {
+            "name": "Tidal Pulse Ability (Unlock)",
+            "effect": "Upon defeating the Maw, the player gains access to the 'Tidal Pulse' ability — a powerful long-range shockwave that damages enemies and creates a temporary zone of reduced enemy movement. It is only available after using the 'Storm Shards' on a vulnerable enemy (i.e., the Fissure Wraith)."
+          },
+          "trigger": "The Maw's roar echoes through the chamber, and the walls begin to bleed black water. The final chamber lights up with bioluminescent patterns — the pattern matches the one from the first encounter's environment. The player is forced to enter a final zone with no escape path. The Deep Sunder begins to awaken. If the player does not defeat the Maw within 90 seconds, the environment collapses, and the player is trapped in a dying current, losing all progress."
+        }
+      ],
+      "boss": {
+        "name": "The Deep Sunder",
+        "health": 1500,
+        "damage": 120,
+        "weakness": "The player must use the 'Storm Shards' (a pickup from the 2nd encounter) to trigger a 300% damage burst on the boss during its 'Fissure Phase'.",
+        "victory_condition": "Player deals 1000+ damage using the 'Tidal Pulse' ability with the 'Storm Shard' weapon"
+      },
+      "objective": "Destroy the Deep Sunder in the Rift Core by defeating all three enemies and using the 'Storm Shards' to trigger the final 'Tidal Pulse' attack.",
+      "reward": "The player receives a final 'Storm Call' signature, unlocking a new class ability: 'Tempest Surge' — a passive ability that increases damage by 20% when using weapons tied to storm energy."
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "eerie",
+      "player_class": "shadowblade",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Eerie and alien — a place where light and darkness are in constant conflict. The ocean floor is a labyrinth of cracked structures and pulsing flora. The deeper you go, the more the environment responds to your presence, reacting to your blade’s frequency and your movements in shadow. Strange echoes suggest intelligent, if ancient, life forms beneath the water's surface. The mood is oppressive, with slow, unnatural movements and sudden bursts of light that seem to watch the player from the dark corners of the trench.",
+      "setting": "A deep-sea trench near the 'Hollow's Maw' tectonic rift — a long-abandoned research station buried under silt. Bioluminescent life pulses erratically. The water is thick with silence, broken only by distant, distorted echoes. The terrain shifts subtly with pressure changes.",
+      "player_weapon": "Shadowblade (emits a low-frequency pulse when active; can disrupt bioluminescent systems)",
+      "player_weapon_damage": 15,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "The Whispering Trench",
+          "enemy": {
+            "name": "Silt Drifter",
+            "health": 180,
+            "damage": 80,
+            "weakness": "Shadowblade's active blade pulse (emits low-frequency shadow resonance)"
+          },
+          "hazard": "Bubbling pressure vents that cause brief stun (1.5s) on contact",
+          "pickup": {
+            "name": "Bio-Shadow Lens",
+            "effect": "Unlocks 'Bio-Shadow Lens' — allows player to see shadow patterns in bioluminescent water"
+          },
+          "trigger": "After defeating Silt Drifter, a pressure vent collapses, exposing the path to the Silt Maw chamber"
+        },
+        {
+          "location": "The Silt Maw",
+          "enemy": {
+            "name": "Gloomfang Maw",
+            "health": 250,
+            "damage": 100,
+            "weakness": "Bio-Shadow Lens (reveals its weak bioluminescent 'flicker zone')"
+          },
+          "hazard": "Tidal vortexes that pull players into suspended currents (10s of motion loss)",
+          "pickup": {
+            "name": "Glowing Tendril Fragment",
+            "effect": "Unlocks 'Glowing Tendril Fragment' — a glowing, pulsing fragment that can be used to disrupt the boss's core"
+          },
+          "trigger": "After defeating Gloomfang Maw, a hidden pressure ridge collapses, revealing a cracked obsidian spire with the boss chamber beneath"
+        },
+        {
+          "location": "Obsidian Spire (Boss Chamber)",
+          "enemy": {
+            "name": "The Hollow Maw",
+            "health": 500,
+            "damage": 140,
+            "weakness": "Glowing Tendril Fragment (must be used directly on the boss’s central node)"
+          },
+          "hazard": "Environmental instability — water pressure shifts, causing vision flicker and increased noise distortion",
+          "pickup": {
+            "name": "Glowing Tendril Fragment (from encounter 1)",
+            "effect": "None — this is the boss fight, requiring previous pickup."
+          },
+          "trigger": "Only accessible after completing previous encounter — the chamber is sealed by pressure until the player obtains the fragment from prior fight."
+        }
+      ],
+      "boss": {
+        "name": "The Hollow Maw",
+        "health": 600,
+        "damage": 120,
+        "weakness": "Glowling Tendril Fragment (acquired during 2nd encounter)",
+        "victory_condition": "Player uses the Glowling Tendril Fragment to strike the boss in its central core"
+      },
+      "objective": "Defeat the Hollow Maw by using the Glowling Tendril Fragment, which is earned from the second encounter.",
+      "reward": "Unique skin: 'Drowned Shadow' with translucent blade glow and flickering bioluminescent patterns"
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "chaotic",
+      "player_class": "pyromancer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Chaotic combustion — fire and water fighting in a state of violent equilibrium. The environment is not static; it reacts to player actions, and every defeat triggers a new instability. The deeper you go, the more the world begins to breathe with hostility. The player is not just fighting enemies — they are navigating a sentient ecosystem that reacts to their power. Each fire spell risks triggering a chain reaction that floods the area or causes structural collapse. The only constant is the slow, growing heat beneath the ocean floor.",
+      "setting": "Deep-sea trench off the volcanic arc of the Cimmerian Trench. The water is thick with particulate matter, and the pressure is immense. The ruins of an ancient underwater city are fractured and overgrown with bioluminescent coral that pulses with erratic rhythms. Constant geothermal activity causes sudden boiling, collapsing structures, and shifting currents.",
+      "player_weapon": "Pyroflame Lance",
+      "player_weapon_damage": 25,
+      "player_health": 80,
+      "encounters": [
+        {
+          "location": "Shattered Reef Gorge (a narrow canyon with collapsed coral pillars and water currents)",
+          "enemy": {
+            "name": "Sputter Siphon",
+            "health": 60,
+            "damage": 28,
+            "weakness": "Pyroflame Lance"
+          },
+          "hazard": "Turbulence Burst (spawns 1–2 random debris blocks every 4 seconds, damages player if struck)",
+          "pickup": {
+            "name": "Ignition Core",
+            "effect": "Ignition Core (a glowing, water-encrusted cylinder; when picked up, player gains 'Ignition Pulse' buff: next fire spell deals +30% damage, but if not used within 6 seconds, it decays and creates a short-lived explosion in the player’s vicinity.)"
+          },
+          "trigger": "After defeating Sputter Siphon, the water surface cracks and a new fissure opens to the west. A deep, groaning sound echoes — a pressure wave ripples through the floor. The next encounter begins when the player crosses the fissure and the ceiling begins to crack, revealing a dark tunnel below. The Sputter Siphon’s corpse collapses into a pool of bubbling steam — the steam cools into a black, jagged rock that emits a low pulse, signaling the next enemy’s arrival."
+        },
+        {
+          "location": "The Shattered Vault (a flooded cavern with fractured basalt walls and floating debris platforms)",
+          "enemy": {
+            "name": "Fracture Wraith",
+            "health": 120,
+            "damage": 42,
+            "weakness": "Ignition Core"
+          },
+          "hazard": "Magma Spout (randomly erupts every 8 seconds — launches a short-lived fireball that damages nearby enemies and players, can ignite nearby flammable debris)",
+          "pickup": {
+            "name": "Molten Shards",
+            "effect": "Molten Shards (a shard of volcanic glass that floats in a current; when picked up, player gains 'Lava Surge' ability: 15-second cooldown, deals 50% area damage to enemies in a 10m radius when activated, and reduces enemy movement speed by 30% in the area.)"
+          },
+          "trigger": "After defeating the Fracture Wraith, the walls of the vault begin to vibrate. A section of the ceiling collapses, and a massive fissure opens upward, forming a bridge of glowing lava that leads to the surface — but it’s unstable. As the bridge forms, the water begins to boil violently. The player must cross it to reach the next zone. However, if the player fails to reach the bridge within 30 seconds, the bridge collapses, and the area floods with toxic steam. If the player survives and reaches the bridge, a final pulse of pressure is felt — the water rises, and the Spire Core begins to hum, preparing for the final fight."
+        },
+        {
+          "location": "The Infernal Grotto (a deep, narrow chamber with molten lava pools and black coral that emits heat waves)",
+          "enemy": {
+            "name": "Abyssal Burner",
+            "health": 200,
+            "damage": 60,
+            "weakness": "Molten Shards"
+          },
+          "hazard": "Acid Current (spawns every 5 seconds — flows from the floor and damages player if standing in it; players must avoid it or take 15 damage per second)",
+          "pickup": {
+            "name": "Molten Shards (acquired from Encounter 1)",
+            "effect": "None (the final pickup is from the previous encounter)"
+          },
+          "trigger": "After defeating the Abyssal Burner, the lava pools begin to rise rapidly. The chamber shakes violently. From the center, a massive black spire rises — the Cimmerian Spire Core — and it begins to pulse with unstable energy. The water boils and the ceiling shatters. The final boss fight begins when the player reaches the central platform of the spire. If the player fails to defeat the Abyssal Burner, the core activates, summoning a firestorm that disables all fire-based attacks and forces the player into a time-limited survival phase (30 seconds), during which they cannot use any spells — only movement and evasion. If the player survives the storm, the core remains active, but the weak point becomes accessible."
+        }
+      ],
+      "boss": {
+        "name": "The Cimmerian Spire Core",
+        "health": 350,
+        "damage": 85,
+        "weakness": "Molten Shards",
+        "victory_condition": "Player uses Molten Shards to ignite the Spire’s central core, causing a chain reaction of lava eruptions that collapse the chamber."
+      },
+      "objective": "Reach the center of the Cimmerian Spire Core and activate it using Molten Shards to trigger the final chain reaction.",
+      "reward": "Unlocks 'Pyrocore Mastery' skill tree (allows summoning fire constructs and fire resistance for 15 seconds)"
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "desolate",
+      "player_class": "warden",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Desolation through decay and forgotten science. The Warden is not just fighting monsters—they are fighting the echo of a failed mission, where humanity tried to control the deep, but was consumed by its own hubris. Every enemy is a remnant of that experiment. The world is not just cold—it is *aware* of the player’s presence, and grows more hostile the deeper they go.",
+      "setting": "Abandoned deep-sea research station, 10,000 meters below the surface. The station is half-submerged, filled with rusted machinery, leaking water, and dead bioluminescent flora. The air is cold, and the silence is broken only by creaking metal and distant, echoing groans. Every system has failed, but the station still hums with energy—dangerous, alive, and watching.",
+      "player_weapon": "Sonic Pulse Cannon",
+      "player_weapon_damage": 40,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Main Deck Hallway (hallway with rusted steel columns and flickering emergency lights)",
+          "enemy": {
+            "name": "Deep Rook",
+            "health": 120,
+            "damage": 35,
+            "weakness": "Sonic Pulse (player's weapon)"
+          },
+          "hazard": "Rotating turbine blades (sudden movement in 3-second intervals)",
+          "pickup": {
+            "name": "Sonic Bloom",
+            "effect": "Sonic Bloom (a glowing, pulsing crystal that emits a low-frequency pulse)"
+          },
+          "trigger": "After killing Deep Rook, the emergency lights flicker and a deep groan echoes—then the central sonar array powers on, emitting a harmonic hum that destabilizes nearby structures."
+        },
+        {
+          "location": "Hydro-Containment Chamber (a cracked dome with leaking water, black sludge pooling)",
+          "enemy": {
+            "name": "Sundering Siphon",
+            "health": 180,
+            "damage": 50,
+            "weakness": "Sonar Beacon (pickup from Encounter 0)"
+          },
+          "hazard": "Acidic vents that pulse with every 5 seconds (causes damage over time)",
+          "pickup": {
+            "name": "Sonar Beacon",
+            "effect": "Sonar Beacon (emits a focused beam that reveals hidden paths and detects enemies)"
+          },
+          "trigger": "Sundering Siphon is summoned when the sonar array detects motion. After defeating it, the chamber’s walls begin to crumble. A low-frequency hum intensifies, and the floor trembles—revealing a fissure leading to the reactor core."
+        },
+        {
+          "location": "Reactor Core Access (a narrow corridor with shifting walls and glowing green algae)",
+          "enemy": {
+            "name": "Fractured Coral Warden (a corrupted Warden-like entity)",
+            "health": 250,
+            "damage": 75,
+            "weakness": "Bioluminescent Lure (pickup from Encounter 1)"
+          },
+          "hazard": "Tidal surge waves that push the player into collapsing walls or trigger wall collapses",
+          "pickup": {
+            "name": "Bioluminescent Lure",
+            "effect": "Bioluminescent Lure (emits a soft blue pulse that repels aggressive life forms)"
+          },
+          "trigger": "The Fractured Coral Warden appears when the player uses the Bioluminescent Lure. After defeating it, the reactor core glows crimson, and a deep, unnatural current begins to swirl—pulling the player toward the central chamber."
+        }
+      ],
+      "boss": {
+        "name": "The Hollowed Current",
+        "health": 1500,
+        "damage": 200,
+        "weakness": "Sonic Bloom (a pickup from Encounter 1)",
+        "victory_condition": "Player inflicts 300 damage via a specific weapon pickup in the final encounter."
+      },
+      "objective": "Defeat the Hollowed Current by using the Sonic Bloom (a pickup from the first encounter) to weaken it.",
+      "reward": "Survival: Unlock 'Echo Chamber' expansion for future levels"
+    }
+  },
+  {
+    "case": {
+      "genre": "underwater",
+      "mood": "whimsical",
+      "player_class": "illusionist",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Whimsical, playful, and full of gentle magic and misdirection. The illusionist class is central — using visual tricks to outwit enemies and navigate the world.",
+      "setting": "The Luminous Tidal Reefs: A vibrant, sun-dappled underwater cave system filled with floating coral islands, glowing sea anemones, and playful sea life. Music includes soft chimes, bubbling sounds, and gentle laughter-like echoes.",
+      "player_weapon": "Bubble Wand",
+      "player_weapon_damage": 5,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Coral Garden, Entrance Zone",
+          "enemy": {
+            "name": "Jellyfish Wobble",
+            "health": 10,
+            "damage": 1,
+            "weakness": "Bubble Wand"
+          },
+          "hazard": "The jellyfish emits a soft hum when near the player, causing a temporary delay in magic casting (a minor inconvenience).",
+          "pickup": {
+            "name": "Floating Tear",
+            "effect": "The player acquires the Floating Tear — a glowing, tear-shaped orb that can be used to create a visual illusion (e.g., a wall that doesn’t exist)."
+          },
+          "trigger": "After defeating the Jellyfish Wobble, the player's view shifts to a shimmering mirror island that appears in the distance. This triggers the next encounter."
+        },
+        {
+          "location": "Mirror Island (appears after Jellyfish Wobble defeat)",
+          "enemy": {
+            "name": "Mirror Shrimp",
+            "health": 15,
+            "damage": 1,
+            "weakness": "Floating Tear"
+          },
+          "hazard": "The shrimp reflects the player's image and occasionally sends out tiny mirrors that confuse the player’s perception.",
+          "pickup": {
+            "name": "Singing Shell",
+            "effect": "The player acquires the Singing Shell — a seashell that hums when used, allowing the creation of harmonious illusions (e.g., a quiet zone that stills the environment)."
+          },
+          "trigger": "After defeating the Mirror Shrimp, the water ripples and a slow, wiggling gulliver appears in the distance, moving in a playful arc. This triggers the final encounter."
+        },
+        {
+          "location": "Floating Reef Corridor",
+          "enemy": {
+            "name": "Glinting Gulliver (Mini-Form)",
+            "health": 20,
+            "damage": 1,
+            "weakness": "Singing Shell"
+          },
+          "hazard": "The Gulliver grows slightly in size when it hears the player move, making it slightly harder to dodge.",
+          "pickup": {
+            "name": "Mirror Shard",
+            "effect": "The player acquires the Mirror Shard — a jagged, reflective piece that can be used to create perfect reflections or double illusions."
+          },
+          "trigger": "After defeating the Gulliver, a giant, translucent jellyfish with glowing eyes floats into view from the ocean’s depth. The level transitions into the boss fight."
+        }
+      ],
+      "boss": {
+        "name": "The Sea of Whispers",
+        "health": 100,
+        "damage": 1,
+        "weakness": "Floating Tear",
+        "victory_condition": "The player uses the Floating Tear to cast an illusion of a solid wall, causing the boss to misdirect and reveal its true position."
+      },
+      "objective": "Defeat three underwater creatures and unlock the Sea of Whispers, using tools gained from each encounter.",
+      "reward": "Upon defeating the boss, the player receives a new feather for their illusion wand — the Feather of Reflection."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "chaotic",
+      "player_class": "beastmaster",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Chaos in the wild: the jungle is not just a setting — it's a sentient, reactive force. Every enemy adapts, every path shifts, and every success sets off more danger. The player must learn to survive chaos, not just fight it.",
+      "setting": "A chaotic jungle with unpredictable terrain, sudden shifts, and animal-like enemies that adapt to player actions. The environment is alive — vines lash at the player, animals scream in unison, and the air thrums with energy.",
+      "player_weapon": "Beastmaster's Bane",
+      "player_weapon_damage": 25,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Cave Entrance (damp, mossy rock wall with vines hanging like frayed ropes)",
+          "enemy": {
+            "name": "Screech Wasp Swarm",
+            "health": 300,
+            "damage": 75,
+            "weakness": "Beastmaster's Bane (player weapon)"
+          },
+          "hazard": "Sonic Bloom Field - when the player steps within 2 tiles, the player takes 15 damage and all nearby enemies gain 10% movement speed for 5 seconds.",
+          "pickup": {
+            "name": "Beastmaster's Bane",
+            "effect": "Beastmaster's Bane (a jagged, obsidian shard that emits a low hum when wielded)"
+          },
+          "trigger": "After defeating Screech Wasp Swarm, the player must cross a narrow, unstable bridge made of hanging vines. The bridge emits a high-pitched frequency that increases in pitch every 5 seconds. If the player fails to cross within 30 seconds, the bridge collapses and the player is trapped in a collapsing cave system with no exit—forcing a restart. If successful, a new path appears leading into the Canopy Thicket."
+        },
+        {
+          "location": "Canopy Thicket (a dense jungle roof where vines sway and leaves chime in unpredictable patterns)",
+          "enemy": {
+            "name": "Gorge Squirrel Shaman",
+            "health": 600,
+            "damage": 120,
+            "weakness": "Screaming Flare (pickup from Encounter 0)"
+          },
+          "hazard": "Echoing Rattle - after 4 seconds of combat, the enemy spawns a phantom version of itself with 50% health and identical attacks, but moves slower and takes double damage from the player's weapon.",
+          "pickup": {
+            "name": "Screaming Flare",
+            "effect": "Screaming Flare (a glowing, unstable orb that flares when activated, causing a 10-second sonic burst that damages nearby enemies and disrupts enemy movement)"
+          },
+          "trigger": "After defeating Gorge Squirrel Shaman, the jungle floor begins to shift violently—roots crack, and the ground splits open, revealing a fissure leading down into the Jungle Core. A faint hum pulses from the fissure. If the player steps into it, the ground trembles and a new environment is triggered: the crumbling ruins of a forgotten beast temple. If the player avoids the fissure, they are forced to restart the level. If they enter, the player gains access to the final encounter."
+        },
+        {
+          "location": "Jungle Core Ruins (a temple with crumbling stone pillars, glowing red eyes in the walls, and a central altar pulsating with dark energy)",
+          "enemy": {
+            "name": "Carrion Stag Sentinel",
+            "health": 900,
+            "damage": 180,
+            "weakness": "Screaming Flare (pickup from Encounter 1)"
+          },
+          "hazard": "Frenzy Chant - every 10 seconds, the enemy calls out a chant that causes all nearby enemies to attack each other for 5 seconds, increasing chaos and making coordinated defense harder.",
+          "pickup": {
+            "name": "Screaming Flare",
+            "effect": "Screaming Flare (used to disrupt enemy control and interrupt enemy summoning abilities)"
+          },
+          "trigger": "The Carrion Stag Sentinel activates a full-scale ritual. The ground quakes and the temple’s pillars begin to bleed red light. The final encounter begins automatically after the player defeats the Carrion Stag Sentinel. The player is now in the final boss fight zone."
+        }
+      ],
+      "boss": {
+        "name": "The Shattered Jaguar",
+        "health": 800,
+        "damage": 200,
+        "weakness": "Screaming Flare (pickup from Encounter 2)",
+        "victory_condition": "Deal 800 total damage while maintaining at least 30% health of the player character at all times."
+      },
+      "objective": "Defeat all three encounters and the final boss to progress.",
+      "reward": "The Shattered Jaguar’s Heart — a rare beast soul that can be used to summon a unique beast companion (only if the player successfully defeats the boss with the Screaming Flare active)."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "mysterious",
+      "player_class": "ranger",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Mysterious balance of silence and chaos; the jungle remembers the actions of those who enter. To restore balance, the player must confront its guardians and uncover forgotten truths.",
+      "setting": "A dense, fog-shrouded jungle with glowing flora, ancient trees, and shifting terrain. The environment reacts to the player’s actions — silence reveals hidden paths, and shadows shift when danger is near.",
+      "player_weapon": "Long-Range Silent Bow",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Ancient Grove of Whispering Leaves",
+          "enemy": {
+            "name": "Shadow Warden (Tree Sentinel)",
+            "health": 75,
+            "damage": 25,
+            "weakness": "Ranger's Bow (Silent Shot Mode)"
+          },
+          "hazard": "Sudden fog, vision obscured for 3 seconds after a missed shot",
+          "pickup": {
+            "name": "Crystal Shard",
+            "effect": "Crystal Shard (rare glowing shard found in Warden's core)"
+          },
+          "trigger": "After defeating the Shadow Warden, a mossy tree trunk reveals a glowing glyph: 'Where silence falls, the path unbinds.' This activates a hidden path behind a waterfall."
+        },
+        {
+          "location": "Echoing Cavern",
+          "enemy": {
+            "name": "Cursed Jaguar",
+            "health": 100,
+            "damage": 35,
+            "weakness": "Crystal Shard (when player uses it during combat)"
+          },
+          "hazard": "The Jaguar learns the player’s movement pattern after 3 seconds; it attacks with a sudden swipe if player is seen moving.",
+          "pickup": {
+            "name": "Shattered Mirror",
+            "effect": "Shattered Mirror (reflects player’s movements, creates vision of future actions)"
+          },
+          "trigger": "After defeating the Jaguar, the mirror shatters and reveals a glowing stone beneath the ground — a path to the final chamber. The mirror now becomes active and can be used to preview enemy movements."
+        },
+        {
+          "location": "Heart of the Mist",
+          "enemy": {
+            "name": "Guardian of the Thirst",
+            "health": 130,
+            "damage": 45,
+            "weakness": "Crystal Shard (used in mid-combat to disrupt illusions)"
+          },
+          "hazard": "The entity mimics the player’s movements and attacks when it senses proximity.",
+          "pickup": {
+            "name": "Final Clue (glowing rune)",
+            "effect": "None (player defeats the Guardian and gains the final clue)"
+          },
+          "trigger": "After defeating the Guardian, the ground pulses and a massive, shadowy form emerges — the Jungle Veil, the true guardian of the jungle’s balance."
+        }
+      ],
+      "boss": {
+        "name": "Jungle Veil",
+        "health": 150,
+        "damage": 10,
+        "weakness": "The Crystal Shard (a pickup from Encounter 2)",
+        "victory_condition": "Player uses the Crystal Shard on the boss during its final phase"
+      },
+      "objective": "Defeat the Jungle Veil by using the Crystal Shard at the precise moment of its final charge.",
+      "reward": "The player receives the 'Jungle's Stillness' achievement upon defeating the Jungle Veil using the Crystal Shard."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "tense",
+      "player_class": "rogue",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "The jungle is not just a setting — it’s a predatory entity. Each encounter is a phase in its awakening. The player is not a hero, but a fugitive, surviving by exploiting the jungle’s weaknesses, one broken rule at a time.",
+      "setting": "A deep, uncharted jungle known as the Viret Vale. Thick fog, constant dripping, and unnatural silence punctuate the environment. The jungle feels alive — watching, reacting, adapting. Every step is a gamble.",
+      "player_weapon": "Stinger Dagger (melee weapon; high crit chance, low stamina drain)",
+      "player_weapon_damage": 15,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Shifting Riverbed",
+          "enemy": {
+            "name": "Jungle Viper",
+            "health": 300,
+            "damage": 60,
+            "weakness": "Stinger Dagger (player weapon)"
+          },
+          "hazard": "Quicksand patches in the riverbed; falling vines that activate on player movement",
+          "pickup": {
+            "name": "Cursed Vines",
+            "effect": "Acquires 'Cursed Vines' (a cursed plant that can be thrown to disrupt enemy movement; one-use, but reactivates after 30 seconds)"
+          },
+          "trigger": "After defeating the Jungle Viper, the vines in the riverbed begin to pulse. A thick, black mist rises from the water, obscuring visibility and activating ambient fog sensors. A faint, low hum begins — a sign of something deeper stirring. The ground trembles, and a rusted iron door creaks open in the jungle wall."
+        },
+        {
+          "location": "Rotting Canopy Chamber",
+          "enemy": {
+            "name": "Shadow Fang",
+            "health": 500,
+            "damage": 90,
+            "weakness": "Cursed Vines (pickup from Encounter 0)"
+          },
+          "hazard": "Spinning roots trap movement; shadows shift when player is in melee range",
+          "pickup": {
+            "name": "Ferrous Dust",
+            "effect": "Acquires 'Ferrous Dust' (a fine powder from a broken ritual altar; when sprinkled on an enemy, it causes them to drop their weapon for 5 seconds and take 10% more damage)"
+          },
+          "trigger": "After using the Cursed Vines to disable Shadow Fang’s movement, the roots begin to retract. A low groan echoes — the floor cracks. A new path appears through the rotting floor, revealing a hidden alcove. Inside, a shattered altar emits a pulse. The dust begins to float. The fog thickens, and the ground vibrates again — a signal that the Gloomshifter is now nearby."
+        },
+        {
+          "location": "Fissure of Echoing Flames",
+          "enemy": {
+            "name": "Twin-Flame Warden",
+            "health": 800,
+            "damage": 140,
+            "weakness": "Ferrous Dust (pickup from Encounter 1)"
+          },
+          "hazard": "Dual fire bursts when player enters line of sight; terrain shifts unpredictably",
+          "pickup": {
+            "name": "Iron Gears",
+            "effect": "Acquires 'Iron Gears' (a salvaged mechanism from the Warden's armor; when used, it disables all enemy area attacks for 3 seconds and allows player to move faster through fire zones)"
+          },
+          "trigger": "The Twin-Flame Warden activates its fire traps. As the player fights, the jungle distorts — the flames ripple. After defeat, the ground splits open. A massive, shifting silhouette appears behind a waterfall. It has no face, only pulsing red eyes. The Gloomshifter’s presence is undeniable. A low, mechanical hum begins to build from within the stone. The Iron Gears glow faintly in the player’s inventory."
+        }
+      ],
+      "boss": {
+        "name": "The Gloomshifter",
+        "health": 2500,
+        "damage": 100,
+        "weakness": "Cursed Vines (pickup from Encounter 2)",
+        "victory_condition": "Deal 1000 damage using a specific pickup in a status effect that disrupts the boss's camouflage."
+      },
+      "objective": "Survive all three encounters to face the Gloomshifter. Use the pickup acquired in Encounter 2 (Iron Gears) to survive its area attacks. Then, apply the 'Cursed Vines' (from Encounter 0) to its movement and trigger its vulnerability.",
+      "reward": "After defeating the Gloomshifter, the jungle begins to heal. A single bloom of white flower appears where the Gloomshifter once stood. The player receives a new quest: 'Return the Balance'."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "serene",
+      "player_class": "warden",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "Harmony with nature. The Warden is not a warrior, but a guardian—calm, observant, and in tune with the jungle’s rhythms. Enemies are rare and passive, appearing only when the path shifts in response to player choices or nature’s subtle cues.",
+      "setting": "A serene, misty jungle at dawn. Sunlight filters through the canopy in dappled patterns. Birds chirp gently. Flowers sway softly with the breeze. The air is cool and still, almost dreamlike.",
+      "player_weapon": "Waterbloom",
+      "player_weapon_damage": 20,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Luminous Canopy Path",
+          "enemy": {
+            "name": "Frosted Leaf Monkey",
+            "health": 30,
+            "damage": 15,
+            "weakness": "Weak to the 'Waterbloom' weapon. When the player equips the 'Waterbloom' weapon, damage taken is reduced by 30%, and the enemy will emit a soft chime when hit."
+          },
+          "hazard": "A small pool of misty water appears on the path—stepping into it triggers a brief fog, reducing visibility by 50% for 3 seconds. If the player avoids it, they gain a +5 vision radius for 10 seconds.",
+          "pickup": {
+            "name": "Waterbloom",
+            "effect": "Upon defeating the Frosted Leaf Monkey, the player receives the 'Waterbloom' flower. The flower can be used to heal 20 HP or to activate a temporary bloom that increases weapon damage by 25% for 10 seconds."
+          },
+          "trigger": "The player approaches a glowing moss-covered stone archway, which only opens when the player has completed a quiet walk through the path—no combat required. After reaching the arch, the environment shifts: the path becomes slightly wet, and a soft breeze signals the presence of the next enemy."
+        },
+        {
+          "location": "Whispering Ravine",
+          "enemy": {
+            "name": "Mist Whisperer",
+            "health": 50,
+            "damage": 25,
+            "weakness": "Weak to the 'Waterbloom' flower. When the player uses the flower on the Mist Whisperer, it emits a low hum and takes 50% more damage. If the player has used the flower within the last 15 seconds, the enemy’s movement is slowed by 40%."
+          },
+          "hazard": "A hidden vine swings slowly across the path. If the player steps into it, they are pulled back 1 meter and gain a 1-second delay in movement. This is a subtle test of patience, not danger.",
+          "pickup": {
+            "name": "Second Waterbloom",
+            "effect": "After defeating the Mist Whisperer, the player gains a second 'Waterbloom' flower. This allows the player to heal twice (20 HP per use), or use the bloom to double the weapon damage for 10 seconds (with a cooldown of 30 seconds)."
+          },
+          "trigger": "After defeating the Mist Whisperer, the air becomes still. A large, ancient tree appears with a golden leaf gently falling. As the leaf lands, the path to the final area becomes visible—only accessible if the player has used the second 'Waterbloom' flower within the last 10 seconds."
+        },
+        {
+          "location": "Heart of the Thicket",
+          "enemy": {
+            "name": "Crown of the Thicket",
+            "health": 80,
+            "damage": 40,
+            "weakness": "Weak to the 'Waterbloom' flower used in a 'bloom chain' effect. When the player uses the second 'Waterbloom' flower within 3 seconds of defeating the Mist Whisperer, a 'bloom chain' activates: the Crown of the Thicket takes 120% damage, and its attack speed is reduced by 50%."
+          },
+          "hazard": "The ground pulses gently every 5 seconds. If the player stands still for more than 3 seconds, the pulse grows stronger and may trigger a small environmental effect (e.g., a floating leaf drifts by, no action needed).",
+          "pickup": {
+            "name": "Jungle Bloom",
+            "effect": "Defeating the Crown of the Thicket rewards the player with the 'Jungle Bloom' flower—this is the key pickup for the boss fight. When used, it triggers a visual bloom that spreads across the jungle and emits a soothing chime, activating the boss's weakness."
+          },
+          "trigger": "After the Crown of the Thicket is defeated, the jungle grows still. A large, stone archway opens at the center with vines glowing in blue and gold. A soft chime echoes, signaling that the final battle with the Silent Guardian is imminent. The player may only enter after using the 'Jungle Bloom' flower within the past 5 seconds."
+        }
+      ],
+      "boss": {
+        "name": "The Silent Guardian",
+        "health": 150,
+        "damage": 100,
+        "weakness": "The Silent Guardian is weak to the 'Jungle Bloom' flower, which grows and blooms when the player uses the 'Waterbloom' weapon. This bloom activates when the player uses the flower to heal or when the enemy is in proximity and the bloom is visible.",
+        "victory_condition": "Player defeats the boss with a weapon that has been upgraded using the 'Jungle Bloom' pickup from a previous encounter"
+      },
+      "objective": "Reach the heart of the thicket and defeat the Silent Guardian using the 'Jungle Bloom' flower as the primary weapon.",
+      "reward": "A map fragment: 'The Whispering Canopy' — unlocks a new jungle region with ancient water temples."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "ominous",
+      "player_class": "necromancer",
+      "target_difficulty": "hard"
+    },
+    "level": {
+      "theme": "Ominous decay — the jungle is alive with restless spirits and the remnants of forgotten necromantic rites. Every step echoes with the sound of bones cracking. The deeper you go, the more the world remembers you. And it remembers you as a threat to the balance of dead things and the living.",
+      "setting": "A dense, decaying jungle where the trees are hollowed by bone-rot, vines pulse with black veins, and the air smells of damp earth and old blood. Faint whispers echo from the roots. Sunlight is absent — only moonlight filters through broken canopies. The jungle is not just wild — it is *aware*.",
+      "player_weapon": "Skeletal Spear",
+      "player_weapon_damage": 20,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Sunken Ruin of the First Grove",
+          "enemy": {
+            "name": "Gloom Wight",
+            "health": 250,
+            "damage": 80,
+            "weakness": "Skeletal Spear (player weapon)"
+          },
+          "hazard": "Fog of Decay: reduces player visibility by 50% after 20 seconds; lasts 30 seconds",
+          "pickup": {
+            "name": "Skeletal Spear",
+            "effect": "Skeletal Spear (unlocks for use; can be used to counter Gloom Wight)"
+          },
+          "trigger": "Player enters the sunken ruins; fog triggers after 10 seconds"
+        },
+        {
+          "location": "The Maw of the Hollow Pit",
+          "enemy": {
+            "name": "Rotting Shade-Skull",
+            "health": 400,
+            "damage": 120,
+            "weakness": "Soul Shard (a pickup from encounter 0)"
+          },
+          "hazard": "Bone-Crushing Ground: stepping on a tile causes 15% damage to player; spawns randomly every 40 seconds",
+          "pickup": {
+            "name": "Soul Shard",
+            "effect": "Soul Shard (a glowing fragment of pure soul energy; used in spells)"
+          },
+          "trigger": "After defeating Gloom Wight, player enters a narrow fissure in the earth — the ground trembles, and a shadowy figure emerges."
+        },
+        {
+          "location": "The Cavern of Whispers and Bones",
+          "enemy": {
+            "name": "Bone-Wraith of the First Fallen",
+            "health": 650,
+            "damage": 180,
+            "weakness": "Soul Shards (a pickup from encounter 1)"
+          },
+          "hazard": "Eyes of the Earth: every 30 seconds, a pulse of light from the ground reveals player's position for 5 seconds — enemy can attack immediately",
+          "pickup": {
+            "name": "Soul Shards",
+            "effect": "Soul Shards (3 pieces — usable only when 2 are in inventory)"
+          },
+          "trigger": "After defeating the Rotting Shade-Skull, a crumbling archway reveals a dark chamber. The air hums with old magic. The Bone-Wraith emerges from a pile of ancient bones."
+        }
+      ],
+      "boss": {
+        "name": "The Shattered Vessel",
+        "health": 1000,
+        "damage": 150,
+        "weakness": "Soul Shards (a pickup from the third encounter)",
+        "victory_condition": "Player uses 'Soul Shards' to hit the boss twice in succession."
+      },
+      "objective": "Defeat the Bone-Wraith of the First Fallen to unlock the final confrontation with The Shattered Vessel.",
+      "reward": "Access to the 'Necro-Soul Vault' and the ability to resurrect fallen allies."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "whimsical",
+      "player_class": "alchemist",
+      "target_difficulty": "easy"
+    },
+    "level": {
+      "theme": "A sun-drenched, magical rainforest filled with singing flowers, floating fruits, and gentle creatures that dance in the breeze. The environment is colorful, playful, and full of charm—like a children’s book brought to life. Birds hum melodies, and the air smells of honey, rain, and bubble-gum flowers. The alchemist uses magic and creativity to navigate challenges, blending potion-making with jungle exploration.",
+      "setting": "Whimsical Jungle: Glimmer-Groves",
+      "player_weapon": "Wisp Flask",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Sunlit Meadow with Glowing Orchids",
+          "enemy": {
+            "name": "Bumblebee Bloop",
+            "health": 40,
+            "damage": 30,
+            "weakness": "Weak to Wisp Flask (player's weapon)"
+          },
+          "hazard": "Floating Honeydew Bubbles that bounce when stepped on",
+          "pickup": {
+            "name": "Honeycomb Shard",
+            "effect": "Honeycomb Shard - a small, golden hexagonal crystal that glows when used"
+          },
+          "trigger": "After defeating Bumblebee Bloop, the path to the Glittering Gorge opens with a gentle hum and a rainbow fruit appears."
+        },
+        {
+          "location": "Glittering Gorge – a narrow, winding ravine with mossy walls and singing vines",
+          "enemy": {
+            "name": "Squishy Sloth-Spinner",
+            "health": 60,
+            "damage": 40,
+            "weakness": "Weak to Honeycomb Shard (picked up from Bumblebee Bloop)"
+          },
+          "hazard": "Mossy Spikes that slowly grow when standing still",
+          "pickup": {
+            "name": "Glowing Lichen Fragment",
+            "effect": "Glowing Lichen Fragment - a soft, pulsing green piece that makes the player’s Wisp Flask glow brighter"
+          },
+          "trigger": "After defeating Squishy Sloth-Spinner, the path leads to the Glimmering Cave, where the Gargoyle’s eyes glow."
+        },
+        {
+          "location": "Glimmering Cave – a cave with crystal stalactites and soft light, glowing like a lullaby",
+          "enemy": {
+            "name": "The Glittering Gargoyle of Glimmer-Grove",
+            "health": 150,
+            "damage": 100,
+            "weakness": "Weak to Honeycomb Shard (must be equipped to deal damage)"
+          },
+          "hazard": "None (peaceful, but the creature is slow and predictable)",
+          "pickup": {
+            "name": "None",
+            "effect": "None (this is the final boss, no new pickup)"
+          },
+          "trigger": "Only accessible after defeating Squishy Sloth-Spinner. The cave opens when the player holds Honeycomb Shard."
+        }
+      ],
+      "boss": {
+        "name": "The Glittering Gargoyle of Glimmer-Grove",
+        "health": 100,
+        "damage": 0,
+        "weakness": "Weak to Honeycomb Shard (from previous encounter)",
+        "victory_condition": "Deal 100 damage using the Honeycomb Shard"
+      },
+      "objective": "Defeat The Glittering Gargoyle of Glimmer-Grove by using the Honeycomb Shard to damage it.",
+      "reward": "Golden Alchemist's Apron with a 'Whimsy +1' bonus"
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "eerie",
+      "player_class": "chronomancer",
+      "target_difficulty": "medium"
+    },
+    "level": {
+      "theme": "Eerie time distortions in a jungle that remembers the past and fears the future. Time is broken, and the jungle is alive with echoes of what was lost.",
+      "setting": "A deep, uncharted jungle with bioluminescent moss, shifting vines, and time-distorted anomalies. The air is thick with silence, broken only by echoes that seem to be delayed by seconds.",
+      "player_weapon": "Chrono-Blade",
+      "player_weapon_damage": 10,
+      "player_health": 100,
+      "encounters": [
+        {
+          "location": "Shifting Tangle - a dense thicket of bioluminescent vines that pulse in erratic rhythms",
+          "enemy": {
+            "name": "Chrono-Viper",
+            "health": 80,
+            "damage": 15,
+            "weakness": "Chrono-Blade"
+          },
+          "hazard": "Vines shift every 3 seconds, creating temporary blind spots",
+          "pickup": {
+            "name": "Frost Core",
+            "effect": "Frost Core - a pulsing, crystalline shard that emits a freezing aura when activated. It freezes enemies in a 3-meter radius."
+          },
+          "trigger": "After defeating the Chrono-Viper, the jungle ripples and a new path appears lit by flickering blue moss — leading to the Echo-Wraith temple."
+        },
+        {
+          "location": "Echoes in the Dusk Temple - a crumbling stone temple with fractured walls and flickering shadows",
+          "enemy": {
+            "name": "Echo-Wraith",
+            "health": 150,
+            "damage": 25,
+            "weakness": "Frost Core"
+          },
+          "hazard": "The wraith spawns two delayed duplicates. The real attack is delayed by 1 second.",
+          "pickup": {
+            "name": "Slow-Infused Tendrils",
+            "effect": "Slow-Infused Tendrils - a weapon that applies 2x time slowdown to enemies when swung."
+          },
+          "trigger": "After defeating the Echo-Wraith, the temple walls crack. A massive, still form emerges — the Jungle Stasis Guardian."
+        },
+        {
+          "location": "The Heart Chamber - a central chamber where the ground repeats in slow motion and time loops.",
+          "enemy": {
+            "name": "Jungle Stasis Guardian",
+            "health": 300,
+            "damage": 40,
+            "weakness": "Slow-Infused Tendrils"
+          },
+          "hazard": "The guardian appears in multiple time loops. It spawns with a 5-second delay after each appearance.",
+          "pickup": {
+            "name": "None",
+            "effect": "None (defeat triggers boss)"
+          },
+          "trigger": "After defeating the guardian, a massive rift opens in the jungle — revealing the final boss."
+        }
+      ],
+      "boss": {
+        "name": "The Time-Rooted Beast",
+        "health": 900,
+        "damage": 100,
+        "weakness": "Frost Core",
+        "victory_condition": "Player activates Frost Core twice during the fight to freeze the beast and land the final critical strike"
+      },
+      "objective": "Defeat all three enemies and the boss to progress.",
+      "reward": "After the final battle, the jungle stabilizes. A time-fragmented flower blooms — hinting at a deeper mystery."
+    }
+  },
+  {
+    "case": {
+      "genre": "jungle",
+      "mood": "desolate",
+      "player_class": "berserker",
+      "target_difficulty": "brutal"
+    },
+    "level": {
+      "theme": "Desolation and decay. The jungle is dying, and its spirits are corrupted. The player must fight through decayed nature to find balance — but every step costs more than it gains. Brutal difficulty, relentless enemies, and environmental hazards make survival a constant battle.",
+      "setting": "Desolate Jungle — a once-thriving jungle now dead, with withered trees, cracked stone, and abandoned temples. The air is still, heavy with silence. Bioluminescent fungi glow faintly, casting eerie red light.",
+      "player_weapon": "Spiked Maul",
+      "player_weapon_damage": 15,
+      "player_health": 150,
+      "encounters": [
+        {
+          "location": "Ruined Temple of the Dying Sun",
+          "enemy": {
+            "name": "Mutated Jaguar-Crone",
+            "health": 450,
+            "damage": 70,
+            "weakness": "Player weapon (Spiked Maul)"
+          },
+          "hazard": "Spikes in the temple floor trigger if player stands still for 3 seconds.",
+          "pickup": {
+            "name": "Ferrous Shard",
+            "effect": "Ferrous Shard (used to weaken Corrupted Spirit)"
+          },
+          "trigger": "After defeating the Jaguar-Crone, the temple floor cracks and a new path opens to the Corrupted Spirit's hollowed tree."
+        },
+        {
+          "location": "The Hollowed Tree of Withered Roots",
+          "enemy": {
+            "name": "Corrupted Spirit of the Dying Tree",
+            "health": 650,
+            "damage": 85,
+            "weakness": "Ferrous Shard (pickup from Encounter 0)"
+          },
+          "hazard": "Poison mist spawns every 15 seconds — reduces player health over time.",
+          "pickup": {
+            "name": "Screaming Ember",
+            "effect": "Screaming Ember (used to trigger Earth Wurm's vulnerability)"
+          },
+          "trigger": "After defeating the Spirit, the tree explodes, revealing a canyon path with quicksand. The Wounded Earth Wurm appears at the canyon's edge."
+        },
+        {
+          "location": "Cracked Canyon of Shattered Stone",
+          "enemy": {
+            "name": "Wounded Earth Wurm",
+            "health": 900,
+            "damage": 110,
+            "weakness": "Screaming Ember (pickup from Encounter 1)"
+          },
+          "hazard": "Ground collapses every 4 seconds — player must dodge or move to avoid falling.",
+          "pickup": {
+            "name": "",
+            "effect": "None (defeat triggers boss)"
+          },
+          "trigger": "After defeating the Earth Wurm, the ground stabilizes, and a massive rift opens — the Jungle King emerges."
+        }
+      ],
+      "boss": {
+        "name": "The Jungle King",
+        "health": 1200,
+        "damage": 95,
+        "weakness": "Screaming Ember (pickup from Encounter 2)",
+        "victory_condition": "Player successfully activates the 'Screaming Ember' pickup to deal critical damage during the final phase."
+      },
+      "objective": "Defeat all three encounters to face the Jungle King. The final fight requires the player to use the 'Screaming Ember' to trigger a critical damage burst.",
+      "reward": "After defeating the Jungle King, the player gains 'Jungle Resilience' and a permanent reduction in stamina drain."
+    }
+  }
+]
