@@ -20,6 +20,18 @@ jev-knows = "jev.knowledge.probe:main"
 jev-routes = "jev.routing.probe:main"
 jev-complies = "jev.compliance.probe:main"
 jev-judges = "jev.judge.run:main"
+jev-tokenizer = "jev.tokenizer.fingerprint:main"
+
+[dependency-groups]
+# Reference tokenizers for `jev-tokenizer`. Heavy, so kept out of the default install:
+#   uv sync --group fingerprint
+fingerprint = [
+    "tiktoken>=0.7",
+    "transformers>=4.44",
+    "sentencepiece>=0.2",  # SentencePiece models: Llama-2, Mistral, Gemma
+    "protobuf>=4",  # DeBERTa-v3 SentencePiece conversion
+    "matplotlib>=3.8",
+]
 
 [build-system]
 requires = ["uv_build>=0.11.3,<0.12.0"]
