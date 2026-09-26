@@ -49,11 +49,7 @@ TOKENIZERS = {
         "ModernBERT": "answerdotai/ModernBERT-base",
     },
     "custom": {
-        "o200k-d1": ("o200k_base", [(r"\p{N}{1,3}", r"\p{N}")]),  # digits split one-at-a-time vs o200k's ≤3 grouping
-        "o200k-d2": ("o200k_base", [(r"\p{N}{1,3}", r"\p{N}{1,2}")]),  # digits grouped ≤2: is the split truly per-digit or pairs?
-        "o200k-nc": ("o200k_base", [(r"(?i:'s|'t|'re|'ve|'m|'ll|'d)?", "")]),  # contractions ('s/'t/'re) kept separate from the word
-        "o200k-d1-nc": ("o200k_base", [(r"\p{N}{1,3}", r"\p{N}"), (r"(?i:'s|'t|'re|'ve|'m|'ll|'d)?", "")]),  # single-digit and no contraction together
-        "o200k-d1-nl": ("o200k_base", [(r"\p{N}{1,3}", r"\p{N}"), (r"\s*[\r\n]+", r"\s*[\r\n]")]),  # single-digit and newline runs split, not grouped
+        "o200k-qwenpre": ("o200k_base", r"(?i:'s|'t|'re|'ve|'m|'ll|'d)|[^\r\n\p{L}\p{N}]?\p{L}+|\p{N}| ?[^\s\p{L}\p{N}]+[\r\n]*|\s*[\r\n]+|\s+(?!\S)|\s+"),  # o200k merges behind Qwen's pretokenizer regex
     }
 }
 
@@ -69,12 +65,8 @@ def load_tokenizers():
             print(f"skip {name}: {str(err).splitlines()[0][:100]}")
             continue
         tokenizers[name] = lambda s, tok=tok: len(tok.encode(s, add_special_tokens=False))
-    for name, (base, edits) in TOKENIZERS["custom"].items():
+    for name, (base, pat) in TOKENIZERS["custom"].items():
         o = tiktoken.get_encoding(base)
-        pat = o._pat_str
-        for target, repl in edits:
-            assert pat.count(target) >= 1
-            pat = pat.replace(target, repl)
         e = tiktoken.Encoding(name=name, pat_str=pat, mergeable_ranks=o._mergeable_ranks, special_tokens=o._special_tokens)
         tokenizers[name] = lambda s, e=e: len(e.encode(s, disallowed_special=()))
     return tokenizers
